@@ -1,3 +1,3 @@
 # luisgarciabonifaz.github.io
 Hola
-Mi nombre es Lusi Garcia
+Mi nombre es Lusi Garcia Bonifaz
