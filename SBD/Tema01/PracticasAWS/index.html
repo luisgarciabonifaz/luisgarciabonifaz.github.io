@@ -1,0 +1,872 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../BigDataConAWS/">
+      
+      
+        <link rel="next" href="../../../BDA/Tema01/IntroduccionBigData/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>T12 - AWS - Mis Clases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#12-practicas-aws" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mis Clases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              T12 - AWS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mis Clases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemes Operatius Monolloc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemes Operatius Monolloc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema01/SistemesInformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Sistemes Informàtics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema02/SistemesOperatius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemas Big Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemas Big Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BigDataConAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Big Data con AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    T12 - AWS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    T12 - AWS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#121-practica-etl-en-aws" class="md-nav__link">
+    12.1. Practica ETL en AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-etl-con-jobs-en-aws-glue" class="md-nav__link">
+    12.2. ETL con jobs en AWS Glue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-etl-con-pyspark" class="md-nav__link">
+    12.3. ETL con PySpark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-streaming-con-kinesis-data-streams-y-kinesis-data-firehose" class="md-nav__link">
+    12.4. Streaming con Kinesis Data Streams y Kinesis Data Firehose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-streaming-con-kinesis-data-firehose-y-kinesis-data-analytics" class="md-nav__link">
+    12.5. Streaming con Kinesis Data Firehose y Kinesis Data Analytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126-visualizacion-de-datos-con-quicksight" class="md-nav__link">
+    12.6. Visualización de datos con QuickSight
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big Data Aplicado
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Big Data Aplicado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema01/IntroduccionBigData/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema02/RepasoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Repaso SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#121-practica-etl-en-aws" class="md-nav__link">
+    12.1. Practica ETL en AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#122-etl-con-jobs-en-aws-glue" class="md-nav__link">
+    12.2. ETL con jobs en AWS Glue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#123-etl-con-pyspark" class="md-nav__link">
+    12.3. ETL con PySpark
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#124-streaming-con-kinesis-data-streams-y-kinesis-data-firehose" class="md-nav__link">
+    12.4. Streaming con Kinesis Data Streams y Kinesis Data Firehose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#125-streaming-con-kinesis-data-firehose-y-kinesis-data-analytics" class="md-nav__link">
+    12.5. Streaming con Kinesis Data Firehose y Kinesis Data Analytics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#126-visualizacion-de-datos-con-quicksight" class="md-nav__link">
+    12.6. Visualización de datos con QuickSight
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="12-practicas-aws">12. Practicas AWS</h1>
+<h2 id="121-practica-etl-en-aws">12.1. Practica ETL en AWS</h2>
+<ul>
+<li>En un bucket S3 (datos_etl) crear dos directorios</li>
+<li>ciclistas</li>
+<li>ciclistas_procesados</li>
+<li>Con AWS Glue</li>
+<li>Utilizando el Data Catalog, crear:<ul>
+<li>Base de datos (datos_ciclistas)</li>
+<li>Tabla (ciclistas)</li>
+</ul>
+</li>
+<li>Crear un job (Lab Role) S3 Originales --&gt; Eliminar Duplicados --&gt; Filtrar filas --&gt; S3 Procesados</li>
+<li>RedShift (Lab Role)</li>
+<li>Crear cluster admin Qwe_1234</li>
+<li>Crear Base de Datos</li>
+<li>Crear Tabla y Definir campos</li>
+<li>Cargar datos en la Tabla (IGNOREHEADER AS 1)</li>
+<li>Crear una función Lamda que haga de trigger (lanzador) del Job</li>
+</ul>
+<h2 id="122-etl-con-jobs-en-aws-glue">12.2. ETL con jobs en AWS Glue</h2>
+<p>Servicios AWS:
+- AWS S3
+- AWS Glue Studio
+- AWS Glue Data Catalog
+- AWS Glue Job
+- AWS RedShift
+- AWS Lambda</p>
+<p>La práctica consiste en hacer una ETL con AWS Glue utilizando un Job Visual. Los datos de partida son un fichero en formato csv con datos de ciclistas. Cargaremos los datos en un bucket S3 que tendrá dos carpetas, una para los datos de entrada y otra para los datos procesados. Crearemos un job que elimine los duplicados y haga un filtro y seleccione solo las filas con el campo Severity = "Grave". Luego cargaremos los datos en un cluster RedShift y finalmente prepararemos una función lambda que lance el job. Revisaremos cómo se monitorizan los jobs y las funciones lambda.</p>
+<p>Los campos del fichero son:</p>
+<p>Pasos a seguir:
+- En un bucket S3 (datos_etl) crear dos directorios
+  - ciclistas
+  - ciclistas_procesados
+- Con AWS Glue
+  - Utilizando el Data Catalog, crear:
+    - Base de datos (datos_ciclistas)
+    - Tabla (ciclistas)
+  - Crear un job (Lab Role) S3 Originales --&gt; Eliminar Duplicados --&gt; Filtrar filas --&gt; S3 Procesados
+- RedShift (Lab Role)
+  - Crear cluster admin Qwe_1234
+  - Crear Base de Datos
+  - Crear Tabla y Definir campos
+  - Cargar datos en la Tabla (IGNOREHEADER AS 1)
+- Crear una función Lambda que haga de trigger (lanzador) del Job</p>
+<h2 id="123-etl-con-pyspark">12.3. ETL con PySpark</h2>
+<p>Servicios AWS:
+- AWS S3
+- AWS Glue Studio
+- AWS Glue Data Catalog
+- AWS Glue Job
+- AWS Glue Crawler
+- AWS Glue Workflow</p>
+<p>La práctica consiste en hacer una ETL con AWS Glue utilizando código PySpark. Los datos de partida son dos ficheros en formato csv con datos de clientes y ventas. Cargaremos los datos en un bucket S3 que también tendrá una carpeta para el script de PySpark y otra para los resultados de salida. Con estos datos queremos un fichero con las ventas totales por cliente en formato JSON.</p>
+<p>Los campos de los ficheros son:
+- <strong>customers</strong>: {CUSTOMERID, CUSTOMERNAME, EMAIL, CITY, COUNTRY, TERRITORY, CONTACTFIRSTNAME, CONTACTLASTNAME}
+- <strong>sales</strong>: {ORDERNUMBER, QUANTITYORDERED, PRICEEACH, ORDERLINENUMBER, SALES, ORDERDATE, STATUS, QTR_ID, MONTH_ID, YEAR_ID, PRODUCTLINE, MSRP, PRODUCTCODE, DEALSIZE, CUSTOMERID}</p>
+<p>Pasos a seguir:
+- Crear un bucket (lago de datos) S3 con la siguiente estructura de carpetas y ficheros:
+  - datos
+    - clientes
+      - customers.csv
+    - ventas
+      - sales.csv
+  - Crear un crawler con AWS Glue que rastree la carpeta datos y los introduzca en una BD (ventas)
+  - Crear un job con Glue de Spark Script Editor
+    - El script debe:
+      - Guardarse en la carpeta scripts del bucket
+      - Debe seleccionar las ventas totales por cliente y guardarlas en un fichero en formato JSON en la carpeta de salida
+  - Crear un flujo de trabajo que lo haga todo.
+    - Añadir Workflow
+    - Añadir Trigger
+      - Inicio Rastreador
+    - Añadir Nodo
+      - Seleccionar Crawler
+    - Añadir Trigger
+      - Type: Evento
+      - Start after ANY watched event
+    - Añadir Job/Crawler
+      - Seleccionar Crawler
+      - Evento: Éxito</p>
+<p>Ejemplo de código:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
+<span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span>\
+    <span class="o">.</span><span class="n">builder</span>\
+    <span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">&quot;SparkETL&quot;</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+
+<span class="n">spark</span><span class="o">.</span><span class="n">catalog</span><span class="o">.</span><span class="n">setCurrentDatabase</span><span class="p">(</span><span class="s2">&quot;ventas&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;select * from clientes&quot;</span><span class="p">)</span>
+<span class="c1"># df.show()</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;customername&quot;</span><span class="p">,</span> <span class="s2">&quot;email&quot;</span><span class="p">)</span>
+<span class="c1"># df.show()</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;json&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">&quot;overwrite&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;s3://lagodatos/salida/&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="124-streaming-con-kinesis-data-streams-y-kinesis-data-firehose">12.4. Streaming con Kinesis Data Streams y Kinesis Data Firehose</h2>
+<p>Servicios AWS:
+- AWS S3
+- AWS Glue Data Catalog
+- AWS Cloud9
+- AWS Kinesis Data Streams
+- AWS Kinesis Data Firehose</p>
+<p>La práctica consiste en crear un escenario en el que Amazon Kinesis Delivery Stream convierte los datos de origen con formato JSON en datos de destino con formato Apache Parquet mediante el esquema de tabla de catálogo de Glue y los almacena en un S3.</p>
+<p>Pasos a seguir:
+- Crear un bucket S3
+- Crear una base de datos y una tabla (Glue Data Catalog) con el siguiente esquema:
+  - firstname: string
+  - lastname: string
+  - age: int
+- Configurar el data stream (Kinesis Data Streams)
+- Crear el delivery stream (Kinesis Firehose)
+- Configurar el entorno de desarrollo
+- Crear el código Python que hace la función de productor</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;kinesis&#39;</span><span class="p">)</span>
+
+<span class="n">partitionkey</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+
+<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">edad</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">90</span><span class="p">);</span>
+    <span class="n">mydata</span> <span class="o">=</span> <span class="s1">&#39;{ &quot;firstname&quot;: &quot;John&quot;, &quot;lastname&quot;: &quot;Smith&quot;, &quot;age&quot;: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; }&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">mydata</span><span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">put_record</span><span class="p">(</span><span class="n">StreamName</span><span class="o">=</span><span class="s2">&quot;flujo_luis&quot;</span><span class="p">,</span> <span class="n">Data</span><span class="o">=</span><span class="n">mydata</span><span class="p">,</span> <span class="n">PartitionKey</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">partitionkey</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span>
+
+<span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+
+<h2 id="125-streaming-con-kinesis-data-firehose-y-kinesis-data-analytics">12.5. Streaming con Kinesis Data Firehose y Kinesis Data Analytics</h2>
+<p>Servicios AWS:
+- AWS S3
+- AWS Kinesis Data Firehose
+- AWS Kinesis Data Analytics</p>
+<p>La práctica consiste en crear un flujo de datos de bolsa con Amazon Kinesis Delivery Stream y con Kinesis Data Analytics guardarlos en un Bucket S3 tanto en crudo tal cual llegan, como ligeramente procesados. Para ello, utilizaremos 4 carpetas en el bucket, dos para los datos limpios (éxito y errores) y dos para los datos procesados (éxito y errores):
+- datos_brutos
+- errores_datos_brutos
+- datos_limpios
+- errores_datos_limpios</p>
+<p>Vamos a necesitar también dos flujos de Kinesis Firehose.</p>
+<p>Pasos a seguir:</p>
+<ul>
+<li>Crear el primer flujo (Firehose) con una entrada directa de datos (DIRECT PUT). Le asignamos las carpetas para el destino que se crearán automáticamente.</li>
+<li>Datos del flujo: 1 Mb o 60 seg</li>
+<li>Rol: LabRole</li>
+<li>Realizar el test del Data Stream Delivery</li>
+<li>Comprobar que se crean los datos en bruto en la carpeta correspondiente</li>
+<li>Limpieza con Kinesis Data Analytics (con aplicaciones SQL)</li>
+<li>Crear aplicación</li>
+<li>Descubrir el esquema. Confirmar que se están generando los datos de prueba</li>
+<li>Configurar la plantilla. Función de agregación en una ventana deslizante de tiempo</li>
+<li>Probar y ejecutar</li>
+<li>Crear el segundo flujo de destino</li>
+<li>Ejecutar</li>
+</ul>
+<p>Ayuda: <a href="https://www.youtube.com/watch?v=_Bof0Ry_Zpc">Enlace a video de ayuda</a></p>
+<p>Ejemplos de Análisis de Flujo Continuo:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">-- Continuous Filter</span>
+<span class="c1">-- Performs a continuous filter based on a WHERE condition.</span>
+<span class="c1">-- .----------.   .----------.   .----------.</span>
+<span class="c1">-- |  SOURCE  |   |  INSERT  |   |  DESTIN. |</span>
+<span class="c1">-- Source--&gt;|  STREAM  |--&gt;| &amp; SELECT |--&gt;|  STREAM |--&gt;Destination</span>
+<span class="c1">-- |          |   |  (PUMP)  |   |          |</span>
+<span class="c1">-- &#39;----------&#39;   &#39;----------&#39;   &#39;----------&#39;</span>
+<span class="c1">-- STREAM (in-application): a continuously updated entity that you can SELECT from and INSERT into like a TABLE</span>
+<span class="c1">-- PUMP: an entity used to continuously &#39;SELECT ... FROM&#39; a source STREAM, and INSERT SQL results into an output STREAM</span>
+<span class="c1">-- Create output stream, which can be used to send to a destination</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="n">STREAM</span><span class="w"> </span><span class="ss">&quot;DESTINATION_SQL_STREAM&quot;</span><span class="w"> </span><span class="p">(</span><span class="n">ticker_symbol</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span><span class="w"> </span><span class="n">sector</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span><span class="w"> </span><span class="n">change</span><span class="w"> </span><span class="nb">REAL</span><span class="p">,</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="nb">REAL</span><span class="p">);</span>
+<span class="c1">-- Create pump to insert into output</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="n">PUMP</span><span class="w"> </span><span class="ss">&quot;STREAM_PUMP&quot;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="ss">&quot;DESTINATION_SQL_STREAM&quot;</span>
+<span class="c1">-- Select all columns from source stream</span>
+<span class="k">SELECT</span><span class="w"> </span><span class="n">STREAM</span><span class="w"> </span><span class="n">ticker_symbol</span><span class="p">,</span><span class="w"> </span><span class="n">sector</span><span class="p">,</span><span class="w"> </span><span class="n">change</span><span class="p">,</span><span class="w"> </span><span class="n">price</span>
+<span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;SOURCE_SQL_STREAM_001&quot;</span>
+<span class="c1">-- LIKE compares a string to a string pattern (_ matches all char, % matches substring)</span>
+<span class="c1">-- SIMILAR TO compares string to a regex, may use ESCAPE</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">sector</span><span class="w"> </span><span class="k">SIMILAR</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;%TECH%&#39;</span><span class="p">;</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="n">STREAM</span><span class="w"> </span><span class="ss">&quot;DESTINATION_SQL_STREAM&quot;</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;eventType&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span><span class="w"> </span><span class="ss">&quot;ses_timestamp&quot;</span><span class="w"> </span><span class="k">timestamp</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;messageId&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span><span class="w"> </span><span class="ss">&quot;ses_to&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span><span class="w"> </span><span class="ss">&quot;ses_configuration_set&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="n">PUMP</span><span class="w"> </span><span class="ss">&quot;STREAM_PUMP&quot;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="ss">&quot;DESTINATION_SQL_STREAM&quot;</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="n">STREAM</span><span class="w"> </span><span class="ss">&quot;eventType&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;ses_timestamp&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;messageId&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;ses_to&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;ses_configuration_set&quot;</span>
+<span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;SOURCE_SQL_STREAM_001&quot;</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="ss">&quot;eventType&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Send&#39;</span>
+</code></pre></div>
+
+<h2 id="126-visualizacion-de-datos-con-quicksight">12.6. Visualización de datos con QuickSight</h2>
+<p>Para todos los ejercicios prácticos, utilizaremos el archivo de datos SaaS-Sales.csv proporcionado <a href="https://ee-assets-prod-us-east-1.s3.amazonaws.com/modules/337d5d05acc64a6fa37bcba6b921071c/v1/SaaS-Sales.csv">aquí</a>.</p>
+<p>Este conjunto de datos representa datos de ventas de una empresa ficticia de SaaS (Software como Servicio) que vende software de ventas y marketing a otras empresas (B2B). Cada fila de datos es una transacción/pedido.</p>
+<p>Servicios AWS:
+- AWS QuickSight</p>
+<p>Pasos a seguir:
+- Acceder a AWS QuickSight
+- Registrarse (gratis 30 días)
+- Crear un nuevo análisis
+- Cargar un dataset
+- Empezar a añadir visualizaciones
+- Publicar el informe</p>
+<p>Ayuda: <a href="https://catalog.workshops.aws/quicksight/en-US/author-workshop/1-build-your-first-dashboard/exercises">Enlace al tutorial de ayuda</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>

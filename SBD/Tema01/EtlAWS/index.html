@@ -1,0 +1,953 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>Documentación Ampliada: AWS Glue - Mis Clases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentacion-ampliada-aws-glue" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mis Clases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Documentación Ampliada: AWS Glue
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mis Clases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemes Operatius Monolloc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemes Operatius Monolloc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema01/SistemesInformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Sistemes Informàtics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema02/SistemesOperatius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemas Big Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemas Big Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BigDataConAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Big Data con AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PracticasAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big Data Aplicado
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Big Data Aplicado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema01/IntroduccionBigData/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema02/RepasoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Repaso SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-aws-glue" class="md-nav__link">
+    Introducción a AWS Glue
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes-clave-de-aws-glue" class="md-nav__link">
+    Componentes Clave de AWS Glue
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes Clave de AWS Glue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-crawlers" class="md-nav__link">
+    1. Crawlers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-catalogo-de-datos" class="md-nav__link">
+    2. Catálogo de Datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-trabajos-etl" class="md-nav__link">
+    3. Trabajos ETL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-desarrollo-de-scripts" class="md-nav__link">
+    4. Desarrollo de Scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracion-y-uso-basico-de-aws-glue" class="md-nav__link">
+    Configuración y Uso Básico de AWS Glue
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración y Uso Básico de AWS Glue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-creacion-de-un-crawler" class="md-nav__link">
+    1. Creación de un Crawler
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-creacion-de-un-catalogo-de-datos" class="md-nav__link">
+    2. Creación de un Catálogo de Datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-desarrollo-de-un-trabajo-etl" class="md-nav__link">
+    3. Desarrollo de un Trabajo ETL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ejecucion-de-un-trabajo-etl" class="md-nav__link">
+    4. Ejecución de un Trabajo ETL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casos-de-uso-comunes-de-aws-glue" class="md-nav__link">
+    Casos de Uso Comunes de AWS Glue
+  </a>
+  
+    <nav class="md-nav" aria-label="Casos de Uso Comunes de AWS Glue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacion-de-datos-para-analisis" class="md-nav__link">
+    1. Preparación de Datos para Análisis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-integracion-de-datos-de-multiples-fuentes" class="md-nav__link">
+    2. Integración de Datos de Múltiples Fuentes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-limpieza-y-transformacion-de-datos" class="md-nav__link">
+    3. Limpieza y Transformación de Datos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recomendaciones-de-seguridad" class="md-nav__link">
+    Recomendaciones de Seguridad
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ayuda-y-documentacion" class="md-nav__link">
+    Ayuda y Documentación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusión
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="documentacion-ampliada-aws-glue">Documentación Ampliada: AWS Glue</h1>
+<h2 id="introduccion-a-aws-glue">Introducción a AWS Glue</h2>
+<p>AWS Glue es un servicio de extracción, transformación y carga (ETL) completamente administrado que facilita la preparación y carga de datos para el análisis en plataformas de big data. Con AWS Glue, puedes definir, ejecutar y monitorear trabajos ETL de manera sencilla, lo que te permite mover y transformar datos desde diversas fuentes hacia almacenes de datos como Amazon Redshift, Amazon S3 y más.</p>
+<p><strong>Documentación Oficial de AWS Glue:</strong> <a href="https://docs.aws.amazon.com/glue/index.html">AWS Glue - Documentación de AWS</a></p>
+<h2 id="componentes-clave-de-aws-glue">Componentes Clave de AWS Glue</h2>
+<h3 id="1-crawlers">1. Crawlers</h3>
+<ul>
+<li><strong>Crawlers</strong>: Los crawlers son componentes de AWS Glue que exploran tus fuentes de datos, identifican la estructura y el esquema de tus datos y generan metadatos que se utilizan en los trabajos ETL.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">Crawlers en AWS Glue - AWS</a></p>
+<h3 id="2-catalogo-de-datos">2. Catálogo de Datos</h3>
+<ul>
+<li><strong>Catálogo de Datos</strong>: El catálogo de datos de AWS Glue es un repositorio centralizado donde se almacenan los metadatos de tus fuentes de datos, tablas y esquemas. Facilita la gestión y organización de tus datos.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">Catálogo de Datos en AWS Glue - AWS</a></p>
+<h3 id="3-trabajos-etl">3. Trabajos ETL</h3>
+<ul>
+<li><strong>Trabajos ETL</strong>: Los trabajos ETL son scripts o flujos de trabajo que transforman y mueven datos de una fuente a un destino. AWS Glue permite crear, programar y monitorear trabajos ETL de manera sencilla.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/author-job.html">Trabajos ETL en AWS Glue - AWS</a></p>
+<h3 id="4-desarrollo-de-scripts">4. Desarrollo de Scripts</h3>
+<ul>
+<li><strong>Desarrollo de Scripts</strong>: AWS Glue permite desarrollar trabajos ETL utilizando lenguajes como Python o Scala. Puedes personalizar la lógica de transformación de datos según tus necesidades.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python.html">Desarrollo de Trabajos con Scripts en AWS Glue - AWS</a></p>
+<h2 id="configuracion-y-uso-basico-de-aws-glue">Configuración y Uso Básico de AWS Glue</h2>
+<h3 id="1-creacion-de-un-crawler">1. Creación de un Crawler</h3>
+<ul>
+<li>Utiliza un crawler para explorar tus fuentes de datos y generar metadatos en el catálogo de datos de AWS Glue.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">Creación de un Crawler en AWS Glue - AWS</a></p>
+<h3 id="2-creacion-de-un-catalogo-de-datos">2. Creación de un Catálogo de Datos</h3>
+<ul>
+<li>Configura un catálogo de datos en AWS Glue para almacenar metadatos de fuentes de datos, tablas y esquemas.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/populate-data-catalog.html">Configuración del Catálogo de Datos en AWS Glue - AWS</a></p>
+<h3 id="3-desarrollo-de-un-trabajo-etl">3. Desarrollo de un Trabajo ETL</h3>
+<ul>
+<li>Desarrolla un trabajo ETL en AWS Glue utilizando lenguajes de script como Python o Scala para transformar y mover datos.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/author-job.html">Desarrollo de Trabajos ETL en AWS Glue - AWS</a></p>
+<h3 id="4-ejecucion-de-un-trabajo-etl">4. Ejecución de un Trabajo ETL</h3>
+<ul>
+<li>Programa y ejecuta trabajos ETL en AWS Glue para mover y transformar datos de acuerdo a tus necesidades.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/gs-scheduled-workflow.html">Programación y Ejecución de Trabajos en AWS Glue - AWS</a></p>
+<h2 id="casos-de-uso-comunes-de-aws-glue">Casos de Uso Comunes de AWS Glue</h2>
+<h3 id="1-preparacion-de-datos-para-analisis">1. Preparación de Datos para Análisis</h3>
+<ul>
+<li>Utiliza AWS Glue para preparar datos antes de cargarlos en almacenes de datos como Amazon Redshift o Amazon S3.</li>
+</ul>
+<h3 id="2-integracion-de-datos-de-multiples-fuentes">2. Integración de Datos de Múltiples Fuentes</h3>
+<ul>
+<li>Combina y transforma datos de diversas fuentes para obtener una vista unificada de tus datos.</li>
+</ul>
+<h3 id="3-limpieza-y-transformacion-de-datos">3. Limpieza y Transformación de Datos</h3>
+<ul>
+<li>Aplica reglas de limpie</li>
+</ul>
+<p>za y transformación a tus datos para asegurar la calidad y consistencia.</p>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/use-cases.html">Casos de Uso de AWS Glue - AWS</a></p>
+<h2 id="recomendaciones-de-seguridad">Recomendaciones de Seguridad</h2>
+<ul>
+<li><strong>Control de Acceso</strong>: Configura políticas de control de acceso para garantizar que solo usuarios autorizados puedan acceder y modificar tus recursos de AWS Glue.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/supported-operations.html">Control de Acceso en AWS Glue - AWS</a></p>
+<ul>
+<li><strong>Seguridad de Datos</strong>: Utiliza cifrado de datos en reposo y en tránsito para proteger la confidencialidad de tus datos en AWS Glue.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/security-data-encryption.html">Seguridad en AWS Glue - AWS</a></p>
+<h2 id="ayuda-y-documentacion">Ayuda y Documentación</h2>
+<p>Para obtener más detalles sobre AWS Glue y cómo utilizarlo en tus proyectos, puedes consultar la <a href="https://docs.aws.amazon.com/glue/index.html">documentación oficial de AWS Glue</a>. Además, AWS ofrece ejemplos de código y tutoriales para facilitar la implementación.</p>
+<h2 id="conclusion">Conclusión</h2>
+<p>AWS Glue es una herramienta poderosa para la preparación y carga de datos en entornos de big data. Al comprender los componentes clave y las mejores prácticas de seguridad, puedes aprovechar al máximo este servicio para facilitar tus flujos de trabajo ETL y análisis de datos.</p>
+<p>Por supuesto, aquí tienes una documentación ampliada sobre Amazon Athena, un servicio de AWS que permite consultar datos almacenados en Amazon S3 utilizando SQL estándar.</p>
+<h1 id="documentacion-ampliada-amazon-athena">Documentación Ampliada: Amazon Athena</h1>
+<h2 id="introduccion-a-amazon-athena">Introducción a Amazon Athena</h2>
+<p>Amazon Athena es un servicio de consulta interactiva y análisis de datos que permite analizar grandes volúmenes de datos almacenados en Amazon S3 utilizando SQL estándar. Con Athena, puedes ejecutar consultas SQL en datos no estructurados o semiestructurados sin necesidad de configurar ni administrar la infraestructura de base de datos.</p>
+<p><strong>Documentación Oficial de Amazon Athena:</strong> <a href="https://docs.aws.amazon.com/athena/index.html">Amazon Athena - Documentación de AWS</a></p>
+<h2 id="componentes-clave-de-amazon-athena">Componentes Clave de Amazon Athena</h2>
+<h3 id="1-tablas">1. Tablas</h3>
+<ul>
+<li><strong>Tablas</strong>: En Amazon Athena, las tablas son definiciones de esquema que se utilizan para organizar y consultar datos en Amazon S3. Puedes crear tablas externas que hacen referencia a datos en S3 sin mover ni copiar los datos.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/athena/latest/ug/tables.html">Creación de Tablas en Athena - AWS</a></p>
+<h3 id="2-consultas">2. Consultas</h3>
+<ul>
+<li><strong>Consultas</strong>: Utiliza consultas SQL estándar para analizar y extraer información de tus datos en Amazon S3.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Ejecución de Consultas en Athena - AWS</a></p>
+<h3 id="3-resultados">3. Resultados</h3>
+<ul>
+<li><strong>Resultados</strong>: Las consultas en Athena generan resultados que pueden descargarse, visualizarse o almacenarse en otros servicios de AWS.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Gestión de Resultados de Consultas en Athena - AWS</a></p>
+<h2 id="configuracion-y-uso-basico-de-amazon-athena">Configuración y Uso Básico de Amazon Athena</h2>
+<h3 id="1-creacion-de-tablas">1. Creación de Tablas</h3>
+<ul>
+<li>Define tablas en Athena para organizar y consultar tus datos en Amazon S3. Puedes crear tablas externas que hacen referencia a datos en S3 sin mover los datos.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/athena/latest/ug/tables.html">Creación de Tablas en Athena - AWS</a></p>
+<h3 id="2-ejecucion-de-consultas">2. Ejecución de Consultas</h3>
+<ul>
+<li>Utiliza la consola de Athena o herramientas como AWS Glue DataBrew para ejecutar consultas SQL en tus datos en Amazon S3.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Ejecución de Consultas en Athena - AWS</a></p>
+<h3 id="3-gestion-de-resultados">3. Gestión de Resultados</h3>
+<ul>
+<li>Administra y descarga los resultados de tus consultas en Athena para su análisis o almacenamiento en otros servicios de AWS.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/athena/latest/ug/querying.html">Gestión de Resultados de Consultas en Athena - AWS</a></p>
+<h2 id="casos-de-uso-comunes-de-amazon-athena">Casos de Uso Comunes de Amazon Athena</h2>
+<h3 id="1-analisis-de-datos-en-amazon-s3">1. Análisis de Datos en Amazon S3</h3>
+<ul>
+<li>Utiliza Athena para analizar y consultar datos en Amazon S3 sin necesidad de moverlos a una base de datos.</li>
+</ul>
+<h3 id="2-analisis-de-logs-y-registros">2. Análisis de Logs y Registros</h3>
+<ul>
+<li>Examina registros y datos de aplicación almacenados en Amazon S3 para obtener información sobre el rendimiento y el comportamiento de las aplicaciones.</li>
+</ul>
+<h3 id="3-exploracion-de-datos">3. Exploración de Datos</h3>
+<ul>
+<li>Realiza análisis exploratorios de datos utilizando consultas SQL en datos semiestructurados o no estructurados.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/athena/latest/ug/use-cases.html">Casos de Uso de Athena - AWS</a></p>
+<h2 id="recomendaciones-de-seguridad_1">Recomendaciones de Seguridad</h2>
+<ul>
+<li><strong>Control de Acceso</strong>: Configura políticas de control de acceso para garantizar que solo usuarios autorizados puedan ejecutar consultas en Athena.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/athena/latest/ug/security.html">Control de Acceso en Athena - AWS</a></p>
+<ul>
+<li><strong>Cifrado de Datos</strong>: Habilita el cifrado de datos en reposo y en tránsito para proteger la confidencialidad de tus datos en Athena.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/athena/latest/ug/security.html">Cifrado de Datos en Athena - AWS</a></p>
+<h2 id="ayuda-y-documentacion_1">Ayuda y Documentación</h2>
+<p>Para obtener más detalles sobre Amazon Athena y cómo utilizarlo en tus proyectos, puedes consultar la <a href="https://docs.aws.amazon.com/athena/index.html">documentación oficial de Amazon Athena</a>. Además, AWS ofrece ejemplos de código y tutoriales para facilitar la implementación.</p>
+<h2 id="conclusion_1">Conclusión</h2>
+<p>Amazon Athena es una herramienta poderosa para analizar datos en Amazon S3 mediante consultas SQL estándar. Al comprender los conceptos clave y las mejores prácticas de seguridad, puedes aprovechar al máximo este servicio para realizar análisis de datos eficaces en tu organización.</p>
+<p>Claro, aquí tienes una documentación detallada sobre cómo realizar una ETL (Extract, Transform, Load) utilizando los servicios de AWS, junto con enlaces a la documentación oficial de AWS para obtener más información detallada.</p>
+<h1 id="documentacion-realizacion-de-una-etl-con-servicios-de-aws">Documentación: Realización de una ETL con Servicios de AWS</h1>
+<h2 id="introduccion-a-etl-en-aws">Introducción a ETL en AWS</h2>
+<p>El proceso ETL (Extract, Transform, Load) es fundamental para la gestión y preparación de datos en la nube de AWS. AWS ofrece una variedad de servicios que facilitan la ejecución de ETL en la nube.</p>
+<p><strong>Documentación Oficial de AWS sobre ETL:</strong> <a href="https://aws.amazon.com/es/big-data/what-is-etl/">ETL en AWS - Documentación de AWS</a></p>
+<h2 id="componentes-clave-de-una-etl-en-aws">Componentes Clave de una ETL en AWS</h2>
+<h3 id="1-amazon-s3">1. Amazon S3</h3>
+<ul>
+<li><strong>Amazon S3</strong>: Utiliza Amazon Simple Storage Service (Amazon S3) como el almacenamiento central para tus datos brutos y transformados. Amazon S3 es escalable y altamente duradero.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/s3/index.html">Amazon S3 - Documentación de AWS</a></p>
+<h3 id="2-aws-glue">2. AWS Glue</h3>
+<ul>
+<li><strong>AWS Glue</strong>: Utiliza AWS Glue para automatizar tareas de extracción, transformación y carga de datos. AWS Glue es un servicio de ETL totalmente administrado.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/index.html">AWS Glue - Documentación de AWS</a></p>
+<h3 id="3-aws-step-functions">3. AWS Step Functions</h3>
+<ul>
+<li><strong>AWS Step Functions</strong>: Utiliza AWS Step Functions para orquestar flujos de trabajo de ETL que involucran múltiples pasos y servicios de AWS.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://aws.amazon.com/es/step-functions/">AWS Step Functions - Documentación de AWS</a></p>
+<h3 id="4-herramientas-de-analisis">4. Herramientas de Análisis</h3>
+<ul>
+<li><strong>Herramientas de Análisis</strong>: Utiliza herramientas de análisis como Amazon Athena, Amazon Redshift o AWS QuickSight para analizar los datos transformados después de la carga.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://aws.amazon.com/es/big-data/analysis/">Herramientas de Análisis en AWS - Documentación de AWS</a></p>
+<h2 id="configuracion-y-uso-basico-de-una-etl-en-aws">Configuración y Uso Básico de una ETL en AWS</h2>
+<h3 id="1-configuracion-de-almacenamiento">1. Configuración de Almacenamiento</h3>
+<ul>
+<li><strong>Configura un Bucket de Amazon S3</strong>: Crea un bucket de Amazon S3 para almacenar tus datos brutos y transformados.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html">Crear un Bucket de S3 - AWS</a></p>
+<h3 id="2-extraccion-de-datos">2. Extracción de Datos</h3>
+<ul>
+<li><strong>Utiliza AWS Glue Crawlers</strong>: Configura y ejecuta AWS Glue Crawlers para descubrir y catalogar automáticamente los datos en tus fuentes, como bases de datos, archivos y servicios.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html">Configurar AWS Glue Crawlers - AWS</a></p>
+<h3 id="3-transformacion-de-datos">3. Transformación de Datos</h3>
+<ul>
+<li><strong>Utiliza AWS Glue ETL Jobs</strong>: Crea trabajos de ETL en AWS Glue para transformar datos según tus necesidades. Puedes utilizar el editor de scripts de Python de AWS Glue para personalizar las transformaciones.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/glue/latest/dg/add-job.html">Crear un Job de AWS Glue ETL - AWS</a></p>
+<h3 id="4-carga-de-datos">4. Carga de Datos</h3>
+<ul>
+<li><strong>Carga de Datos en Amazon S3</strong>: Después de la transformación, carga los datos en un bucket de Amazon S3 para su posterior análisis.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/upload-objects.html">Cargar Datos en Amazon S3 - AWS</a></p>
+<h3 id="5-orquestacion-de-flujos-de-trabajo">5. Orquestación de Flujos de Trabajo</h3>
+<ul>
+<li><strong>Orquesta Flujos de Trabajo con AWS Step Functions</strong>: Utiliza AWS Step Functions para orquestar flujos de trabajo de ETL que involucran extracción, transformación y carga de datos.</li>
+</ul>
+<p><strong>Documentación Relacionada:</strong> <a href="https://aws.amazon.com/es/step-functions/">Orquestación de Flujos de Trabajo con AWS Step Functions - AWS</a></p>
+<h2 id="recomendaciones-de-mejores-practicas">Recomendaciones de Mejores Prácticas</h2>
+<ul>
+<li>
+<p><strong>Seguridad y Gobernanza</strong>: Implementa políticas de seguridad y gobernanza para proteger tus datos y garantizar la conformidad con las regulaciones.</p>
+</li>
+<li>
+<p><strong>Monitorización y Auditoría</strong>: Establece una solución de monitorización y auditoría para supervisar el rendimiento y la calidad de los flujos de trabajo de ETL.</p>
+</li>
+<li>
+<p><strong>Automatización</strong>: Utiliza la automatización para ejecutar flujos de trabajo de ETL de manera regular y confiable.</p>
+</li>
+</ul>
+<h2 id="ejemplo-practico-de-etl-con-aws">Ejemplo Práctico de ETL con AWS</h2>
+<p>A continuación, se muestra un ejemplo simplificado de un flujo de trabajo de ETL utilizando AWS Glue y Amazon S3:</p>
+<ol>
+<li>
+<p>Configura un bucket de Amazon S3 para almacenar los datos brutos.</p>
+</li>
+<li>
+<p>Crea un Crawler de AWS Glue para catalogar automáticamente los datos en el bucket.</p>
+</li>
+<li>
+<p>Crea un Job de AWS Glue ETL para transformar los datos catalogados.</p>
+</li>
+<li>
+<p>Ejecuta el Job de AWS Glue para realizar la transformación y carga los datos transformados en otro bucket de Amazon S3.</p>
+</li>
+<li>
+<p>Utiliza Amazon Athena para consultar y analizar los datos transformados.</p>
+</li>
+</ol>
+<p>Este es solo un ejemplo básico, y los flujos de trabajo de ETL pueden ser mucho más complejos según las necesidades de tu organización.</p>
+<h2 id="ayuda-y-documentacion-adicional">Ayuda y Documentación Adicional</h2>
+<p>Para obtener más detalles sobre cómo realizar una ETL con servicios de AWS, consulta la <a href="https://aws.amazon.com/es/big-data/what-is-etl/">documentación oficial de AWS sobre ETL</a>. Además, AWS ofrece tutoriales y ejemplos detallados para ayudarte en tu proyecto de ETL en la nube de AWS.</p>
+<h2 id="conclusion_2">Conclusión</h2>
+<p>Realizar una ETL en AWS es esencial para la gestión de datos y análisis en la nube. Utilizando los servicios de AWS como AWS Glue, Amazon S3 y AWS Step Functions, puedes automatizar y simplificar el proceso de extracción, transformación y carga de datos para satisfacer las necesidades de tu organización.</p>
+<p>Puedes encontrar ejemplos prácticos de cómo realizar una ETL (Extract, Transform, Load) en AWS en varios lugares, incluyendo la documentación oficial de AWS, tutoriales en línea y recursos de la comunidad. Aquí te proporciono un ejemplo sencillo de una ETL utilizando AWS Glue y Amazon S3 como punto de partida:</p>
+<p><strong>Escenario:</strong> Supongamos que tienes datos brutos almacenados en Amazon S3 en formato CSV y deseas realizar una ETL para transformar estos datos y cargarlos en otra ubicación en Amazon S3 en formato Parquet.</p>
+<p><strong>Pasos para un Ejemplo Práctico de ETL en AWS:</strong></p>
+<ol>
+<li><strong>Configuración de Almacenamiento en Amazon S3:</strong></li>
+<li>Crea un bucket de Amazon S3 para almacenar tus datos brutos y transformados.</li>
+<li>
+<p>Por ejemplo, crea dos carpetas en tu bucket: <code>datos_brutos</code> y <code>datos_transformados</code>.</p>
+</li>
+<li>
+<p><strong>Utiliza AWS Glue Crawlers para Descubrir los Datos:</strong></p>
+</li>
+<li>
+<p>Configura un Crawler de AWS Glue para descubrir y catalogar automáticamente los datos en la carpeta <code>datos_brutos</code> de tu bucket de S3.</p>
+</li>
+<li>
+<p><strong>Crea un Job de AWS Glue ETL:</strong></p>
+</li>
+<li>Crea un trabajo de ETL en AWS Glue utilizando el editor de scripts de Python de Glue.</li>
+<li>
+<p>Define la transformación que deseas aplicar a tus datos. Por ejemplo, puedes seleccionar columnas, filtrar filas o realizar agregaciones.</p>
+</li>
+<li>
+<p><strong>Ejecuta el Job de AWS Glue:</strong></p>
+</li>
+<li>Ejecuta el trabajo de ETL de AWS Glue para realizar la transformación de datos.</li>
+<li>
+<p>Durante el proceso de transformación, guarda los datos transformados en la carpeta <code>datos_transformados</code> en tu bucket de S3 en formato Parquet.</p>
+</li>
+<li>
+<p><strong>Análisis de los Datos Transformados:</strong></p>
+</li>
+<li>Utiliza herramientas de análisis como Amazon Athena o Amazon Redshift para consultar y analizar los datos transformados en formato Parquet.</li>
+</ol>
+<p>Este es un ejemplo simplificado de una ETL en AWS utilizando AWS Glue y Amazon S3. Puedes adaptar este escenario básico según tus necesidades específicas. Para ejemplos más detallados y casos de uso más complejos, te recomiendo consultar la documentación oficial de AWS, tutoriales en línea y recursos de la comunidad, donde encontrarás ejemplos prácticos adicionales y proyectos de ETL más avanzados. También puedes explorar ejemplos de código y scripts de ETL en repositorios de GitHub y foros de discusión relacionados con AWS.</p>
+<p>Por supuesto, aquí te proporciono un conjunto de datos de ejemplo en formato CSV que podrías utilizar en el escenario de ETL en AWS que describí anteriormente. Estos datos representan información ficticia de ventas:</p>
+<p><strong>datos_brutos/ejemplo_ventas.csv:</strong></p>
+<div class="codehilite"><pre><span></span><code>fecha,producto,cantidad,precio
+2023-01-01,Producto A,10,100.00
+2023-01-01,Producto B,5,75.00
+2023-01-02,Producto A,8,100.00
+2023-01-02,Producto C,3,50.00
+2023-01-03,Producto B,12,75.00
+2023-01-03,Producto A,15,100.00
+2023-01-04,Producto C,6,50.00
+2023-01-04,Producto A,20,100.00
+2023-01-05,Producto B,7,75.00
+2023-01-05,Producto C,4,50.00
+</code></pre></div>
+
+<p>Estos datos representan ventas diarias de tres productos diferentes durante cinco días. Cada fila contiene la fecha de la venta, el producto vendido, la cantidad y el precio unitario.</p>
+<p>Puedes cargar estos datos en tu bucket de Amazon S3 en la carpeta <code>datos_brutos</code> y utilizar AWS Glue para realizar la transformación y guardar los datos transformados en la carpeta <code>datos_transformados</code> en formato Parquet.</p>
+<p>Recuerda que estos datos son solo un ejemplo y puedes adaptarlos según tus necesidades y el escenario de tu proyecto de ETL en AWS.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
