@@ -791,13 +791,15 @@
 <p>Per a aconseguir-ho, incorpora una interfície adequada per a l'usuari final i un conjunt de funcions i procediments que poden ser invocats pels programes d'aplicació i que rep el nom d'API (de l'anglés Application Programming Interface).</p>
 <p><img alt="Programari" src="../Sw_SO.png" style="width:70%;margin:auto;display:block" /></p>
 <p>Encara que l'element fonamental del programari de sistema siga el sistema operatiu, també s'inclouen en aquest nivell els controladors de dispositiu, les eines de diagnòstic i altres utilitats.
-Entre els sistemes operatius més utilitzats es troben:
-- Microsoft Windows.
-- GNU/Linux.
-- Apple macOS.</p>
+Entre els sistemes operatius més utilitzats es troben:</p>
+<ul>
+<li>Microsoft Windows.</li>
+<li>GNU/Linux.</li>
+<li>Apple macOS.</li>
+</ul>
 <h3 id="212-programari-daplicacio">2.1.2. Programari d'aplicació</h3>
-<p>Està format per els programes que permeten als usuaris realitzar tasques concretes, que poden ser generals (processadors de text, fulls de càlcul, navegadors d'internet, etc.) o específics per a activitats particulars que puguen recolzar-se en un sistema informàtic (comptabilitat, disseny assistit per ordinador, videojocs, etc.).
-És molt freqüent que just després d'instal·lar un sistema operatiu trobem instal·lats alguns programes (calculadora, navegador, editor de textos, etc.). Encara que aquests programes formin part del programari d'aplicació, és molt freqüent que els usuaris finals pensen que formen part del sistema operatiu. No obstant això, només es tracta d'un complement que incorporen els proveïdors del sistema operatiu per a facilitar certes tasques comunes.</p>
+<p>Està format per els programes que permeten als usuaris realitzar tasques concretes, que poden ser generals (processadors de text, fulls de càlcul, navegadors d'internet, etc.) o específics per a activitats particulars que puguen recolzar-se en un sistema informàtic (comptabilitat, disseny assistit per ordinador, videojocs, etc.).</p>
+<p>És molt freqüent que just després d'instal·lar un sistema operatiu trobem instal·lats alguns programes (calculadora, navegador, editor de textos, etc.). Encara que aquests programes formin part del programari d'aplicació, és molt freqüent que els usuaris finals pensen que formen part del sistema operatiu. No obstant això, només es tracta d'un complement que incorporen els proveïdors del sistema operatiu per a facilitar certes tasques comunes.</p>
 <h2 id="22-sistemes-operatius-actuals">2.2. Sistemes Operatius Actuals</h2>
 <p>Ja hem esmentat alguns dels sistemes operatius més utilitzats en ordinadors: Microsoft Windows, GNU/Linux i Apple macOS. No obstant això, només ens havíem referit a les solucions d'escriptori, és a dir, als sistemes operatius dissenyats per a l'ús diari per part d'un usuari o un grup reduït d'ells. No obstant això, existeixen sistemes operatius per a ordinadors la tasca dels quals consisteix en oferir serveis a través d'una xarxa a altres ordinadors (i als seus usuaris). En aquests casos, els sistemes d'escriptori actuen com a clients dels sistemes servidors.</p>
 <p>A més, existeixen altres sistemes operatius que, encara que no estan dissenyats per a ordinadors, també són molt comuns en l'actualitat, són els destinats a telèfons intel·ligents (smartphones). Entre ells, podem mencionar els següents: Android, iOS, Windows Phone i, en menor mesura, Ubuntu Phone, Firefox OS, BlackBerry OS i Symbian.</p>
@@ -828,20 +830,28 @@ Entre els sistemes operatius més utilitzats es troben:
 <p>A més, aquesta idea s'aplica també a la resta dels dispositius: discs durs, dispositius d'emmagatzematge USB, monitors, ratolins, etc. Totes les ordres d'aquest tipus són les que formen l'API.
 Encara que l'element fonamental del programari de sistema siga el sistema operatiu, també s'inclouen en aquest nivell els controladors de dispositiu, les eines de diagnòstic i altres utilitats.</p>
 <h2 id="26-elements-i-estructura-del-so">2.6. Elements i estructura del S.O.</h2>
-<p>Podríem definir el concepte de Sistema Operatiu com un programa, o un conjunt de programes que col·laboren entre ells per a administrar els elements físics d'un sistema informàtic, optimitzant el seu ús i oferint determinats serveis als programes d'aplicació.
-Un sistema operatiu es farà càrrec d'aspectes com:
-- L'ús, compartit i ordenat, dels recursos entre diferents usuaris.
-- La protecció de recursos, per evitar que un usuari accedisca a recursos als quals no està autoritzat.</p>
-<p>Perquè aquesta protecció siga possible, el sistema informàtic ha de ser capaç d'executar instruccions en dos nivells diferents:
-- En <strong>mode usuari</strong>: És el mode menys privilegiat de funcionament del sistema. En aquest mode no es permet l'accés directe al maquinari.
-- En <strong>mode nucli</strong> (també anomenat mode kernel) o mode supervisor: En ell, les instruccions s'executen en un mode privilegiat, tenint accés directe a tota la memòria (inclosos els espais d'adreces de tots els processos que estiguen executant-se). En aquest mode només s'executen algunes parts del sistema operatiu.</p>
+<p>Podríem definir el concepte de Sistema Operatiu com un programa, o un conjunt de programes que col·laboren entre ells per a administrar els elements físics d'un sistema informàtic, optimitzant el seu ús i oferint determinats serveis als programes d'aplicació.</p>
+<p>Un sistema operatiu es farà càrrec d'aspectes com:</p>
+<ul>
+<li>L'ús, compartit i ordenat, dels recursos entre diferents usuaris.</li>
+<li>La protecció de recursos, per evitar que un usuari accedisca a recursos als quals no està autoritzat.</li>
+</ul>
+<p>Perquè aquesta protecció siga possible, el sistema informàtic ha de ser capaç d'executar instruccions en dos nivells diferents:</p>
+<ul>
+<li>En <strong>mode usuari</strong>: És el mode menys privilegiat de funcionament del sistema. En aquest mode no es permet l'accés directe al maquinari.</li>
+<li>En <strong>mode nucli</strong> (també anomenat mode kernel) o mode supervisor: En ell, les instruccions s'executen en un mode privilegiat, tenint accés directe a tota la memòria (inclosos els espais d'adreces de tots els processos que estiguen executant-se). En aquest mode només s'executen algunes parts del sistema operatiu.</li>
+</ul>
 <h2 id="27-classificacio-dels-so">2.7. Classificació dels S.O.</h2>
-<p>Per nombre d'usuaris:
-- Monousuari: Només un usuari en l'ordinador en un moment donat.
-- Multiusuari: Varios usuaris en l'ordinador.
-Per nombre de processos:
-- Monotasca: Només processa una tasca en un instant donat.
-- Multitasca: Varies tasques simultàniament</p>
+<p>Per nombre d'usuaris:</p>
+<ul>
+<li>Monousuari: Només un usuari en l'ordinador en un moment donat.</li>
+<li>Multiusuari: Varios usuaris en l'ordinador.</li>
+</ul>
+<p>Per nombre de processos:</p>
+<ul>
+<li>Monotasca: Només processa una tasca en un instant donat.</li>
+<li>Multitasca: Varies tasques simultàniament</li>
+</ul>
 <h2 id="28-elements-dun-so">2.8. Elements d'un S.O.</h2>
 <p>Com podem imaginar, un sistema operatiu és un programa molt complex que ha d'estar molt ben organitzat i estructurat internament per a dur a terme la seua feina d'una forma molt eficient. En aquest sentit, els sistemes operatius es subdividixen en diferents components que estan especialitzats en aspectes molt concrets del mateix.</p>
 <p>Els elements que constitueixen la majoria dels sistemes operatius són els següents:</p>
@@ -858,11 +868,13 @@ Per nombre de processos:
 </ul>
 <p><img alt="Funcions del S.O." src="../Funciones_SO.png" style="width:70%;margin:auto;display:block" /></p>
 <h2 id="29-estructura-dun-so">2.9 Estructura d'un  S.O.</h2>
-<p>Podem plantejar-nos la manera en què aquests elements s'organitzen dins del sistema operatiu per a dur a terme el seu objectiu. També serà important per al disseny del sistema establir quins components del mateix s'executen en mode nucli i quins en mode usuari.
-En aquest sentit, els plantejaments que s'apliquen en els sistemes operatius més coneguts són els següents:
-- Monolític.
-- Micronucli.
-- Nucli híbrid</p>
+<p>Podem plantejar-nos la manera en què aquests elements s'organitzen dins del sistema operatiu per a dur a terme el seu objectiu. També serà important per al disseny del sistema establir quins components del mateix s'executen en mode nucli i quins en mode usuari.</p>
+<p>En aquest sentit, els plantejaments que s'apliquen en els sistemes operatius més coneguts són els següents:</p>
+<ul>
+<li>Monolític.</li>
+<li>Micronucli.</li>
+<li>Nucli híbrid</li>
+</ul>
 <h3 id="291-monolitic">2.9.1. Monolític</h3>
 <p><img alt="Arquitectura Monolitica" src="../Monolitico.png" style="width:70%;margin:auto;display:block" /></p>
 <h3 id="292-micronucli">2.9.2. Micronucli</h3>
@@ -870,8 +882,8 @@ En aquest sentit, els plantejaments que s'apliquen en els sistemes operatius mé
 <h3 id="293-nucli-hibrid">2.9.3. Nucli híbrid</h3>
 <p><img alt="Arquitectura Hibrida" src="../Hibrido.png" style="width:70%;margin:auto;display:block" /></p>
 <h2 id="210-funcions-del-so">2.10 Funcions del S.O.</h2>
-<p>La estructura d'un sistema operatiu es divideix en diferents mòduls que solen estar especialitzats en funcions concretes. En alguns casos existeix una relació directa entre un determinat mòdul i una funció concreta del sistema operatiu. No obstant això, en altres casos, són diversos els mòduls que cooperen d'alguna manera per a dur a terme una funció específica.
-En qualsevol cas, aquestes són les principals funcions que duu a terme qualsevol sistema operatiu:</p>
+<p>La estructura d'un sistema operatiu es divideix en diferents mòduls que solen estar especialitzats en funcions concretes. En alguns casos existeix una relació directa entre un determinat mòdul i una funció concreta del sistema operatiu. No obstant això, en altres casos, són diversos els mòduls que cooperen d'alguna manera per a dur a terme una funció específica.</p>
+<p>En qualsevol cas, aquestes són les principals funcions que duu a terme qualsevol sistema operatiu:</p>
 <ul>
 <li>Gestió de processos.</li>
 <li>Gestió de memòria.</li>
