@@ -514,7 +514,8 @@
     1.3.6.  Procesamiento Hibrido
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="1.3.6. Procesamiento Hibrido">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1361-lambda" class="md-nav__link">
@@ -527,6 +528,11 @@
   <a href="#1362-kappa" class="md-nav__link">
     1.3.6.2. Kappa
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -625,8 +631,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#17-bibliografia" class="md-nav__link">
-    1.7. Bibliografia
+  <a href="#16-bibliografia" class="md-nav__link">
+    1.6. Bibliografia
   </a>
   
 </li>
@@ -755,7 +761,8 @@
     1.3.6.  Procesamiento Hibrido
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="1.3.6. Procesamiento Hibrido">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1361-lambda" class="md-nav__link">
@@ -768,6 +775,11 @@
   <a href="#1362-kappa" class="md-nav__link">
     1.3.6.2. Kappa
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -866,8 +878,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#17-bibliografia" class="md-nav__link">
-    1.7. Bibliografia
+  <a href="#16-bibliografia" class="md-nav__link">
+    1.6. Bibliografia
   </a>
   
 </li>
@@ -889,7 +901,7 @@
 
 <h1 id="1-introduccion-big-data">1. Introducción Big Data</h1>
 <h2 id="11-big-data">1.1. Big Data</h2>
-<p><strong>El Big Data es el análisis masivo de datos.</strong> Una cuantía de datos, tan sumamente grande, que las aplicaciones de software de procesamiento de datos que tradicionalmente se venían usando no son capaces de capturar, tratar y poner en valor en un tiempo razonable.</p>
+<p><strong>El Big Data es el análisis masivo de datos.</strong> Una cantidad de datos, tan sumamente grande, que las aplicaciones de software de procesamiento de datos que tradicionalmente se venían usando no son capaces de capturar, tratar y poner en valor en un tiempo razonable.</p>
 <p>El mismo término <strong>también se refiere a las nuevas tecnologías que hacen posible el almacenamiento y procesamiento</strong>, además de al uso que se hace de la información obtenida a través de dichas tecnologías.</p>
 <p>La gran popularidad del Big Data es debida principalmente a la oportunidad que ven en ella las grandes empresas. El hecho de poder analizar millones de datos de distintas procedencias como redes sociales, imágenes digitales, emails, encuestas, logs, señales de móvil, etc., permite que la toma de decisiones sea mucho más rápida, precisa y efectiva.</p>
 <details class="info">
@@ -920,7 +932,7 @@
 <p>Los componentes de Big Data constan de una variedad de elementos, pero no es necesario utilizarlos todos juntos para un caso de uso. Los componentes varían según el caso de uso empresarial.</p>
 <p><img alt="componentes" src="../Arquitectura_BigData.png" style="width:90%;margin:auto;display:block" /></p>
 <h3 id="131-fuentes-de-datos">1.3.1. Fuentes de Datos</h3>
-<p>Las fuentes incluyen una variedad de datos, como bases de datos relacionales tradicionales, archivos de registro de procesos empresariales y aplicaciones, y mensajes en tiempo real generados por eventos y dispositivos de IoT.</p>
+<p>Las fuentes incluyen una gran variedad de datos, como bases de datos relacionales tradicionales, archivos de registro de procesos empresariales y aplicaciones, y mensajes en tiempo real generados por eventos y dispositivos de IoT.</p>
 <p>Los datos en Big Data pueden ser clasificados en tres tipos según su origen:</p>
 <ul>
 <li><strong>Generados por máquinas</strong>: procedentes de sensores (GPS, contadores…), Web Log Data (redes, aplicaciones…), procedentes de puntos de venta (códigos de barras de un producto) y financieros (operaciones bancarias).</li>
@@ -953,7 +965,7 @@
 <p>La ingestión de datos en tiempo real incluye mecanismos para recibir mensajes en streaming, almacenarlos y procesarlos para obtener conocimientos. </p>
 <p>Los componentes que facilitan la recepción de mensajes actúan cómo un búfer mientras los datos se envían a un almacenamiento para su procesamiento. </p>
 <h3 id="134-procesamiento-por-lotes">1.3.4. Procesamiento por Lotes</h3>
-<p>El procesamiento por lotes generalmente implica conjuntos de datos grandes que se procesan por lotes mediante trabajos por lotes para agregar, filtrar y preparar los datos para un análisis posterior. </p>
+<p>El procesamiento por lotes generalmente implica conjuntos de datos grandes que se procesan secuencialmente para agregar, filtrar y preparar los datos para un análisis posterior. </p>
 <p>Este enfoque puede ser útil cuando se trata con datos históricos o cuando se realizan análisis complejos que requieren más tiempo.</p>
 <p>Algunos de los componentes de procesamiento por lotes incluyen Azure Data Factory, Azure Batch, U-SQL (Azure Data Lake Analytics), clústeres HDInsight Hadoop y Spark</p>
 <h3 id="135-procesamiento-en-tiempo-real">1.3.5. Procesamiento en Tiempo Real</h3>
@@ -968,7 +980,7 @@
 </ul>
 <h3 id="136-procesamiento-hibrido">1.3.6.  Procesamiento Hibrido</h3>
 <p>Es una mezcla de  los dos anteriores y tiene dos posibles arquitecturas:</p>
-<h3 id="1361-lambda">1.3.6.1. Lambda</h3>
+<h4 id="1361-lambda">1.3.6.1. Lambda</h4>
 <p>Su objetivo es tener un sistema robusto tolerante a fallos que sea linealmente escalable y que permita realizar escrituras y lecturas con baja latencia.</p>
 <p><img alt="Tipos de datos" src="../Lambda.png" style="width:80%;margin:auto;display:block" /></p>
 <p>La nueva información recogida por el sistema se envía tanto a la capa de batch como a la capa de streaming (Speed Layer).</p>
@@ -976,14 +988,16 @@
 <p>La capa que sirve los datos(Serving Layer), indexa las Batch Views para que puedan ser consultadas con baja latencia.</p>
 <p>La capa de streaming (Speed Layer), compensa la alta latencia de las escrituras que ocurre en la serving layer y solo tiene en cuenta los datos nuevos.</p>
 <p>Finalmente, la respuesta a las consultas realizadas se construye combinando los resultados de las Batch Views y de las vistas en tiempo real (Real-time Views).</p>
-<h3 id="1362-kappa">1.3.6.2. Kappa</h3>
+<h4 id="1362-kappa">1.3.6.2. Kappa</h4>
 <p>Su objetivo es eliminar la capa batch dejando solamente la capa de streaming.</p>
 <p>Esta capa, a diferencia de la de tipo batch, no tiene un comienzo ni un fin desde un punto de vista temporal y está continuamente procesando nuevos datos a medida que van llegando.</p>
-<p>Sus cuatro pilares principales son:
-- Todo es un stream: las operaciones batch son un subconjunto de las operaciones de streaming, por lo que todo puede ser tratado como un stream.
-- Los datos de partida no se modifican: los datos son almacenados sin ser transformados y las vistas se derivan de ellos. Un estado concreto puede ser recalculado puesto que la información de origen no se modifica.
-- Solo existe un flujo de procesamiento: puesto que mantenemos un solo flujo, el código, el mantenimiento y la actualización del sistema se ven reducidos considerablemente.
-- Posibilidad de volver a lanzar un procesamiento: se puede modificar un procesamiento concreto y su configuración para variar los resultados obtenidos partiendo de los mismos datos de entrada</p>
+<p>Sus cuatro pilares principales son:</p>
+<ul>
+<li>Todo es un stream: las operaciones batch son un subconjunto de las operaciones de streaming, por lo que todo puede ser tratado como un stream.</li>
+<li>Los datos de partida no se modifican: los datos son almacenados sin ser transformados y las vistas se derivan de ellos. Un estado concreto puede ser recalculado puesto que la información de origen no se modifica.</li>
+<li>Solo existe un flujo de procesamiento: puesto que mantenemos un solo flujo, el código, el mantenimiento y la actualización del sistema se ven reducidos considerablemente.</li>
+<li>Posibilidad de volver a lanzar un procesamiento: se puede modificar un procesamiento concreto y su configuración para variar los resultados obtenidos partiendo de los mismos datos de entrada</li>
+</ul>
 <p><img alt="Tipos de datos" src="../Kappa.png" style="width:80%;margin:auto;display:block" /></p>
 <h3 id="137-almacen-de-datos-analiticos-data-warehouse">1.3.7. Almacén de Datos Analíticos (Data Warehouse)</h3>
 <p>Los almacenes de datos analíticos o  Data Warehouses en inglés, son sistemas de almacenamiento y gestión de datos diseñados específicamente para la recopilación, organización y análisis de grandes volúmenes de información empresarial. </p>
@@ -1028,7 +1042,7 @@
 </ul>
 <h4 id="1382-informes-o-visualizacion-de-datos">1.3.8.2. Informes o Visualización de datos</h4>
 <p>La visualización de datos es la presentación de datos en formato ilustrado o gráfico. Permite a los tomadores de decisiones ver la analítica presentada de forma visual, de modo que puedan captar conceptos difíciles o identificar nuevos patrones. Con la visualización interactiva, se puede llevar el concepto un paso adelante utilizando tecnología para profundizar en diagramas y gráficas para observar mayor detalle, cambiando de forma interactiva qué datos se ven y cómo se procesan.</p>
-<p>Hay muchas herramientas disponibles para la visualización de Big Data. Algunas de las herramientas más populares son Tableau, Infogram, ChartBlocks, Datawrapper y Ploty. Estas herramientas permiten crear tablas, gráficos, mapas y otros tipos de visualizaciones para ayudar a comprender y comunicar los datos.</p>
+<p>Hay muchas herramientas disponibles para la visualización de Big Data. Algunas de las herramientas más populares son Tableau, Power BI, Infogram, ChartBlocks, Datawrapper y Ploty. Estas herramientas permiten crear tablas, gráficos, mapas y otros tipos de visualizaciones para ayudar a comprender y comunicar los datos.</p>
 <p>La visualización de datos es importante porque permite transmitir conceptos de manera universal y rápida. También puede ayudar a identificar áreas que necesitan atención o mejoras y esclarecer qué factores influencian el comportamiento de los clientes.</p>
 <h3 id="139-orquestacion">1.3.9. Orquestación</h3>
 <p>Para lograr un procesamiento por lotes o en tiempo real exitoso, la orquestación del flujo de datos es muy importante para construir procesos por lotes o en tiempo real confiables y resistentes a fallos. </p>
@@ -1041,9 +1055,9 @@
 <p>El aprendizaje automático aprovecha el big data para entrenar modelos más precisos y confiables. Cuanto más datos haya disponibles, más precisos y confiables serán los modelos del aprendizaje automático. El aprendizaje automático tiene aplicaciones amplias en el procesamiento y análisis del big data, cómo la clasificación y categorización automática de datos, la detección de anomalías y la predicción de resultados futuros.</p>
 <p>La combinación de big data y aprendizaje automático ofrece beneficios significativos. Permite descubrir información valiosa oculta en grandes volúmenes de datos, mejorar la toma de decisiones basada en datos, automatizar tareas y optimizar procesos empresariales.</p>
 <h2 id="14-las-vs-de-la-arquitectura-big-data">1.4. Las V's de la Arquitectura Big Data</h2>
-<p>El concepto de "Las V's del Big Data" se refiere a las características clave que describen los datos masivos utilizados en el análisis de datos. A lo largo del tiempo, diferentes fuentes y expertos han propuesto diferentes cantidades de "V's" para describir estas características. A continuación, se mencionan las dos versiones más comunes:</p>
+<p>El concepto de "Las V's del Big Data" se refiere a las características clave que describen los datos masivos utilizados en el análisis de datos. A lo largo del tiempo, diferentes fuentes y expertos han propuesto diferentes cantidades de "V's" para describir estas características. A continuación, se mencionan las tres versiones más comunes:</p>
 <h3 id="las-3-vs-del-big-data">Las 3 V's del Big Data:</h3>
-<ol>
+<ul>
 <li>
 <p><strong>Volumen</strong>: Hace referencia a la cantidad de datos generados y almacenados. En el Big Data, se manejan conjuntos de datos extremadamente grandes.</p>
 </li>
@@ -1053,27 +1067,27 @@
 <li>
 <p><strong>Velocidad</strong>: Indica la rapidez con la que se generan y se deben analizar los datos. En el Big Data, se trata de procesar datos en tiempo real o casi en tiempo real.</p>
 </li>
-</ol>
+</ul>
 <h3 id="las-5-vs-del-big-data">Las 5 V's del Big Data:</h3>
 <p>Además de las 3 V's mencionadas anteriormente, algunas fuentes también incluyen:</p>
-<ol>
+<ul>
 <li>
 <p><strong>Veracidad</strong>: La calidad y precisión de los datos son esenciales. Los datos deben ser confiables y veraces para tomar decisiones precisas.</p>
 </li>
 <li>
 <p><strong>Valor</strong>: Finalmente, el valor se refiere a la capacidad de extraer información valiosa y conocimiento útil de los datos. Los datos deben ser relevantes y aportar valor a una organización o proyecto.</p>
 </li>
-</ol>
+</ul>
 <h3 id="las-7-vs-del-big-data">Las 7 V's del Big Data:</h3>
 <p>Además de las 5 V's mencionadas anteriormente, algunas fuentes también incluyen:</p>
-<ol>
+<ul>
 <li>
 <p><strong>Viabilidad</strong>: Se refiere a la capacidad de llevar a cabo proyectos de Big Data de manera factible desde el punto de vista técnico y económico.</p>
 </li>
 <li>
 <p><strong>Visualización</strong>: La capacidad de representar y comunicar los datos de manera efectiva a través de gráficos y herramientas visuales.</p>
 </li>
-</ol>
+</ul>
 <p>Estas V's son importantes para comprender las características esenciales de los datos masivos y cómo gestionarlos para obtener el máximo valor</p>
 <h2 id="15-infraestructura">1.5. Infraestructura</h2>
 <p>Una infraestructura para Big Data debe facilitar la recopilación, el almacenamiento y el análisis de grandes volúmenes de datos, que pueden estar en diferentes formatos y generándose en tiempo real. Para ello, se utilizan tecnologías y servicios especiales que han sido creados específicamente para dar solución al procesamiento de estos enormes conjuntos de datos.</p>
@@ -1089,12 +1103,14 @@
 <li>Bases de datos NoSQL: como Cassandra, son utilizadas para almacenar y gestionar grandes volúmenes de datos no estructurados.</li>
 </ul>
 <p>La infraestructura para procesar el Big Data debe ser capaz de manejar grandes volúmenes de datos y proporcionar herramientas para su análisis y visualización.</p>
-<h2 id="17-bibliografia">1.7. Bibliografia</h2>
-<p><a href="https://medium.com/nerd-for-tech/modern-day-big-data-architecture-c7b784881af7">Arquitectura Big Data</a>
-<a href="https://www.masterbigdataucm.com/que-es-big-data/">Qué es Big Data</a>
-<a href="https://blog.mdcloud.es/que-es-big-data-y-para-que-sirve/">Qué es Big Data y para que sirve</a>
-<a href="https://ideasparatuempresa.vodafone.es/big-data-desde-los-inicios-hoy/">Historia de Big Data</a>
-<a href="https://www.paradigmadigital.com/techbiz/de-lambda-a-kappa-evolucion-de-las-arquitecturas-big-data/">Arqruitecturas Lamda y Kappa</a> </p>
+<h2 id="16-bibliografia">1.6. Bibliografia</h2>
+<ul>
+<li><a href="https://medium.com/nerd-for-tech/modern-day-big-data-architecture-c7b784881af7">Arquitectura Big Data</a></li>
+<li><a href="https://www.masterbigdataucm.com/que-es-big-data/">Qué es Big Data</a></li>
+<li><a href="https://blog.mdcloud.es/que-es-big-data-y-para-que-sirve/">Qué es Big Data y para que sirve</a></li>
+<li><a href="https://ideasparatuempresa.vodafone.es/big-data-desde-los-inicios-hoy/">Historia de Big Data</a></li>
+<li><a href="https://www.paradigmadigital.com/techbiz/de-lambda-a-kappa-evolucion-de-las-arquitecturas-big-data/">Arqruitecturas Lamda y Kappa</a> </li>
+</ul>
 
 
 
