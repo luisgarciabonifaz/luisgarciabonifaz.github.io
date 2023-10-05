@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -620,38 +620,31 @@
 <p>En sistemas Linux y macOS, puedes instalar AWS CLI utilizando el administrador de paquetes <code>pip</code> de Python o a través de la instalación de paquetes de tu sistema.</p>
 <h4 id="instalacion-con-pip">Instalación con <code>pip</code></h4>
 <p>Ejecuta el siguiente comando en tu terminal:</p>
-<div class="codehilite"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>awscli
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>awscli
 </code></pre></div>
-
 <h4 id="instalacion-en-macos-con-homebrew">Instalación en macOS con Homebrew</h4>
 <p>Si utilizas Homebrew en macOS, puedes instalar AWS CLI con el siguiente comando:</p>
-<div class="codehilite"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>awscli
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>awscli
 </code></pre></div>
-
 <h2 id="configuracion-de-aws-cli">Configuración de AWS CLI</h2>
 <p>Después de instalar AWS CLI, debes configurar las credenciales de acceso para que puedas autenticarte en AWS. Puedes hacerlo utilizando el comando <code>aws configure</code> y proporcionando tus credenciales de AWS, que incluyen la clave de acceso y la clave secreta.</p>
-<div class="codehilite"><pre><span></span><code>aws<span class="w"> </span>configure
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>configure
 </code></pre></div>
-
 <p>También puedes configurar la región predeterminada y el formato de salida preferido (por ejemplo, JSON) durante este proceso.</p>
 <h2 id="uso-basico-de-aws-cli">Uso Básico de AWS CLI</h2>
 <p>AWS CLI permite ejecutar comandos para interactuar con servicios de AWS. Aquí tienes algunos ejemplos de comandos básicos:</p>
 <h3 id="listar-instancias-ec2">Listar Instancias EC2</h3>
-<div class="codehilite"><pre><span></span><code>aws<span class="w"> </span>ec2<span class="w"> </span>describe-instances
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ec2<span class="w"> </span>describe-instances
 </code></pre></div>
-
 <h3 id="crear-un-bucket-de-amazon-s3">Crear un Bucket de Amazon S3</h3>
-<div class="codehilite"><pre><span></span><code>aws<span class="w"> </span>s3<span class="w"> </span>mb<span class="w"> </span>s3://mi-bucket
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>s3<span class="w"> </span>mb<span class="w"> </span>s3://mi-bucket
 </code></pre></div>
-
 <h3 id="subir-un-archivo-a-amazon-s3">Subir un Archivo a Amazon S3</h3>
-<div class="codehilite"><pre><span></span><code>aws<span class="w"> </span>s3<span class="w"> </span>cp<span class="w"> </span>mi-archivo.txt<span class="w"> </span>s3://mi-bucket/
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>s3<span class="w"> </span>cp<span class="w"> </span>mi-archivo.txt<span class="w"> </span>s3://mi-bucket/
 </code></pre></div>
-
 <h3 id="crear-una-instancia-ec2">Crear una Instancia EC2</h3>
-<div class="codehilite"><pre><span></span><code>aws<span class="w"> </span>ec2<span class="w"> </span>run-instances<span class="w"> </span>--image-id<span class="w"> </span>ami-XXXXXXXXXXXXXXXXX<span class="w"> </span>--instance-type<span class="w"> </span>t2.micro<span class="w"> </span>--key-name<span class="w"> </span>mi-keypair
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ec2<span class="w"> </span>run-instances<span class="w"> </span>--image-id<span class="w"> </span>ami-XXXXXXXXXXXXXXXXX<span class="w"> </span>--instance-type<span class="w"> </span>t2.micro<span class="w"> </span>--key-name<span class="w"> </span>mi-keypair
 </code></pre></div>
-
 <h2 id="scripts-y-automatizacion">Scripts y Automatización</h2>
 <p>AWS CLI es una herramienta poderosa para la automatización de tareas en AWS. Puedes escribir scripts y secuencias de comandos para realizar operaciones complejas y administrar recursos de manera eficiente.</p>
 <h2 id="ayuda-y-documentacion">Ayuda y Documentación</h2>

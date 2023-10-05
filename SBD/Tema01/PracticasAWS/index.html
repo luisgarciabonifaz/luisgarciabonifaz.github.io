@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -695,7 +695,7 @@
       - Seleccionar Crawler
       - Evento: Éxito</p>
 <p>Ejemplo de código:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
@@ -715,7 +715,6 @@
 
 <span class="n">df</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;json&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">&quot;overwrite&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;s3://lagodatos/salida/&quot;</span><span class="p">)</span>
 </code></pre></div>
-
 <h2 id="124-streaming-con-kinesis-data-streams-y-kinesis-data-firehose">12.4. Streaming con Kinesis Data Streams y Kinesis Data Firehose</h2>
 <p>Servicios AWS:
 - AWS S3
@@ -734,7 +733,7 @@
 - Crear el delivery stream (Kinesis Firehose)
 - Configurar el entorno de desarrollo
 - Crear el código Python que hace la función de productor</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">boto3</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">boto3</span>
 <span class="kn">import</span> <span class="nn">random</span>
 <span class="kn">import</span> <span class="nn">time</span>
 
@@ -753,7 +752,6 @@
 
 <span class="mi">5</span><span class="p">)</span>
 </code></pre></div>
-
 <h2 id="125-streaming-con-kinesis-data-firehose-y-kinesis-data-analytics">12.5. Streaming con Kinesis Data Firehose y Kinesis Data Analytics</h2>
 <p>Servicios AWS:
 - AWS S3
@@ -782,7 +780,7 @@
 </ul>
 <p>Ayuda: <a href="https://www.youtube.com/watch?v=_Bof0Ry_Zpc">Enlace a video de ayuda</a></p>
 <p>Ejemplos de Análisis de Flujo Continuo:</p>
-<div class="codehilite"><pre><span></span><code><span class="c1">-- Continuous Filter</span>
+<div class="highlight"><pre><span></span><code><span class="c1">-- Continuous Filter</span>
 <span class="c1">-- Performs a continuous filter based on a WHERE condition.</span>
 <span class="c1">-- .----------.   .----------.   .----------.</span>
 <span class="c1">-- |  SOURCE  |   |  INSERT  |   |  DESTIN. |</span>
@@ -802,8 +800,7 @@
 <span class="c1">-- SIMILAR TO compares string to a regex, may use ESCAPE</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">sector</span><span class="w"> </span><span class="k">SIMILAR</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;%TECH%&#39;</span><span class="p">;</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="n">STREAM</span><span class="w"> </span><span class="ss">&quot;DESTINATION_SQL_STREAM&quot;</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;eventType&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span><span class="w"> </span><span class="ss">&quot;ses_timestamp&quot;</span><span class="w"> </span><span class="k">timestamp</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;messageId&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span><span class="w"> </span><span class="ss">&quot;ses_to&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span><span class="w"> </span><span class="ss">&quot;ses_configuration_set&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="n">STREAM</span><span class="w"> </span><span class="ss">&quot;DESTINATION_SQL_STREAM&quot;</span><span class="w"> </span><span class="p">(</span><span class="ss">&quot;eventType&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span><span class="w"> </span><span class="ss">&quot;ses_timestamp&quot;</span><span class="w"> </span><span class="k">timestamp</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;messageId&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span><span class="w"> </span><span class="ss">&quot;ses_to&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span><span class="w"> </span><span class="ss">&quot;ses_configuration_set&quot;</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">32</span><span class="p">));</span>
 
 <span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="n">PUMP</span><span class="w"> </span><span class="ss">&quot;STREAM_PUMP&quot;</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="ss">&quot;DESTINATION_SQL_STREAM&quot;</span>
 
@@ -811,7 +808,6 @@
 <span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;SOURCE_SQL_STREAM_001&quot;</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="ss">&quot;eventType&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Send&#39;</span>
 </code></pre></div>
-
 <h2 id="126-visualizacion-de-datos-con-quicksight">12.6. Visualización de datos con QuickSight</h2>
 <p>Para todos los ejercicios prácticos, utilizaremos el archivo de datos SaaS-Sales.csv proporcionado <a href="https://ee-assets-prod-us-east-1.s3.amazonaws.com/modules/337d5d05acc64a6fa37bcba6b921071c/v1/SaaS-Sales.csv">aquí</a>.</p>
 <p>Este conjunto de datos representa datos de ventas de una empresa ficticia de SaaS (Software como Servicio) que vende software de ventas y marketing a otras empresas (B2B). Cada fila de datos es una transacción/pedido.</p>

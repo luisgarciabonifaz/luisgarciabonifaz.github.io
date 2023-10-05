@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -890,7 +890,7 @@
 <p>Este es un ejemplo simplificado de una ETL en AWS utilizando AWS Glue y Amazon S3. Puedes adaptar este escenario básico según tus necesidades específicas. Para ejemplos más detallados y casos de uso más complejos, te recomiendo consultar la documentación oficial de AWS, tutoriales en línea y recursos de la comunidad, donde encontrarás ejemplos prácticos adicionales y proyectos de ETL más avanzados. También puedes explorar ejemplos de código y scripts de ETL en repositorios de GitHub y foros de discusión relacionados con AWS.</p>
 <p>Por supuesto, aquí te proporciono un conjunto de datos de ejemplo en formato CSV que podrías utilizar en el escenario de ETL en AWS que describí anteriormente. Estos datos representan información ficticia de ventas:</p>
 <p><strong>datos_brutos/ejemplo_ventas.csv:</strong></p>
-<div class="codehilite"><pre><span></span><code>fecha,producto,cantidad,precio
+<div class="highlight"><pre><span></span><code>fecha,producto,cantidad,precio
 2023-01-01,Producto A,10,100.00
 2023-01-01,Producto B,5,75.00
 2023-01-02,Producto A,8,100.00
@@ -902,7 +902,6 @@
 2023-01-05,Producto B,7,75.00
 2023-01-05,Producto C,4,50.00
 </code></pre></div>
-
 <p>Estos datos representan ventas diarias de tres productos diferentes durante cinco días. Cada fila contiene la fecha de la venta, el producto vendido, la cantidad y el precio unitario.</p>
 <p>Puedes cargar estos datos en tu bucket de Amazon S3 en la carpeta <code>datos_brutos</code> y utilizar AWS Glue para realizar la transformación y guardar los datos transformados en la carpeta <code>datos_transformados</code> en formato Parquet.</p>
 <p>Recuerda que estos datos son solo un ejemplo y puedes adaptarlos según tus necesidades y el escenario de tu proyecto de ETL en AWS.</p>
