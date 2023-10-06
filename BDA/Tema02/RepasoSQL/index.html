@@ -275,6 +275,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema03/GestioRecursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Gestio de Recursos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -642,6 +662,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#214-datos-para-practicar" class="md-nav__link">
+    2.14. Datos para practicar
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -856,6 +883,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#214-datos-para-practicar" class="md-nav__link">
+    2.14. Datos para practicar
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -891,21 +925,10 @@
 <span class="w">                  </span><span class="n">birth</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                  </span><span class="n">death</span><span class="w"> </span><span class="nb">DATE</span><span class="p">);</span><span class="o">&lt;</span><span class="n">details</span><span class="o">&gt;</span>
 </code></pre></div></p>
-<details>
-<summary>Esta es la solución:</summary>
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">menagerie</span><span class="p">;</span>
-<span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">pet</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="w"> </span>
-<span class="w">                  </span><span class="k">owner</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="w"> </span>
-<span class="w">                  </span><span class="n">species</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">),</span><span class="w"> </span>
-<span class="w">                  </span><span class="n">sex</span><span class="w"> </span><span class="nb">CHAR</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span>
-<span class="w">                  </span><span class="n">birth</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span><span class="w"> </span>
-<span class="w">                  </span><span class="n">death</span><span class="w"> </span><span class="nb">DATE</span><span class="p">);</span>
-</code></pre></div>
-</details>
-
 <h3 id="222-alter">2.2.2. ALTER</h3>
 <p>Este comando permite modificar la estructura de un objeto. Se pueden agregar/quitar campos a una tabla, modificar el tipo de un campo, agregar/quitar índices a una tabla, modificar un trigger, etc.
-<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="s1">&#39;NOMBRE_TABLA&#39;</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">NUEVO_CAMPO</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="s1">&#39;NOMBRE_TABLA&#39;</span><span class="w"> </span><span class="k">ADD</span><span class="w"> </span><span class="n">nuevo_campo</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="s1">&#39;NOMBRE_TABLA&#39;</span><span class="w"> </span><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">nombre_antiguo</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">nombre_nuevo</span><span class="p">;</span>
 </code></pre></div></p>
 <h3 id="223-drop">2.2.3 DROP</h3>
 <p>Este comando elimina un objeto de la base de datos. Se puede combinar con la sentencia ALTER.
@@ -944,11 +967,11 @@ Ejemplo:
 <h2 id="24-clausulas">2.4. Cláusulas</h2>
 <p>Las cláusulas son condiciones de modificación utilizadas para definir los datos que desea seleccionar o manipular.</p>
 <ul>
-<li>FROM: Utilizada para especificar la tabla de la cual se van a seleccionar los registros.</li>
-<li>GROUP BY: Utilizada para separar los registros seleccionados en grupos específicos.</li>
-<li>HAVING: Utilizada para expresar condición que debe satisfacer cada grupo.</li>
-<li>ORDER BY: Utilizada para ordenar los registros seleccionados de acuerdo con un orden específico.</li>
-<li>WHERE: Utilizada para determinar los registros seleccionados en la cláusula FROM.</li>
+<li><strong>FROM</strong>: Utilizada para especificar la tabla de la cual se van a seleccionar los registros.</li>
+<li><strong>GROUP BY</strong>: Utilizada para separar los registros seleccionados en grupos específicos.</li>
+<li><strong>HAVING</strong>: Utilizada para expresar condición que debe satisfacer cada grupo.</li>
+<li><strong>ORDER BY</strong>: Utilizada para ordenar los registros seleccionados de acuerdo con un orden específico.</li>
+<li><strong>WHERE</strong>: Utilizada para determinar los registros seleccionados en la cláusula FROM.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">campos</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">tabla</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">campo</span><span class="o">=</span><span class="n">X</span>
@@ -975,56 +998,95 @@ Funciones:
 </code></pre></div></p>
 <h3 id="271-consultas-de-seleccion-basicas">2.7.1. Consultas de selección básicas</h3>
 <p>Ordenar los registros con ORDER BY:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">CodigoPostal</span><span class="p">,</span><span class="w"> </span><span class="n">Nombre</span><span class="p">,</span><span class="w"> </span><span class="n">Telefono</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Clientes</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CodigoPostal</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">Nombre</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">CodigoPostal</span><span class="p">,</span><span class="w"> </span><span class="n">Nombre</span><span class="p">,</span><span class="w"> </span><span class="n">Telefono</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Clientes</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">CodigoPostal</span><span class="w"> </span><span class="k">DESC</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">Nombre</span><span class="w"> </span><span class="k">ASC</span><span class="p">;</span>
 </code></pre></div></p>
 <h3 id="272-consultas-con-predicado">2.7.2. Consultas con predicado</h3>
-<p>TOP: Devuelve un cierto número de registros que entran en un rango especificado por una cláusula ORDER BY.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="n">Nombre</span><span class="p">,</span><span class="w"> </span><span class="n">Apellido</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Estudiantes</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Nota</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
+<p><strong>TOP</strong>: Devuelve un cierto número de registros que entran en un rango especificado por una cláusula ORDER BY.
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="n">Nombre</span><span class="p">,</span><span class="w"> </span><span class="n">Apellido</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Estudiantes</span><span class="w"> </span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Nota</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div></p>
 <ul>
 <li>El Motor de base de datos selecciona todos los registros que cumplen las condiciones de la instrucción SQL:
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="p">;</span>
 </code></pre></div></li>
 </ul>
-<p>DISTINCT: Omite los registros que contienen datos duplicados en los campos seleccionados. Para que los valores de cada campo listado en la instrucción SELECT se incluyan en la consulta deben ser únicos.
+<p><strong>DISTINCT</strong>: Omite los registros que contienen datos duplicados en los campos seleccionados. Para que los valores de cada campo listado en la instrucción SELECT se incluyan en la consulta deben ser únicos.
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Apellido</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="p">;</span>
 </code></pre></div></p>
 <h2 id="28-criterios-de-seleccion">2.8. Criterios de selección</h2>
-<p>Operadores lógicos:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">Edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">Sueldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">Estado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Soltero&#39;</span><span class="p">;</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">Sueldo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Sueldo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="n">Provincia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Madrid&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Estado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Casado&#39;</span><span class="p">);</span>
+<p><strong>Operadores lógicos</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">Edad</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Edad</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50</span><span class="p">)</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="n">Sueldo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">Estado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Soltero&#39;</span><span class="p">;</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="p">(</span><span class="n">Sueldo</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Sueldo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">500</span><span class="p">)</span><span class="w"> </span>
+<span class="w">      </span><span class="k">OR</span><span class="w"> </span><span class="p">(</span><span class="n">Provincia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Madrid&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">Estado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Casado&#39;</span><span class="p">);</span>
 </code></pre></div></p>
-<p>Operador BETWEEN:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">CodPostal</span><span class="w"> </span><span class="k">Between</span><span class="w"> </span><span class="mi">28000</span><span class="w"> </span><span class="k">And</span><span class="w"> </span><span class="mi">28999</span><span class="p">;</span>
+<p><strong>Operador BETWEEN</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">CodPostal</span><span class="w"> </span><span class="k">Between</span><span class="w"> </span><span class="mi">28000</span><span class="w"> </span><span class="k">And</span><span class="w"> </span><span class="mi">28999</span><span class="p">;</span>
 </code></pre></div></p>
-<p>Operador LIKE: Se utiliza para comparar una expresión de cadena con una expresión SQL.
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">personas</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;AN%&#39;</span>
+<p><strong>Operador LIKE</strong>: Se utiliza para comparar una expresión de cadena con una expresión SQL.
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">personas</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;AN%&#39;</span>
 </code></pre></div>
-Operador IN:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Provincia</span><span class="w"> </span><span class="k">In</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Madrid&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Barcelona&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sevilla&#39;</span><span class="p">);</span>
+<strong>Operador IN</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Provincia</span><span class="w"> </span><span class="k">In</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;Madrid&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Barcelona&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Sevilla&#39;</span><span class="p">);</span>
 </code></pre></div></p>
 <h2 id="29-agregacion">2.9. Agregación</h2>
-<p>AVG:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Avg</span><span class="p">(</span><span class="n">Gastos</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Promedio</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Gastos</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<p><strong>AVG</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Avg</span><span class="p">(</span><span class="n">Gastos</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Promedio</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Gastos</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
 </code></pre></div>
-MAX, MIN:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Min</span><span class="p">(</span><span class="n">Gastos</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ElMin</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Costa Rica&#39;</span><span class="p">;</span>
-<span class="k">SELECT</span><span class="w"> </span><span class="k">Max</span><span class="p">(</span><span class="n">Gastos</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ElMax</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Costa Rica&#39;</span><span class="p">;</span>
+<strong>MAX, MIN</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Min</span><span class="p">(</span><span class="n">Gastos</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ElMin</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Costa Rica&#39;</span><span class="p">;</span>
+
+<span class="k">SELECT</span><span class="w"> </span><span class="k">Max</span><span class="p">(</span><span class="n">Gastos</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">ElMax</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Pais</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Costa Rica&#39;</span><span class="p">;</span>
 </code></pre></div>
-SUM:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">PrecioUnidad</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Cantidad</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Total</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">DetallePedido</span><span class="p">;</span>
+<strong>SUM</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">PrecioUnidad</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Cantidad</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">Total</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">DetallePedido</span><span class="p">;</span>
 </code></pre></div></p>
-<p>GROUP BY:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Id_Familia</span><span class="p">,</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">Stock</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Productos</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Id_Familia</span><span class="p">;</span>
+<p><strong>GROUP BY</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Id_Familia</span><span class="p">,</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">Stock</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Productos</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Id_Familia</span><span class="p">;</span>
 </code></pre></div>
 HAVING:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Id_Familia</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">Stock</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Productos</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Id_Familia</span><span class="w"> </span><span class="k">HAVING</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">Stock</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">NombreProducto</span><span class="w"> </span><span class="k">Like</span><span class="w"> </span><span class="s1">&#39;BOS%&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Id_Familia</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">Stock</span><span class="p">)</span><span class="w"> </span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Productos</span><span class="w"> </span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Id_Familia</span><span class="w"> </span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">Stock</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">NombreProducto</span><span class="w"> </span><span class="k">Like</span><span class="w"> </span><span class="s1">&#39;BOS%&#39;</span><span class="p">;</span>
 </code></pre></div></p>
 <h2 id="210-claves">2.10. Claves</h2>
 <p>Claves Primarias y Ajenas:
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">OrderID</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">OrderNumber</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">PersonID</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">OrderID</span><span class="p">),</span><span class="w"> </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">PersonID</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Persons</span><span class="p">(</span><span class="n">PersonID</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Orders</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">OrderID</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                      </span><span class="n">OrderNumber</span><span class="w"> </span><span class="nb">int</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                      </span><span class="n">PersonID</span><span class="w"> </span><span class="nb">int</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                      </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">OrderID</span><span class="p">),</span><span class="w"> </span>
+<span class="w">                      </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">PersonID</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Persons</span><span class="p">(</span><span class="n">PersonID</span><span class="p">)</span>
+<span class="w">                    </span><span class="p">)</span>
 </code></pre></div></p>
 <h2 id="211-consultas-multitabla">2.11. Consultas multitabla</h2>
 <p>Trabajaremos con estas tablas:</p>
@@ -1101,35 +1163,125 @@ HAVING:
 <p>La sentencia SQL JOIN se utiliza para relacionar varias tablas. Nos permitirá obtener un listado de los campos que tienen coincidencias en ambas tablas.
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">telefono</span><span class="p">,</span><span class="w"> </span><span class="n">accion</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Clientes</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Acciones</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Clientes</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="n">Acciones</span><span class="p">.</span><span class="n">cid</span><span class="p">;</span>
-</code></pre></div>
-| nombre | telefono | action | cantidad | 
-| -- | -- |-- | -- |
-| maria | 222 | REDHAT | 10 |
-| jesus | 4444 | NOVEL | 20 |
-| jesus | 4444 | SUN | 30 |</p>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>nombre</th>
+<th>telefono</th>
+<th>action</th>
+<th>cantidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>maria</td>
+<td>222</td>
+<td>REDHAT</td>
+<td>10</td>
+</tr>
+<tr>
+<td>jesus</td>
+<td>4444</td>
+<td>NOVEL</td>
+<td>20</td>
+</tr>
+<tr>
+<td>jesus</td>
+<td>4444</td>
+<td>SUN</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
 <p><strong>LEFT JOIN:</strong> </p>
 <p>La sentencia LEFT JOIN nos dará el resultado anterior más los campos de la tabla de la izquierda del JOIN que no tienen coincidencias en la tabla de la derecha.
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">telefono</span><span class="p">,</span><span class="w"> </span><span class="n">accion</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Clientes</span><span class="w"> </span><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Acciones</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Clientes</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="n">Acciones</span><span class="p">.</span><span class="n">cid</span><span class="p">;</span>
-</code></pre></div>
-| nombre | telefono | action | cantidad | 
-| -- | -- |-- | -- |
-| jose | 111 | NULL | NULL |
-| maria | 222 | REDHAT | 10 |
-| manuel | 333 | NULL | NULL |
-| jesus | 4444 | NOVEL | 20 |
-| jesus | 4444 | SUN | 30 |</p>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>nombre</th>
+<th>telefono</th>
+<th>action</th>
+<th>cantidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jose</td>
+<td>111</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>maria</td>
+<td>222</td>
+<td>REDHAT</td>
+<td>10</td>
+</tr>
+<tr>
+<td>manuel</td>
+<td>333</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>jesus</td>
+<td>4444</td>
+<td>NOVEL</td>
+<td>20</td>
+</tr>
+<tr>
+<td>jesus</td>
+<td>4444</td>
+<td>SUN</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
 <p><strong>RIGHT JOIN:</strong> </p>
 <p>Idéntico funcionamiento que en el caso anterior pero con la tabla que se incluye en la consulta a la derecha del JOIN.
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">telefono</span><span class="p">,</span><span class="w"> </span><span class="n">accion</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Clientes</span><span class="w"> </span><span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Acciones</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Clientes</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="n">Acciones</span><span class="p">.</span><span class="n">cid</span><span class="p">;</span>
-</code></pre></div>
-| nombre | telefono | action | cantidad | 
-| -- | -- |-- | -- |
-| maria | 222 | REDHAT | 10 |
-| jesus | 4444 | NOVEL | 20 |
-| jesus | 4444 | SUN | 30 |
-| NULL | NULL | FORD | 100 |</p>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>nombre</th>
+<th>telefono</th>
+<th>action</th>
+<th>cantidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>maria</td>
+<td>222</td>
+<td>REDHAT</td>
+<td>10</td>
+</tr>
+<tr>
+<td>jesus</td>
+<td>4444</td>
+<td>NOVEL</td>
+<td>20</td>
+</tr>
+<tr>
+<td>jesus</td>
+<td>4444</td>
+<td>SUN</td>
+<td>30</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>FORD</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
 <p><strong>UNION y UNION ALL:</strong> </p>
 <p>Podemos combinar el resultado de varias sentencias con UNION o UNION ALL. UNION no nos muestra los resultados duplicados, pero UNION ALL si los muestra.
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">telefono</span><span class="p">,</span><span class="w"> </span><span class="n">accion</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span>
@@ -1139,12 +1291,37 @@ HAVING:
 <span class="k">SELECT</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">telefono</span><span class="p">,</span><span class="w"> </span><span class="n">accion</span><span class="p">,</span><span class="w"> </span><span class="n">cantidad</span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Clientes</span><span class="w"> </span><span class="k">RIGHT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Acciones</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Clientes</span><span class="p">.</span><span class="n">cid</span><span class="o">=</span><span class="n">Acciones</span><span class="p">.</span><span class="n">cid</span><span class="w"> </span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span><span class="mi">1</span>
-</code></pre></div>
-| nombre | telefono | action | cantidad | 
-| -- | -- |-- | -- |
-| jose | 111 | NULL | NULL |
-| manuel | 333 | NULL | NULL |
-| NULL | NULL | FORD | 100 |</p>
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>nombre</th>
+<th>telefono</th>
+<th>action</th>
+<th>cantidad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jose</td>
+<td>111</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>manuel</td>
+<td>333</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>FORD</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
 <p><strong>RESUMEN</strong></p>
 <p><img alt="Resumen Join" src="../sqljoin.jpg" style="width:80%;margin:auto;display:block" /></p>
 <h2 id="212-vistas">2.12. Vistas</h2>
@@ -1166,6 +1343,37 @@ HAVING:
 <p>Finalmente, la función más importante que usará en SQL es la función if (). Le permite definir la condicionalidad if que se encuentra en cualquier lenguaje de programación.
 Tiene una sintaxis simple:
 <div class="highlight"><pre><span></span><code><span class="k">IF</span><span class="p">(</span><span class="n">expresión</span><span class="p">,</span><span class="w"> </span><span class="n">valor_si_verdadero</span><span class="p">,</span><span class="w"> </span><span class="n">valor_si_falso</span><span class="p">)</span>
+</code></pre></div></p>
+<h2 id="214-datos-para-practicar">2.14. Datos para practicar</h2>
+<p>Aqui tienes los comandos SQL para crear unas tablas con datos para pruebas</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Alumnos</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">AlumnoID</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Edad</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<span class="w">    </span><span class="n">ProfesorID</span><span class="w"> </span><span class="nb">INT</span>
+<span class="p">);</span>
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Profesores</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">ProfesorID</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Materia</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Alumnos</span><span class="w"> </span><span class="p">(</span><span class="n">AlumnoID</span><span class="p">,</span><span class="w"> </span><span class="n">Nombre</span><span class="p">,</span><span class="w"> </span><span class="n">Edad</span><span class="p">,</span><span class="w"> </span><span class="n">ProfesorID</span><span class="p">)</span>
+<span class="k">VALUES</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Juan Pérez&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;María López&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Pedro Pérez&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">101</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Luis Garcia&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Maria Martinez&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w"> </span><span class="mi">103</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Eva Gonzaleza&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">104</span><span class="p">);</span>
+
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Profesores</span><span class="w"> </span><span class="p">(</span><span class="n">ProfesorID</span><span class="p">,</span><span class="w"> </span><span class="n">Nombre</span><span class="p">,</span><span class="w"> </span><span class="n">Materia</span><span class="p">)</span>
+<span class="k">VALUES</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">101</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Profesor Smith&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Matemáticas&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Profesora Johnson&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Historia&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">103</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Profesor Martinez&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Lengua&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">(</span><span class="mi">104</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Profesora Eva&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Ingles&#39;</span><span class="p">);</span>
 </code></pre></div></p>
 
 
