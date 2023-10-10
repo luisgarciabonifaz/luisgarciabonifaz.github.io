@@ -346,27 +346,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#312-estats-dun-proces" class="md-nav__link">
-    3.1.2. Estats d'un Procés
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#313-execucio-dun-proces" class="md-nav__link">
-    3.1.3. Execució d'un procés
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#314-estats-dun-proces" class="md-nav__link">
-    3.1.4 Estats d'un procés
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#315-canvi-de-context" class="md-nav__link">
     3.1.5 Canvi de context
   </a>
@@ -749,27 +728,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#312-estats-dun-proces" class="md-nav__link">
-    3.1.2. Estats d'un Procés
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#313-execucio-dun-proces" class="md-nav__link">
-    3.1.3. Execució d'un procés
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#314-estats-dun-proces" class="md-nav__link">
-    3.1.4 Estats d'un procés
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#315-canvi-de-context" class="md-nav__link">
     3.1.5 Canvi de context
   </a>
@@ -955,16 +913,15 @@
 <li>Gestió d'Entrada/Sortida</li>
 <li>Gestió d'Arxius</li>
 </ul>
-<p>Començarem amb la gestió del processador.</p>
 <h2 id="31-gestio-del-processador">3.1. Gestió del Processador</h2>
-<p>L'element del sistema operatiu que es fa càrrec de la gestió del processador és el planificador.</p>
-<p>Funcions:</p>
+<p>L'element del sistema operatiu que es fa càrrec de la gestió del processador és el planificador i les seues funcions son:</p>
 <ul>
 <li>Fer el canvi d'estat dels processos.</li>
 <li>Gestionar la cua d'espera de processos.</li>
 <li>Aplicar els algoritmes de planificació.</li>
 <li>Gestionar l'intercanvi de dades entre memòria i disc.</li>
 </ul>
+<p>Comencem amb el concepte de proces.</p>
 <h3 id="311-proces">3.1.1. Proces</h3>
 <p>La idea fonamental d'un sistema informàtic consisteix en un dispositiu que és capaç d'executar ordres agrupades en forma de programes. Quan un programa no està en execució, no serà més que un fitxer de dades en un mitjà d'emmagatzematge.</p>
 <p>En aquest sentit, podem entendre el concepte de procés com un programa que s'està executant. No obstant això, una definició més acadèmica seria aquesta:</p>
@@ -978,31 +935,37 @@
 <li>La seva prioritat respecte als altres processos del sistema.</li>
 <li>La posició de memòria on es troba, entre altres.</li>
 </ul>
-<h3 id="312-estats-dun-proces">3.1.2. Estats d'un Procés</h3>
-<p>Els sistemes operatius intenten resoldre de la millor manera possible les següents situacions sobre els sobre els processos:</p>
+<p>Els sistemes operatius intenten resoldre de la millor manera possible les següents situacions sobre els processos:</p>
 <ul>
 <li>Oferir als processos els recursos que necessiten.</li>
 <li>Repartir el temps d'execució del processador entre diversos processos, de manera que estiga ocupat el major temps possible i permetent que tots ells tinguen un temps de resposta adequat.</li>
-<li>Facilitar la creació de processos per part de l'usuari i d'altres processos, i la comunicació entre diferents processos.</li>
+<li>Facilitar la creació de processos per part de l'usuari i d'altres processos</li>
+<li>Facilitar la comunicació entre diferents processos.</li>
 </ul>
-<h3 id="313-execucio-dun-proces">3.1.3. Execució d'un procés</h3>
-<p>Perquè un procés s'execute, la seua seqüència d'instruccions ha de trobar-se en la memòria principal.
-A més, en tots els sistemes operatius moderns, es va intercalant l'execució de diferents processos, de manera que s'alternen l'ús del processador.</p>
+<p><strong>3.1.3. Execució d'un procés</strong></p>
+<div class="admonition info">
+<p class="admonition-title">Important:</p>
+<p>Perquè un procés s'execute, la seua seqüència d'instruccions ha de trobar-se en la memòria principal.</p>
+</div>
+<p>A més, en tots els sistemes operatius moderns, es va intercalant l'execució de diferents processos, de manera que s'alternen l'ús del processador.</p>
 <ul>
 <li>Nomenem multitasca o multiprogramació a la capacitat que tenen els sistemes operatius actuals d'alternar l'ús del processador entre diferents processos. Donada la velocitat a la qual funcionen els processadors, l'usuari té la sensació que els processos s'executen al mateix temps.</li>
 <li>Quan en un sistema informàtic disposem de diversos processadors, poden executar-se diversos processos al mateix temps. A aquesta tècnica la diem multiprocés o multiprocessament. Quan tots els processadors actuen en igualtat de condicions, parlem de multiprocés simètric o SMP (Symmetric Multi-Processing). Quan el sistema disposa de processadors amb funcions especialitzades, parlem de multiprocés asimètric o AMP (Asymmetric Multi-*Processing).</li>
 </ul>
-<h3 id="314-estats-dun-proces">3.1.4 Estats d'un procés</h3>
+<p><strong>3.1.4 Estats d'un procés</strong></p>
 <ul>
 <li>En execució: En aquest estat es trobarà el procés que ocupa l'atenció del processador en aqueix moment.</li>
 <li>Preparat: En aquest estat es troben els processos que no s'estan executant, però que podrien fer-ho en qualsevol moment.</li>
 <li>Bloquejat: En aquest estat estaran els processos que han sol·licitat algun servei del sistema operatiu i estan esperant una resposta.</li>
 </ul>
+<p><img alt="Estats d'un proces" src="../EstadosProceso.png" style="width:70%;margin:auto;display:block" /></p>
 <p>El processador executa un codi que pertany a un mòdul del sistema operatiu, anomenat Distribuïdor (Dispatcher), cada vegada que un procés haja consumit el seu temps o haja sol·licitat algun servei pel qual haja d'esperar.</p>
 <p>Així s'evita que un procés s'apropie del processador de manera indefinida.</p>
 <p>Cada vegada que es crea un nou procés, aquest és situat en estat de Preparat.</p>
 <p>Quan el procés que s'està executant és interromput, el Distribuïdor tria un nou procés entre els quals es troben en estat Preparat. L'estat del procés triat passa a ser En Execució mentre que el procés que abandona l'execució passarà a estat Preparat (si ha consumit el seu temps) o Bloquejat (si ha realitzat una petició al sistema).</p>
+<p><img alt="Canvis d'estat d'un proces" src="../CambiosEstado.png" style="width:70%;margin:auto;display:block" /></p>
 <p>Els processos que es troben en estat Preparat esperen el seu torn en una cua.</p>
+<p><img alt="Cua de procesos" src="../ColaProcesos.png" style="width:70%;margin:auto;display:block" /></p>
 <h3 id="315-canvi-de-context">3.1.5 Canvi de context</h3>
 <p>Quan s'executa el mòdul del kernel que s'encarrega de parar l'execució d'un procés i fer els canvis necessaris perquè s'execute un procés diferent, es produeix un canvi de context, amb aquestes accions:</p>
 <ul>
@@ -1034,15 +997,20 @@ procés.</li>
 Una dels seues avantatges principals consisteix en el fet que és un algorisme molt senzill d'implementar i també és fàcilment predictible.
 Entre els seus principals inconvenients podem esmentar que els processos llargs poden fer esperar molt als processos curts FCFS (First Come First Served)
 Exemple pràctic en el qual disposem de cinc processos que s'incorporen al sistema en moments successius i que tenen diferents temps de duració</p>
+<p><img alt="FCFS" src="../FCFS.png" style="width:100%;margin:auto;display:block" /></p>
 <p><strong>SJF (Shortest Job First)</strong></p>
 <p>És emprat en processos per lots (sense intervenció de l'usuari) i és no apropiatiu.
 Els processos es van posant en cua segons arriben i se'ls assigna l'estat Preparat, però el Planificador tria el que té un menor temps previst d'execució.</p>
+<p><img alt="SJF" src="../SJF.png" style="width:100%;margin:auto;display:block" /></p>
 <p><strong>SRTF (Shortest Remaining Time First)</strong></p>
 <p>SRTF (Shortest Remaining Time First) és un algoritme emprat en processos per lots (sense intervenció de l'usuari) i no apropiatiu. Els processos es posen en cua segons arriben i se'ls assigna l'estat Preparat. No obstant això, el Planificador tria el procés amb el temps previst més curt d'execució.</p>
+<p><img alt="SRTF" src="../SRTF.png" style="width:100%;margin:auto;display:block" /></p>
 <p><strong>RR (Round Robin)</strong></p>
 <p>RR (Round Robin) s'utilitza en processos interactius (on intervé l'usuari) i és apropiatiu. Els processos es posen en cua segons arriben i se'ls assigna l'estat Preparat. El processador s'assigna a cada procés en ordre durant un període de temps anomenat "Quàntum", que és igual per a tots els processos.</p>
+<p><img alt="RR" src="../RR.png" style="width:100%;margin:auto;display:block" /></p>
 <p><strong>Planificació per prioritat</strong></p>
 <p>La planificació per prioritat s'emplea en processos interactius i és apropiativa. Cada procés rep un nombre enter que representa la seva prioritat, on un nombre menor indica una prioritat més alta. Si es considera no apropiativa, funciona com l'algoritme "Primer el més curt" (SJF), però considera la prioritat en lloc de la durada.</p>
+<p><img alt="Prioritat" src="../Prioridad.png" style="width:100%;margin:auto;display:block" /></p>
 <h3 id="318-comunicacio-entre-processos">3.1.8. Comunicació entre processos</h3>
 <p>Els sistemes operatius sovint executen diversos processos que han de comunicar-se per col·laborar en un objectiu comú. </p>
 <p>Això es fa mitjançant funcions anomenades IPC (Inter-Process Communication) que faciliten l'enviament de missatges entre processos i la sincronització.</p>
@@ -1070,6 +1038,7 @@ Els processos es van posant en cua segons arriben i se'ls assigna l'estat Prepar
 <p><strong>Alliberament de Memòria</strong>: Quan un procés ja no necessita memòria, aquesta es libera i es torna a posar a disposició d'altres processos.</p>
 </li>
 </ul>
+<p><img alt="Unic Proces" src="../UnicoProceso.png" style="width:40%;margin:auto;display:block" /></p>
 <h3 id="322-gestio-de-memoria-amb-particions-fixes">3.2.2. Gestió de Memòria amb Particions Fixes</h3>
 <p>En la gestió de memòria amb particions fixes, la memòria es divideix en seccions de grandària uniforme anomenades particions. Cada partició s'assigna a un procés en particular. Els aspectes clau són:</p>
 <ul>
@@ -1080,6 +1049,7 @@ Els processos es van posant en cua segons arriben i se'ls assigna l'estat Prepar
 <p><strong>Fragmentació Interna</strong>: Les particions poden tenir espai no utilitzat, el que es coneix com fragmentació interna.</p>
 </li>
 </ul>
+<p><img alt="Particions Fixes" src="../VariasParticiones.png" style="width:70%;margin:auto;display:block" /></p>
 <h3 id="323-gestio-de-memoria-amb-particions-variables">3.2.3. Gestió de Memòria amb Particions Variables</h3>
 <p>La gestió de memòria amb particions variables permet assignar memòria de manera més flexible, ja que les particions poden tenir grandàries diferents segons les necessitats dels processos. Aspectes importants:</p>
 <ul>
@@ -1090,6 +1060,7 @@ Els processos es van posant en cua segons arriben i se'ls assigna l'estat Prepar
 <p><strong>Fragmentació Externa</strong>: Tot i reduir la fragmentació interna, pot haver-hi fragmentació externa, on hi ha prou memòria total, però no es pot assignar a un procés degut a la distribució de particions.</p>
 </li>
 </ul>
+<p><img alt="Particions Variables" src="../ParticionesVariables.png" style="width:100%;margin:auto;display:block" /></p>
 <h3 id="324-memoria-virtual">3.2.4. Memòria Virtual</h3>
 <p>Tots els mètodes estudiats fins al moment suposen que un procés ha d'estar completament carregat en memòria per a poder executar-se. No obstant això, el model de Memòria virtual aplica els mecanismes d'intercanvi que ja hem esmentat perquè les parts d'un procés que no estiguen sent utilitzades en un moment concret, puguen residir en memòria secundària. D'aquesta manera, s'allibera una major quantitat de memòria principal per a albergar un nombre de processos superior.
 A més, aquest plantejament ens permetria executar processos que foren més grans que la memòria física.</p>
@@ -1100,16 +1071,21 @@ A més, aquest plantejament ens permetria executar processos que foren més gran
 <p>No obstant això, si es produeix una situació que provoque una quantitat elevada de fallades de pàgina, els accessos a disc es multiplicaran i el rendiment pot caure de manera considerable. Aquest fenomen rep el nom de hiperpaginació.</p>
 <h3 id="325-paginacio">3.2.5. Paginació</h3>
 <p>La paginació divideix la memòria en blocs de grandària fixa anomenats "pàgines". Cada procés rep pàgines a la memòria principal segons les seues necessitats. Això té avantatges, com un ús eficient de la memòria i una administració més senzilla. No obstant això, pot haver-hi fragmentació interna i requereix una taula de pàgines per fer un seguiment de les ubicacions.</p>
+<p><img alt="Paginació" src="../Paginacion1.png" style="width:50%;margin:auto;display:block" />
+<img alt="Paginació" src="../Paginacion2.png" style="width:50%;margin:auto;display:block" /></p>
 <p><strong>Aspectes dels marcs de pàgina</strong></p>
 <p>Un aspecte important és la mida dels marcs de pàgina:</p>
 <ul>
 <li>Amb marcs de pàgina petits, hi ha poca fragmentació interna i taules de pàgines grans.</li>
 <li>Amb marcs de pàgina grans, hi ha més fragmentació interna i taules de pàgines petites.</li>
 </ul>
+<p><img alt="Marcs de pàgina" src="../MarcosPagina.png" style="width:80%;margin:auto;display:block" /></p>
 <h3 id="326-segmentacio">3.2.6. Segmentació</h3>
 <p>La segmentació divideix la memòria en segments lògics de grandària variable per reflectir l'estructura lògica d'un programa. Ofereix flexibilitat, però pot causar fragmentació externa. Es necessita una taula de segments per rastrejar els segments a la memòria.</p>
 <p>Un programa es considera un conjunt d'elements lògics de mides variables.</p>
+<p><img alt="Segmentació" src="../Segmentacion.png" style="width:40%;margin:auto;display:block" /></p>
 <p>La segmentació planteja que, en compilar un programa, aquest es converteixi en un conjunt de segments als quals se'ls assignarà un identificador, un punt d'inici i una mida.</p>
+<p><img alt="Segmentació" src="../TablaSegmentos.png" style="width:100%;margin:auto;display:block" /></p>
 <h3 id="327-paginacio-segmentacio">3.2.7.  Paginació + Segmentació</h3>
 <p>Quan els segments són grans, és comú utilitzar una combinació de paginació i segmentació. La idea és dividir cada segment en pàgines de longitud fixa per a la seva ubicació a la memòria.</p>
 <h3 id="328-control-dus-de-memoria">3.2.8. Control d'ús de memòria</h3>
@@ -1118,10 +1094,12 @@ A més, aquest plantejament ens permetria executar processos que foren més gran
 Els mapes de bits divideixen la memòria en  unitats d'assignació, que poden ser des d'unes quantes paraules fins a diversos kilobytes. A cada unitat d'assignació li correspon un bit del mapa de bits. El bit és 0 si la unitat d'assignació està lliure i 1 si està ocupada (o viceversa).</p>
 <p>Un mapa de bits pro porciona una manera senzilla de portar el control de les paraules de memòria utilitzant una quantitat de memòria fixa perquè la seua grandària només depén de la grandària de la memòria i de la grandària de la unitat  d'assignació.
 El problema principal amb ell és que una vegada que s'ha decidit portar a la memòria un procés de k unitats, el gestor de memòria ha d'examinar el mapa de bits a la recerca d'una seqüència de k bits a 0 consecutius. Buscar en el mapa una seqüència d'una certa longitud és una operació lenta (perquè la seqüència en el mapa pot travessar fronteres de paraula); aquest és un argument en contra de l'ús dels mapes de bits.</p>
-<p>Les llistes enllaçades mantenen registres de blocs de memòria assignats i lliures, on cada bloc representa un procés o un espai buit entre processos.</p>
+<p><img alt="Mapes de bits" src="../MapaBits.png" style="width:100%;margin:auto;display:block" /></p>
 <p><strong>Llistes Enllaçades</strong></p>
 <p>Una altra manera de portar el control de la memòria és mantindre una llista enllaçada de blocs de memòria assignats i lliures, on cada bloc és un procés o un buit entre dos processos.</p>
 <p>La memòria es representa com una llista enllaçada. Cada node de la llista representa un bloc, especificant el tipus de bloc [buit (H) o procés (P)], la seua adreça de començament, la seua longitud i un punter al següent node</p>
+<p>Les llistes enllaçades mantenen registres de blocs de memòria assignats i lliures, on cada bloc representa un procés o un espai buit entre processos.</p>
+<p><img alt="Listes Enllaçades" src="../ListaEnlazada.png" style="width:100%;margin:auto;display:block" /></p>
 <h2 id="33-gestio-des">3.3. Gestió d'E/S</h2>
 <p>El sistema operatiu haurà de controlar els dispositius, detectar interrupcions i manejar errors. També ha de proporcionar una interfície entre els perifèrics i la resta del sistema intentant que el seu ús siga el més estàndard possible.</p>
 <p>En un sistema informàtic modern podem trobar molts dispositius d'entrada/eixida diferents. No obstant això, un dels objectius del disseny d'un sistema operatiu és que l'usuari, o el programador, els perceben d'una forma semblant, sense importar els detalls tècnics que els distingeixen ni la diferència quant a la complexitat del dispositiu.</p>
@@ -1129,11 +1107,23 @@ El problema principal amb ell és que una vegada que s'ha decidit portar a la me
 <p>Un ordinador pot utilitzar diferents tècniques per a interactuar amb els controladors d'entrada/eixida. Com ja vam fer en l'apartat anterior, nomenarem les més representatives de menor a major sofisticació:</p>
 <ul>
 <li><strong>Entrada/eixida programada</strong>: El processador executa una instrucció d'un procés que sol·licita una operació d'entrada/eixida. Es realitza el requeriment al mòdul d'entrada/eixida corresponent, i queda en espera de rebre la resposta.e/s programada</li>
-<li><strong>Entrada/eixida controlada per interrupcions</strong>: El processador executa una instrucció d'un procés que sol·licita una operació d'entrada/eixida. Llavors, el procés espera en estat Bloquejat i el processador continua amb l'execució d'altres instruccions. Quan es completa l'operació, el mòdul d'entrada/eixida genera una interrupció per al processador i aquest executa el mòdul del sistema operatiu que posa al procés en estat Llest.</li>
-<li><strong>Accés directe a memòria (o DMA, de l'anglés Direct Memory Access)</strong>: L'equip disposa d'un mòdul DMA autoritzat per a accedir directament a la memòria RAM. D'aquesta  manera, en lloc d'encarregar-se el processador de controlar cada operació individual d'entrada o eixida, es confia en el mòdul DMA perquè execute diverses operacions consecutives posant (o obtenint) la informació directament en la memòria RAM. El mòdul DMA interromp al processador només quan han acabat totes les operacions que tenia
-encarregades.</li>
+</ul>
+<p><img alt="Entrada/eixida programada" src="../ESProgramada.png" style="width:100%;margin:auto;display:block" /></p>
+<ul>
+<li>
+<p><strong>Entrada/eixida controlada per interrupcions</strong>: El processador executa una instrucció d'un procés que sol·licita una operació d'entrada/eixida. Llavors, el procés espera en estat Bloquejat i el processador continua amb l'execució d'altres instruccions. Quan es completa l'operació, el mòdul d'entrada/eixida genera una interrupció per al processador i aquest executa el mòdul del sistema operatiu que posa al procés en estat Llest.
+<img alt="Entrada/eixida controlada per interrupcions" src="../ESInterrupciones.png" style="width:100%;margin:auto;display:block" /></p>
+</li>
+<li>
+<p><strong>Accés directe a memòria (o DMA, de l'anglés Direct Memory Access)</strong>: L'equip disposa d'un mòdul DMA autoritzat per a accedir directament a la memòria RAM. D'aquesta  manera, en lloc d'encarregar-se el processador de controlar cada operació individual d'entrada o eixida, es confia en el mòdul DMA perquè execute diverses operacions consecutives posant (o obtenint) la informació directament en la memòria RAM. El mòdul DMA interromp al processador només quan han acabat totes les operacions que tenia
+encarregades.</p>
+</li>
+</ul>
+<p><img alt="Entrada/eixida directa a memòria" src="../ES_DMA.png" style="width:80%;margin:auto;display:block" /></p>
+<ul>
 <li><strong>Processadors d'entrada/eixida (o IOP)</strong>: L'equip disposa d'un processador complementari amb la capacitat d'executar les operacions d'entrada/eixida, obtenint-les directament de la memòria principal. També pot utilitzar tècniques de DMA per a llegir o escriure les dades en la memòria. D'aquesta manera, el processador principal queda alliberat d'aquesta mena d'operacions. </li>
 </ul>
+<p><img alt="Processadors d'entrada/eixida (o IOP)" src="../ESProcesadores.png" style="width:70%;margin:auto;display:block" /></p>
 <h3 id="332-emagatzament-intermedi">3.3.2. Emagatzament intermedi</h3>
 <p>Quan és necessari llegir un gran volum de dades de l'emmagatzematge secundari, el procés anirà emetent sol·licituds de blocs de manera consecutiva, que anirà processant d'un en un. Com l'emmagatzematge secundari és molt més lent, entre una lectura i una altra el procés, probablement, romandrà en estat Bloquejat. Una vegada completada la lectura, haurà d'esperar en la cua de processos en estat Llest fins que el Planificador ho trie per a la seua execució.</p>
 <p>Per a evitar aquesta situació, s'utilitza una tècnica denominada buffering, que consisteix en el fet que el sistema operatiu realitze les lectures abans que es produïsca la sol·licitud, emmagatzemant-les en una àrea de la memòria principal que rep el nom de Buffer</p>
@@ -1154,7 +1144,7 @@ encarregades.</li>
 </ul>
 <p>Com podem suposar, la unitat d'informació amb la qual treballa un sistema d'arxius és, precisament, l'arxiu.</p>
 <p>És freqüent que cada família de sistemes operatius tinga els seus propis sistemes d'arxius. Per exemple, a continuació relacionem els més coneguts:</p>
-<p>IAMGEN</p>
+<p><img alt="Sistemes d'arxius)" src="../TiposFicheros.png" style="width:80%;margin:auto;display:block" /></p>
 <p>Un sistema d'arxius s'encarregarà d'aspectes com:</p>
 <ul>
 <li>Organitzar de manera lògica els sectors del dispositiu per a constituir arxius i directoris</li>
@@ -1170,6 +1160,7 @@ encarregades.</li>
 <h3 id="342-organitzacio-del-sistema-darxiux">3.4.2. Organització del sistema d'arxiux</h3>
 <p>Hui dia, pràcticament tots els sistemes d'arxius que podem trobar organitzen els arxius de manera jeràrquica, permetent la creació d'un arbre de directoris que faciliten l'organització i classificació del seu contingut.</p>
 <p>A més, per a evitar ambigüitats, els sistemes operatius no permeten que, dins del mateix directori, existisquen dos arxius amb el mateix nom.</p>
+<p><img alt="Arbre de directoris)" src="../ArbolDirectorios.png" style="width:50%;margin:auto;display:block" /></p>
 <h3 id="343-rutes">3.4.3. Rutes</h3>
 <p>Per a expressar la ubicació exacta d'un arxiu o un directori s'utilitza la seua ruta (en anglés, path). Encara que la manera d'expressar una ruta pot canviar segons el sistema operatiu que estiguem usant. En general es formen indicant la llista jeràrquica de directoris que representa el camí que hem de recórrer per a arribar fins a un arxiu o directori. En aqueixa relació, l'últim element serà el propi arxiu o directori referenciat.</p>
 <p>En escriure una ruta, haurem d'utilitzar un caràcter que separe cada element del següent. Aquest caràcter separador sol ser una barra invertida () en els sistemes Microsoft i una barra inclinada (/) en la família de sistemes Unix, com és el cas de GNU/Linux.</p>
