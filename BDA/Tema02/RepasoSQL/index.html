@@ -1046,13 +1046,19 @@ Ejemplo:
 <li>Operadores de comparación: &lt;, &gt;, &lt;&gt;, &lt;=, &gt;=, BETWEEN, LIKE, In</li>
 </ul>
 <h2 id="26-funciones-de-agregado">2.6. Funciones de agregado</h2>
-<p>Las funciones de agregado se usan dentro de una cláusula SELECT en grupos de registros para devolver un único valor que se aplica a un grupo de registros.
-Funciones:
-- AVG
-- COUNT
-- SUM
-- MAX
-- MIN</p>
+<p>Las funciones de agregado se usan dentro de una cláusula SELECT en grupos de registros para devolver un único valor que se aplica a un grupo de registros. Los campos que aparecen en el SELECT que no son funciones de agregado deben aparecer en la clausula GROUP BY.</p>
+<p>Funciones:</p>
+<ul>
+<li>AVG</li>
+<li>COUNT</li>
+<li>SUM</li>
+<li>MAX</li>
+<li>MIN</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Dpto</span><span class="p">,</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="n">Sueldo</span><span class="p">)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Dpto</span><span class="p">;</span>
+</code></pre></div>
 <h2 id="27-consultas">2.7. Consultas</h2>
 <p>Consultas de selección se utilizan para indicar al motor de datos que devuelva información de las bases de datos, esta información es devuelta en forma de conjunto de registros. Este conjunto de registros es modificable.
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Campos</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Tabla</span><span class="p">;</span>
@@ -1070,11 +1076,6 @@ Funciones:
 <span class="k">FROM</span><span class="w"> </span><span class="n">Estudiantes</span><span class="w"> </span>
 <span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Nota</span><span class="w"> </span><span class="k">DESC</span><span class="p">;</span>
 </code></pre></div></p>
-<ul>
-<li>El Motor de base de datos selecciona todos los registros que cumplen las condiciones de la instrucción SQL:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="p">;</span>
-</code></pre></div></li>
-</ul>
 <p><strong>DISTINCT</strong>: Omite los registros que contienen datos duplicados en los campos seleccionados. Para que los valores de cada campo listado en la instrucción SELECT se incluyan en la consulta deben ser únicos.
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">Apellido</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Empleados</span><span class="p">;</span>
 </code></pre></div></p>
@@ -1135,7 +1136,7 @@ Funciones:
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Id_Familia</span><span class="p">,</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">Stock</span><span class="p">)</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Productos</span><span class="w"> </span><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Id_Familia</span><span class="p">;</span>
 </code></pre></div>
-HAVING:
+<strong>HAVING</strong>:
 <div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Id_Familia</span><span class="w"> </span><span class="k">Sum</span><span class="p">(</span><span class="n">Stock</span><span class="p">)</span><span class="w"> </span>
 <span class="k">FROM</span><span class="w"> </span><span class="n">Productos</span><span class="w"> </span>
 <span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">Id_Familia</span><span class="w"> </span>
