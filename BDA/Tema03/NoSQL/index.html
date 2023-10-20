@@ -702,11 +702,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#333consultas" class="md-nav__link">
-    3.3.3.Consultas
+  <a href="#333-consultas" class="md-nav__link">
+    3.3.3. Consultas
   </a>
   
-    <nav class="md-nav" aria-label="3.3.3.Consultas">
+    <nav class="md-nav" aria-label="3.3.3. Consultas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -724,15 +724,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3333-consultas-con-arrays" class="md-nav__link">
-    3.3.3.3. Consultas con Arrays
+  <a href="#3333-busqueda-de-texto" class="md-nav__link">
+    3.3.3.3. Búsqueda de texto
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3334-documentos-embebidos" class="md-nav__link">
-    3.3.3.4. Documentos embebidos
+  <a href="#3334-consultas-con-arrays" class="md-nav__link">
+    3.3.3.4. Consultas con Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3335-documentos-embebidos" class="md-nav__link">
+    3.3.3.5. Documentos embebidos
   </a>
   
 </li>
@@ -816,6 +823,13 @@
           <li class="md-nav__item">
   <a href="#3368-operadores-de-comparacion" class="md-nav__link">
     3.3.6.8 Operadores de comparación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#337-actividades" class="md-nav__link">
+    3.3.7. Actividades
   </a>
   
 </li>
@@ -1024,11 +1038,11 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#333consultas" class="md-nav__link">
-    3.3.3.Consultas
+  <a href="#333-consultas" class="md-nav__link">
+    3.3.3. Consultas
   </a>
   
-    <nav class="md-nav" aria-label="3.3.3.Consultas">
+    <nav class="md-nav" aria-label="3.3.3. Consultas">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1046,15 +1060,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3333-consultas-con-arrays" class="md-nav__link">
-    3.3.3.3. Consultas con Arrays
+  <a href="#3333-busqueda-de-texto" class="md-nav__link">
+    3.3.3.3. Búsqueda de texto
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3334-documentos-embebidos" class="md-nav__link">
-    3.3.3.4. Documentos embebidos
+  <a href="#3334-consultas-con-arrays" class="md-nav__link">
+    3.3.3.4. Consultas con Arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3335-documentos-embebidos" class="md-nav__link">
+    3.3.3.5. Documentos embebidos
   </a>
   
 </li>
@@ -1138,6 +1159,13 @@
           <li class="md-nav__item">
   <a href="#3368-operadores-de-comparacion" class="md-nav__link">
     3.3.6.8 Operadores de comparación
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#337-actividades" class="md-nav__link">
+    3.3.7. Actividades
   </a>
   
 </li>
@@ -1264,8 +1292,8 @@
 <li>Cada entrada genera una columna</li>
 <li>Los datos están dispuestos uno debajo del otro</li>
 <li>Gira la BBDD orientada a filas
- <img alt="Columnas" src="../Columnar1.png" style="width:30%;margin:auto;display:block" /><br />
-<img alt="Columnas" src="../Columnar2.png" style="width:30%;margin:auto;display:block" />  </li>
+ <img alt="Columnas" src="../Columnar1.png" style="width:40%;margin:auto;display:block" /><br />
+<img alt="Columnas" src="../Columnar2.png" style="width:60%;margin:auto;display:block" />  </li>
 <li>En el disco duro los datos se muestran de manera unidimensional:<ul>
 <li>1,MongoDB,Documental,2,Cassandra,Key-value..</li>
 <li>1,2,3;MongoDB,Cassandra,Redshift…</li>
@@ -1324,22 +1352,25 @@
 <li><strong>Colecciones</strong>: Una base de datos tendrá 0 o más colecciones. Una colección es muy similar a lo que entendemos como tabla dentro de un SGDB.</li>
 <li><strong>Documentos</strong>: Las colecciones contiene 0 o más documentos, por lo que es similar a una fila o registro de un RDMS.</li>
 </ul>
+<p><img alt="Esquema MongoDB" src="../EsquemaDocumentos.png" style="width:50%;margin:auto;display:block" /></p>
 <h4 id="3311-documentos">3.3.1.1. Documentos</h4>
 <p>El corazón de MongoDB es el documento, un conjunto ordenado de claves con valores asociados. Su representación como hemos nombrado en el tema anterior es en JSON, un formato muy intuitivo y que no pensamos que requiera mayor explicación. Este podría ser un ejemplo sencillo de un documento que guarda el nombre, apellidos y dedad de una persona. A la izquierda de los dos puntos el nombre del campo y a la derecha el valor.</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">{</span>
-<span class="w">  </span><span class="kc">n</span><span class="err">ombre</span><span class="p">:</span><span class="err">”Jose</span><span class="w"> </span><span class="err">A</span><span class="kc">nt</span><span class="err">o</span><span class="kc">n</span><span class="err">io”</span><span class="p">,</span>
-<span class="w">  </span><span class="err">apellidos</span><span class="p">:</span><span class="err">”Guillem</span><span class="w"> </span><span class="err">Be</span><span class="kc">ne</span><span class="err">di</span><span class="kc">t</span><span class="err">o”</span><span class="p">,</span>
+<span class="w">  </span><span class="kc">n</span><span class="err">ombre</span><span class="p">:</span><span class="s2">&quot;Jose Antonio&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="err">apellidos</span><span class="p">:</span><span class="s2">&quot;Guillem Benedito&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="err">edad</span><span class="p">:</span><span class="mi">35</span>
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div>
-<p>Las claves de los documentos:
-  * No pueden ser nulas.
-  * No pueden contener los caracteres . (punto) y $ (dólar).
-  * Puede contener cualquiera de los demás caracteres UTF-8 existentes.
-  * Son case-sensitive (sensible a mayúsculas y minúsculas), por lo que las claves “nombre” y “Nombre” son diferentes, y por tanto consideradas como campos diferentes.
-  * Las claves dentro de un mismo documento deben ser únicas, no pueden duplicarse. Así por ejemplo el siguiente documento no es válido por tener dos veces la clave nota.</p>
+<p>Las claves de los documentos:</p>
+<ul>
+<li>No pueden ser nulas.</li>
+<li>No pueden contener los caracteres . (punto) y $ (dólar).</li>
+<li>Puede contener cualquiera de los demás caracteres UTF-8 existentes.</li>
+<li>Son case-sensitive (sensible a mayúsculas y minúsculas), por lo que las claves “nombre” y “Nombre” son diferentes, y por tanto consideradas como campos diferentes.</li>
+<li>Las claves dentro de un mismo documento deben ser únicas, no pueden duplicarse. Así por ejemplo el siguiente documento no es válido por tener dos veces la clave nota.</li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">{</span>
-<span class="w">  </span><span class="kc">n</span><span class="err">ombre</span><span class="p">:</span><span class="err">”Jose</span><span class="w"> </span><span class="err">A</span><span class="kc">nt</span><span class="err">o</span><span class="kc">n</span><span class="err">io”</span><span class="p">,</span>
+<span class="w">  </span><span class="kc">n</span><span class="err">ombre</span><span class="p">:</span><span class="s2">&quot;Jose Antonio&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="kc">n</span><span class="err">o</span><span class="kc">ta</span><span class="p">:</span><span class="mf">8.9</span><span class="p">,</span>
 <span class="w">  </span><span class="kc">n</span><span class="err">o</span><span class="kc">ta</span><span class="p">:</span><span class="mf">7.2</span><span class="w"> </span>
 <span class="w">  </span><span class="p">}</span>
@@ -1347,11 +1378,11 @@
 <p>Cada documento en Mongo debe tener <strong>obligatoriamente</strong> un campo _id con valor único y que actuará como identificador único del documento. Es tan necesario este campo que cuando se guarda un documento sin especificarlo, Mongo automáticamente le asigna uno del tipo ObjectId.</p>
 <h4 id="3312-colecciones">3.3.1.2. Colecciones</h4>
 <p>Una colección es un grupo de documentos, es lo análogo a las tablas en el modelo relacional.
-Las colecciones tienen esquemas dinámicos, lo que significa que los documentos dentro de una colección pueden tener múltiples “formas”. Por ejemplo, los siguientes documentos podrían guardarse en la misma colección, a pesar de tener diferentes campos, y diferentes tipos de dato.
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="kc">n</span><span class="err">ombre</span><span class="p">:</span><span class="err">”Jose</span><span class="w"> </span><span class="err">A</span><span class="kc">nt</span><span class="err">o</span><span class="kc">n</span><span class="err">io”</span><span class="p">,</span><span class="w"> </span><span class="err">edad</span><span class="p">:</span><span class="mi">35</span><span class="w"> </span><span class="p">}</span>
-<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="err">user</span><span class="kc">na</span><span class="err">me</span><span class="p">::</span><span class="err">”pepi</span><span class="kc">t</span><span class="err">o”</span><span class="p">,</span><span class="w"> </span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="err">ac</span><span class="kc">t</span><span class="err">ive</span><span class="p">:</span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+Las colecciones tienen esquemas dinámicos, lo que significa que los documentos dentro de una colección pueden tener múltiples “formas”. Por ejemplo, los siguientes documentos podrían guardarse en la misma colección, a pesar de tener diferentes campos, y diferentes tipos de datoS.
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="kc">n</span><span class="err">ombre</span><span class="p">:</span><span class="s2">&quot;Jose Antonio&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">edad</span><span class="p">:</span><span class="mi">35</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="err">user</span><span class="kc">na</span><span class="err">me</span><span class="p">::</span><span class="s2">&quot;pepito&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="err">ac</span><span class="kc">t</span><span class="err">ive</span><span class="p">:</span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div></p>
-<p>Hay algunas restricciones respecto a nombre que una colección puede tener:</p>
+<p>Hay algunas restricciones respecto al nombre que una colección puede tener:</p>
 <ul>
 <li>La cadena vacía (“”) no es un nombre válido.</li>
 <li>Lo puede contener el carácter null.</li>
@@ -1361,26 +1392,27 @@ Las colecciones tienen esquemas dinámicos, lo que significa que los documentos 
 <h3 id="332-operaciones-basicas">3.3.2. Operaciones básicas</h3>
 <h4 id="3321-insercion">3.3.2.1. Inserción</h4>
 <p>Para insertar un documento en una colección, utilice el método:
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.i</span><span class="kc">nsert</span><span class="err">(</span><span class="w"> </span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Antonio Cuenca&quot;</span><span class="p">}</span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.i</span><span class="kc">nsert</span><span class="err">(</span><span class="p">{</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Antonio Cuenca&quot;</span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
 <p>El comando ha añadido automáticamente el campo _id de tipo ObjectId, ya que como hemos explicado, todo documento debe tener un identificador único.
 Pero el uso del tipo ObjectId para el campo _id no es obligatorio, podemos utilizar cualquier valor, siempre y cuando garanticemos su unicidad. A continuación insertamos una nueva alumna, especificando que su _id es el número 10 (tipo Long).
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.i</span><span class="kc">nsert</span><span class="err">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">_id</span><span class="p">:</span><span class="err">NumberLo</span><span class="kc">n</span><span class="err">g(</span><span class="mi">10</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Raquel&quot;</span><span class="p">,</span><span class="err">apellidos</span><span class="p">:</span><span class="s2">&quot;Gutierrez Garcia&quot;</span><span class="p">}</span><span class="w"> </span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.i</span><span class="kc">nsert</span><span class="err">(</span><span class="p">{</span><span class="err">_id</span><span class="p">:</span><span class="err">NumberLo</span><span class="kc">n</span><span class="err">g(</span><span class="mi">10</span><span class="err">)</span><span class="p">,</span><span class="w"> </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Eva&quot;</span><span class="p">,</span><span class="err">apellidos</span><span class="p">:</span><span class="s2">&quot;Perez Garcia&quot;</span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
 <p>Si queremos insertar múltiples documentos,podemos hacer la inserción más rápida utilizando batch inserts, que permiten insertar en bloque un array de documentos a la colección. Esto se consigue con solo pasar un array de objetos al comando insert.
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.</span><span class="kc">nu</span><span class="err">merosprimos.i</span><span class="kc">nsert</span><span class="err">(</span>
-<span class="w">  </span><span class="p">[{</span><span class="err">_id</span><span class="p">:</span><span class="mi">2</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">5</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">7</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">11</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">13</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">17</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">19</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">23</span><span class="p">}]</span><span class="w"> </span><span class="err">)</span>
+<span class="w">  </span><span class="p">[{</span><span class="err">_id</span><span class="p">:</span><span class="mi">2</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">3</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">5</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">7</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">11</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">13</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">17</span><span class="p">},{</span><span class="err">_id</span><span class="p">:</span><span class="mi">19</span><span class="p">}]</span><span class="w"> </span><span class="err">)</span>
 </code></pre></div></p>
 <h4 id="3322-borrado">3.3.2.2. Borrado</h4>
 <p>Vaya con cuidado, eliminar colecciones completas es muy sencillo en Mongo. Esto borrará todo, tanto la colección como meta propiedades asociadas a ella o
 índices creados sobre campos.
   db.alumno.drop()
 Por otra parte, para eliminar solo documentos de una colección, tenemos el comando remove, que recibe como parámetro el criterio de borrado en forma de documento JSON. En ese caso, solo los documentos que cumplen el criterio se eliminarán de la colección.
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.</span><span class="kc">nu</span><span class="err">merosprimos.remove(</span><span class="w"> </span><span class="p">{</span><span class="err">_id</span><span class="p">:</span><span class="mi">23</span><span class="p">}</span><span class="w"> </span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.</span><span class="kc">nu</span><span class="err">merosprimos.remove(</span><span class="w"> </span><span class="p">{</span><span class="err">id</span><span class="p">:</span><span class="mi">23</span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
 <h4 id="3223-modificacion">3.2.2.3. Modificación</h4>
-<p>Para modificar un documento se utiliza el método update. Este método recibe dos parámetros, el primero es el criterio de actualización, y el segundo el modificador, que describe los cambios que deben realizarse.</p>
+<p>Para modificar un documento se utiliza el método <strong>update</strong>. Este método recibe dos parámetros, el primero es el criterio de actualización, y el segundo el modificador, que describe los cambios que deben realizarse.</p>
 <p>Tenemos dos tipos de actualización. El cambio completo del documento o reemplazo y la modificación de algunos elementos del documento</p>
+<p><strong>Reemplazo</strong></p>
 <p>Veamos un ejemplo de reemplazo. Creamos un elemento con los siguientes datos:<br />
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.usuarios.i</span><span class="kc">nsert</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;jose&quot;</span><span class="p">,</span><span class="kc">fr</span><span class="err">ie</span><span class="kc">n</span><span class="err">ds</span><span class="p">:</span><span class="mi">32</span><span class="p">,</span><span class="err">e</span><span class="kc">ne</span><span class="err">mies</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
@@ -1393,7 +1425,7 @@ Por otra parte, para eliminar solo documentos de una colección, tenemos el coma
 <span class="w">  </span><span class="p">}</span><span class="w">  </span>
 </code></pre></div></p>
 <p>Ahora lo reemplazamos:
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.usuarios.upda</span><span class="kc">te</span><span class="err">(</span><span class="w"> </span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;jose&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;jose&quot;</span><span class="p">,</span><span class="err">rela</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="err">hips</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="kc">fr</span><span class="err">ie</span><span class="kc">n</span><span class="err">ds</span><span class="p">:</span><span class="mi">32</span><span class="p">,</span><span class="err">e</span><span class="kc">ne</span><span class="err">mies</span><span class="p">:</span><span class="mi">2</span><span class="p">}}</span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.usuarios.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;jose&quot;</span><span class="p">},{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;jose&quot;</span><span class="p">,</span><span class="err">rela</span><span class="kc">t</span><span class="err">io</span><span class="kc">ns</span><span class="err">hips</span><span class="p">:{</span><span class="kc">fr</span><span class="err">ie</span><span class="kc">n</span><span class="err">ds</span><span class="p">:</span><span class="mi">32</span><span class="p">,</span><span class="err">e</span><span class="kc">ne</span><span class="err">mies</span><span class="p">:</span><span class="mi">2</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
 <p>Y quedaría así:
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">{</span>
@@ -1405,39 +1437,85 @@ Por otra parte, para eliminar solo documentos de una colección, tenemos el coma
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 </code></pre></div></p>
-<p>Si lo que queremos es modificar algunos campos utilizaremos el insert, pero con modificadores. Veámoslos:</p>
-<p><strong>$set</strong></p>
+<p><strong>Modificación</strong>  </p>
+<p>Si lo que queremos es modificar algunos campos utilizaremos el update, pero con modificadores. </p>
+<table>
+<thead>
+<tr>
+<th>Modificador</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$set</td>
+<td>Asigna el valor a un campo</td>
+</tr>
+<tr>
+<td>$unset</td>
+<td>Elimina cualquier campo de uno o varios documentos</td>
+</tr>
+<tr>
+<td>$inc</td>
+<td>Incrementar el valor numérico de una clave existente</td>
+</tr>
+</tbody>
+</table>
+<p>Veamoslos:</p>
+<p><u>$set</u></p>
 <p>Asigna el valor a un campo. Si el campo todavía no existe en el documento lo creará. Se utiliza en el segundo parámetro que se le pasa al comando update.
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.i</span><span class="kc">nsert</span><span class="err">(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Arturo&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">apellidos</span><span class="p">:</span><span class="s2">&quot;Leon Zapata&quot;</span><span class="w"> </span><span class="p">}</span><span class="err">)</span>
 <span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.upda</span><span class="kc">te</span><span class="err">(</span><span class="w"> </span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Arturo&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">$se</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">edad</span><span class="p">:</span><span class="mi">17</span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
 <p>Podemos darle valor a varios campos a la vez, simplemente informando los pares clave:valor separados por coma. En este ejemplo damos valor a tres campos diferentes con un solo comando.
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.upda</span><span class="kc">te</span><span class="err">(</span><span class="w"> </span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Arturo&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">$se</span><span class="kc">t</span><span class="p">:{</span><span class="kc">n</span><span class="err">o</span><span class="kc">ta</span><span class="p">:</span><span class="mf">8.2</span><span class="p">,</span><span class="err">orde</span><span class="kc">n</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="err">ac</span><span class="kc">t</span><span class="err">i</span><span class="kc">tu</span><span class="err">d</span><span class="p">:</span><span class="s2">&quot;positiva&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Arturo&quot;</span><span class="p">},{</span><span class="err">$se</span><span class="kc">t</span><span class="p">:{</span><span class="kc">n</span><span class="err">o</span><span class="kc">ta</span><span class="p">:</span><span class="mf">8.2</span><span class="p">,</span><span class="err">orde</span><span class="kc">n</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="err">ac</span><span class="kc">t</span><span class="err">i</span><span class="kc">tu</span><span class="err">d</span><span class="p">:</span><span class="s2">&quot;positiva&quot;</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
-<p><strong>$unset</strong></p>
-<p>Para eliminar cualquier campo de uno o varios documentos lo hacemos también con el comando update pero con el modificador $unset.
-En MongoDB es habitual utilizar los valores 1 y -1 para indicar verdadero y falso respectivamente. En este caso, al especificar valor 1 estamos diciendo que la
-clave entra dentro del conjunto de campos en los que queremos aplicar el $unset.
-De esta forma, si queremos eliminar el campo “edad” del documento que guarda la información del alumno “Arturo”, lo haríamos así.
+<p><u>$unset</u></p>
+<p>Para eliminar cualquier campo de uno o varios documentos lo hacemos también con el comando update pero con el modificador $unset.</p>
+<p>En MongoDB es habitual utilizar los valores 1 y -1 para indicar verdadero y falso respectivamente. En este caso, al especificar valor 1 estamos diciendo que la
+clave entra dentro del conjunto de campos en los que queremos aplicar el $unset.</p>
+<p>De esta forma, si queremos eliminar el campo "edad" del documento que guarda la información del alumno "Arturo", lo haríamos así.
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Arturo&quot;</span><span class="p">},{</span><span class="err">$u</span><span class="kc">nset</span><span class="p">:{</span><span class="err">edad</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
-<p><strong>$inc</strong></p>
+<p><u>$inc</u></p>
 <p>Este modificador puede utilizarse para incrementar o decrementar el valor numérico de una clave existente o para crear una nueva si no existe.
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Arturo&quot;</span><span class="p">},{</span><span class="err">$i</span><span class="kc">n</span><span class="err">c</span><span class="p">:{</span><span class="err">pu</span><span class="kc">ntua</span><span class="err">cio</span><span class="kc">n</span><span class="p">:</span><span class="mi">2</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
 <p>Otros operadores que podemos utilizar de forma similar son <strong>$mul, $min, $max y $currentDate</strong>.
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Arturo&quot;</span><span class="p">},{</span><span class="err">$mi</span><span class="kc">n</span><span class="p">:{</span><span class="err">pu</span><span class="kc">ntua</span><span class="err">cio</span><span class="kc">n</span><span class="p">:</span><span class="mi">3</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
-<p>El ejemplo de arriba modifica la puntuación si esta es menor que3</p>
-<p>Ahora vamos a ver modificadores de arrays.
-<strong>$push</strong>
-Se utiliza para añadir elementos a un array. Si el array no existe lo crea con los elementos indicados en el push, y si ya existe los añade al final del array.
+<p>El ejemplo de arriba modifica la puntuación y le asigna un 3, si esta es menor que 3</p>
+<p><strong>Modificadores de arrays</strong></p>
+<table>
+<thead>
+<tr>
+<th>Modificador</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$push</td>
+<td>Añadir elementos a un array</td>
+</tr>
+<tr>
+<td>$pull</td>
+<td>Elimina elementos de un array basados en un criterio</td>
+</tr>
+<tr>
+<td>$pop</td>
+<td>Elimina el primer o último elemento del array</td>
+</tr>
+</tbody>
+</table>
+<p><u>$push</u></p>
+<p>Se utiliza para añadir elementos a un array. Si el array no existe lo crea con los elementos indicados en el push, y si ya existe los añade al final del array.
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.i</span><span class="kc">nsert</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Sofia&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">apellidos</span><span class="p">:</span><span class="s2">&quot;Alarcon Sevilla&quot;</span><span class="p">}</span><span class="err">)</span>
 <span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Sofia&quot;</span><span class="p">},</span>
 <span class="w">                     </span><span class="p">{</span><span class="err">$push</span><span class="p">:{</span><span class="nt">&quot;asignaturas&quot;</span><span class="p">:{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Matematicas&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">n</span><span class="err">o</span><span class="kc">ta</span><span class="p">:</span><span class="mf">9.1</span><span class="p">}}}</span>
 <span class="w">                    </span><span class="err">)</span>
 </code></pre></div></p>
-<p><strong>$pull</strong></p>
+<p><u>$pull</u></p>
 <p>Hay varias formas de eliminar elementos de un array. Cuando queremos borrar elementos basados en algún criterio, el modificador adecuado es $pull.
 Partimos de un array y borraremos elementos
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.lis</span><span class="kc">ts</span><span class="err">.i</span><span class="kc">nsert</span><span class="err">(</span><span class="p">{</span><span class="nt">&quot;todo&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;lavar platos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;colada&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;tender&quot;</span><span class="p">]}</span><span class="err">)</span>
@@ -1445,7 +1523,7 @@ Partimos de un array y borraremos elementos
 Para eliminar la colada haríamos.
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.lis</span><span class="kc">ts</span><span class="err">.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{},{</span><span class="err">$pull</span><span class="p">:{</span><span class="nt">&quot;todo&quot;</span><span class="p">:</span><span class="s2">&quot;colada&quot;</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
-<p><strong>$pop</strong></p>
+<p><u>$pop</u></p>
 <p>Para eliminar el primer o último elemento del array.
 Para eliminar el último elemento del array:
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.lis</span><span class="kc">ts</span><span class="err">.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{},{</span><span class="err">$pop</span><span class="p">:{</span><span class="kc">t</span><span class="err">odo</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span><span class="err">)</span>
@@ -1453,9 +1531,9 @@ Para eliminar el último elemento del array:
 Para eliminar el prtimer elemento del array:
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.lis</span><span class="kc">ts</span><span class="err">.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{},{</span><span class="err">$pop</span><span class="p">:{</span><span class="kc">t</span><span class="err">odo</span><span class="p">:</span><span class="mi">-1</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
-<p><strong>Upserts</strong></p>
-<p>Un upsert es un tipo de update espcial. Si no se encuentra ningún documento que haga matching con el criterio del update, entonces se creará un nuevo documento combinando el criterio y lo que se quiere actualizar. Si se encuentra un documento que haga matching se actualizará normalmente.
-Para decirle a MongoDB que queremos hacer un upsert, solo hay que pasar al comando update un tercer parámetro, con valor true. Esto significa que el update se comportará como hemos explicado que lo hace el upsert. 
+<p><strong>Upsert</strong></p>
+<p>Un upsert es un tipo de update especial. Si no se encuentra ningún documento que haga matching con el criterio del update, entonces se creará un nuevo documento combinando el criterio y lo que se quiere actualizar. Si se encuentra un documento que haga matching se actualizará normalmente.
+Para decirle a MongoDB que queremos hacer un upsert, solo hay que pasar al comando update un tercer parámetro, con valor true. Esto significa que el update se comportará como lo acabamos de explicar. 
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">...</span><span class="p">},{</span><span class="err">...</span><span class="p">},</span><span class="kc">true</span><span class="err">)</span>
 <span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Sofia&quot;</span><span class="p">},</span>
 <span class="w">                     </span><span class="p">{</span><span class="err">$se</span><span class="kc">t</span><span class="p">:{</span><span class="err">apellidos</span><span class="p">:</span><span class="s2">&quot;Alarcon Revilla&quot;</span><span class="p">}},</span>
@@ -1467,14 +1545,14 @@ Para decirle a MongoDB que queremos hacer un upsert, solo hay que pasar al coman
 <span class="w">                    </span><span class="p">{</span><span class="err">$i</span><span class="kc">n</span><span class="err">c</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">price</span><span class="p">:</span><span class="w"> </span><span class="mf">50.00</span><span class="p">}},</span><span class="w"> </span>
 <span class="w">                    </span><span class="p">{</span><span class="err">mul</span><span class="kc">t</span><span class="err">i</span><span class="p">:</span><span class="kc">true</span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
-<h3 id="333consultas">3.3.3.Consultas</h3>
-<p>El método find es el que se utiliza para hacer queries en Mongo. Es el equivalente al comando select en el modelo relacional. Al consultar una colección, Mongo nos
-devolverá un subconjunto de documentos, que variará desde el conjunto vació hasta la colección completa.
-Find tiene varios parámetros de entrada, el primero de ellos especifica los documentos que queremos recuperar, esto es, el criterio de búsqueda.
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.coleccio</span><span class="kc">n</span><span class="mf">1.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="w"> </span><span class="err">clave</span><span class="mi">1</span><span class="p">:</span><span class="err">valor</span><span class="mi">1</span><span class="w"> </span><span class="p">}</span><span class="err">)</span>
+<h3 id="333-consultas">3.3.3. Consultas</h3>
+<p>El método <strong>find</strong> es el que se utiliza para hacer queries en Mongo. Es el equivalente al comando select en el modelo relacional. Al consultar una colección, Mongo nos
+devolverá un subconjunto de documentos, que variará desde el conjunto vació hasta la colección completa.</p>
+<p>Find tiene varios parámetros de entrada, el primero de ellos especifica los documentos que queremos recuperar, esto es, el criterio de búsqueda.
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.coleccio</span><span class="kc">n</span><span class="err">.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="w"> </span><span class="err">clave</span><span class="p">:</span><span class="err">valor</span><span class="w"> </span><span class="p">}</span><span class="err">)</span>
 </code></pre></div>
-La función anterior nos devolvería documentos de la colección coleccion1 cuyo campo clave1 tenga un valor igual a valor1.</p>
-<p>El valor por defecto para este primer parámetro es {}, que significa “cualquier documento”. Por tanto una query como db.coleccion1.find({ }) devolverá todos los documentos de la colección coleccion1. Como es el valor por defecto para el criterio de la consulta es equivalente hacer find({ }) y find( ).
+La función anterior nos devolvería documentos de la colección coleccion cuyo campo clave tenga un valor igual a valor.</p>
+<p>El valor por defecto para este primer parámetro es {}, que significa "cualquier documento". Por tanto una query como db.coleccion1.find({ }) devolverá todos los documentos de la colección coleccion1. Como es el valor por defecto para el criterio de la consulta es equivalente hacer find({ }) y find( ).
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">edad</span><span class="p">:</span><span class="mi">17</span><span class="p">}</span><span class="err">)</span>
 <span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Antonio&quot;</span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
@@ -1485,41 +1563,55 @@ Los campos que queremos que sean devueltos les pondremos el valor 1. El campo _i
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.coleccio</span><span class="kc">n</span><span class="mf">1.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="w"> </span><span class="p">},{</span><span class="w"> </span><span class="err">clave</span><span class="mi">3</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="err">clave</span><span class="mi">4</span><span class="p">:</span><span class="mi">0</span><span class="w"> </span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
 <h4 id="3331-operadores-de-comparacion">3.3.3.1 Operadores de comparación</h4>
-<p>MongoDB permite utilizar los siguientes operadores de comparación:
-  * <strong>$lt</strong> (less than), se corresponde con la condición &lt; (menor estricto).
-  * <strong>$lte</strong> (less than or equal), se corresponde con la condición &lt;= (menor o igual).
-  * <strong>$gt</strong> (greather than), se corresponde con la condición &gt; (mayor estricto).
-  * <strong>$gte</strong> (greather than or equal), se corresponde con la condición &gt;= (mayor o igual).</p>
-<p>clave: { $operador: valor }</p>
-<p>Así si por ejemplo queremos recuperar los libros con un precio mayor que 10 lo haríamos utilizando el operador $gt sobre el campo precio:
+<p>MongoDB permite utilizar los siguientes operadores de comparación:</p>
+<ul>
+<li><strong>$lt</strong> (less than), se corresponde con la condición &lt; (menor estricto).</li>
+<li><strong>$lte</strong> (less than or equal), se corresponde con la condición &lt;= (menor o igual).</li>
+<li><strong>$gt</strong> (greather than), se corresponde con la condición &gt; (mayor estricto).</li>
+<li><strong>$gte</strong> (greather than or equal), se corresponde con la condición &gt;= (mayor o igual).</li>
+</ul>
+<p>La sintaxis es:
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">clave</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">$operador</span><span class="p">:</span><span class="w"> </span><span class="err">valor</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+Así si por ejemplo queremos recuperar los libros con un precio mayor que 10 lo haríamos utilizando el operador $gt sobre el campo precio:
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="nt">&quot;precio&quot;</span><span class="p">:{</span><span class="err">$g</span><span class="kc">t</span><span class="p">:</span><span class="mi">10</span><span class="p">}},{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
 <h4 id="3332-operadores-logicos">3.3.3.2. Operadores lógicos</h4>
-<p><strong>$in</strong>
-  clave: { $in: [valor1, valor2, valorN] }
-Recupera documentos cuyo campo clave esté entre alguno de los valores especificados en el array, esto es, [ valor1, valor2, valorN ].
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:{</span><span class="err">$i</span><span class="kc">n</span><span class="p">:[</span><span class="s2">&quot;Debolsillo&quot;</span><span class="p">,</span><span class="s2">&quot;Planeta&quot;</span><span class="p">,</span><span class="s2">&quot;Gigamesh&quot;</span><span class="p">]}},{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="err">)</span>
-</code></pre></div></p>
-<p><strong>$nin</strong>
-  clave: { $nin: [valor1, valor2, valorN] }
-Recupera documentos cuyo campo clave NO esté entre alguno de los valores especificados en el array, esto es, [ valor1, valor2, valorN ].
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:{</span><span class="err">$</span><span class="kc">n</span><span class="err">i</span><span class="kc">n</span><span class="p">:[</span><span class="s2">&quot;Debolsillo&quot;</span><span class="p">,</span><span class="s2">&quot;Planeta&quot;</span><span class="p">,</span><span class="s2">&quot;Gigamesh&quot;</span><span class="p">]}},{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="err">)</span>
-</code></pre></div></p>
-<p><strong>$or</strong>
-  $or: [ {clave1:valor1}, {clave2:valor2}, {claveN:valorN} ]
-Con el siguiente find, vamos a recuperar aquellos documentos que estén en stock (enstock:false) o que tengan editorial (editorial:null).
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">$or</span><span class="p">:[{</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="kc">false</span><span class="p">},{</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="kc">null</span><span class="p">}]},{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="err">)</span>
-</code></pre></div></p>
-<p><strong>$nor</strong>
-  $nor: [ {clave1:valor1}, {clave2:valor2}, {claveN:valorN} ]
-Con el siguiente find, vamos a recuperar aquellos documentos que no estén en stock (enstock:false) o que no tengan editorial (editorial:null).
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">$</span><span class="kc">n</span><span class="err">or</span><span class="p">:[{</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="kc">false</span><span class="p">},{</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="kc">null</span><span class="p">}]},{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="err">)</span>
+<p><strong>$in</strong></p>
+<p>clave: { $in: [valor1, valor2, valorN] }</p>
+<p>Recupera documentos cuyo campo clave esté entre alguno de los valores especificados en el array, esto es, [ valor1, valor2, valorN ].
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:{</span><span class="err">$i</span><span class="kc">n</span><span class="p">:[</span><span class="s2">&quot;Debolsillo&quot;</span><span class="p">,</span><span class="s2">&quot;Planeta&quot;</span><span class="p">,</span><span class="s2">&quot;Gigamesh&quot;</span><span class="p">]}},</span>
+<span class="w">                </span><span class="p">{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="w">               </span><span class="err">)</span>
+</code></pre></div>
+<strong>$nin</strong></p>
+<p>clave: { $nin: [valor1, valor2, valorN] }</p>
+<p>Recupera documentos cuyo campo clave NO esté entre alguno de los valores especificados en el array, esto es, [ valor1, valor2, valorN ].
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:{</span><span class="err">$</span><span class="kc">n</span><span class="err">i</span><span class="kc">n</span><span class="p">:[</span><span class="s2">&quot;Debolsillo&quot;</span><span class="p">,</span><span class="s2">&quot;Planeta&quot;</span><span class="p">,</span><span class="s2">&quot;Gigamesh&quot;</span><span class="p">]}},</span>
+<span class="w">                </span><span class="p">{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="w">               </span><span class="err">)</span>
+</code></pre></div>
+<strong>$or</strong></p>
+<p>$or: [ {clave1:valor1}, {clave2:valor2}, {claveN:valorN} ]</p>
+<p>Con el siguiente find, vamos a recuperar aquellos documentos que estén en stock (enstock:false) o que tengan editorial (editorial:null).
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">$or</span><span class="p">:[{</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="kc">false</span><span class="p">},{</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="kc">null</span><span class="p">}]},</span>
+<span class="w">                </span><span class="p">{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="w">               </span><span class="err">)</span>
+</code></pre></div>
+<strong>$nor</strong></p>
+<p>$nor: [ {clave1:valor1}, {clave2:valor2}, {claveN:valorN} ]</p>
+<p>Con el siguiente find, vamos a recuperar aquellos documentos que no estén en stock (enstock:false) o que no tengan editorial (editorial:null).
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">$</span><span class="kc">n</span><span class="err">or</span><span class="p">:[{</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="kc">false</span><span class="p">},{</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="kc">null</span><span class="p">}]},</span>
+<span class="w">                </span><span class="p">{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">edi</span><span class="kc">t</span><span class="err">orial</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="w">               </span><span class="err">)</span>
 </code></pre></div></p>
 <p><strong>$not</strong></p>
 <p>$not es lo que se conoce como un metacondicional, que son opeadores que pueden aplicarse por encima de cualquier otro criterio. Su sintaxis es sencilla, solo hay que ponerlo “fuera” de aquello que queremos negar.
   $not: { criterio }
 Y así directamente podemos recuperar por ejemplo, documentos que no tengan 480 paginas.
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">$</span><span class="kc">n</span><span class="err">o</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">$eq</span><span class="p">:</span><span class="mi">480</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="w"> </span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">$</span><span class="kc">n</span><span class="err">o</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">$eq</span><span class="p">:</span><span class="mi">480</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">                 </span><span class="p">{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<span class="w">               </span><span class="err">)</span>
 </code></pre></div></p>
 <p><strong>$exist</strong></p>
 <p>El operador $exists se utiliza para comprobar los documentos que tienen informado o no un campo determinado. Su sintaxis es la siguiente:
@@ -1537,7 +1629,7 @@ Veamos un ejemplo con dos comandos find donde utilizamos el operador $exists con
 Ejemplo: Recuperamos los libros del autor Posteguillo, sin preocuparnos por mayúsculas y minúsculas, haríamos esta consulta.
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="err">au</span><span class="kc">t</span><span class="err">or</span><span class="p">:</span><span class="err">/pos</span><span class="kc">te</span><span class="err">guillo/i</span><span class="p">},{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">au</span><span class="kc">t</span><span class="err">or</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="err">).pre</span><span class="kc">tt</span><span class="err">y()</span>
 </code></pre></div></p>
-<p><strong>Búsqueda de texto</strong></p>
+<h4 id="3333-busqueda-de-texto">3.3.3.3. Búsqueda de texto</h4>
 <p>En MongoDB, podemos realizar búsquedas de texto usando el índice de texto y el operador $text. Pasos:</p>
 <p>Primero se crea un índice de texto en los  campos para realizar la búsqueda de  texto. 
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.books.crea</span><span class="kc">te</span><span class="err">I</span><span class="kc">n</span><span class="err">dex(</span><span class="p">{</span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="s2">&quot;text&quot;</span><span class="p">}</span><span class="err">)</span><span class="w">   </span><span class="c1">//---  Un campo//</span>
@@ -1563,7 +1655,7 @@ Ejemplo: Recuperamos los libros del autor Posteguillo, sin preocuparnos por may�
 <span class="w">           </span><span class="err">$</span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:{</span><span class="err">$search</span><span class="p">:</span><span class="s2">&quot;la -Biblia&quot;</span><span class="p">}</span><span class="w">    </span><span class="c1">//--- Busca &quot;la&quot; pero no &quot;Biblia&quot;//</span>
 <span class="w">          </span><span class="p">}</span><span class="err">)</span><span class="w"> </span>
 </code></pre></div></p>
-<h4 id="3333-consultas-con-arrays">3.3.3.3. Consultas con Arrays</h4>
+<h4 id="3334-consultas-con-arrays">3.3.3.4. Consultas con Arrays</h4>
 <p>Creamos una colección para ver los ejemplos
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.comida.i</span><span class="kc">nsert</span><span class="err">(</span><span class="p">{</span><span class="kc">fruta</span><span class="p">:[</span><span class="s2">&quot;manzana&quot;</span><span class="p">,</span><span class="s2">&quot;platano&quot;</span><span class="p">,</span><span class="s2">&quot;pera&quot;</span><span class="p">]}</span><span class="err">)</span>
 </code></pre></div></p>
@@ -1616,7 +1708,7 @@ Donde según x:
 <span class="w">  </span><span class="err">db.grades.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="s2">&quot;exam&quot;</span><span class="p">}</span><span class="err">).cou</span><span class="kc">nt</span><span class="err">()</span><span class="w"> </span>
 <span class="w">  </span><span class="err">db.grades.cou</span><span class="kc">nt</span><span class="err">(</span><span class="p">{</span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="s2">&quot;essay&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">score</span><span class="p">:{</span><span class="err">$g</span><span class="kc">t</span><span class="p">:</span><span class="mi">90</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
-<h4 id="3334-documentos-embebidos">3.3.3.4. Documentos embebidos</h4>
+<h4 id="3335-documentos-embebidos">3.3.3.5. Documentos embebidos</h4>
 <p>Para hacer queries contra campos de documentos embebidos dentro de otros documentos, solamente hay que poner la “ruta” completa de claves separada por puntos. Es decir, si tenemos por ejemplo una estructura como esta para los libros.
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.save(</span><span class="p">{</span>
 <span class="w">          </span><span class="nt">&quot;_id&quot;</span><span class="p">:</span><span class="s2">&quot;9788408117117&quot;</span><span class="p">,</span>
@@ -1694,7 +1786,7 @@ descendentemente (-1). En caso de ascendente sería “count”:1.</p>
 <p><strong>{“$limit” : 3}</strong>  Limita el número de resultados a los primeros tres.</p>
 </li>
 </ol>
-<p>Veamos todo esto con más detalle y partiendo de un ejemplo con una colección de libros</p>
+<p>Veamos todo esto con más detalle y partiendo de un ejemplo con una colecció  n de libros</p>
 <p 1="1" :=":" Casanovas_="Casanovas&quot;," _Anna="&quot;Anna" __id_="&quot;_id&quot;" _count_="&quot;count&quot;"><div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">au</span><span class="kc">t</span><span class="err">or</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
 <span class="w">                   </span><span class="p">{</span><span class="err">$group</span><span class="p">:{</span><span class="err">_id</span><span class="p">:</span><span class="s2">&quot;$autor&quot;</span><span class="p">,</span><span class="err">cou</span><span class="kc">nt</span><span class="p">:{</span><span class="err">$sum</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span>
 <span class="w">                   </span><span class="p">{</span><span class="err">$sor</span><span class="kc">t</span><span class="p">:{</span><span class="err">cou</span><span class="kc">nt</span><span class="p">:</span><span class="mi">-1</span><span class="p">}},{</span><span class="err">$limi</span><span class="kc">t</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
@@ -1786,7 +1878,7 @@ Se pueden utilizar tanto campos existentes como campos proyectados para ordenar.
 <h4 id="3367-operador-unwind">3.3.6.7. operador $unwind</h4>
 <p>Dentro de una agregación podemos utilizar el operador $unwind, se podría traducir como "aplanar" ya que aplana los datos de un array convirtiéndo sus elementos en documentos independientes. Puede ser útil para poder acceder al interior de los elementos de un array cuando estos no son atómicos.</p>
 <p><div class="highlight"><pre><span></span><code><span class="err">db.usuario.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">come</span><span class="kc">ntar</span><span class="err">ios</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
-<span class="w">                     </span><span class="p">{</span><span class="err">$u</span><span class="kc">n</span><span class="err">wi</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="p">:</span><span class="s2">&quot;$comentarios&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">                     </span><span class="p">{</span><span class="err">$u</span><span class="kc">n</span><span class="err">wi</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="p">:</span><span class="s2">&quot;$comentarios&quot;</span><span class="w"> </span><span class="p">}</span><span class="err">!</span><span class="p">[</span><span class="err">Al</span><span class="kc">t</span><span class="w"> </span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">]</span><span class="err">(EsquemaDocume</span><span class="kc">nt</span><span class="err">os.p</span><span class="kc">n</span><span class="err">g)</span>
 <span class="w">                    </span><span class="err">)</span>
 </code></pre></div>
 evueltos les pondremos el valor 1. El campo _id siempre se devuelve. También podemos especificar los campos que no queremos que sean devueltos, en este caso como valor para cada una de esos campos, pondremos cero. El resultado será que se devolverán el resto de documentos.
@@ -1805,6 +1897,41 @@ evueltos les pondremos el valor 1. El campo _id siempre se devuelve. También po
 <p>Así si por ejemplo queremos recuperar los libros con un precio mayor que 10 lo haríamos utilizando el operador $gt sobre el campo precio:
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="err">db.libro.</span><span class="kc">f</span><span class="err">i</span><span class="kc">n</span><span class="err">d(</span><span class="p">{</span><span class="nt">&quot;precio&quot;</span><span class="p">:{</span><span class="err">$g</span><span class="kc">t</span><span class="p">:</span><span class="mi">10</span><span class="p">}},{</span><span class="kc">t</span><span class="err">i</span><span class="kc">tul</span><span class="err">o</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
+<h4 id="337-actividades">3.3.7. Actividades</h4>
+<p>Vamos a trabajar con dos colecciones:
+<a href="../profesores.json" target="_blank">profesores</a> y <a href="../asignaturas.json" target="_blank">asignaturas</a></p>
+<p>Para importar los datos y subirlos a MongoDB Atlas podéis usar este comando:
+<div class="highlight"><pre><span></span><code><span class="n">mongoimport</span> <span class="o">--</span><span class="n">uri</span> <span class="s1">&#39;mongodb+srv://USUARIO:CONTRASEÑA@CLUSTER/BASEDEDATOS?retryWrites=true&amp;w=majority&#39;&#39; --collection=&#39;</span><span class="n">asignaturas</span><span class="s1">&#39; --file=&#39;</span><span class="n">asignaturas</span><span class="o">.</span><span class="n">json</span><span class="s1">&#39;</span>
+</code></pre></div>
+Estas son las consultas propuestas:</p>
+<p><strong>Insertar, Modificar y Borrar</strong></p>
+<ol>
+<li>Listar todos los profesores  // db.profesores.find()</li>
+<li>Insertar un profesor y una asignatura en la colección</li>
+<li>Actualizar la asignatura del profesor que acabáis de insertar</li>
+<li>Borrar el profesor que se acaba de insertar</li>
+<li>Actualizar todas las edades de los profesores en una unidad</li>
+<li>Usar upsert para añadir un nuevo profesor con nombre “Aitor”, en caso de que no lo encuentre, añade un campo “Personal” con valor ”Fijo”</li>
+</ol>
+<p><strong>Filtra, Ordenar y Contar mediante consultas</strong></p>
+<ol>
+<li>Listar los profesores mostrando solo los nombres</li>
+<li>Ordenar por nombre de forma ascendente</li>
+<li>Ordenar por nombre de forma descendente</li>
+<li>Limitar a 2 una búsqueda general sobre la colección profesores</li>
+<li>Limitar a 2 intercalando 1 salto entre resultados</li>
+<li>Contar el número de profesores de la colección</li>
+<li>Contar el número de profesores que se llaman juan</li>
+</ol>
+<p><strong>Selectores de consultas</strong></p>
+<ol>
+<li>Listar las asignaturas con 23 alumnos</li>
+<li>Listar las asignaturas con 23 alumnos o más</li>
+<li>Listar las asignaturas que imparte el profesor Juan</li>
+<li>Listar las asignaturas que NO imparte el profesor Juan</li>
+<li>Listar las asignaturas que imparten Juan o Laura </li>
+<li>Listar las asignaturas que NO imparten ni Juan ni Laura </li>
+</ol>
 
 
 
