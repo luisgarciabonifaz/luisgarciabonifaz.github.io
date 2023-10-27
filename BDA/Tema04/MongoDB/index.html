@@ -18,7 +18,7 @@
     
     
       
-        <title>T4 - MongoDBL - Mis Clases</title>
+        <title>T4 - MongoDB - Mis Clases</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              T4 - MongoDBL
+              T4 - MongoDB
             
           </span>
         </div>
@@ -538,7 +538,7 @@
           
   
   <span class="md-ellipsis">
-    T4 - MongoDBL
+    T4 - MongoDB
   </span>
   
 
@@ -549,7 +549,7 @@
         
   
   <span class="md-ellipsis">
-    T4 - MongoDBL
+    T4 - MongoDB
   </span>
   
 
@@ -695,11 +695,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#351-operaciones-pipeline" class="md-nav__link">
-    3.5.1. Operaciones Pipeline
+  <a href="#351-operadores-del-pipeline" class="md-nav__link">
+    3.5.1. Operadores del pipeline
   </a>
   
-    <nav class="md-nav" aria-label="3.5.1. Operaciones Pipeline">
+    <nav class="md-nav" aria-label="3.5.1. Operadores del pipeline">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -717,36 +717,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3513-expresiones-en-el-pipeline" class="md-nav__link">
-    3.5.1.3. Expresiones en el Pipeline
+  <a href="#3513-operador-group" class="md-nav__link">
+    3.5.1.3. Operador $group
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3514-operador-sort" class="md-nav__link">
-    3.5.1.4. Operador $sort
+  <a href="#3514-expresiones-en-el-pipeline" class="md-nav__link">
+    3.5.1.4. Expresiones en el Pipeline
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3515-operador-limit" class="md-nav__link">
-    3.5.1.5. Operador $limit
+  <a href="#3515-operador-sort" class="md-nav__link">
+    3.5.1.5. Operador $sort
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3516-operador-skip" class="md-nav__link">
-    3.5.1.6. Operador $skip
+  <a href="#3516-operador-limit" class="md-nav__link">
+    3.5.1.6. Operador $limit
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3517-operador-unwind" class="md-nav__link">
-    3.5.1.7. operador $unwind
+  <a href="#3517-operador-skip" class="md-nav__link">
+    3.5.1.7. Operador $skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3518-operador-unwind" class="md-nav__link">
+    3.5.1.8. operador $unwind
   </a>
   
 </li>
@@ -962,11 +969,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#351-operaciones-pipeline" class="md-nav__link">
-    3.5.1. Operaciones Pipeline
+  <a href="#351-operadores-del-pipeline" class="md-nav__link">
+    3.5.1. Operadores del pipeline
   </a>
   
-    <nav class="md-nav" aria-label="3.5.1. Operaciones Pipeline">
+    <nav class="md-nav" aria-label="3.5.1. Operadores del pipeline">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -984,36 +991,43 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3513-expresiones-en-el-pipeline" class="md-nav__link">
-    3.5.1.3. Expresiones en el Pipeline
+  <a href="#3513-operador-group" class="md-nav__link">
+    3.5.1.3. Operador $group
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3514-operador-sort" class="md-nav__link">
-    3.5.1.4. Operador $sort
+  <a href="#3514-expresiones-en-el-pipeline" class="md-nav__link">
+    3.5.1.4. Expresiones en el Pipeline
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3515-operador-limit" class="md-nav__link">
-    3.5.1.5. Operador $limit
+  <a href="#3515-operador-sort" class="md-nav__link">
+    3.5.1.5. Operador $sort
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3516-operador-skip" class="md-nav__link">
-    3.5.1.6. Operador $skip
+  <a href="#3516-operador-limit" class="md-nav__link">
+    3.5.1.6. Operador $limit
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3517-operador-unwind" class="md-nav__link">
-    3.5.1.7. operador $unwind
+  <a href="#3517-operador-skip" class="md-nav__link">
+    3.5.1.7. Operador $skip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3518-operador-unwind" class="md-nav__link">
+    3.5.1.8. operador $unwind
   </a>
   
 </li>
@@ -1240,7 +1254,7 @@ Para decirle a MongoDB que queremos hacer un upsert, solo hay que pasar al coman
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="err">upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">...</span><span class="p">},{</span><span class="err">...</span><span class="p">},</span><span class="kc">true</span><span class="err">)</span>
 <span class="w">    </span><span class="err">db.alum</span><span class="kc">n</span><span class="err">o.upda</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="s2">&quot;Sofia&quot;</span><span class="p">},</span>
 <span class="w">                     </span><span class="p">{</span><span class="err">$se</span><span class="kc">t</span><span class="p">:{</span><span class="err">apellidos</span><span class="p">:</span><span class="s2">&quot;Alarcon Revilla&quot;</span><span class="p">}},</span>
-<span class="w">                     </span><span class="kc">true</span><span class="err">)</span>
+<span class="w">                     </span><span class="p">{</span><span class="err">upser</span><span class="kc">t</span><span class="p">:</span><span class="kc">true</span><span class="p">}</span><span class="err">)</span>
 </code></pre></div></p>
 <p><strong>Multiples Documentos</strong></p>
 <p>Para modificar múltiples documentos, en el tercer parámetro del update indicaremos {multi: true}. 
@@ -1506,7 +1520,7 @@ tres títulos, y el cursor empezará a devolver a partir del cuarto.
 <h2 id="35-agregacion">3.5. Agregación</h2>
 <p>Una vez tenemos datos almacenados en MongoDB, queremos hacer algo más que solamente recuperarlos, queremos analizarlos de diversas formas interesantes. Esto lo conseguimos con la función de agregación que MongoDB ofrece.</p>
 <p>La agregación nos permite transformar y combinar documentos en una colección. Básicamente, se construye un pipeline (secuencia de comandos) que procesan un conjunto de documentos a través de varios “bloques”: filtrado, proyecciones, agrupaciones, ordenación, limitación y skipping.</p>
-<p>Por ejemplo, si de la colección de libros de ejemplo quisiéramos saber los tres autores con más libros escritos, crearíamos un pipeline con los siguientes pasos:</p>
+<p>Por ejemplo, si de la colección de  <a href="../libros.json" target="_blank">libros</a>  de ejemplo quisiéramos saber los tres autores con más libros escritos, crearíamos un pipeline con los siguientes pasos:</p>
 <ul>
 <li>Proyectaríamos el autor de cada libro.0</li>
 <li>Agruparíamos los autores por nombre, contando el número de ocurrencias.</li>
@@ -1523,7 +1537,7 @@ tres títulos, y el cursor empezará a devolver a partir del cuarto.
 <p><strong>{“$group” : { “_id”:”$autor”, “count”: {“$sum”:1}}}</strong>  Eso agrupa por autores e incrementa (“count”) para cada documento en los que el autor aparece.
 Primero especificamos el campo por el que queremos agrupar, que es “autor” (Esto lo indicamos con el “_id”:”$autor”). Podríamos entenderlo como: tras el Group habrá un documento resultado para cada autor, por lo que “autor” se convertirá en el identificador único (“_id”).
 El segundo campo significa añadir 1 al campo “count” para cada documento en el grupo. Fíjese  que los documentos de entrada (libro) no tienen el  campo “count”, es un nuevo campo creado por el “$group”.
-Al final de este paso, cada documento resultado es algo como:  {“_id”:”nombre de autor”, “count”: numeroDeLibros}</p>
+Al final de este paso, cada documento resultado es algo como:  {“_id”:”nombre_de_autor”, “count”: numero_de_libros}</p>
 </li>
 <li>
 <p><strong>{“$sort” : {“count” : -1}}</strong> Esto reordena los resultados por el valor del campo “count” descendentemente (-1). En caso de ascendente sería “count”:1.</p>
@@ -1533,14 +1547,18 @@ Al final de este paso, cada documento resultado es algo como:  {“_id”:”nom
 </li>
 </ol>
 <p>Veamos todo esto con más detalle y partiendo de un ejemplo con una colección de libros</p>
-<p 1="1" :=":" Casanovas_="Casanovas&quot;," _Anna="&quot;Anna" __id_="&quot;_id&quot;" _count_="&quot;count&quot;"><div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">au</span><span class="kc">t</span><span class="err">or</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
+<p><div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">au</span><span class="kc">t</span><span class="err">or</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
 <span class="w">                   </span><span class="p">{</span><span class="err">$group</span><span class="p">:{</span><span class="err">_id</span><span class="p">:</span><span class="s2">&quot;$autor&quot;</span><span class="p">,</span><span class="err">cou</span><span class="kc">nt</span><span class="p">:{</span><span class="err">$sum</span><span class="p">:</span><span class="mi">1</span><span class="p">}}},</span>
-<span class="w">                   </span><span class="p">{</span><span class="err">$sor</span><span class="kc">t</span><span class="p">:{</span><span class="err">cou</span><span class="kc">nt</span><span class="p">:</span><span class="mi">-1</span><span class="p">}},{</span><span class="err">$limi</span><span class="kc">t</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+<span class="w">                   </span><span class="p">{</span><span class="err">$sor</span><span class="kc">t</span><span class="p">:{</span><span class="err">cou</span><span class="kc">nt</span><span class="p">:</span><span class="mi">-1</span><span class="p">}},</span>
+<span class="w">                   </span><span class="p">{</span><span class="err">$limi</span><span class="kc">t</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
 <span class="w">                  </span><span class="err">)</span>
 </code></pre></div>
-  { "_id" : "Santiago Posteguillo", "count" : 3 }
-  { "_id" : "George R.R. Martin", "count" : 2 }</p>
-<h3 id="351-operaciones-pipeline">3.5.1. Operaciones Pipeline</h3>
+Resultado:
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Santiago Posteguillo&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;George R.R. Martin&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Anna Casanovas&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;count&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></p>
+<h3 id="351-operadores-del-pipeline">3.5.1. Operadores del pipeline</h3>
 <p>Cada operador recibe un conjunto de documentos, hace algún tipo de transformación sobre ellos, y después pasa el resultado de la transformación. 
 Esto es lo que se conoce como pipeline.</p>
 <p><img alt="Pipelinen" src="../Agregaciones.png" style="width:90%;margin:auto;display:block" /></p>
@@ -1548,22 +1566,39 @@ Esto es lo que se conoce como pipeline.</p>
 <p>El operador <strong>$match</strong> filtra documentos de forma que podamos ejecutar una agregación sobre un subconjunto de documentos, puede utilizar todos los operadores para query estudiados ($gt, $lt, $in, etc).</p>
 <p>Con el siguiente ejemplo, filtraríamos solo aquellos libros con un precio mayor que 20, reduciendo el conjunto inicial de documentos y formando la entrada de 
 los siguientes pasos del pipeline.
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$ma</span><span class="kc">t</span><span class="err">ch</span><span class="p">:{</span><span class="err">precio</span><span class="p">:{</span><span class="err">$g</span><span class="kc">t</span><span class="p">:</span><span class="mi">20</span><span class="p">}}}</span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$ma</span><span class="kc">t</span><span class="err">ch</span><span class="p">:{</span><span class="err">precio</span><span class="p">:{</span><span class="err">$g</span><span class="kc">t</span><span class="p">:</span><span class="mi">20</span><span class="p">}}}</span><span class="err">)</span>
 </code></pre></div>
 Como hemos comentado, cualquiera de las condiciones estudiadas del find podemos utilizarlas con match. Como por ejemplo, los libros en stock. 
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$ma</span><span class="kc">t</span><span class="err">ch</span><span class="p">:{</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="kc">true</span><span class="p">}}</span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$ma</span><span class="kc">t</span><span class="err">ch</span><span class="p">:{</span><span class="err">e</span><span class="kc">nst</span><span class="err">ock</span><span class="p">:</span><span class="kc">true</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
 <h4 id="3512-operador-project">3.5.1.2. Operador $project</h4>
 <p>La “proyección” es mucho más potente en el pipeline que en el lenguaje “normal” de la query. <strong>$project</strong> nos permite extraer campos de subdocumentos, renombrar campos, y realizar operaciones interesantes sobre ellos. </p>
-<p>La operación más sencilla de $project realiza una selección simple de unos documentos de entrada, es decir, de los documentos de entrada con campos a, b, c y d, con $project decimos que nos quedamos únicamente con a y c. Para incluir o excluir un campo, se utiliza la misma sintaxis que para el segundo argumento de una query, es decir “nombrecampo”: 1 para incluir o “nombrecampo”:0 para excluir. Por defecto, el campo “_id” siempre se devuelve si existe en los documentos de entrada. Lo podemos eliminar por ejemplo utilizando $project de la siguiente forma, en la que devolveríamos todos los campos excepto “_id”. {$project:{ “_id”:0 }}  Con $project también podemos renombrar el campo proyectado. </p>
-<p>Por ejemplo si queremos devolver el campo “_id” de los libros como “isbn” haríamos esto. 
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">isb</span><span class="kc">n</span><span class="p">:</span><span class="s2">&quot;$_id&quot;</span><span class="p">}}</span><span class="err">)</span>
+<p>La operación más sencilla de $project realiza una selección simple de unos documentos de entrada, es decir, de los documentos de entrada con campos a, b, c y d, con $project decimos que nos quedamos únicamente con a y c. Para incluir o excluir un campo, se utiliza la misma sintaxis que para el segundo argumento de una query, es decir “nombrecampo”: 1 para incluir o “nombrecampo”:0 para excluir. Por defecto, el campo “_id” siempre se devuelve si existe en los documentos de entrada. Lo podemos eliminar por ejemplo utilizando $project de la siguiente forma, en la que devolveríamos todos los campos excepto “_id”. {$project:{ “_id”:0 }}.  </p>
+<p>Con $project también podemos renombrar el campo proyectado. Por ejemplo si queremos devolver el campo “_id” de los libros como “isbn” haríamos esto. 
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">isb</span><span class="kc">n</span><span class="p">:</span><span class="s2">&quot;$_id&quot;</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
 <p>La clave está en $_id, cuando ponemos el símbolo del dólar ($) más el nombre de un campo, nos estamos refiriendo al valor que tomará dicho campo para cada documento en el entorno de agregación. Por tanto con $project: {“isbn”:”$_id”} estamos diciendo que proyectamos un nuevo campo isbn como el valor que tendrá el campo _id en cada documento de entrada. 
 Igualmente podríamos haber renombrado cualquier otro campo, por ejemplo el campo “enstock” como “disponible”. 
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">isb</span><span class="kc">n</span><span class="p">:</span><span class="s2">&quot;$_id&quot;</span><span class="p">,</span><span class="err">dispo</span><span class="kc">n</span><span class="err">ible</span><span class="p">:</span><span class="s2">&quot;$enstock&quot;</span><span class="p">}}</span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">isb</span><span class="kc">n</span><span class="p">:</span><span class="s2">&quot;$_id&quot;</span><span class="p">,</span><span class="err">dispo</span><span class="kc">n</span><span class="err">ible</span><span class="p">:</span><span class="s2">&quot;$enstock&quot;</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
-<h4 id="3513-expresiones-en-el-pipeline">3.5.1.3. Expresiones en el Pipeline</h4>
+<h4 id="3513-operador-group">3.5.1.3. Operador $group</h4>
+<p>Agrupa los documentos con el propósito de calcular valores agregados de una colección de documentos. Cuando referenciamos al valor de un campo lo haremos poniendo entre comillas un $ delante del nombre del campo. Ejemplo:</p>
+<p><div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">[{</span>
+<span class="w">   </span><span class="err">$group</span><span class="p">:{</span>
+<span class="w">           </span><span class="err">_id</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$autor&quot;</span><span class="p">,</span>
+<span class="w">           </span><span class="kc">t</span><span class="err">o</span><span class="kc">tal</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">$sum</span><span class="p">:</span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}]</span><span class="err">)</span>
+</code></pre></div>
+Si lo que queremos es que el valor del identificador contenga un objeto, lo podemos hacer asociándolo como valor:</p>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">[{</span>
+<span class="w">   </span><span class="err">$group</span><span class="p">:{</span>
+<span class="w">          </span><span class="err">_id</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;escritor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$autor&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">           </span><span class="kc">t</span><span class="err">o</span><span class="kc">tal</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">$sum</span><span class="p">:</span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">]</span><span class="err">)</span>
+</code></pre></div>
+<h4 id="3514-expresiones-en-el-pipeline">3.5.1.4. Expresiones en el Pipeline</h4>
 <p>La operaciones más simples en $project son inclusión, exclusión y nombres de campo (“$nombrecampo”). Aunque hay otras más, mucho más potentes. Podemos utilizar expresiones, que nos permiten combinar múltiples literales y variables en un valor único. </p>
 <p><strong>Expresiones matemáticas</strong>. </p>
 <p>Las expresiones matemáticas nos permiten manipular valores numéricos contra los que operar, y que normalmente se especifican en un array. </p>
@@ -1575,53 +1610,63 @@ Igualmente podríamos haber renombrado cualquier otro campo, por ejemplo el camp
 <li>“$divide”: [ expr1, expr2 ]. Divide la expr1 entre la expr2. </li>
 <li>“$mod”: [ expr1, expr2 ]. Divide la expr1 entre la expr2 y devuelve el resto. </li>
 </ul>
+<p>Por ejemplo, para obtener el montante total de los productos agrupados por fabricante, haríamos:</p>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">[{</span>
+<span class="w">  </span><span class="err">$group</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">_id</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;escritor&quot;</span><span class="p">:</span><span class="s2">&quot;$autor&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="kc">t</span><span class="err">o</span><span class="kc">tal</span><span class="err">Precio</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">$sum</span><span class="p">:</span><span class="s2">&quot;$precio&quot;</span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}]</span><span class="err">)</span>
+</code></pre></div>
 <p><strong>Expresiones de fechas</strong>. </p>
 <p>Muchas agregaciones son basadas en el tiempo. ¿Qué ocurrió la semana pasada? ¿Y el mes pasado?. Es por esto que el entorno de agregación tiene un conjunto de expresiones  que pueden utilizarse para extraer información sobre fechas de una forma muy usable, son: “$year”, “$month”,“$week”, “$dayOfMonth”, “$dayOfWeek”, “$dayOfYear”, “$hour”, “$minute” y “$second”. </p>
 <p>Con siguiente sentencia de agregación vamos a recuperar tanto la fecha, como el año de dicha fecha, gracias a la expresión “$year”.</p>
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="kc">fe</span><span class="err">cha</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">year</span><span class="p">:{</span><span class="err">$year</span><span class="p">:</span><span class="err">&quot;$fecha* }}})</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="kc">fe</span><span class="err">cha</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">year</span><span class="p">:{</span><span class="err">$year</span><span class="p">:</span><span class="err">&quot;$fecha* }}})</span>
 </code></pre></div>
 <p><strong>Expresiones de Strings</strong>.</p>
 <p>Hay una pocas operaciones básicas sobre cadenas de caracteres que también podemos utilizar. Son estas: </p>
 <p>“$substr”: [ expr, start, length ]. Devuelve el substring de la expresión expr, empezando en la posición start de la cadena y devolviendo desde ahí un total de length caracteres. En el siguiente ejemplo proyectamos un campo inicio los primeros quince caracteres del campo título.<br />
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">i</span><span class="kc">n</span><span class="err">icio</span><span class="p">:{</span><span class="err">$subs</span><span class="kc">tr</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;$titulo&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span><span class="w"> </span><span class="p">}}}</span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">i</span><span class="kc">n</span><span class="err">icio</span><span class="p">:{</span><span class="err">$subs</span><span class="kc">tr</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;$titulo&quot;</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span><span class="w"> </span><span class="p">}}}</span><span class="err">)</span>
 </code></pre></div></p>
 <p>“$concat”: [ expr1, expr2, ..., exprN ]. Devuelve un nuevo string resultado de la concatenación de expr1, expr2 y así hasta exprN. En el siguiente ejemplo proyectamos un campo descripción en el que concatenamos el titulo, un guión, y el autor.<br />
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">descripcio</span><span class="kc">n</span><span class="p">:{</span><span class="err">$co</span><span class="kc">n</span><span class="err">ca</span><span class="kc">t</span><span class="p">:[</span><span class="s2">&quot;$titulo&quot;</span><span class="p">,</span><span class="s2">&quot; - &quot;</span><span class="p">,</span><span class="s2">&quot;$autor&quot;</span><span class="p">]},</span><span class="err">_id</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">descripcio</span><span class="kc">n</span><span class="p">:{</span><span class="err">$co</span><span class="kc">n</span><span class="err">ca</span><span class="kc">t</span><span class="p">:[</span><span class="s2">&quot;$titulo&quot;</span><span class="p">,</span><span class="s2">&quot; - &quot;</span><span class="p">,</span><span class="s2">&quot;$autor&quot;</span><span class="p">]},</span><span class="err">_id</span><span class="p">:</span><span class="mi">0</span><span class="p">}}</span><span class="err">)</span>
 </code></pre></div></p>
 <p>“$toLower”: expr. Devuelve un string en minúsculas. 
 “$toUpper”: expr. Devuelve un string en mayúsculas. </p>
 <p><strong>Expresiones lógicas</strong>.</p>
 <p>Existen algunas operaciones lógicas que podemos utilizar. Replanteamos el ejemplo anterior de la proyección del campo “barato” utilizando uno de estos comparadores.  </p>
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">bara</span><span class="kc">t</span><span class="err">o</span><span class="p">:{</span><span class="err">$g</span><span class="kc">t</span><span class="p">:[</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;$precio&quot;</span><span class="p">]},</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="err">)</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">bara</span><span class="kc">t</span><span class="err">o</span><span class="p">:{</span><span class="err">$g</span><span class="kc">t</span><span class="p">:[</span><span class="mi">15</span><span class="p">,</span><span class="s2">&quot;$precio&quot;</span><span class="p">]},</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="err">)</span>
 </code></pre></div>
-<h4 id="3514-operador-sort">3.5.1.4. Operador $sort</h4>
+<h4 id="3515-operador-sort">3.5.1.5. Operador $sort</h4>
 <p>Podemos ordenar por cualquier campo o conjunto de campos utilizando la misma sintaxis que para las queries “normales”. </p>
 <p>Si tenemos que ordenar un número de documentos muy elevado, es recomendable desde el punto de vista del rendimiento, que hagamos la ordenación al principio del pipeline y además tengamos un índice por el conjunto de campos por los que ordenar. De otra forma, $sort puede ser lento y consumir mucha memoria. </p>
 <p>Se pueden utilizar tanto campos existentes como campos proyectados para ordenar. De esta forma podemos por ejemplo completar la agregración en la que calculábamos la media aritmética del precio de los libros por autor, y ordenar los resultados por dicha media calculada ascendentemente. </p>
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$group</span><span class="p">:{</span><span class="err">_id</span><span class="p">:</span><span class="s2">&quot;$autor&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">media</span><span class="p">:{</span><span class="err">$avg</span><span class="p">:</span><span class="s2">&quot;$precio&quot;</span><span class="p">}}},</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$group</span><span class="p">:{</span><span class="err">_id</span><span class="p">:</span><span class="s2">&quot;$autor&quot;</span><span class="p">,</span><span class="w"> </span><span class="err">media</span><span class="p">:{</span><span class="err">$avg</span><span class="p">:</span><span class="s2">&quot;$precio&quot;</span><span class="p">}}},</span>
 <span class="w">                   </span><span class="p">{</span><span class="err">$sor</span><span class="kc">t</span><span class="p">:{</span><span class="err">media</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span>
 <span class="w">                  </span><span class="err">)</span>
 </code></pre></div>
 <p>Para ordenar cada campo es valor 1, para ordenación ascendente y -­‐1 para descendente. En el siguiente ejemplo ordenamos primero por precio descendente y después por páginas ascendente.
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
 <span class="w">                   </span><span class="p">{</span><span class="err">$sor</span><span class="kc">t</span><span class="p">:{</span><span class="err">precio</span><span class="p">:</span><span class="mi">-1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}}</span>
 <span class="w">                  </span><span class="err">)</span>
 </code></pre></div></p>
-<h4 id="3515-operador-limit">3.5.1.5. Operador $limit</h4>
+<h4 id="3516-operador-limit">3.5.1.6. Operador $limit</h4>
 <p>La función $limit toma un número N y devuelve los primeros N documentos resultantes. 
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
 <span class="w">                   </span><span class="p">{</span><span class="err">$sor</span><span class="kc">t</span><span class="p">:{</span><span class="err">precio</span><span class="p">:</span><span class="mi">-1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
 <span class="w">                   </span><span class="p">{</span><span class="err">$limi</span><span class="kc">t</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
 <span class="w">                  </span><span class="err">)</span>
 </code></pre></div></p>
-<h4 id="3516-operador-skip">3.5.1.6. Operador $skip</h4>
+<h4 id="3517-operador-skip">3.5.1.7. Operador $skip</h4>
 <p>La función $skip toma un número N y desecha los primeros N documentos del conjunto de resultados. 
-<div class="highlight"><pre><span></span><code><span class="err">db.libro.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="err">precio</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
 <span class="w">                   </span><span class="p">{</span><span class="err">$sor</span><span class="kc">t</span><span class="p">:{</span><span class="err">precio</span><span class="w"> </span><span class="p">:</span><span class="mi">-1</span><span class="p">,</span><span class="err">pagi</span><span class="kc">nas</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
 <span class="w">                   </span><span class="p">{</span><span class="err">$skip</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
 <span class="w">                  </span><span class="err">)</span>
 </code></pre></div></p>
-<h4 id="3517-operador-unwind">3.5.1.7. operador $unwind</h4>
+<h4 id="3518-operador-unwind">3.5.1.8. operador $unwind</h4>
 <p>Dentro de una agregación podemos utilizar el operador <strong>$unwind</strong>, se podría traducir como "aplanar" ya que aplana los datos de un array convirtiéndo sus elementos en documentos independientes. Puede ser útil para poder acceder al interior de los elementos de un array cuando estos no son atómicos.</p>
 <div class="highlight"><pre><span></span><code><span class="err">db.usuario.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="err">come</span><span class="kc">ntar</span><span class="err">ios</span><span class="p">:</span><span class="mi">1</span><span class="p">}},</span>
 <span class="w">                     </span><span class="p">{</span><span class="err">$u</span><span class="kc">n</span><span class="err">wi</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="p">:</span><span class="s2">&quot;$comentarios&quot;</span><span class="w"> </span><span class="p">}</span>
