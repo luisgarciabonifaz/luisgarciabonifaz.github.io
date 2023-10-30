@@ -1,8 +1,8 @@
 {
 	"_id":1,
-0	"sku": "abc123",
+	"sku": "abc123",
 	"etiquetas": ["escolar","libro", "bolsa", "audífonos", "cuaderno"],
-0	"cantidad": [
+	"cantidad": [
 		{"tamano":"S", "num":10, "color": "azul"},
 		{"tamano":"M", "num":45, "color": "azul"},
 		{"tamano":"L", "num":100, "color": "verde"}
