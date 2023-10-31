@@ -1,0 +1,1070 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Tema03/SeguridadAWS/">
+      
+      
+        <link rel="next" href="../../Tema01/PracticasAWS/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>T4 - Informatica en AWS - Mis Clases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4-informatica-aws" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mis Clases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              T4 - Informatica en AWS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mis Clases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemes Operatius Monolloc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemes Operatius Monolloc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema01/SistemesInformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Sistemes Informàtics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema02/SistemesOperatius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema03/GestioRecursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Gestio de Recursos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema04/Virtualitzacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Virtualització
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemas Big Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemas Big Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema01/BigDataConAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Big Data con AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema02/InfraestructuraAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Infraestructura AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema03/SeguridadAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Seguridad en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    T4 - Informatica en AWS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Informatica en AWS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-amazon-ec2-elastic-compute-cloud" class="md-nav__link">
+    4.1. Amazon EC2 (Elastic Compute Cloud)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-principales-caracteristicas-de-ec2" class="md-nav__link">
+    4.2. Principales Características de EC2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-creacion-de-instancias-ec2" class="md-nav__link">
+    4.3. Creación de Instancias EC2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-casos-de-uso-de-ec2" class="md-nav__link">
+    4.4. Casos de Uso de EC2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-introduccion-a-aws-cli" class="md-nav__link">
+    4.5. Introducción a AWS CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Introducción a AWS CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-instalacion-en-windows" class="md-nav__link">
+    4.5.1. Instalación en Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-instalacion-en-linux-y-macos" class="md-nav__link">
+    4.5.2. Instalación en Linux y macOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-configuracion-de-aws-cli" class="md-nav__link">
+    4.5.2. Configuración de AWS CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-uso-basico-de-aws-cli" class="md-nav__link">
+    4.5.3. Uso Básico de AWS CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-scripts-y-automatizacion" class="md-nav__link">
+    4.5.4. Scripts y Automatización
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-actividad" class="md-nav__link">
+    4.6. Actividad
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema01/PracticasAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big Data Aplicado
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Big Data Aplicado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema01/IntroduccionBigData/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema02/RepasoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Repaso SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema03/NoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Bases de datos NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema04/MongoDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-amazon-ec2-elastic-compute-cloud" class="md-nav__link">
+    4.1. Amazon EC2 (Elastic Compute Cloud)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-principales-caracteristicas-de-ec2" class="md-nav__link">
+    4.2. Principales Características de EC2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-creacion-de-instancias-ec2" class="md-nav__link">
+    4.3. Creación de Instancias EC2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-casos-de-uso-de-ec2" class="md-nav__link">
+    4.4. Casos de Uso de EC2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-introduccion-a-aws-cli" class="md-nav__link">
+    4.5. Introducción a AWS CLI
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5. Introducción a AWS CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-instalacion-en-windows" class="md-nav__link">
+    4.5.1. Instalación en Windows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-instalacion-en-linux-y-macos" class="md-nav__link">
+    4.5.2. Instalación en Linux y macOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-configuracion-de-aws-cli" class="md-nav__link">
+    4.5.2. Configuración de AWS CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-uso-basico-de-aws-cli" class="md-nav__link">
+    4.5.3. Uso Básico de AWS CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-scripts-y-automatizacion" class="md-nav__link">
+    4.5.4. Scripts y Automatización
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-actividad" class="md-nav__link">
+    4.6. Actividad
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="4-informatica-aws">4. Informática AWS</h1>
+<h2 id="41-amazon-ec2-elastic-compute-cloud">4.1. Amazon EC2 (Elastic Compute Cloud)</h2>
+<p>Amazon Elastic Compute Cloud (Amazon EC2) es un servicio de cómputo en la nube escalable que permite a las empresas y desarrolladores lanzar y administrar máquinas virtuales (<strong>instancias</strong>) en la infraestructura de AWS. EC2 proporciona la capacidad de cómputo necesaria para ejecutar aplicaciones y cargas de trabajo de manera flexible y rentable.</p>
+<h2 id="42-principales-caracteristicas-de-ec2">4.2. Principales Características de EC2</h2>
+<ul>
+<li><strong>Escalabilidad Vertical y Horizontal</strong>: Puedes escalar tus instancias hacia arriba (aumentar la capacidad) o hacia abajo (disminuir la capacidad) según la demanda. Esto garantiza que siempre tengas suficiente capacidad de cómputo.</li>
+<li><strong>Diversidad de Recursos</strong>: EC2 ofrece una amplia variedad de tipos de instancia optimizados para diferentes cargas de trabajo, desde instancias de propósito general hasta instancias optimizadas para GPU y cómputo intensivo.</li>
+<li><strong>Flexibilidad de SO</strong>: Puedes seleccionar el sistema operativo que mejor se adapte a tus necesidades, incluidos Linux, Windows, macOS y sistemas basados en contenedores como Amazon ECS.</li>
+<li><strong>Almacenamiento EBS</strong>: EC2 ofrece almacenamiento Elastic Block Store (EBS) para adjuntar volúmenes de datos persistentes a tus instancias. Puedes crear instantáneas (snapshots) de estos volúmenes para copias de seguridad y replicación.</li>
+<li><strong>Amazon VPC</strong>: Puedes crear tu propia red virtual (Amazon VPC) para aislar tus instancias y controlar el acceso a ellas. También puedes configurar grupos de seguridad y asignar direcciones IP elásticas.</li>
+<li><strong>Auto Scaling y Load Balancing</strong>: EC2 es compatible con Auto Scaling para ajustar automáticamente el número de instancias en función de la demanda. También puedes usar Amazon Elastic Load Balancing (ELB) para distribuir el tráfico entre múltiples instancias.</li>
+</ul>
+<h2 id="43-creacion-de-instancias-ec2">4.3. Creación de Instancias EC2</h2>
+<p>El proceso de creación de instancias EC2 generalmente implica los siguientes pasos:</p>
+<ol>
+<li>Inicia sesión en la Consola de AWS con tus credenciales de cuenta.</li>
+<li>Desde el panel de AWS, navega a la sección "Servicios" y selecciona "EC2" bajo la categoría "Compute".</li>
+<li>Haz clic en "Launch Instance" para comenzar el proceso de lanzamiento de una instancia.</li>
+<li>Selecciona la opciones de la instancia</li>
+<li>Después de lanzar la instancia, puedes conectarte a ella utilizando SSH (para sistemas basados en Unix) o RDP (para sistemas Windows).</li>
+</ol>
+<p>Elecciones que se toman con el asistente de lanzamiento de instancias:</p>
+<ol>
+<li>AMI (Imagen de Amazon Machine (AMI)<ul>
+<li>Es una plantilla que se utiliza para crear una instancia EC2 (una máquina virtual, o VM, que se ejecuta en la nube de AWS).</li>
+<li>Contiene un sistema operativo Windows o Linux.</li>
+<li>También suele tener algún sistema de software preinstalado.</li>
+</ul>
+</li>
+<li>Tipo de instancia<ul>
+<li>El tipo de instancia que elija determina los siguientes elementos: La memoria (RAM), la capacidad de procesamiento (CPU), el espacio en disco y tipo de disco (almacenamiento), el rendimiento de red</li>
+</ul>
+</li>
+<li>Configuración de red<ul>
+<li>¿Dónde debe implementarse la instancia? </li>
+<li>Identificar la VPC y, de forma opcional, la subred</li>
+<li>¿Debería asignarse una dirección IP pública automáticamente?</li>
+<li>Para que sea accesible desde Internet</li>
+</ul>
+</li>
+<li>Rol de IAM<ul>
+<li>¿Tendrá que interactuar el software de la instancia EC2 con otros servicios de AWS? Si es así, asocie el rol de IAM adecuado.</li>
+</ul>
+</li>
+<li>Datos de usuario<ul>
+<li>De forma opcional, puede especificar un script de datos de usuario durante el llanzamiento de la instancia. </li>
+<li>Utilice scripts de datos de usuario para personalizar el entorno de tiempo de ejecución de la instancia.  </li>
+<li>El script se ejecuta la primera vez que se inicia la instancia.</li>
+</ul>
+</li>
+<li>Opciones de almacenamiento<ul>
+<li>Configure el volumen raíz.</li>
+<li>Lugar donde está instalado el sistema operativo invitado</li>
+<li>Adjunte volúmenes de almacenamiento adicionales (opcional).</li>
+<li>Es posible que la AMI incluya más de un volumen.</li>
+<li>Para cada volumen, especifique lo siguiente:<ul>
+<li>El tamaño del disco (en GB)</li>
+<li>El tipo de volumen. Hay diferentes tipos de unidades de estado sólido (SSD) y unidades de disco duro (HDD) disponibles.</li>
+<li>Si el volumen se eliminará cuando se termine la instancia</li>
+<li>Si se debe utilizar el cifrado</li>
+</ul>
+</li>
+<li>Opciones de almacenamiento<ul>
+<li>Amazon Elastic Block Store (Amazon EBS): Ofrece volúmenes de almacenamiento de nivel de bloque persistentes. Puede detener la instancia e iniciarla de nuevo sin perder los datos.</li>
+<li>Almacén de instancias de Amazon EC2: El almacenamiento se proporciona en discos asociados al equipo host en el que se ejecuta la instancia EC2. Si la instancia se detiene, se eliminarán los datos almacenados aquí.</li>
+</ul>
+</li>
+<li>Otras opciones de almacenamiento (no para el volumen raíz): <ul>
+<li>Montar un sistema de archivos de Amazon Elastic File System (Amazon EFS)</li>
+<li>Conectarse a Amazon Simple Storage Service (Amazon S3) </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Etiquetas<ul>
+<li>Una etiqueta es una marca que se puede asignar a un recurso de AWS. </li>
+<li>Cada etiqueta consta de una clave y un valor opcional.</li>
+<li>El etiquetado es la forma en que asocia metadatos a una instancia EC2. </li>
+<li>Los beneficios potenciales del etiquetado son la capacidad de filtrado, la automatización, la asignación de costos y el control de acceso.</li>
+</ul>
+</li>
+<li>Grupo de seguridad<ul>
+<li>Un grupo de seguridad es un conjunto de reglas de firewall que controlan el tráfico a la instancia. </li>
+<li>Se encuentra fuera del sistema operativo invitado de la instancia.</li>
+<li>Cree reglas que especifiquen el origen y los puertos que las comunicaciones de red pueden utilizar.</li>
+<li>Especifique el número de puerto y el protocolo, como el Protocolo de control de transmisión (TCP), el Protocolo de datagramas de usuario (UDP) o el Protocolo de mensaje de control de Internet (ICMP).</li>
+<li>Especifique el origen (por ejemplo, una dirección IP u otro grupo de seguridad) que tiene permiso para utilizar la regla.</li>
+</ul>
+</li>
+<li>Par de claves<ul>
+<li>En el lanzamiento de la instancia, debe especificar un par de claves existente o crear uno nuevo.</li>
+<li>Un par de claves consta de lo siguiente: <ul>
+<li>Una clave pública que AWS almacena.</li>
+<li>Un archivo de clave privada que usted almacena. </li>
+<li>Posibilita las conexiones seguras a la instancia. </li>
+</ul>
+</li>
+<li>Para las AMI de Windows: <ul>
+<li>Utilice la clave privada para obtener la contraseña de administrador que necesita para iniciar sesión en la instancia. </li>
+</ul>
+</li>
+<li>Para las AMI de Linux: <ul>
+<li>Utilice la clave privada para utilizar SSH y conectarse de forma segura a la instancia.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>Ciclo de vida de las instancias</p>
+<p><img alt="Ciclo de Vida de una instancia" src="../CicloVidaInstanciasEC2.png" style="width:100%;margin:auto;display:block" /></p>
+<p><strong>Que ocurre cuando detienes una instancia</strong></p>
+<ul>
+<li>El reinicio de una instancia no cambiará las direcciones IP ni los nombres de host DNS.</li>
+<li>Cuando se detiene una instancia y se vuelve a iniciar, sucede lo siguiente: <ul>
+<li>Se modifican la dirección IPv4 pública y el nombre de host DNS externo.</li>
+<li>La dirección IPv4 privada y el nombre de host DNS interno permanecen iguales.</li>
+</ul>
+</li>
+<li>Si necesitas una dirección IP pública persistente, asocia una dirección IP elástica a la instancia.</li>
+<li>Características de la dirección IP elástica: <ul>
+<li>Se puede asociar a las instancias en la región según sea necesario.</li>
+<li>Permanece asignada a su cuenta hasta que decida liberarla.</li>
+</ul>
+</li>
+</ul>
+<h2 id="44-casos-de-uso-de-ec2">4.4. Casos de Uso de EC2</h2>
+<p>Amazon EC2 es versátil y se utiliza en una amplia variedad de casos de uso, que incluyen:</p>
+<ul>
+<li><strong>Hospedaje de Sitios Web</strong>: Ejecutar servidores web y alojar sitios y aplicaciones web.</li>
+<li><strong>Desarrollo y Pruebas</strong>: Crear entornos de desarrollo y pruebas bajo demanda.</li>
+<li><strong>Procesamiento de Datos</strong>: Ejecutar tareas de procesamiento de datos y análisis con clusters de EC2.</li>
+<li><strong>Aplicaciones Empresariales</strong>: Ejecutar aplicaciones empresariales críticas en instancias EC2.</li>
+<li><strong>Ejecución de Contenedores</strong>: Implementar y administrar contenedores con servicios como Amazon ECS y EKS.</li>
+</ul>
+<h2 id="45-introduccion-a-aws-cli">4.5. Introducción a AWS CLI</h2>
+<p>AWS CLI es una interfaz de línea de comandos que te permite interactuar con los servicios y recursos de Amazon Web Services (AWS) directamente desde tu terminal. Con AWS CLI, puedes administrar y configurar recursos de AWS, automatizar tareas y realizar operaciones de forma eficiente sin necesidad de utilizar la interfaz web de AWS.</p>
+<h3 id="451-instalacion-en-windows">4.5.1. Instalación en Windows</h3>
+<p>Puedes instalar AWS CLI en Windows siguiendo estos pasos:</p>
+<ol>
+<li>Descarga el instalador de AWS CLI para Windows desde el sitio web oficial de AWS.</li>
+<li>Ejecuta el instalador descargado y sigue las instrucciones de instalación.</li>
+</ol>
+<h3 id="452-instalacion-en-linux-y-macos">4.5.2. Instalación en Linux y macOS</h3>
+<p>En sistemas Linux y macOS, puedes instalar AWS CLI utilizando el administrador de paquetes <code>pip</code> de Python o a través de la instalación de paquetes de tu sistema.</p>
+<p><strong>Instalación con <code>pip</code></strong></p>
+<p>Ejecuta el siguiente comando en tu terminal:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>awscli
+</code></pre></div>
+<p><strong>Instalación en macOS con Homebrew</strong></p>
+<p>Si utilizas Homebrew en macOS, puedes instalar AWS CLI con el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>awscli
+</code></pre></div>
+<h3 id="452-configuracion-de-aws-cli">4.5.2. Configuración de AWS CLI</h3>
+<p>Después de instalar AWS CLI, debes configurar las credenciales de acceso para que puedas autenticarte en AWS. Puedes hacerlo utilizando el comando <code>aws configure</code> y proporcionando tus credenciales de AWS, que incluyen la clave de acceso y la clave secreta.</p>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>configure
+</code></pre></div>
+<p>También puedes configurar la región predeterminada y el formato de salida preferido (por ejemplo, JSON) durante este proceso.</p>
+<h3 id="453-uso-basico-de-aws-cli">4.5.3. Uso Básico de AWS CLI</h3>
+<p>AWS CLI permite ejecutar comandos para interactuar con servicios de AWS. Aquí tienes algunos ejemplos de comandos básicos:</p>
+<p><strong>Listar Instancias EC2</strong></p>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ec2<span class="w"> </span>describe-instances
+</code></pre></div>
+<p><strong>Crear un Bucket de Amazon S3</strong></p>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>s3<span class="w"> </span>mb<span class="w"> </span>s3://mi-bucket
+</code></pre></div>
+<p><strong>Subir un Archivo a Amazon S3</strong></p>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>s3<span class="w"> </span>cp<span class="w"> </span>mi-archivo.txt<span class="w"> </span>s3://mi-bucket/
+</code></pre></div>
+<p><strong>Crear una Instancia EC2</strong></p>
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ec2<span class="w"> </span>run-instances<span class="w"> </span>--image-id<span class="w"> </span>ami-XXXXXXXXXXXXXXXXX<span class="w"> </span>--instance-type<span class="w"> </span>t2.micro<span class="w"> </span>--key-name<span class="w"> </span>mi-keypair
+</code></pre></div>
+<h3 id="454-scripts-y-automatizacion">4.5.4. Scripts y Automatización</h3>
+<p>AWS CLI es una herramienta poderosa para la automatización de tareas en AWS. Puedes escribir scripts y secuencias de comandos para realizar operaciones complejas y administrar recursos de manera eficiente.</p>
+<p>AWS CLI proporciona documentación detallada y ayuda en línea para cada comando y servicio. Puedes utilizar el comando <code>aws help</code> para obtener información sobre el uso de comandos específicos y acceder a la documentación oficial de AWS CLI en línea.</p>
+<h2 id="46-actividad">4.6. Actividad</h2>
+<p>Crea una instancia EC2 Amazon Linux 2 AMI para utilizarla como servidor Web, con las siguientes características:</p>
+<ul>
+<li><strong>Red</strong>: Lab- VPC</li>
+<li><strong>Almacenamiento</strong>: EBS 8 Gb</li>
+<li><strong>Etiquetas</strong>: Nombre - Servidor Web</li>
+<li><strong>Grupo de seguridad</strong>: Crea uno con acceso mediante SSH y acceso a través de HTTP (es un servidor Web)</li>
+<li>Tiene que tener habilitada la protección de terminación.</li>
+<li><strong>Claves</strong>: Crea un par de claves para su acceso mediante SSH.</li>
+<li>El servidor web debe iniciar con un index.php como este:
+<div class="highlight"><pre><span></span><code>   <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>!!! Hola, este es mi servidor Web !!!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></li>
+<li>Una vez creada y lanzada la instancia. Accede al servidor en otra pestaña del navegado</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
