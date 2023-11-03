@@ -674,6 +674,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#33-dynamodb" class="md-nav__link">
+    3.3. DynamoDB
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-caracteristicas" class="md-nav__link">
+    3.3.1. Características
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-estructura-de-la-informacion-en-dynamodb" class="md-nav__link">
+    3.3.2. Estructura de la información en DynamoDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-partiql" class="md-nav__link">
+    3.3.3. PartiQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -809,6 +843,40 @@
           <li class="md-nav__item">
   <a href="#324-bases-de-datos-de-grafos" class="md-nav__link">
     3.2.4. Bases de datos de grafos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-dynamodb" class="md-nav__link">
+    3.3. DynamoDB
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3. DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-caracteristicas" class="md-nav__link">
+    3.3.1. Características
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-estructura-de-la-informacion-en-dynamodb" class="md-nav__link">
+    3.3.2. Estructura de la información en DynamoDB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-partiql" class="md-nav__link">
+    3.3.3. PartiQL
   </a>
   
 </li>
@@ -982,6 +1050,78 @@
 <p class="admonition-title">Recuerda</p>
 <p>Cada tipo de base de datos NoSQL tiene sus propias características y casos de uso específicos. La elección dependerá de las necesidades de tu proyecto.</p>
 </div>
+<h2 id="33-dynamodb">3.3. DynamoDB</h2>
+<p>Amazon DynamoDB es un servicio de base de datos NoSQL administrado proporcionado por Amazon Web Services (AWS). Es un tipo de base de datos NoSQL que se ajusta a la categoría de bases de datos de clave-valor y de documentos. </p>
+<h3 id="331-caracteristicas">3.3.1. Características</h3>
+<ul>
+<li>
+<p>Modelo de datos de clave-valor:</p>
+<ul>
+<li>DynamoDB almacena datos en pares de clave-valor, donde cada elemento en la base de datos tiene una clave única que se utiliza para acceder a los datos.</li>
+<li>Las claves son sensibles a mayúsculas y minúsculas y se utilizan para buscar y recuperar datos.</li>
+</ul>
+</li>
+<li>
+<p>Soporte para documentos y atributos anidados:</p>
+<ul>
+<li>Aunque DynamoDB utiliza un modelo de clave-valor, admite atributos anidados y permite almacenar datos complejos, lo que lo hace adecuado para aplicaciones que requieren estructuras de datos más complejas.</li>
+</ul>
+</li>
+<li>
+<p>Características de seguridad y control de acceso:</p>
+<ul>
+<li>DynamoDB ofrece opciones de seguridad y control de acceso para proteger tus datos, incluyendo la integración con Identity and Access Management (IAM) de AWS.</li>
+</ul>
+</li>
+<li>
+<p>Totalmente administrado:</p>
+<ul>
+<li>Como un servicio totalmente administrado, AWS se encarga de tareas como la implementación, la escalabilidad, la gestión de réplicas y la copia de seguridad de datos.</li>
+</ul>
+</li>
+</ul>
+<h3 id="332-estructura-de-la-informacion-en-dynamodb">3.3.2. Estructura de la información en DynamoDB</h3>
+<p><strong>Tablas</strong>: En DynamoDB, los datos se organizan en tablas. Cada tabla puede considerarse como un conjunto de elementos relacionados. Por ejemplo, si estás construyendo una aplicación de comercio electrónico, puedes tener una tabla para productos, una para pedidos, y otra para usuarios. Cada tabla es independiente y puede tener su propio esquema.</p>
+<p><strong>Elementos (o Items)</strong>: Los elementos son las unidades básicas de datos en DynamoDB y se asemejan a las filas en una base de datos relacional. Cada elemento se almacena como un conjunto de atributos (columnas). No es necesario que todos los elementos en una tabla tengan el mismo conjunto de atributos, lo que le da una gran flexibilidad. Por ejemplo, en una tabla de productos, un elemento podría tener atributos como "nombre", "precio", "descripción", mientras que otro elemento podría tener "nombre", "precio" y "disponibilidad".</p>
+<p><strong>Clave Primaria</strong>: Cada elemento en DynamoDB debe tener una clave primaria que consiste en uno o dos componentes: clave de partición y opcionalmente una clave de ordenación (sort key). La clave de partición se utiliza para distribuir los elementos a través de múltiples particiones y garantizar una distribución equitativa de la carga. La clave de ordenación permite ordenar los elementos dentro de una partición. Esto es útil para realizar consultas específicas en un rango de claves.</p>
+<p>La estructura de las tablas en DynamoDB es flexible y puede cambiar con el tiempo a medida que evolucionan los requisitos de tu aplicación. Puedes agregar o eliminar atributos de los elementos sin afectar a los elementos existentes en la tabla.</p>
+<p><strong>Ejemplo</strong></p>
+<p>Tabla: Usuarios</p>
+<ul>
+<li>Clave de Partición (Primary Key): ID del Usuario</li>
+<li>Atributos:<ul>
+<li>Nombre</li>
+<li>Email</li>
+<li>Edad</li>
+<li>Dirección</li>
+</ul>
+</li>
+</ul>
+<p>En esta tabla, "ID del Usuario" es la clave de partición y se usa para distribuir los elementos. Los atributos son las columnas que almacenan información sobre cada usuario. Puedes realizar consultas para buscar usuarios por su ID, y los atributos te permiten almacenar información adicional sobre cada usuario.</p>
+<div class="admonition info">
+<p class="admonition-title">Recuerda</p>
+<p>DynamoDB no requiere un esquema fijo, por lo que puedes adaptar la estructura de tus tablas y elementos según las necesidades de tu aplicación a medida que evoluciona con el tiempo.</p>
+</div>
+<h3 id="333-partiql">3.3.3. PartiQL</h3>
+<p>PartiQL es un lenguaje de consulta que se puede utilizar para interactuar con las tablas de DynamoDB. Ejemplos:</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="ss">&quot;Alumnos&quot;</span><span class="w"> </span><span class="n">VALUE</span><span class="w"> </span>
+<span class="err">{</span><span class="w">  </span><span class="s1">&#39;Id_Alumno&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">&#39;Nombre&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Luis Garcia&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">&#39;Edad&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">&#39;Curso&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Primero&#39;</span>
+<span class="err">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="ss">&quot;Alumnos&quot;</span><span class="w"> </span><span class="n">VALUE</span><span class="w"> </span>
+<span class="err">{</span><span class="w">  </span><span class="s1">&#39;Id_Alumno&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">&#39;Nombre&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Jose Perez&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">&#39;Edad&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">&#39;Curso&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Primero&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="s1">&#39;Sip&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;A12345&#39;</span>
+<span class="err">}</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Id_Alumno</span><span class="p">,</span><span class="w"> </span><span class="n">Nombre</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="ss">&quot;Alumnos&quot;</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">Id_Alumno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div>
+<p><a href="https://docs.aws.amazon.com/es_es/amazondynamodb/latest/developerguide/ql-reference.statements.html" target="_blank">Documentación</a> </p>
 
 
 

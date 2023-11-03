@@ -798,6 +798,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3519-operador-lookup" class="md-nav__link">
+    3.5.1.9. operador $lookup
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -833,6 +840,13 @@
           <li class="md-nav__item">
   <a href="#363-act_3" class="md-nav__link">
     3.6.3. Act_3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#364-act_4" class="md-nav__link">
+    3.6.4. Act_4
   </a>
   
 </li>
@@ -1072,6 +1086,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#3519-operador-lookup" class="md-nav__link">
+    3.5.1.9. operador $lookup
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1107,6 +1128,13 @@
           <li class="md-nav__item">
   <a href="#363-act_3" class="md-nav__link">
     3.6.3. Act_3
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#364-act_4" class="md-nav__link">
+    3.6.4. Act_4
   </a>
   
 </li>
@@ -1689,6 +1717,28 @@ Si lo que queremos es que el valor del identificador contenga un objeto, lo pode
 <span class="w">                     </span><span class="p">{</span><span class="err">$u</span><span class="kc">n</span><span class="err">wi</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="p">:</span><span class="s2">&quot;$comentarios&quot;</span><span class="w"> </span><span class="p">}</span>
 <span class="w">                    </span><span class="err">)</span>
 </code></pre></div>
+<h4 id="3519-operador-lookup">3.5.1.9. operador $lookup</h4>
+<p>El operador $lookup se utiliza para realizar una operación de "join" entre dos colecciones en MongoDB, lo que te permite combinar documentos de una colección con documentos de otra basándote en un campo común. </p>
+<p>Supongamos que tienes dos colecciones: ventas y clientes, y deseas combinar documentos de ambas basándote en el campo cliente_id que se encuentra en ambas colecciones, y quieres obtener todos los pedidos junto con la información del cliente al que pertenecen.
+<div class="highlight"><pre><span></span><code><span class="err">db.ve</span><span class="kc">ntas</span><span class="err">.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="err">$lookup</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kc">fr</span><span class="err">om</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clientes&quot;</span><span class="p">,</span><span class="w">   </span><span class="c1">// El nombre de la segunda colección</span>
+<span class="w">      </span><span class="err">localField</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cliente_id&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// El campo en la colección &quot;ventas&quot;</span>
+<span class="w">      </span><span class="kc">f</span><span class="err">oreig</span><span class="kc">n</span><span class="err">Field</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cliente_id&quot;</span><span class="p">,</span><span class="w">  </span><span class="c1">// El campo en la colección &quot;clientes&quot;</span>
+<span class="w">      </span><span class="err">as</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cliente_info&quot;</span><span class="w">  </span><span class="c1">// El nombre del nuevo campo que contendrá la información del cliente</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span><span class="err">);</span>
+</code></pre></div></p>
+<ol>
+<li>Usamos la operación <strong>aggregate</strong> en la colección ventas.</li>
+<li>Dentro del $lookup, especificamos la colección clientes con la propiedad <strong>from</strong>.</li>
+<li>Luego, definimos <strong>localField</strong> como "clienter_id", que es el campo en la colección ventas que se usará como clave para hacer la unión.</li>
+<li><strong>foreignField</strong> se establece en "cliente_id", que es el campo correspondiente en la colección clientes.</li>
+<li>Con la propiedad <strong>as</strong>, podemos darle un nombre al nuevo campo que contendrá la información del cliente. En este caso, lo nombramos "cliente_info".</li>
+</ol>
+<p>Después de ejecutar esta consulta, obtendrás un nuevo campo en cada documento de la colección ventas llamado "cliente_info". Este campo contendrá la información del cliente al que pertenece la venta, lo que te permite acceder a los datos del cliente directamente desde los documentos de la colección ventas.</p>
 <h2 id="36-actividades">3.6. Actividades</h2>
 <h3 id="361-act_1">3.6.1. Act_1</h3>
 <p>Vamos a trabajar con dos colecciones:
@@ -1749,7 +1799,7 @@ Estas son las consultas propuestas:</p>
 </ol>
 <p><strong>Modificadores de actualización</strong></p>
 <ol>
-<li>Asignarle al producto con id:1 un precio de 20 si el precio que tiene actualmente es menor</li>
+<li>Asignarle al producto con _id:1 un precio de 20 si el precio que tiene actualmente es menor</li>
 <li>Multiplica por dos 2 el precio del producto _id:1</li>
 </ol>
 <p><strong>Modificadores de actualización de arrays</strong></p>
@@ -1766,6 +1816,8 @@ Estas son las consultas propuestas:</p>
 <li>Muestra la población de cada provincia (Provincia y Población total) en orden descendente</li>
 <li>Muestra en orden descendente las provincias (provincia y número de poblaciones) con más de 20 de poblaciones cuya altitud sea mayor que 1000</li>
 </ol>
+<h3 id="364-act_4">3.6.4. Act_4</h3>
+<p>Utilizando estas colecciones de <a href="../productos.json" target="_blank">productos</a> y <a href="../ventas.json" target="_blank">ventas</a> obten el importe total vendido de cada producto, indicando su nombre y descripión</p>
 
 
 
