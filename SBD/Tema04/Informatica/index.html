@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
@@ -548,6 +548,47 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#46-amazon-vpc" class="md-nav__link">
+    4.6. Amazon VPC
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6. Amazon VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-conceptos-clave-de-amazon-vpc" class="md-nav__link">
+    4.6.1. Conceptos Clave de Amazon VPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462-configuracion-de-amazon-vpc" class="md-nav__link">
+    4.6.2. Configuración de Amazon VPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#463-escenarios-comunes-en-amazon-vpc" class="md-nav__link">
+    4.6.3. Escenarios Comunes en Amazon VPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#664-recomendaciones-de-seguridad" class="md-nav__link">
+    6.6.4. Recomendaciones de Seguridad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#46-actividad" class="md-nav__link">
     4.6. Actividad
   </a>
@@ -814,6 +855,47 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#46-amazon-vpc" class="md-nav__link">
+    4.6. Amazon VPC
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6. Amazon VPC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-conceptos-clave-de-amazon-vpc" class="md-nav__link">
+    4.6.1. Conceptos Clave de Amazon VPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462-configuracion-de-amazon-vpc" class="md-nav__link">
+    4.6.2. Configuración de Amazon VPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#463-escenarios-comunes-en-amazon-vpc" class="md-nav__link">
+    4.6.3. Escenarios Comunes en Amazon VPC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#664-recomendaciones-de-seguridad" class="md-nav__link">
+    6.6.4. Recomendaciones de Seguridad
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#46-actividad" class="md-nav__link">
     4.6. Actividad
   </a>
@@ -842,7 +924,7 @@
 <ul>
 <li><strong>Escalabilidad Vertical y Horizontal</strong>: Puedes escalar tus instancias hacia arriba (aumentar la capacidad) o hacia abajo (disminuir la capacidad) según la demanda. Esto garantiza que siempre tengas suficiente capacidad de cómputo.</li>
 <li><strong>Diversidad de Recursos</strong>: EC2 ofrece una amplia variedad de tipos de instancia optimizados para diferentes cargas de trabajo, desde instancias de propósito general hasta instancias optimizadas para GPU y cómputo intensivo.</li>
-<li><strong>Flexibilidad de SO</strong>: Puedes seleccionar el sistema operativo que mejor se adapte a tus necesidades, incluidos Linux, Windows, macOS y sistemas basados en contenedores como Amazon ECS.</li>
+<li><strong>Flexibilidad de SO</strong>: Puedes seleccionar el sistema operativo que mejor se adapte a tus necesidades, incluidos Linux, Windows, macOS y sistemas basados en contenedores cómo Amazon ECS.</li>
 <li><strong>Almacenamiento EBS</strong>: EC2 ofrece almacenamiento Elastic Block Store (EBS) para adjuntar volúmenes de datos persistentes a tus instancias. Puedes crear instantáneas (snapshots) de estos volúmenes para copias de seguridad y replicación.</li>
 <li><strong>Amazon VPC</strong>: Puedes crear tu propia red virtual (Amazon VPC) para aislar tus instancias y controlar el acceso a ellas. También puedes configurar grupos de seguridad y asignar direcciones IP elásticas.</li>
 <li><strong>Auto Scaling y Load Balancing</strong>: EC2 es compatible con Auto Scaling para ajustar automáticamente el número de instancias en función de la demanda. También puedes usar Amazon Elastic Load Balancing (ELB) para distribuir el tráfico entre múltiples instancias.</li>
@@ -858,7 +940,7 @@
 </ol>
 <p>Elecciones que se toman con el asistente de lanzamiento de instancias:</p>
 <ol>
-<li>AMI (Imagen de Amazon Machine (AMI)<ul>
+<li>AMI Imagen de Amazon Machine (AMI)<ul>
 <li>Es una plantilla que se utiliza para crear una instancia EC2 (una máquina virtual, o VM, que se ejecuta en la nube de AWS).</li>
 <li>Contiene un sistema operativo Windows o Linux.</li>
 <li>También suele tener algún sistema de software preinstalado.</li>
@@ -1006,9 +1088,72 @@
 <p><strong>Crear una Instancia EC2</strong></p>
 <div class="highlight"><pre><span></span><code>aws<span class="w"> </span>ec2<span class="w"> </span>run-instances<span class="w"> </span>--image-id<span class="w"> </span>ami-XXXXXXXXXXXXXXXXX<span class="w"> </span>--instance-type<span class="w"> </span>t2.micro<span class="w"> </span>--key-name<span class="w"> </span>mi-keypair
 </code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Ayuda</p>
+<p><a href="https://josejuansanchez.org/iaw/practica-aws-cli/index.html#configuraci%C3%B3n-de-aws-cli" target="_blank">Ejemplo AWS CLI</a></p>
+</div>
 <h3 id="454-scripts-y-automatizacion">4.5.4. Scripts y Automatización</h3>
 <p>AWS CLI es una herramienta poderosa para la automatización de tareas en AWS. Puedes escribir scripts y secuencias de comandos para realizar operaciones complejas y administrar recursos de manera eficiente.</p>
 <p>AWS CLI proporciona documentación detallada y ayuda en línea para cada comando y servicio. Puedes utilizar el comando <code>aws help</code> para obtener información sobre el uso de comandos específicos y acceder a la documentación oficial de AWS CLI en línea.</p>
+<h2 id="46-amazon-vpc">4.6. Amazon VPC</h2>
+<p>Amazon Virtual Private Cloud (Amazon VPC) es un servicio de red que te permite crear una red virtual aislada en la nube de AWS. Con Amazon VPC, puedes controlar la topología de red, asignar direcciones IP, definir tablas de rutas y aplicar reglas de seguridad para tus recursos en la nube. VPC te permite crear una extensión virtual de tu centro de datos en AWS.</p>
+<h3 id="461-conceptos-clave-de-amazon-vpc">4.6.1. Conceptos Clave de Amazon VPC</h3>
+<p><strong>Red Virtual (VPC)</strong></p>
+<p>Una VPC es tu propia red virtual en la nube de AWS. Puedes personalizar su topología, direcciones IP y configuración de red.</p>
+<p><strong>Subredes</strong></p>
+<p>Una VPC se divide en subredes. Puedes crear subredes públicas y privadas según tus necesidades.</p>
+<p><strong>Tablas de Rutas</strong></p>
+<p>Las tablas de rutas definen cómo se enrutan los paquetes dentro y fuera de la VPC. Puedes personalizar las rutas y las reglas.</p>
+<p><strong>Grupos de Seguridad</strong></p>
+<p>Los grupos de seguridad son cortafuegos virtuales que controlan el tráfico de entrada y salida de las instancias EC2.</p>
+<p><strong>Listas de Control de Acceso a la Red (NACL)</strong></p>
+<p>Las NACL son conjuntos de reglas que controlan el tráfico de subredes en la VPC.</p>
+<p><strong>VPN y Direct Connect</strong></p>
+<p>Amazon VPC te permite conectar tu red local a la VPC mediante una conexión VPN o Direct Connect para acceso privado.</p>
+<h3 id="462-configuracion-de-amazon-vpc">4.6.2. Configuración de Amazon VPC</h3>
+<p>Pasos:</p>
+<ol>
+<li>
+<p>Creación de una VPC</p>
+<ul>
+<li>Define una VPC especificando su rango de direcciones IP y configuración de red.</li>
+<li>Puedes seleccionar un rango de direcciones IP IPv4 CIDR para tu VPC.</li>
+</ul>
+</li>
+<li>
+<p>Creación de Subredes</p>
+<ul>
+<li>Divide tu VPC en subredes públicas y privadas.</li>
+<li>Configura las tablas de rutas para permitir o denegar el tráfico.</li>
+</ul>
+</li>
+<li>
+<p>Configuración de Grupos de Seguridad</p>
+<ul>
+<li>Define grupos de seguridad para controlar el tráfico de red a instancias EC2.</li>
+<li>Asigna reglas de entrada y salida a los grupos de seguridad.</li>
+</ul>
+</li>
+<li>
+<p>Configuración de NACL</p>
+</li>
+<li>
+<p>Configura listas de control de acceso a la red (NACL) para controlar el tráfico de subredes.</p>
+</li>
+<li>Define reglas de entrada y salida en las NACL.</li>
+</ol>
+<h3 id="463-escenarios-comunes-en-amazon-vpc">4.6.3. Escenarios Comunes en Amazon VPC</h3>
+<ul>
+<li>Crea una VPC con subredes públicas que tienen acceso a Internet y subredes privadas que están aisladas.</li>
+<li>Configura una VPN o Direct Connect para conectar tu red local a tu VPC en AWS.</li>
+<li>Implementa aplicaciones y servicios en tus subredes personalizadas dentro de la VPC.</li>
+</ul>
+<h3 id="664-recomendaciones-de-seguridad">6.6.4. Recomendaciones de Seguridad</h3>
+<ul>
+<li><strong>Seguridad de Grupos</strong>: Asigna grupos de seguridad para controlar el tráfico de red a nivel de instancia.</li>
+<li><strong>Aislamiento de Subredes</strong>: Diseña subredes para aislar componentes críticos.</li>
+<li><strong>Monitoreo y Auditoría</strong>: Habilita el monitoreo y la auditoría de red para supervisar y proteger tu VPC.</li>
+</ul>
 <h2 id="46-actividad">4.6. Actividad</h2>
 <p>Crea una instancia EC2 Amazon Linux 2 AMI para utilizarla como servidor Web, con las siguientes características:</p>
 <ul>
