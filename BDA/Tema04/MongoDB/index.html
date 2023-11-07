@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -1739,13 +1739,24 @@ Si lo que queremos es que el valor del identificador contenga un objeto, lo pode
 <li>Con la propiedad <strong>as</strong>, podemos darle un nombre al nuevo campo que contendrá la información del cliente. En este caso, lo nombramos "cliente_info".</li>
 </ol>
 <p>Después de ejecutar esta consulta, obtendrás un nuevo campo en cada documento de la colección ventas llamado "cliente_info". Este campo contendrá la información del cliente al que pertenece la venta, lo que te permite acceder a los datos del cliente directamente desde los documentos de la colección ventas.</p>
-<p>El $lookp equivale a esta sentecia SQL:
-<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="o">&lt;</span><span class="k">output</span><span class="w"> </span><span class="nb">array</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;</span>
-<span class="k">FROM</span><span class="w"> </span><span class="n">collection</span>
-<span class="k">WHERE</span><span class="w"> </span><span class="o">&lt;</span><span class="k">output</span><span class="w"> </span><span class="nb">array</span><span class="w"> </span><span class="n">field</span><span class="o">&gt;</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
-<span class="w">                               </span><span class="k">FROM</span><span class="w"> </span><span class="o">&lt;</span><span class="n">collection</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">join</span><span class="o">&gt;</span>
-<span class="w">                               </span><span class="k">WHERE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">foreignField</span><span class="o">&gt;=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">collection</span><span class="p">.</span><span class="n">localField</span><span class="o">&gt;</span><span class="p">);</span>
-</code></pre></div></p>
+<p>El $lookp equivale a un left outer join, si queremos que sea equivalente a un left join deberiamos incluir el parametro "preserveNullAndEmptyArrays: true" en el $unwind, tal como muestra el ejemplo:</p>
+<div class="highlight"><pre><span></span><code><span class="err">db.produc</span><span class="kc">t</span><span class="err">os.aggrega</span><span class="kc">te</span><span class="err">(</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="err">$lookup</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kc">fr</span><span class="err">om</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ventas&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="err">localField</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_id&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="kc">f</span><span class="err">oreig</span><span class="kc">n</span><span class="err">Field</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;producto_id&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="err">as</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datos_ventas&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="err">$u</span><span class="kc">n</span><span class="err">wi</span><span class="kc">n</span><span class="err">d</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="err">pa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$datos_ventas&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="err">preserveNullA</span><span class="kc">n</span><span class="err">dEmp</span><span class="kc">t</span><span class="err">yArrays</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="err">)</span>
+</code></pre></div>
 <h2 id="36-actividades">3.6. Actividades</h2>
 <h3 id="361-act_1">3.6.1. Act_1</h3>
 <p>Vamos a trabajar con dos colecciones:
@@ -1826,7 +1837,7 @@ Estas son las consultas propuestas:</p>
 <h3 id="364-act_4">3.6.4. Act_4</h3>
 <p>Utilizando estas colecciones de <a href="../productos.json" target="_blank">productos</a> y <a href="../ventas.json" target="_blank">ventas</a> obten el importe total vendido de cada producto, indicando su nombre y descripión</p>
 <details class="info">
-<summary>Solución</summary>
+<summary>Solución_1</summary>
 <div class="highlight"><pre><span></span><code><span class="err">db.ve</span><span class="kc">ntas</span><span class="err">.aggrega</span><span class="kc">te</span><span class="err">(</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="err">$lookup</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -1855,6 +1866,44 @@ Estas son las consultas propuestas:</p>
 <span class="w">      </span><span class="err">Nombre</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$_id.Nombre&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="err">Descripcio</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$_id.Descripcion&quot;</span><span class="p">,</span>
 <span class="w">      </span><span class="err">Impor</span><span class="kc">te</span><span class="err">To</span><span class="kc">tal</span><span class="err">Ve</span><span class="kc">n</span><span class="err">dido</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$Total&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="err">)</span>
+</code></pre></div>
+</details>
+<details class="info">
+<summary>Solución_2 con left join. Incluye los articulos sin ventas</summary>
+<div class="highlight"><pre><span></span><code><span class="err">db.produc</span><span class="kc">t</span><span class="err">os.aggrega</span><span class="kc">te</span><span class="err">(</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="err">$lookup</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kc">fr</span><span class="err">om</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ventas&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="err">localField</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;_id&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="kc">f</span><span class="err">oreig</span><span class="kc">n</span><span class="err">Field</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;producto_id&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="err">as</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;datos_ventas&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="err">$u</span><span class="kc">n</span><span class="err">wi</span><span class="kc">n</span><span class="err">d</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="err">pa</span><span class="kc">t</span><span class="err">h</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$datos_ventas&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="err">preserveNullA</span><span class="kc">n</span><span class="err">dEmp</span><span class="kc">t</span><span class="err">yArrays</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="err">$group</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="err">_id</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="err">_id</span><span class="p">:</span><span class="s2">&quot;$id&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="err">Nombre</span><span class="p">:</span><span class="s2">&quot;$nombre&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="err">Descripcio</span><span class="kc">n</span><span class="err">Nombre</span><span class="p">:</span><span class="s2">&quot;$descripcion&quot;</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="err">To</span><span class="kc">tal</span><span class="p">:</span><span class="w">  </span><span class="p">{</span><span class="err">$sum</span><span class="w"> </span><span class="p">:</span><span class="s2">&quot;$datos_ventas.total&quot;</span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="err">$projec</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="err">_id</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">          </span><span class="err">Nombre</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$_id.Nombre&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="err">Descripcio</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$_id.Descripcion&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="err">Impor</span><span class="kc">te</span><span class="err">To</span><span class="kc">tal</span><span class="err">Ve</span><span class="kc">n</span><span class="err">dido</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$Total&quot;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="err">)</span>
