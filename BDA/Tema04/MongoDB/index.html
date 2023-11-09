@@ -12,6 +12,8 @@
         <link rel="prev" href="../../Tema03/NoSQL/">
       
       
+        <link rel="next" href="../../Tema05/Almacenamiento/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
@@ -860,6 +862,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema05/Almacenamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1739,7 +1761,7 @@ Si lo que queremos es que el valor del identificador contenga un objeto, lo pode
 <li>Con la propiedad <strong>as</strong>, podemos darle un nombre al nuevo campo que contendrá la información del cliente. En este caso, lo nombramos "cliente_info".</li>
 </ol>
 <p>Después de ejecutar esta consulta, obtendrás un nuevo campo en cada documento de la colección ventas llamado "cliente_info". Este campo contendrá la información del cliente al que pertenece la venta, lo que te permite acceder a los datos del cliente directamente desde los documentos de la colección ventas.</p>
-<p>El $lookp equivale a un left outer join, si queremos que sea equivalente a un left join deberiamos incluir el parametro "preserveNullAndEmptyArrays: true" en el $unwind, tal como muestra el ejemplo:</p>
+<p>Con $lookp tambien podemos hacer un left join deberiamos incluir el parametro "preserveNullAndEmptyArrays: true" en el $unwind, tal como muestra el ejemplo:</p>
 <div class="highlight"><pre><span></span><code><span class="err">db.produc</span><span class="kc">t</span><span class="err">os.aggrega</span><span class="kc">te</span><span class="err">(</span>
 <span class="w">  </span><span class="p">{</span>
 <span class="w">    </span><span class="err">$lookup</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
