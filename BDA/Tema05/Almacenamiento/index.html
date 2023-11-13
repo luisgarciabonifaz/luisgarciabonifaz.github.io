@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
@@ -1459,6 +1459,93 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Comparativa con un ejemplo.</strong></p>
+<p>Si tenemos la siguiente tabla:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>City</th>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matt</td>
+<td>LosAngeles</td>
+<td>27</td>
+</tr>
+<tr>
+<td>Dave</td>
+<td>SanFrancisco</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Tin</td>
+<td>Oakland</td>
+<td>33</td>
+</tr>
+</tbody>
+</table>
+<p>En un almacenamiento por Filas los datos se guardan asi:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matt</td>
+<td>LosAngeles</td>
+<td>27</td>
+<td>Dave</td>
+<td>SanFrancisco</td>
+<td>30</td>
+<td>Tin</td>
+<td>Oakland</td>
+<td>33</td>
+</tr>
+</tbody>
+</table>
+<p>En una almacenamiento por Columnas sería así:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matt</td>
+<td>Dave</td>
+<td>Tin</td>
+<td>Oakland</td>
+<td>Los Angeles</td>
+<td>San Francisco</td>
+<td>27</td>
+<td>30</td>
+<td>33</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://dataschool.com/data-modeling-101/row-vs-column-oriented-databases/" target="_blank">Mas info</a></p>
 <h2 id="52-repositorios">5.2  Repositorios</h2>
 <p>Un repositorio de Big Data es un sistema de almacenamiento centralizado y gestionado diseñado para almacenar, administrar y organizar grandes volúmenes de datos. Estos repositorios se utilizan para reunir y conservar una amplia variedad de datos, incluidos datos estructurados, semiestructurados y no estructurados, con el objetivo de facilitar su posterior análisis y procesamiento.</p>
 <p>Características:</p>
