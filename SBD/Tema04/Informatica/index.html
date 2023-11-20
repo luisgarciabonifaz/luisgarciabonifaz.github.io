@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
@@ -577,8 +577,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#664-recomendaciones-de-seguridad" class="md-nav__link">
-    6.6.4. Recomendaciones de Seguridad
+  <a href="#464-recomendaciones-de-seguridad" class="md-nav__link">
+    4.6.4. Recomendaciones de Seguridad
   </a>
   
 </li>
@@ -589,8 +589,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#46-actividad" class="md-nav__link">
-    4.6. Actividad
+  <a href="#47-actividades" class="md-nav__link">
+    4.7. Actividades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#471-actividad-1" class="md-nav__link">
+    4.7.1. Actividad 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#472-actividad-2" class="md-nav__link">
+    4.7.2. Actividad 2
   </a>
   
 </li>
@@ -765,6 +779,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema06/ETL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -904,8 +938,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#664-recomendaciones-de-seguridad" class="md-nav__link">
-    6.6.4. Recomendaciones de Seguridad
+  <a href="#464-recomendaciones-de-seguridad" class="md-nav__link">
+    4.6.4. Recomendaciones de Seguridad
   </a>
   
 </li>
@@ -916,8 +950,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#46-actividad" class="md-nav__link">
-    4.6. Actividad
+  <a href="#47-actividades" class="md-nav__link">
+    4.7. Actividades
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#471-actividad-1" class="md-nav__link">
+    4.7.1. Actividad 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#472-actividad-2" class="md-nav__link">
+    4.7.2. Actividad 2
   </a>
   
 </li>
@@ -1090,10 +1138,31 @@
 <div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>awscli
 </code></pre></div>
 <h3 id="452-configuracion-de-aws-cli">4.5.2. Configuración de AWS CLI</h3>
-<p>Después de instalar AWS CLI, debes configurar las credenciales de acceso para que puedas autenticarte en AWS. Puedes hacerlo utilizando el comando <code>aws configure</code> y proporcionando tus credenciales de AWS, que incluyen la clave de acceso y la clave secreta.</p>
+<p>Después de instalar AWS CLI, debes configurar las credenciales de acceso para que puedas autenticarte en AWS. Puedes hacerlo utilizando el comando: </p>
 <div class="highlight"><pre><span></span><code>aws<span class="w"> </span>configure
 </code></pre></div>
-<p>También puedes configurar la región predeterminada y el formato de salida preferido (por ejemplo, JSON) durante este proceso.</p>
+<p>Este comando preguntará estos datos:
+<div class="highlight"><pre><span></span><code>AWS<span class="w"> </span>Access<span class="w"> </span>Key<span class="w"> </span>ID<span class="w"> </span><span class="o">[</span>None<span class="o">]</span>:<span class="w"> </span>
+AWS<span class="w"> </span>Secret<span class="w"> </span>Access<span class="w"> </span>Key<span class="w"> </span><span class="o">[</span>None<span class="o">]</span>:<span class="w"> </span>
+Default<span class="w"> </span>region<span class="w"> </span>name<span class="w"> </span><span class="o">[</span>None<span class="o">]</span>:<span class="w"> </span>
+Default<span class="w"> </span>output<span class="w"> </span>format<span class="w"> </span><span class="o">[</span>None<span class="o">]</span>:<span class="w"> </span>
+</code></pre></div>
+Y creará un archivo de texto llamado credentials dentro del directorio home del usuario.</p>
+<ul>
+<li>En Linux/macOs el archivo estará en la ruta: ~/.aws/credentials.</li>
+<li>En Windows estará en la ruta: C:\Users\usuario.aws\credentials.</li>
+</ul>
+<p>Si queremos utilizar las credenciales de AWS Academy solo tenemos que copiar en el archivo ~/.aws/credentials los datos que nos aparecen en el apartado <strong>AWS Details -&gt; Cloud Access -&gt; AWS CLI</strong>.</p>
+<p>Ejemplo de un archivo credentials
+<div class="highlight"><pre><span></span><code><span class="o">[</span>default<span class="o">]</span>
+<span class="nv">aws_access_key_id</span><span class="o">=</span>BSICYBW38QHVAVV7P365
+<span class="nv">aws_secret_access_key</span><span class="o">=</span>DE/CB2FGCx8EV34x0EtuZfJg39E7hapZ9suhXBzF
+<span class="nv">aws_session_token</span><span class="o">=</span>FwoGZXIvYXdzECkaDAGFN5okYCHateFXISK9AYwT4gghzz5hIr6TZs9X8pQaOYPZvTCNSrLtJoaw/fEwz9...XBzH
+</code></pre></div>
+Después de copiar el contenido del archivo tenemos que ejecutar el comando:
+<div class="highlight"><pre><span></span><code>aws<span class="w"> </span>configure
+</code></pre></div>
+También preguntará por la región predeterminada (us-east-1) y el formato de salida preferido (JSON) durante este proceso.</p>
 <h3 id="453-uso-basico-de-aws-cli">4.5.3. Uso Básico de AWS CLI</h3>
 <p>AWS CLI permite ejecutar comandos para interactuar con servicios de AWS. Aquí tienes algunos ejemplos de comandos básicos:</p>
 <p><strong>Listar Instancias EC2</strong></p>
@@ -1168,13 +1237,14 @@
 <li>Configura una VPN o Direct Connect para conectar tu red local a tu VPC en AWS.</li>
 <li>Implementa aplicaciones y servicios en tus subredes personalizadas dentro de la VPC.</li>
 </ul>
-<h3 id="664-recomendaciones-de-seguridad">6.6.4. Recomendaciones de Seguridad</h3>
+<h3 id="464-recomendaciones-de-seguridad">4.6.4. Recomendaciones de Seguridad</h3>
 <ul>
 <li><strong>Seguridad de Grupos</strong>: Asigna grupos de seguridad para controlar el tráfico de red a nivel de instancia.</li>
 <li><strong>Aislamiento de Subredes</strong>: Diseña subredes para aislar componentes críticos.</li>
 <li><strong>Monitoreo y Auditoría</strong>: Habilita el monitoreo y la auditoría de red para supervisar y proteger tu VPC.</li>
 </ul>
-<h2 id="46-actividad">4.6. Actividad</h2>
+<h2 id="47-actividades">4.7. Actividades</h2>
+<h2 id="471-actividad-1">4.7.1. Actividad 1</h2>
 <p>Crea una instancia EC2 Amazon Linux 2 AMI para utilizarla como servidor Web, con las siguientes características:</p>
 <ul>
 <li><strong>Red</strong>: Lab- VPC</li>
@@ -1187,6 +1257,21 @@
 <div class="highlight"><pre><span></span><code>   <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>!!! Hola, este es mi servidor Web !!!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></li>
 <li>Una vez creada y lanzada la instancia. Accede al servidor en otra pestaña del navegado</li>
+</ul>
+<details class="info">
+<summary>Ayuda. Datos de usuario</summary>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>httpd
+systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>httpd
+systemctl<span class="w"> </span>start<span class="w"> </span>httpd
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;&lt;html&gt;&lt;h1&gt;Hello From Your Web Server!&lt;/h1&gt;&lt;/html&gt;&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/var/www/html/index.html
+</code></pre></div>
+</details>
+<h2 id="472-actividad-2">4.7.2. Actividad 2</h2>
+<p>Crea una VPC con una única subred pública con una instancia EC2 con un servidor Web.</p>
+<ul>
+<li>El rango de direcciones de la subred pública es 10.0.1.0/24.</li>
+<li>Prueba el entorno con y sin IP elástica.</li>
 </ul>
 
 
