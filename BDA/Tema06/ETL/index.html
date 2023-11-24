@@ -1194,14 +1194,18 @@
 </ul>
 <h3 id="651-mapeo-de-datos">6.5.1. Mapeo de datos</h3>
 <p>El mapeo de datos es el proceso por el que se establecen correspondencias entre campos de una base de datos a otra. Es el primer paso para facilitar la migración, integración y otras tareas de gestión de datos.</p>
-<p><strong>¿Cuándo se puede realizar un mapeo?</strong>
-- Si disponemos de datos limpios y estructurados generamos la ingesta y trabajamos sobre ellos.
-- Después de una o varias transformaciones.</p>
+<p><strong>¿Cuándo se puede realizar un mapeo?</strong></p>
+<ul>
+<li>Si disponemos de datos limpios y estructurados generamos la ingesta y trabajamos sobre ellos.</li>
+<li>Después de una o varias transformaciones.</li>
+</ul>
 <p>Las tareas de mapeo de origen a destino varían en complejidad. El nivel de complejidad depende de la jerarquía de datos y la disparidad entre la estructura de datos de origen y destino.</p>
-<p>Usos de un mapeo de datos:
-- <strong>Migración de datos:</strong> es el proceso en que trasladamos los datos de un sistema a otro de forma puntual.
-- <strong>Integración de datos:</strong> proceso continuo por el que se trasladan datos periódicamente de un sistema a otro.
-- <strong>Durante una transformación de datos:</strong> por ejemplo, podemos realizar una operación de transformación de “Illinois” a “IL” y mapearlo a otro campo destino.</p>
+<p>Usos de un mapeo de datos:</p>
+<ul>
+<li><strong>Migración de datos:</strong> es el proceso en que trasladamos los datos de un sistema a otro de forma puntual.</li>
+<li><strong>Integración de datos:</strong> proceso continuo por el que se trasladan datos periódicamente de un sistema a otro.</li>
+<li><strong>Durante una transformación de datos:</strong> por ejemplo, podemos realizar una operación de transformación de “Illinois” a “IL” y mapearlo a otro campo destino.</li>
+</ul>
 <h3 id="652-limpieza-de-datos">6.5.2. Limpieza de datos</h3>
 <p>Los datos que recibimos de los diferentes orígenes pueden contener errores, como información faltante, registros duplicados o datos incorrectos. La limpieza de datos ayuda a identificar errores en un conjunto de datos y los corrige para garantizar que solo se transfieran datos precisos a los sistemas de destino.</p>
 <p>Para realizar esta tarea, vamos a tener que:</p>
@@ -1232,26 +1236,30 @@
 Tenemos la columna “Estado” en dos sistemas fuente, uno escribe el nombre del estado tal cual, Illinois como «Illinois», pero el otro sistema tiene la información escrita con la abreviatura «IL».</p>
 <p>Una vez hagamos una ingesta de las dos fuentes, ¿qué podemos hacer para poder explotar la información?</p>
 <h3 id="653-otras-transformaciones">6.5.3. Otras transformaciones</h3>
-<p>Todas las tareas de transformaciones se configuran para que se ejecuten automáticamente en la secuencia que se defina. Además de las que acabamos de ver, podemos añadir:
-- Cambios de codificación.
-- Cruzar diferentes fuentes de datos para obtener una fuente diferente.
-- Agregar información en función de alguna variable.
-- Tomar parte de los datos para cargarlos.
-- Transformar información para generar códigos, claves, identificadores.
-- Estructurar mejor la información.
-- Generar indicadores que faciliten el procesamiento y entendimiento.
-- ...</p>
-<p>Estas son algunas de las acciones más comunes que podemos hacer para conseguir las tareas que hemos descrito:
-- Reformateo de datos.
-- Conversión de unidades.
-- Selección de columnas para su carga posterior.
-- Agregación de columnas.
-- Eliminación de campos innecesarios de los registros.
-- Dividir una columna en varias.
-- Obtener nuevos valores calculados.
-- Unir datos de varias fuentes.
-- Lookups.
-- Pivoting.</p>
+<p>Todas las tareas de transformaciones se configuran para que se ejecuten automáticamente en la secuencia que se defina. Además de las que acabamos de ver, podemos añadir:</p>
+<ul>
+<li>Cambios de codificación.</li>
+<li>Cruzar diferentes fuentes de datos para obtener una fuente diferente.</li>
+<li>Agregar información en función de alguna variable.</li>
+<li>Tomar parte de los datos para cargarlos.</li>
+<li>Transformar información para generar códigos, claves, identificadores.</li>
+<li>Estructurar mejor la información.</li>
+<li>Generar indicadores que faciliten el procesamiento y entendimiento.</li>
+<li>...</li>
+</ul>
+<p>Estas son algunas de las acciones más comunes que podemos hacer para conseguir las tareas que hemos descrito:</p>
+<ul>
+<li>Reformateo de datos.</li>
+<li>Conversión de unidades.</li>
+<li>Selección de columnas para su carga posterior.</li>
+<li>Agregación de columnas.</li>
+<li>Eliminación de campos innecesarios de los registros.</li>
+<li>Dividir una columna en varias.</li>
+<li>Obtener nuevos valores calculados.</li>
+<li>Unir datos de varias fuentes.</li>
+<li>Lookups.</li>
+<li>Pivoting.</li>
+</ul>
 <h2 id="66-carga">6.6. Carga</h2>
 <p>La última fase de un proceso de ETL es la carga de esos datos extraídos y transformados a su nuevo destino. Existen tres vías habituales de cargar los datos a un almacén de datos: la carga completa, la carga incremental y la actualización completa.
 - <strong>Carga completa:</strong> Todos los datos se mueven al almacén al mismo tiempo.
