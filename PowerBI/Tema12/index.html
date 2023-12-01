@@ -16,7 +16,7 @@
     
     
       
-        <title>Sistemas Big Data - Mis Clases</title>
+        <title>Tema12 - Mis Clases</title>
       
     
     
@@ -60,11 +60,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#sistemas-big-data" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -97,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sistemas Big Data
+              Tema12
             
           </span>
         </div>
@@ -400,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema01/BigDataConAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema01/BigDataConAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema02/InfraestructuraAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema02/InfraestructuraAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +435,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema03/SeguridadAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema03/SeguridadAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema04/Informatica/" class="md-nav__link">
+      <a href="../../SBD/Tema04/Informatica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema05/AlmacenamientoAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema05/AlmacenamientoAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema01/PracticasAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema01/PracticasAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -699,23 +694,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#temas" class="md-nav__link">
-    Temas
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -730,16 +708,263 @@
                   
 
 
-<h1 id="sistemas-big-data">Sistemas Big Data</h1>
-<h2 id="temas">Temas</h2>
-<ul>
-<li><a href="../Tema01/BigDataConAWS/">T1 Big Data con AWS</a> </li>
-<li><a href="../Tema02/InfraestructuraAWS/">T2 Infraestructura AWS</a> </li>
-<li><a href="../Tema03/SeguridadAWS/">T3 Seguridad en AWS</a> </li>
-<li><a href="../Tema04/Informatica/">T4 Informática AWS</a> </li>
-<li><a href="../Tema05/AlmacenamientoAWS/">T5 Almacenamiento AWS</a> </li>
-<li><a href="../Tema01/PracticasAWS/">T12 AWS</a> </li>
-</ul>
+  <h1>Tema12</h1>
+
+<p>Apuntes - Tema 12: Funciones de Tabla y FiltrosÍndice</p>
+<p>Funciones comunes y recomendadas</p>
+<p>Capítulo 1: Funciones comunes y recomendadas
+Capítulo 2: Funciones para la Creación de Datos
+Capítulo 3: Funciones para la Adición de Datos
+Capítulo 4: Funciones para el Filtrado de Datos
+Funciones comunes y recomendadas</p>
+<ol>
+<li>
+<p>Funciones comunes y recomendadas
+Funciones en DAX para desarrollar fórmulas y obtener medidas y columnas calculadas.
+Funciones orientadas a mejorar el modelo y el rendimiento en la visualización de datos en Power BI.
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+Enfoque en funciones para tablas y filtros.
+Mejora del modelado y volumen de datos en la visualización.
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+Exploración de funciones comunes y utilizadas con ejemplos.
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+Introducción a funciones recurrentes para la manipulación de tablas.
+Explicación de algunas funciones más utilizadas con ejemplos.
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+COUNTROWS: Contar el número de filas de una tabla.
+Ejemplo: Cuenta Filas = COUNTROWS('Ventas Videojuegos')
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+HASONEVALUE: Validar si solo existe un valor en una columna.
+Ejemplo: Un Valor Exclusivo = HASONEVALUE('Ventas Videojuegos'[Año])
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+ADDCOLUMNS: Añadir columnas calculadas a una nueva tabla.
+Ejemplo: Completa Salarios = ADDCOLUMNS('Tabla Empleados', "Salario", SUM('Tabla Empleados'[Sueldo]))
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+DISTINCT: Crear una tabla con valores distintos de una columna o tabla.
+Ejemplo: Lista de Departamentos = DISTINCT('Tabla Empleados'[Departamento])
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+GENERATESERIES: Devolver una tabla con una serie aritmética.
+Ejemplo: Tabla Series 0-100 = GENERATESERIES(0,100,10)
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+SUMMARIZE: Devolver una tabla resumen de valores con generación de columnas.
+Ejemplo: Sueldos Totales por Jefe = SUMMARIZE('Tabla Empleados', 'Tabla Empleados'[Nombre Jefe], "Sueldo", SUM('Tabla Sueldo'[Sueldo]))
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+TOPN: Devolver las N filas superiores de una tabla basado en agrupación y ordenación.
+Ejemplo: TOP Empleados mejores Evaluaciones = TOPN(10, 'Tabla Empleados', 'Tabla Empleados'[Evaluacion], DESC)
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+SUMX: Devolver la suma de la expresión evaluada para cada fila de la tabla.
+Ejemplo: Suma de la Media de Sueldo por ID = SUMX('Tabla Sueldo', AVERAGE('Tabla Sueldo'[Sueldo]))
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+AVERAGEX: Devolver la media de la expresión evaluada para cada fila de la tabla.
+Ejemplo: Media de la Suma de Sueldo por ID = AVERAGEX('Tabla Empleados',SUM('Tabla Sueldo'[Sueldo]))
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+MAXX: Evaluar una expresión para cada fila y devolver el valor mayor.
+Ejemplo: Valor Máximo Sueldo Empleados = MAXX('Tabla Sueldo','Tabla Sueldo'[Sueldo])
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+MINX: Evaluar una expresión para cada fila y devolver el valor menor.
+Ejemplo: Valor Mínimo Sueldo Empleados = MINX('Tabla Sueldo','Tabla Sueldo'[Sueldo])
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+Resumen de funciones utilizadas y su aplicación.
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+Las funciones pueden ser más o menos complejas según su finalidad.
+Se pueden combinar para obtener resultados deseados.
+Funciones comunes y recomendadas</p>
+</li>
+<li>
+<p>Funciones comunes y recomendadas
+Referencia a futuros temas y funciones más específicas.
+Ver Vídeo 1.
+Funciones para la creación de Datos</p>
+</li>
+<li>
+<p>Funciones para la creación de Datos
+Funciones de creación de datos para generar nuevas columnas y enriquecer tablas.
+Funciones de tipo date, random, y operadores de concatenación.
+Funciones para la creación de Datos</p>
+</li>
+<li>
+<p>Funciones para la creación de Datos
+CALENDAR: Devolver una tabla con fechas dentro de un rango especificado.
+Ejemplo: Tabla Calendario = CALENDAR("01-01-1990","31-12-2021")
+Funciones para la creación de Datos</p>
+</li>
+<li>
+<p>Funciones para la creación de Datos
+CALENDARAUTO: Devolver una tabla con fechas calculadas automáticamente según los datos del modelo.
+Ejemplo: Tabla Calendario = CALENDARAUTO()
+Funciones para la creación de Datos</p>
+</li>
+<li>
+<p>Funciones para la creación de Datos
+RAND(): Devolver un número decimal aleatorio entre 0 y 1.
+Ejemplo: Número Aleatorio = RAND()
+Funciones para la creación de Datos</p>
+</li>
+<li>
+<p>Funciones para la creación de Datos
+CONCATENATEX: Concatenar textos de una columna en una nueva columna calculada.
+Ejemplo: Nombre Completo = CONCATENATEX('Tabla Clientes', 'Tabla Clientes'[Nombre], ", ")
+Funciones para la creación de Datos</p>
+</li>
+<li>
+<p>Funciones para la creación de Datos
+UNION: Combinar dos tablas en una nueva tabla.
+Ejemplo: Tabla Combinada = UNION('Tabla A', 'Tabla B')
+Funciones para la creación de Datos</p>
+</li>
+<li>
+<p>Funciones para la creación de Datos
+ADDCOLUMNS: Añadir columnas calculadas a una nueva tabla.
+Ejemplo: Completa Sueldos = ADDCOLUMNS('Tabla Empleados', "Sueldo", SUM('Tabla Empleados'[Sueldo]))
+Funciones para la creación de Datos</p>
+</li>
+<li>
+<p>Funciones para la creación de Datos
+Resumen de funciones para la creación de datos.
+Ver Vídeo 2.
+Funciones para la adición de Datos</p>
+</li>
+<li>
+<p>Funciones para la adición de Datos
+Funciones para la adición de datos y enriquecimiento de tablas.
+Uso de funciones como RELATED y RELATEDTABLE.
+Funciones para la adición de Datos</p>
+</li>
+<li>
+<p>Funciones para la adición de Datos
+RELATED: Seguir relaciones y devolver el valor relacionado de otra tabla.
+Ejemplo: Categoría del Producto = RELATED('Tabla Categorías'[Categoría])
+Funciones para la adición de Datos</p>
+</li>
+<li>
+<p>Funciones para la adición de Datos
+RELATEDTABLE: Seguir relaciones y devolver una tabla relacionada de otra tabla.
+Ejemplo: Productos Relacionados = RELATEDTABLE('Tabla Productos')
+Funciones para el filtrado de Datos</p>
+</li>
+<li>
+<p>Funciones para el filtrado de Datos
+Funciones para filtrar datos en tablas y mejorar la visualización.
+Uso de funciones como FILTER y ALL.
+Funciones para el filtrado de Datos</p>
+</li>
+<li>
+<p>Funciones para el filtrado de Datos
+FILTER: Filtrar filas de una tabla basándose en una condición.
+Ejemplo: Ventas 2022 = FILTER('Ventas', 'Ventas'[Año] = 2022)
+Funciones para el filtrado de Datos</p>
+</li>
+<li>
+<p>Funciones para el filtrado de Datos
+ALL: Eliminar todos los filtros de una columna o tabla.
+Ejemplo: Ventas Totales = CALCULATE(SUM('Ventas'[Monto]), ALL('Ventas'[Producto]))
+Funciones para el filtrado de Datos</p>
+</li>
+<li>
+<p>Funciones para el filtrado de Datos
+VALUES: Devolver una tabla con los valores distintos de una columna.
+Ejemplo: Valores Únicos de Producto = VALUES('Ventas'[Producto])
+Funciones para el filtrado de Datos</p>
+</li>
+<li>
+<p>Funciones para el filtrado de Datos
+CALCULATETABLE: Evaluar expresiones en un contexto modificado por filtros.
+Ejemplo: Ventas Altas 2022 = CALCULATETABLE('Ventas', 'Ventas'[Monto] &gt; 1000)
+Funciones para el filtrado de Datos</p>
+</li>
+<li>
+<p>Funciones para el filtrado de Datos
+Resumen de funciones para el filtrado de datos.
+Ver Vídeo 3.
+Funciones para el filtrado de Datos</p>
+</li>
+<li>
+<p>Funciones para el filtrado de Datos
+Consideraciones y buenas prácticas al utilizar funciones de filtrado.
+Ver Vídeo 4.
+Funciones para el filtrado de Datos</p>
+</li>
+<li>
+<p>Funciones para el filtrado de Datos
+Preguntas y respuestas frecuentes sobre funciones de filtrado.
+Ver Vídeo 5.
+Funciones para el filtrado de Datos</p>
+</li>
+<li>
+<p>Funciones para el filtrado de Datos
+Desafíos y ejercicios para practicar funciones de filtrado.
+Ver Vídeo 6.
+Conclusiones y Recursos Adicionales</p>
+</li>
+<li>
+<p>Conclusiones y Recursos Adicionales
+Resumen del tema y puntos clave.
+Recursos adicionales y lecturas recomendadas para profundizar.
+Ver Vídeo 7.
+Conclusiones y Recursos Adicionales</p>
+</li>
+<li>
+<p>Conclusiones y Recursos Adicionales
+Preguntas y respuestas finales.
+Información sobre futuros temas y novedades.
+Ver Vídeo 8.
+Conclusiones y Recursos Adicionales</p>
+</li>
+<li>
+<p>Conclusiones y Recursos Adicionales
+Agradecimientos y despedida.
+Encuestas y retroalimentación para mejorar futuros temas.
+Ver Vídeo 9.</p>
+</li>
+</ol>
 
 
 

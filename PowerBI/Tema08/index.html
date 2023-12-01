@@ -1,0 +1,1320 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>Tema 8: Fundamentos del Lenguaje DAX - Mis Clases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-8-fundamentos-del-lenguaje-dax" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mis Clases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 8: Fundamentos del Lenguaje DAX
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mis Clases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemes Operatius Monolloc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemes Operatius Monolloc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOM/Tema01/SistemesInformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Sistemes Informàtics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOM/Tema02/SistemesOperatius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOM/Tema03/GestioRecursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Gestio de Recursos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOM/Tema04/Virtualitzacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Virtualització
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOM/Tema05/InstalacionSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Instalació Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SOM/Tema06/ConfiguracionBasicaWindows.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Configuració bàsica Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemas Big Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemas Big Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SBD/Tema01/BigDataConAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Big Data con AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SBD/Tema02/InfraestructuraAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Infraestructura AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SBD/Tema03/SeguridadAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Seguridad en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SBD/Tema04/Informatica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Informatica en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SBD/Tema05/AlmacenamientoAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SBD/Tema01/PracticasAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big Data Aplicado
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Big Data Aplicado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDA/Tema01/IntroduccionBigData/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDA/Tema02/RepasoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Repaso SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDA/Tema03/NoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Bases de datos NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDA/Tema04/MongoDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDA/Tema05/Almacenamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BDA/Tema06/ETL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#capitulo-1-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    Capítulo 1 – Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="Capítulo 1 – Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    21. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="21. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-dax" class="md-nav__link">
+    ¿Qué es DAX?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    31. Las Categorías de las Funciones DAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    41. Las Categorías de las Funciones DAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    51. Las Categorías de las Funciones DAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    61. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="61. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-fecha-y-hora" class="md-nav__link">
+    Funciones de fecha y hora:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#71-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    71. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="71. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-filtro" class="md-nav__link">
+    Funciones de filtro:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#81-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    81. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="81. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-financieras" class="md-nav__link">
+    Funciones financieras:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#91-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    91. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="91. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-informacion" class="md-nav__link">
+    Funciones de información:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#101-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    101. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="101. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-logicas" class="md-nav__link">
+    Funciones lógicas:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#111-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    111. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="111. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-matematicas-y-trigonometricas" class="md-nav__link">
+    Funciones matemáticas y trigonométricas:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#121-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    121. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="121. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-relacion" class="md-nav__link">
+    Funciones de relación:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#131-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    131. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="131. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-estadisticas" class="md-nav__link">
+    Funciones estadísticas:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#141-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    141. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="141. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-manipulacion-de-tablas" class="md-nav__link">
+    Funciones de manipulación de tablas:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#151-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    151. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="151. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-texto" class="md-nav__link">
+    Funciones de texto:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#161-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    161. Las Categorías de las Funciones DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="161. Las Categorías de las Funciones DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funciones-de-ingenieria" class="md-nav__link">
+    Funciones de ingeniería:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#171-las-categorias-de-las-funciones-dax" class="md-nav__link">
+    171. Las Categorías de las Funciones DAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursos-adicionales" class="md-nav__link">
+    Recursos Adicionales
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capitulo-2-operadores-dax" class="md-nav__link">
+    Capítulo 2 – Operadores DAX
+  </a>
+  
+    <nav class="md-nav" aria-label="Capítulo 2 – Operadores DAX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-introduccion-a-operadores-dax" class="md-nav__link">
+    21. Introducción a Operadores DAX
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-tipos-de-operadores" class="md-nav__link">
+    31. Tipos de Operadores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-importancia-de-operadores-en-programacion" class="md-nav__link">
+    41. Importancia de Operadores en Programación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capitulo-3-diferencias-entre-columnas-calculadas-y-medidas" class="md-nav__link">
+    Capítulo 3 – Diferencias entre Columnas Calculadas y Medidas
+  </a>
+  
+    <nav class="md-nav" aria-label="Capítulo 3 – Diferencias entre Columnas Calculadas y Medidas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-conceptos-basicos" class="md-nav__link">
+    21. Conceptos Básicos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-creacion-de-columnas-calculadas" class="md-nav__link">
+    31. Creación de Columnas Calculadas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-ejemplos-de-columnas-calculadas" class="md-nav__link">
+    41. Ejemplos de Columnas Calculadas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-ventajas-y-limitaciones-de-columnas-calculadas" class="md-nav__link">
+    51. Ventajas y Limitaciones de Columnas Calculadas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-creacion-de-medidas" class="md-nav__link">
+    61. Creación de Medidas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#71-diferencias-clave" class="md-nav__link">
+    71. Diferencias Clave
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capitulo-4-medidas-rapidas" class="md-nav__link">
+    Capítulo 4 – Medidas Rápidas
+  </a>
+  
+    <nav class="md-nav" aria-label="Capítulo 4 – Medidas Rápidas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-introduccion-a-medidas-rapidas" class="md-nav__link">
+    21. Introducción a Medidas Rápidas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-tipos-de-calculos-en-medidas-rapidas" class="md-nav__link">
+    31. Tipos de Cálculos en Medidas Rápidas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-creacion-y-configuracion" class="md-nav__link">
+    41. Creación y Configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-adaptacion-de-medidas-rapidas" class="md-nav__link">
+    51. Adaptación de Medidas Rápidas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-consideraciones-y-visualizacion" class="md-nav__link">
+    61. Consideraciones y Visualización
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capitulo-5-conclusiones-y-recursos-adicionales" class="md-nav__link">
+    Capítulo 5 – Conclusiones y Recursos Adicionales
+  </a>
+  
+    <nav class="md-nav" aria-label="Capítulo 5 – Conclusiones y Recursos Adicionales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-equilibrio-en-el-uso-de-recursos" class="md-nav__link">
+    21. Equilibrio en el Uso de Recursos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31-recursos-para-profundizar" class="md-nav__link">
+    31. Recursos para Profundizar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tema-8-fundamentos-del-lenguaje-dax">Tema 8: Fundamentos del Lenguaje DAX</h1>
+<h2 id="capitulo-1-las-categorias-de-las-funciones-dax">Capítulo 1 – Las Categorías de las Funciones DAX</h2>
+<h3 id="21-las-categorias-de-las-funciones-dax">21. Las Categorías de las Funciones DAX</h3>
+<h4 id="que-es-dax">¿Qué es DAX?</h4>
+<p>DAX es un lenguaje de fórmulas usado en Power BI que significa Data Analysis Expressions o Expresiones de Análisis de Datos. También es utilizado en otros productos de Microsoft, como Power Pivot y SSAS Tabular.</p>
+<p>Las funciones que proporciona este lenguaje tienen funcionalidades idénticas y los mismos nombres que las funciones de Excel. Así, se consigue que los usuarios ya estén familiarizados con la nomenclatura.</p>
+<h3 id="31-las-categorias-de-las-funciones-dax">31. Las Categorías de las Funciones DAX</h3>
+<p>Sin embargo, estas funciones se modificaron para usar los tipos de datos de DAX y así trabajar con tablas y columnas. También proporcionan una amplia variedad de funciones especializadas (para propósitos específicos ofrecidos por DAX):</p>
+<ul>
+<li>Búsquedas basadas en relaciones</li>
+<li>La capacidad de iterar sobre una tabla para realizar cálculos recursivos</li>
+<li>Cálculos que usan la inteligencia de tiempo</li>
+<li>Cambiar el contexto de los objetos visuales</li>
+</ul>
+<h3 id="41-las-categorias-de-las-funciones-dax">41. Las Categorías de las Funciones DAX</h3>
+<p>Cuenta con conceptos sencillos y eficaces. Se basa en patrones y conceptos de programación únicos, y por esa razón puede costar su comprensión y ponerlo en práctica en su totalidad.</p>
+<p>Es posible que los métodos tradicionales de aprendizaje de lenguajes informáticos no sean la forma más adecuada de iniciarse en este lenguaje.</p>
+<h3 id="51-las-categorias-de-las-funciones-dax">51. Las Categorías de las Funciones DAX</h3>
+<p>Existen diferentes tipos de funciones en el lenguaje DAX, que se agrupan de forma que cada uno de estos grupos, tienen unas finalidades específicas en el desarrollo de medidas y columnas calculadas.</p>
+<p>Los conceptos de medidas y columnas calculadas, se detallarán dentro de este tema. A continuación, se detalla y se explica cada uno de los grupos de funciones de los que dispone DAX.</p>
+<h3 id="61-las-categorias-de-las-funciones-dax">61. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-de-fecha-y-hora">Funciones de fecha y hora:</h4>
+<p>Las funciones de fecha y hora de DAX son similares a las funciones de fecha y hora de Excel.</p>
+<h3 id="71-las-categorias-de-las-funciones-dax">71. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-de-filtro">Funciones de filtro:</h4>
+<p>Devuelven una columna o una tabla o valores vinculados a la fila actual. Puede utilizar las funciones de filtro de DAX para devolver tipos específicos de datos, buscar valores en tablas relacionadas y filtrar por valores relacionados. También permiten manipular el contexto de los datos para crear cálculos dinámicos.</p>
+<h3 id="81-las-categorias-de-las-funciones-dax">81. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-financieras">Funciones financieras:</h4>
+<p>Las funciones financieras se usan en fórmulas que realizan cálculos financieros, como el valor neto presente y la tasa de devolución. Estas funciones son similares a las funciones financieras usadas en Microsoft Excel.</p>
+<h3 id="91-las-categorias-de-las-funciones-dax">91. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-de-informacion">Funciones de información:</h4>
+<p>Estas funciones, sirven para examinar la celda o fila proporcionada como argumento y devuelven como resultado si el valor coincide con el tipo esperado.</p>
+<h3 id="101-las-categorias-de-las-funciones-dax">101. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-logicas">Funciones lógicas:</h4>
+<p>Devuelven información sobre los valores de una expresión. Por ejemplo, la función DAX TRUE le permite saber si una expresión que evalúa devuelve un valor TRUE.</p>
+<h3 id="111-las-categorias-de-las-funciones-dax">111. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-matematicas-y-trigonometricas">Funciones matemáticas y trigonométricas:</h4>
+<p>Las funciones matemáticas y trigonométricas de DAX son muy similares a las funciones matemáticas y trigonométricas de Excel.</p>
+<h3 id="121-las-categorias-de-las-funciones-dax">121. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-de-relacion">Funciones de relación:</h4>
+<p>Estas funciones proporcionan información sobre las relaciones entre las tablas.</p>
+<h3 id="131-las-categorias-de-las-funciones-dax">131. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-estadisticas">Funciones estadísticas:</h4>
+<p>Devuelven información sobre estadísticas descriptivas, como el promedio, la varianza y la desviación estándar.</p>
+<h3 id="141-las-categorias-de-las-funciones-dax">141. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-de-manipulacion-de-tablas">Funciones de manipulación de tablas:</h4>
+<p>Estas funciones permiten manipular tablas para que se adapten a sus necesidades.</p>
+<h3 id="151-las-categorias-de-las-funciones-dax">151. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-de-texto">Funciones de texto:</h4>
+<p>Las funciones de texto en DAX se usan para devolver información sobre texto en una columna.</p>
+<h3 id="161-las-categorias-de-las-funciones-dax">161. Las Categorías de las Funciones DAX</h3>
+<h4 id="funciones-de-ingenieria">Funciones de ingeniería:</h4>
+<p>Estas funciones permiten realizar cálculos en bases de datos multidimensionales.</p>
+<h3 id="171-las-categorias-de-las-funciones-dax">171. Las Categorías de las Funciones DAX</h3>
+<h3 id="recursos-adicionales">Recursos Adicionales</h3>
+<p>La documentación detallada de DAX está disponible en <a href="https://docs.microsoft.com/es-es/dax/">Microsoft Docs</a>.</p>
+<h2 id="capitulo-2-operadores-dax">Capítulo 2 – Operadores DAX</h2>
+<h3 id="21-introduccion-a-operadores-dax">21. Introducción a Operadores DAX</h3>
+<p>Los operadores DAX se utilizan para realizar comparaciones, cálculos aritméticos y trabajar con cadenas de texto. </p>
+<h3 id="31-tipos-de-operadores">31. Tipos de Operadores</h3>
+<p>Existen varios tipos de operadores en DAX, incluyendo:</p>
+<ul>
+<li>Operadores aritméticos para realizar operaciones matemáticas básicas.</li>
+<li>Operadores de comparación para comparar valores y obtener resultados lógicos (TRUE/FALSE).</li>
+<li>Operadores de concatenación de texto para unir cadenas.</li>
+<li>Operadores lógicos para combinar expresiones y generar resultados lógicos.</li>
+</ul>
+<h3 id="41-importancia-de-operadores-en-programacion">41. Importancia de Operadores en Programación</h3>
+<p>Los operadores son esenciales en programación y se utilizan para realizar diversas operaciones. Es importante comprender cómo funcionan y cuándo aplicarlos.</p>
+<h2 id="capitulo-3-diferencias-entre-columnas-calculadas-y-medidas">Capítulo 3 – Diferencias entre Columnas Calculadas y Medidas</h2>
+<h3 id="21-conceptos-basicos">21. Conceptos Básicos</h3>
+<p>En Power BI, las columnas calculadas y las medidas son elementos clave para realizar cálculos personalizados en los informes.</p>
+<h3 id="31-creacion-de-columnas-calculadas">31. Creación de Columnas Calculadas</h3>
+<p>Puede crear columnas calculadas desde el panel de 'Informe' en Power BI, en la pestaña 'Modelado'.</p>
+<h3 id="41-ejemplos-de-columnas-calculadas">41. Ejemplos de Columnas Calculadas</h3>
+<p>Las columnas calculadas permiten realizar cálculos a nivel de fila, utilizando fórmulas DAX para cada fila de la tabla.</p>
+<h3 id="51-ventajas-y-limitaciones-de-columnas-calculadas">51. Ventajas y Limitaciones de Columnas Calculadas</h3>
+<p>Las columnas calculadas tienen ventajas, como la evaluación a nivel de filas, pero también tienen limitaciones en términos de agregación y visualización.</p>
+<h3 id="61-creacion-de-medidas">61. Creación de Medidas</h3>
+<p>Las medidas son creadas desde el panel de 'Informe' en Power BI y se utilizan para realizar cálculos a nivel de totales o subtotales.</p>
+<h3 id="71-diferencias-clave">71. Diferencias Clave</h3>
+<p>La principal diferencia entre columnas calculadas y medidas es cómo se evalúan. Las columnas calculadas se evalúan a nivel de filas, mientras que las medidas se adaptan al contexto visual.</p>
+<h2 id="capitulo-4-medidas-rapidas">Capítulo 4 – Medidas Rápidas</h2>
+<h3 id="21-introduccion-a-medidas-rapidas">21. Introducción a Medidas Rápidas</h3>
+<p>Las medidas rápidas son un recurso facilitador que permite a los usuarios crear medidas sin tener conocimientos profundos de DAX.</p>
+<h3 id="31-tipos-de-calculos-en-medidas-rapidas">31. Tipos de Cálculos en Medidas Rápidas</h3>
+<p>Las medidas rápidas permiten realizar una variedad de cálculos, incluyendo agregados, filtros, inteligencia de tiempo, totales, operaciones matemáticas y funciones de texto.</p>
+<h3 id="41-creacion-y-configuracion">41. Creación y Configuración</h3>
+<p>La creación de medidas rápidas es un proceso simple que implica seleccionar el tipo de cálculo deseado y los campos necesarios.</p>
+<h3 id="51-adaptacion-de-medidas-rapidas">51. Adaptación de Medidas Rápidas</h3>
+<p>Es posible ajustar las medidas rápidas generadas según las necesidades específicas del usuario o del informe.</p>
+<h3 id="61-consideraciones-y-visualizacion">61. Consideraciones y Visualización</h3>
+<p>Las medidas rápidas se pueden utilizar en objetos visuales y su fórmula DAX asociada se muestra en la visualización.</p>
+<h2 id="capitulo-5-conclusiones-y-recursos-adicionales">Capítulo 5 – Conclusiones y Recursos Adicionales</h2>
+<h3 id="21-equilibrio-en-el-uso-de-recursos">21. Equilibrio en el Uso de Recursos</h3>
+<p>Es importante encontrar un equilibrio en el uso de columnas calculadas, medidas y medidas rápidas para optimizar el rendimiento y la eficacia.</p>
+<h3 id="31-recursos-para-profundizar">31. Recursos para Profundizar</h3>
+<p>Para ampliar los conocimientos sobre DAX, se pueden consultar los recursos adicionales disponibles en la documentación oficial de DAX en <a href="https://docs.microsoft.com/es-es/dax/">Microsoft Docs</a>.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>

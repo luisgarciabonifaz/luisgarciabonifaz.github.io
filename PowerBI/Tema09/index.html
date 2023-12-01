@@ -16,7 +16,7 @@
     
     
       
-        <title>Sistemas Big Data - Mis Clases</title>
+        <title>Apuntes - Funciones Escalares - Mis Clases</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sistemas-big-data" class="md-skip">
+        <a href="#apuntes-funciones-escalares" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sistemas Big Data
+              Apuntes - Funciones Escalares
             
           </span>
         </div>
@@ -400,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema01/BigDataConAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema01/BigDataConAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema02/InfraestructuraAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema02/InfraestructuraAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema03/SeguridadAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema03/SeguridadAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema04/Informatica/" class="md-nav__link">
+      <a href="../../SBD/Tema04/Informatica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema05/AlmacenamientoAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema05/AlmacenamientoAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema01/PracticasAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema01/PracticasAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,9 +709,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#temas" class="md-nav__link">
-    Temas
+  <a href="#tema-9-funciones-escalares" class="md-nav__link">
+    Tema 9: Funciones Escalares
   </a>
+  
+    <nav class="md-nav" aria-label="Tema 9: Funciones Escalares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indice" class="md-nav__link">
+    Índice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -730,16 +743,105 @@
                   
 
 
-<h1 id="sistemas-big-data">Sistemas Big Data</h1>
-<h2 id="temas">Temas</h2>
-<ul>
-<li><a href="../Tema01/BigDataConAWS/">T1 Big Data con AWS</a> </li>
-<li><a href="../Tema02/InfraestructuraAWS/">T2 Infraestructura AWS</a> </li>
-<li><a href="../Tema03/SeguridadAWS/">T3 Seguridad en AWS</a> </li>
-<li><a href="../Tema04/Informatica/">T4 Informática AWS</a> </li>
-<li><a href="../Tema05/AlmacenamientoAWS/">T5 Almacenamiento AWS</a> </li>
-<li><a href="../Tema01/PracticasAWS/">T12 AWS</a> </li>
-</ul>
+<h1 id="apuntes-funciones-escalares">Apuntes - Funciones Escalares</h1>
+<h2 id="tema-9-funciones-escalares">Tema 9: Funciones Escalares</h2>
+<h3 id="indice">Índice</h3>
+<ol>
+<li><strong>Redondeo</strong></li>
+<li>Capítulo 1: Redondeo</li>
+<li>Capítulo 2: Lógicas</li>
+<li>Capítulo 3: Agregación</li>
+<li>Capítulo 4: Información</li>
+<li>
+<p>Capítulo 5: Conversión</p>
+</li>
+<li>
+<p><strong>Funciones de Redondeo (Capítulo 21-81)</strong></p>
+</li>
+<li>Definición de Función Escalar: Asocia un valor a cada punto del espacio.</li>
+<li>Estructura de fórmula DAX: Empieza con el nombre de la variable y "=".</li>
+<li>Operadores y Constantes Escalares: (+, -, *, /, &gt;=, ..., &amp;&amp;, ...)</li>
+<li>
+<p>Funciones DAX que devuelven tablas deben ajustarse a funciones que retornan un valor escalar.</p>
+</li>
+<li>
+<p><strong>Consideraciones Generales (Capítulo 81-91)</strong></p>
+</li>
+<li>Elementos en una expresión: Operadores, constantes o referencias a columnas.</li>
+<li>
+<p>Enlace a funciones detalladas: <a href="https://docs.microsoft.com/es-es/dax/dax-function-reference">Documentación de funciones DAX</a></p>
+</li>
+<li>
+<p><strong>Funciones de Redondeo Detalladas (Capítulo 91-161)</strong></p>
+</li>
+<li>ROUNDDOWN: Redondeo hacia el cero.</li>
+<li>ROUNDUP: Redondeo alejándose del cero.</li>
+<li>ROUND: Redondeo al valor más cercano.</li>
+<li>INT: Redondeo al entero igual o inferior.</li>
+<li>
+<p>TRUNC: Redondeo hacia la parte entera.</p>
+</li>
+<li>
+<p><strong>Aplicaciones y Video Tutorial (Capítulo 161-171)</strong></p>
+</li>
+<li>Control de decimales, redondeo al alza o a la baja.</li>
+<li>
+<p>Convertir valores a enteros, truncando decimales.</p>
+</li>
+<li>
+<p><strong>Video Tutorial 1: Redondeo</strong></p>
+</li>
+<li>
+<p><strong>Funciones Lógicas (Capítulo 182-282)</strong></p>
+</li>
+<li>Objetivo: Devolver TRUE o FALSE según la evaluación de expresiones.</li>
+<li>
+<p>Ejemplos: AND, OR, NOT, TRUE, FALSE, IF, IFERROR, SWITCH.</p>
+</li>
+<li>
+<p><strong>Video Tutorial 2: Funciones Lógicas</strong></p>
+</li>
+<li>
+<p><strong>Funciones de Agregación (Capítulo 293-503)</strong></p>
+</li>
+<li>ADDCOLUMNS, AVERAGE, AVERAGEX, COUNT, COUNTA, DISTINCTCOUNT, COUNTROWS, CROSSJOIN, GENERATE, GENERATEALL, MAX, MAXX, ROW, SELECTCOLUMNS, SUM, SUMX, SUMMARIZE, PRODUCT, PRODUCTX, TOPN.</li>
+<li>
+<p>Aplicaciones en cálculos sobre tablas y columnas.</p>
+</li>
+<li>
+<p><strong>Video Tutorial 3: Funciones de Agregación</strong></p>
+</li>
+<li>
+<p><strong>Funciones de Información (Capítulo 524-664)</strong></p>
+</li>
+<li>Objetivo: Evaluar y devolver TRUE o FALSE.</li>
+<li>
+<p>Ejemplos: CONTAINS, ISBLANK, ISERROR, ISEMPTY, ISLOGICAL, ISONORAFTER, ISTEXT, ISNONTEXT, ISNUMBER, ISEVEN, ISODD, LOOKUPVALUE.</p>
+</li>
+<li>
+<p><strong>Video Tutorial 4: Funciones de Información</strong></p>
+</li>
+<li>
+<p><strong>Funciones de Conversión (Capítulo 675-805)</strong></p>
+</li>
+<li>CONVERT: Transforma expresiones al tipo de dato deseado.</li>
+<li>
+<p>Tipos de conversión: INTEGER, DOUBLE, STRING, BOOLEAN, CURRENCY, DATETIME.</p>
+</li>
+<li>
+<p><strong>Consideraciones y Buenas Prácticas (Capítulo 81-795)</strong></p>
+</li>
+<li>Manejo de errores y tipos de datos mixtos.</li>
+<li>
+<p>Limitaciones y recomendaciones de uso.</p>
+</li>
+<li>
+<p><strong>Video Tutorial 5: Funciones de Conversión</strong></p>
+</li>
+<li>
+<p><strong>Fin del Capítulo 9: Funciones Escalares / Buenas Prácticas en DAX</strong></p>
+</li>
+</ol>
 
 
 

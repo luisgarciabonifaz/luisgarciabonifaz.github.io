@@ -16,7 +16,7 @@
     
     
       
-        <title>Sistemas Big Data - Mis Clases</title>
+        <title>Tema13 - Mis Clases</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sistemas-big-data" class="md-skip">
+        <a href="#tema-13-funciones-de-tablas-combinadas" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sistemas Big Data
+              Tema13
             
           </span>
         </div>
@@ -400,7 +400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema01/BigDataConAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema01/BigDataConAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -420,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema02/InfraestructuraAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema02/InfraestructuraAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -440,7 +440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema03/SeguridadAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema03/SeguridadAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema04/Informatica/" class="md-nav__link">
+      <a href="../../SBD/Tema04/Informatica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema05/AlmacenamientoAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema05/AlmacenamientoAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema01/PracticasAWS/" class="md-nav__link">
+      <a href="../../SBD/Tema01/PracticasAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -709,8 +709,35 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#temas" class="md-nav__link">
-    Temas
+  <a href="#indice" class="md-nav__link">
+    Índice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-funciones-comunes-y-recomendadas" class="md-nav__link">
+    1. Funciones comunes y recomendadas
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Funciones comunes y recomendadas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-combinacion" class="md-nav__link">
+    Tipos de Combinación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-funcion-union" class="md-nav__link">
+    2. Función UNION
   </a>
   
 </li>
@@ -730,16 +757,76 @@
                   
 
 
-<h1 id="sistemas-big-data">Sistemas Big Data</h1>
-<h2 id="temas">Temas</h2>
+<p>Claro, puedo ayudarte a convertir el texto en formato Markdown para MkDocs. Aquí está la versión en formato Markdown:</p>
+<p>markdown
+Copy code</p>
+<h1 id="tema-13-funciones-de-tablas-combinadas">Tema 13: Funciones de Tablas Combinadas</h1>
+<h2 id="indice">Índice</h2>
 <ul>
-<li><a href="../Tema01/BigDataConAWS/">T1 Big Data con AWS</a> </li>
-<li><a href="../Tema02/InfraestructuraAWS/">T2 Infraestructura AWS</a> </li>
-<li><a href="../Tema03/SeguridadAWS/">T3 Seguridad en AWS</a> </li>
-<li><a href="../Tema04/Informatica/">T4 Informática AWS</a> </li>
-<li><a href="../Tema05/AlmacenamientoAWS/">T5 Almacenamiento AWS</a> </li>
-<li><a href="../Tema01/PracticasAWS/">T12 AWS</a> </li>
+<li><a href="#capítulo-1--funciones-comunes-y-recomendadas">Capítulo 1 – Funciones comunes y recomendadas</a></li>
+<li><a href="#capítulo-2--función-union">Capítulo 2 – Función UNION</a></li>
+<li><a href="#capítulo-3--función-crossjoin">Capítulo 3 – Función CROSSJOIN</a></li>
+<li><a href="#capítulo-4--función-except">Capítulo 4 – Función EXCEPT</a></li>
+<li><a href="#capítulo-5--función-allexcept">Capítulo 5 – Función ALLEXCEPT</a></li>
 </ul>
+<h2 id="1-funciones-comunes-y-recomendadas">1. Funciones comunes y recomendadas</h2>
+<p>En ocasiones, puede interesar realizar algunas operaciones de forma puntual para la combinación de varias tablas. A continuación, se detallan las funciones más comunes en DAX para este propósito.</p>
+<ul>
+<li><strong>Combinación Virtual:</strong> Explicación reservada para el siguiente capítulo.</li>
+</ul>
+<h3 id="tipos-de-combinacion">Tipos de Combinación</h3>
+<ul>
+<li><strong>Left Outer Join:</strong> Toma todas las filas de A y las coincidentes de la tabla B.</li>
+<li><strong>Right Outer Join:</strong> Toma todas las filas de B y las coincidentes de la tabla A.</li>
+<li><strong>Full Outer Join:</strong> Toma todas las filas de A y todas las de B, devolviendo una tabla con todos los registros.</li>
+<li><strong>Inner Join:</strong> Toma solo las filas coincidentes de A y B.</li>
+<li><strong>Left Anti Join:</strong> Toma todas las filas de A sin coincidencias en B.</li>
+<li><strong>Right Anti Join:</strong> Toma todas las filas de B sin coincidencias en A.</li>
+</ul>
+<h2 id="2-funcion-union">2. Función UNION</h2>
+<p>La función UNION devuelve una tabla resultado de concatenar las filas de dos o más tablas. Su sintaxis es la siguiente:
+```dax
+UNION(<table_expression1>, <table_expression2> [,<table_expression>]...)
+Consideraciones adicionales:</p>
+<p>Las tablas deben tener el mismo número de columnas.
+Los nombres de las columnas de la tabla resultante son los mismos que los de la primera tabla pasada como argumento.
+Las filas duplicadas aparecerán duplicadas en el resultado.
+Ejemplo de uso de UNION:</p>
+<p>dax
+Copy code
+UNION(Paises1, Paises2)
+3. Función CROSSJOIN
+La función CROSSJOIN realiza un producto cartesiano de las tablas definidas dentro de la expresión. Su estructura es:</p>
+<p>dax
+Copy code
+CROSSJOIN(<table>, <table>[, <table>]...)
+Aspectos a tener en cuenta:</p>
+<p>Las columnas de la tabla resultante son todas las columnas presentes en las tablas incluidas como argumentos.
+Los nombres de las columnas deben ser diferentes entre las tablas.
+4. Función EXCEPT
+La función EXCEPT muestra las filas de una tabla que no se encuentran en la otra. Su estructura es:</p>
+<p>dax
+Copy code
+EXCEPT(table1, table2)
+Requisito:</p>
+<p>table1 y table2 deben tener el mismo número de columnas, y la tabla resultante tendrá los mismos campos.
+Ejemplo de uso de EXCEPT:</p>
+<p>dax
+Copy code
+EXCEPT(Paises1, Paises2)
+5. Función ALLEXCEPT
+La función ALLEXCEPT se utiliza para eliminar todos los filtros de contexto aplicados a la tabla definida en la función, excepto aquellos que hagan referencia a las columnas incluidas como parámetros. Su estructura es:</p>
+<p>dax
+Copy code
+ALLEXCEPT(table, columna [,columna [,...]])
+Parámetros:</p>
+<p>table: Tabla cuyos filtros se desean eliminar.
+columna: Nombre de la/s columna/s cuyos filtros se desean dejar.
+Ejemplo de uso de ALLEXCEPT:</p>
+<p>dax
+Copy code
+CALCULATE(SUM('Tabla Empleados'[Sueldo]), ALLEXCEPT('Tabla Empleados', 'Tabla Empleados'[Departamento]))
+Estas funciones son esenciales en el modelado de datos en DAX. Para obtener ejemplos más detallados, se recomienda consultar material adicional o el contenido multimedia asociado.</p>
 
 
 
