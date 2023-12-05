@@ -1,0 +1,1141 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Tema05/InstalacionSO/">
+      
+      
+        <link rel="next" href="../../../SBD/Tema01/BigDataConAWS/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>T6 - Configuració bàsica Windows - Mis Clases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-configuracion-basica-en-windows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mis Clases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              T6 - Configuració bàsica Windows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mis Clases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemes Operatius Monolloc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemes Operatius Monolloc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema01/SistemesInformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Sistemes Informàtics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema02/SistemesOperatius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema03/GestioRecursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Gestio de Recursos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema04/Virtualitzacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Virtualització
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema05/InstalacionSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Instalació Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    T6 - Configuració bàsica Windows
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Configuració bàsica Windows
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-versiones-de-windows-10" class="md-nav__link">
+    6.1. Versiones de Windows 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-arranque-y-reinicio-del-sistema" class="md-nav__link">
+    6.2. Arranque y reinicio del Sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-parada-del-sistema" class="md-nav__link">
+    6.3. Parada del Sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-administrador-de-tareas" class="md-nav__link">
+    6.4. Administrador de Tareas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-escritorio" class="md-nav__link">
+    6.5. Escritorio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-organizacion-de-las-carpetas" class="md-nav__link">
+    6.6. Organización de las Carpetas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-interfaz-con-el-usuario" class="md-nav__link">
+    6.7. Interfaz con el Usuario
+  </a>
+  
+    <nav class="md-nav" aria-label="6.7. Interfaz con el Usuario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#671-interfaz-grafica-gui-interfaz-grafica-de-usuario" class="md-nav__link">
+    6.7.1. Interfaz Gráfica (GUI - Interfaz Gráfica de Usuario):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#671-powershell" class="md-nav__link">
+    6.7.1. PowerShell
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemas Big Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemas Big Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema01/BigDataConAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Big Data con AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema02/InfraestructuraAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Infraestructura AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema03/SeguridadAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Seguridad en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema04/Informatica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Informatica en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema05/AlmacenamientoAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema06/BasesDatos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Bases de Datos AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema01/PracticasAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big Data Aplicado
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Big Data Aplicado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema01/IntroduccionBigData/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema02/RepasoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Repaso SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema03/NoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Bases de datos NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema04/MongoDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema05/Almacenamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema06/ETL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-versiones-de-windows-10" class="md-nav__link">
+    6.1. Versiones de Windows 10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-arranque-y-reinicio-del-sistema" class="md-nav__link">
+    6.2. Arranque y reinicio del Sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-parada-del-sistema" class="md-nav__link">
+    6.3. Parada del Sistema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-administrador-de-tareas" class="md-nav__link">
+    6.4. Administrador de Tareas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-escritorio" class="md-nav__link">
+    6.5. Escritorio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-organizacion-de-las-carpetas" class="md-nav__link">
+    6.6. Organización de las Carpetas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-interfaz-con-el-usuario" class="md-nav__link">
+    6.7. Interfaz con el Usuario
+  </a>
+  
+    <nav class="md-nav" aria-label="6.7. Interfaz con el Usuario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#671-interfaz-grafica-gui-interfaz-grafica-de-usuario" class="md-nav__link">
+    6.7.1. Interfaz Gráfica (GUI - Interfaz Gráfica de Usuario):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#671-powershell" class="md-nav__link">
+    6.7.1. PowerShell
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="6-configuracion-basica-en-windows">6. Configuración Básica en Windows</h1>
+<h2 id="61-versiones-de-windows-10">6.1. Versiones de Windows 10</h2>
+<p>Las versiones más comunes son:</p>
+<ul>
+<li><strong>Home</strong>: Windows 10 Home es la edición estándar dirigida a usuarios domésticos. Incluye características esenciales como el menú Inicio, Cortana, el navegador Edge y la capacidad de crear escritorios virtuales.</li>
+<li><strong>Pro</strong>: Windows 10 Pro está diseñado para usuarios empresariales y profesionales. Ofrece funcionalidades adicionales como el modo de escritorio remoto, cifrado de disco BitLocker y políticas de grupo.</li>
+<li><strong>Enterprise</strong>: La edición Enterprise se centra en las necesidades de las grandes empresas. Incluye características de seguridad avanzadas, como Windows Defender Advanced Threat Protection (ATP) y actualizaciones a largo plazo.</li>
+<li><strong>Education</strong>: Diseñada para instituciones educativas, Windows 10 Education comparte muchas características con la edición Enterprise. Los usuarios tienen acceso a herramientas de colaboración y administración simplificada.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Actualizaciones</p>
+<p>Las actualizaciones son cruciales para mantener la seguridad y el rendimiento del sistema. Configura las actualizaciones automáticas para garantizar que el sistema esté siempre actualizado con las últimas correcciones de seguridad y mejoras de características.</p>
+</div>
+<h2 id="62-arranque-y-reinicio-del-sistema">6.2. Arranque y reinicio del Sistema</h2>
+<p>Para acceder a las opciones de arranque del sistema puedes reiniciar el sistema y presionando repetidamente la tecla F8 antes de que aparezca el logo de Windows. Para reiniciar el sistema puedes utilizar la combinación de teclas  (Ctrl + Alt + Supr).</p>
+<p>Algunas de las opciones de arranque más importantes son:</p>
+<ul>
+<li><strong>Inicio Normal</strong>: Es la opción de arranque estándar y predeterminada. El sistema operativo se inicia normalmente cargando todos los controladores y servicios necesarios.</li>
+<li><strong>Modo Seguro</strong>:Inicia Windows en un modo básico con un conjunto mínimo de controladores y servicios. Es útil para solucionar problemas relacionados con controladores o software de terceros que pueden estar interfiriendo con el arranque normal.</li>
+<li><strong>Modo Seguro con funciones de red</strong>: Similar al Modo Seguro, pero con la capacidad de utilizar la conexión de red. Útil si necesitas descargar controladores o realizar actualizaciones mientras estás en modo seguro.</li>
+<li><strong>Modo Seguro con símbolo del sistema</strong>: Inicia Windows en Modo Seguro pero con acceso al símbolo del sistema en lugar de la interfaz gráfica de usuario. Es útil para realizar tareas de mantenimiento y solución de problemas desde la línea de comandos.</li>
+<li><strong>Última Configuración Buena Conocida</strong>: Inicia Windows utilizando la configuración que funcionó correctamente en la última ocasión en la que el sistema se inició correctamente. Útil si se han realizado cambios recientes que causan problemas de inicio.</li>
+<li><strong>Reparación de Inicio</strong>: Intenta reparar cualquier problema de inicio automáticamente. Esta opción puede ser útil si el sistema operativo encuentra dificultades para arrancar.
+Cómo acceder: Disponible desde las opciones de inicio avanzado.</li>
+<li><strong>Habilitar Modo de Prueba</strong>: Permite la instalación de controladores no firmados digitalmente. Es útil si estás desarrollando o utilizando software que requiere controladores que no están certificados por Microsoft.</li>
+<li><strong>Inicio de Sesión con Depuración</strong>: Se utiliza para depurar problemas específicos relacionados con el arranque del sistema. Está diseñado para desarrolladores y profesionales de TI.</li>
+</ul>
+<p>Estas opciones proporcionan flexibilidad para solucionar problemas, realizar tareas de mantenimiento y configurar el sistema según las necesidades específicas. Para acceder a muchas de estas opciones, puedes usar las configuraciones de inicio avanzado, que puedes encontrar en la Configuración de Windows o durante el proceso de arranque presionando combinaciones de teclas específicas.</p>
+<h2 id="63-parada-del-sistema">6.3. Parada del Sistema</h2>
+<p>Hay diferentes formas en que puedes apagar, reiniciar o suspender tu sistema. Estas son algunas de las opciones más comunes en Windows 10:</p>
+<ul>
+<li><strong>Apagar</strong>: Cierra todas las aplicaciones y servicios y apaga completamente el sistema.</li>
+<li><strong>Reiniciar</strong>: Cierra todas las aplicaciones y servicios, apaga el sistema y luego lo vuelve a encender.</li>
+<li><strong>Suspender</strong>: Pone el sistema en un estado de bajo consumo de energía, conservando el estado actual de las aplicaciones y documentos abiertos. Es útil para pausar rápidamente el trabajo sin cerrar las aplicaciones.</li>
+<li><strong>Hibernar</strong>: Similar a la suspensión, pero guarda el estado actual en el disco y apaga completamente el sistema. Permite reanudar exactamente donde lo dejaste, incluso después de un apagado completo.</li>
+<li><strong>Cerrar Sesión</strong>: Cierra la sesión del usuario actual sin apagar el sistema. Puedes iniciar sesión con otro usuario o volver a iniciar sesión más tarde.</li>
+<li><strong>Cambiar de Usuario</strong>: Permite cambiar de un usuario a otro sin cerrar la sesión del usuario actual.</li>
+<li><strong>Bloquear</strong>: Bloquea la pantalla, requiriendo la contraseña o el PIN para volver a acceder.</li>
+<li><strong>Cerrar Sesión Rápida (Fast User Switching)</strong>: Permite cambiar rápidamente entre diferentes cuentas de usuario sin cerrar la sesión de ninguna de ellas.</li>
+</ul>
+<h2 id="64-administrador-de-tareas">6.4. Administrador de Tareas</h2>
+<p>El Administrador de tareas de Windows es una herramienta integral que proporciona información detallada sobre el rendimiento del sistema, los procesos en ejecución, las aplicaciones en segundo plano y otros recursos del sistema. Para acceder al Administrador de tareas tienes varias opciones:</p>
+<ul>
+<li><strong>Ctrl + Shift + Esc</strong>: Puedes abrir el Administrador de tareas rápidamente usando el atajo de teclado Ctrl + Shift + Esc.</li>
+<li><strong>Ctrl + Alt + Supr</strong>: También puedes abrir el Administrador de tareas utilizando Ctrl + Alt + Supr y seleccionando "Administrador de tareas" desde el menú que aparece.</li>
+<li><strong>Botón Derecho en la Barra de Tareas</strong>: Haz clic derecho en la barra de tareas y selecciona "Administrador de tareas" en el menú contextual.</li>
+<li><strong>Botón de Inicio</strong>: Haz clic en el botón de Inicio, escribe "Administrador de tareas" y selecciona la aplicación en los resultados de la búsqueda.</li>
+</ul>
+<p>Estas son algunas de las funciones básicas del Administrador de Tareas:</p>
+<ol>
+<li><strong>Pestañas Principales</strong>:<ul>
+<li>Procesos: Muestra una lista de todos los procesos en ejecución en el sistema, junto con información sobre el uso de la CPU, memoria y disco.</li>
+<li>Rendimiento: Proporciona una visión general del rendimiento del sistema, incluyendo el uso de la CPU, memoria, disco y red.</li>
+<li>Aplicaciones: Muestra las aplicaciones actualmente abiertas y permite finalizar tareas.</li>
+</ul>
+</li>
+<li><strong>Detalles de Procesos</strong>:<ul>
+<li>Puedes hacer clic en la pestaña "Detalles" para obtener información más detallada sobre cada proceso en ejecución, incluyendo el uso de CPU y memoria.</li>
+</ul>
+</li>
+<li><strong>Finalizar Tarea</strong>:<ul>
+<li>En la pestaña "Procesos" o "Detalles", puedes seleccionar un proceso y hacer clic en "Finalizar tarea" para cerrar una aplicación o proceso que no responde.</li>
+</ul>
+</li>
+<li><strong>Inicio de Nueva Tarea</strong>:<ul>
+<li>En la pestaña "Archivo", puedes seleccionar "Ejecutar nueva tarea" para iniciar una nueva aplicación o proceso.</li>
+</ul>
+</li>
+<li><strong>Historial de Aplicaciones</strong>:<ul>
+<li>En la pestaña "Aplicaciones", puedes ver las aplicaciones que están abiertas y cambiar entre ellas. También puedes finalizar tareas desde esta pestaña. </li>
+</ul>
+</li>
+<li><strong>Rendimiento en Tiempo Real</strong>:<ul>
+<li>La pestaña "Rendimiento" ofrece información en tiempo real sobre el uso de recursos del sistema, presentado gráficamente para facilitar la comprensión.</li>
+</ul>
+</li>
+<li><strong>Usuarios</strong>:<ul>
+<li>Muestra una lista de los usuarios conectados al sistema y sus respectivos procesos en ejecución.</li>
+</ul>
+</li>
+<li><strong>Iniciar o Detener Servicios</strong>:<ul>
+<li>En la pestaña "Servicios", puedes ver y administrar los servicios del sistema, iniciar, detener o reiniciar servicios según sea necesario.</li>
+</ul>
+</li>
+</ol>
+<p>El Administrador de tareas es una herramienta esencial para monitorizar y gestionar el rendimiento del sistema y solucionar problemas relacionados con procesos en ejecución. </p>
+<h2 id="65-escritorio">6.5. Escritorio</h2>
+<p>Los elementos básicos del escritorio en Windows 10:</p>
+<ul>
+<li><strong>Iconos</strong>:<ul>
+<li>Los iconos son accesos directos visuales a programas, archivos o carpetas en tu escritorio. Puedes hacer clic en ellos para abrir rápidamente los elementos correspondientes.</li>
+<li>Puedes organizar, mover o eliminar iconos en el escritorio para personalizar tu espacio de trabajo.</li>
+</ul>
+</li>
+<li><strong>Menú Inicio</strong>:<ul>
+<li>El Menú Inicio es el punto de partida principal para acceder a programas, aplicaciones y configuraciones en Windows 10. Puedes abrirlo haciendo clic en el botón de inicio en la esquina inferior izquierda de la pantalla.</li>
+<li>Desde el Menú Inicio, puedes buscar y abrir aplicaciones, acceder a la configuración del sistema, y ver una lista de aplicaciones y documentos recientes.</li>
+</ul>
+</li>
+<li><strong>Caja de Búsqueda</strong>:<ul>
+<li>La Caja de Búsqueda te permite buscar aplicaciones, archivos y configuraciones directamente desde el escritorio. Puedes acceder a ella haciendo clic en la barra de búsqueda en la barra de tareas o presionando la tecla de Windows y escribiendo directamente.</li>
+<li>Escribe palabras clave en la Caja de Búsqueda para encontrar rápidamente lo que necesitas en tu sistema.</li>
+</ul>
+</li>
+<li><strong>Vista de Tareas</strong>:<ul>
+<li>La Vista de Tareas te muestra miniaturas de todas las aplicaciones y ventanas abiertas en tu sistema. Puedes acceder a ella haciendo clic en el ícono de Vista de Tareas en la barra de tareas.</li>
+<li>Puedes cambiar entre aplicaciones abiertas y escritorios virtuales, así como cerrar aplicaciones desde la Vista de Tareas.</li>
+</ul>
+</li>
+<li><strong>Inicio Rápido</strong>:<ul>
+<li>El Inicio Rápido es una sección de la barra de tareas que contiene accesos directos a programas y aplicaciones que utilizas con frecuencia. Puedes personalizar estos accesos directos según tus preferencias.</li>
+<li>Arrastra y suelta aplicaciones en la sección de Inicio Rápido o elige "Anclar a la barra de tareas" desde el Menú Inicio.</li>
+</ul>
+</li>
+<li><strong>Barra de Tareas</strong>:<ul>
+<li>La Barra de Tareas es una parte fundamental del escritorio de Windows 10. Contiene el Menú Inicio, la Caja de Búsqueda, accesos rápidos, iconos de aplicaciones en ejecución y la bandeja del sistema.</li>
+<li>Puedes cambiar el tamaño de la Barra de Tareas, anclar aplicaciones, y personalizar la posición y apariencia desde la configuración del sistema.</li>
+</ul>
+</li>
+<li><strong>Iconos del Sistema</strong>:<ul>
+<li>Los iconos del sistema, como el reloj, el volumen y la red, se encuentran en la esquina derecha de la Barra de Tareas. Proporcionan acceso rápido a configuraciones y estados del sistema.</li>
+<li>Puedes hacer clic en estos iconos para ajustar la configuración de red, controlar el volumen, ver notificaciones y acceder a otras funciones del sistema.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Escritorio" src="../Escritorio.png" style="width:120%;margin:auto;display:block" /></p>
+<p>Estos elementos básicos del escritorio en Windows 10 te brindan acceso rápido y fácil a las funciones y aplicaciones esenciales para tu experiencia informática diaria. Puedes personalizar muchos de estos elementos según tus preferencias y necesidades específicas.</p>
+<h2 id="66-organizacion-de-las-carpetas">6.6. Organización de las Carpetas</h2>
+<p>El <strong>Explorador de Archivos</strong> Es la herramienta principal para navegar y gestionar carpetas y archivos en Windows 10.Puedes abrir el Explorador de Archivos haciendo clic en el ícono del archivo en la barra de tareas o usando la combinación de teclas Win + E.</p>
+<p>Conceptos clave relacionados con la organización de carpetas:</p>
+<ul>
+<li><strong>Jerarquía de Carpetas</strong>:<ul>
+<li>Unidades de Almacenamiento: Las unidades (C:, D:, etc.) representan los discos duros, particiones o unidades de almacenamiento conectadas a tu computadora.</li>
+<li>Carpetas Principales: Las carpetas principales en la raíz de una unidad incluyen "Usuarios" (donde se almacenan los perfiles de usuario) y "Windows" (que contiene archivos del sistema y programas).</li>
+<li>Usuarios: La carpeta "Usuarios" contiene perfiles individuales para cada usuario de la computadora. Dentro de cada perfil, encontrarás carpetas personales como "Documentos," "Descargas," y "Escritorio."</li>
+<li>Carpetas del Sistema: La carpeta "Windows" contiene archivos del sistema operativo y programas instalados. Es importante no realizar cambios aquí a menos que sepas exactamente lo que estás haciendo.</li>
+</ul>
+</li>
+<li><strong>Organización Interna de Carpetas</strong>:<ul>
+<li>Documentos: La carpeta "Documentos" es el lugar predeterminado para guardar archivos de texto, hojas de cálculo y otros documentos.</li>
+<li>Descargas: "Descargas" es la carpeta predeterminada para guardar archivos que descargas desde internet.</li>
+<li>Escritorio: La carpeta "Escritorio" contiene accesos directos e íconos que se muestran en el escritorio. Es un lugar común para organizar archivos y accesos directos.</li>
+<li>Imágenes, Música, y Vídeos: Estas carpetas almacenan archivos multimedia correspondientes, facilitando la organización de contenido visual y auditivo.</li>
+</ul>
+</li>
+<li><strong>Otras Carpetas Importantes</strong>:<ul>
+<li>ProgramData: Contiene datos compartidos por programas instalados en el sistema.</li>
+<li>AppData: Almacena datos de configuración y personalización específicos de cada usuario.</li>
+<li>Windows: Contiene archivos del sistema operativo y programas instalados.</li>
+</ul>
+</li>
+<li><strong>Consejos para la Organización</strong>:<ul>
+<li>Crear Carpetas Personalizadas: Puedes crear carpetas adicionales para organizar tus archivos de manera más específica.</li>
+<li>Etiquetar y Describir Carpetas: Utiliza nombres descriptivos para las carpetas y, cuando sea necesario, añade descripciones para recordar el contenido.</li>
+<li>Usar Bibliotecas: Aprovecha las bibliotecas para agrupar contenido de diferentes ubicaciones sin tener que mover físicamente los archivos.</li>
+<li>Eliminar Archivos Innecesarios: Realiza limpiezas periódicas para eliminar archivos y carpetas que ya no necesitas.</li>
+<li>Realizar Copias de Seguridad: Guarda copias de seguridad de archivos importantes en unidades externas para prevenir pérdidas de datos.</li>
+</ul>
+</li>
+</ul>
+<h2 id="67-interfaz-con-el-usuario">6.7. Interfaz con el Usuario</h2>
+<p>La interfaz gráfica y PowerShell son dos formas distintas de interactuar con el sistema operativo Windows, y cada una tiene sus propias características y usos específicos. La interfaz gráfica es la forma tradicional y visual de interactuar con Windows, mientras que PowerShell es una herramienta más avanzada y potente para tareas administrativas y scripting en entornos de línea de comandos.</p>
+<h3 id="671-interfaz-grafica-gui-interfaz-grafica-de-usuario">6.7.1. Interfaz Gráfica (GUI - Interfaz Gráfica de Usuario):</h3>
+<p>La interfaz gráfica de usuario es la forma visual y gráfica de interactuar con el sistema operativo. Incluye ventanas, íconos, menús, botones y otros elementos visuales que permiten a los usuarios realizar acciones de manera intuitiva.</p>
+<h3 id="671-powershell">6.7.1. PowerShell</h3>
+<p>PowerShell es una interfaz de línea de comandos y un entorno de scripting que proporciona acceso a funciones avanzadas y tareas de administración del sistema a través de comandos de texto.</p>
+<p>PowerShell es un entorno de línea de comandos basado en texto. Los usuarios interactúan escribiendo y ejecutando comandos en lugar de hacer clic en elementos visuales.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
