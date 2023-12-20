@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
     
     
       
@@ -1076,9 +1076,10 @@
 <li>Comando: <code>New-Item “nombre” -itemType Directory</code></li>
 </ul>
 </li>
-<li><strong>Ver el contenido de un directorio</strong><ul>
+<li>
+<p><strong>Ver el contenido de un directorio</strong></p>
+<ul>
 <li>Comando: <code>Get-ChildItem [directorio] [-Force]</code></li>
-<li>Parámetro <code>-Force</code>: Para ver los archivos ocultos</li>
 <li>Atrtibutos de los elementos listados:<ul>
 <li><strong>d</strong>: Directorio</li>
 <li><strong>a</strong>: Archivo</li>
@@ -1087,12 +1088,20 @@
 <li><strong>s</strong>: Fichero/Directorio del sistema</li>
 </ul>
 </li>
+<li>Parámetro <code>-Force</code>: Para ver los archivos ocultos
+   <img alt="Ejemplo" src="../Get-ChildItem.png" style="width:70%;margin:auto;display:block" /></li>
+<li>Parámetro <code>-Recurse</code>: Para ver el contenido del directorio y de todos los directorios incluidos, de forma recursiva</li>
+<li>Símbolos comodines<ul>
+<li><strong>'*'</strong>: sustituye a unoo varios caracteres</li>
+<li><strong>'?'</strong>: sustituye a unico carácter
+   <img alt="Ejemplo" src="../Comodines.png" style="width:70%;margin:auto;display:block" /></li>
 </ul>
 </li>
 </ul>
-<p><img alt="Ejemplo" src="../Get-ChildItem.png" style="width:70%;margin:auto;display:block" /></p>
+</li>
+<li>
+<p><strong>Desplazarse por los directorios</strong></p>
 <ul>
-<li><strong>Desplazarse por los directorios</strong><ul>
 <li>Comando: <code>Set-Location Directorio</code></li>
 </ul>
 </li>
