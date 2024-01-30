@@ -1481,20 +1481,29 @@
 </ul>
 <h3 id="833-permisos">8.3.3. Permisos</h3>
 <ul>
-<li>Asignar permisos a carpetas y ficheros: <code>icacls fichero|directorio /grant[:r] usuario:permisos</code>.
-  Ejemplo: 
-  <code>icacls zz.txt /grant:r luis:W</code> </li>
+<li>Asignar permisos a carpetas y ficheros: <ul>
+<li><code>icacls fichero|directorio /grant[:r] usuario:permisos</code>.</li>
 </ul>
-<p>Opciones:
-- :r (reemplaza permisos).</p>
-<p>Permisos:
-- N - sin acceso
-- F - acceso total
-- M - acceso de modificación
-- RX - acceso de lectura y ejecución
-- R - acceso de solo lectura
-- W - acceso de solo escritura
-- D - acceso de eliminación</p>
+</li>
+<li>Ejemplo:<ul>
+<li><code>icacls zz.txt /grant:r luis:W</code> </li>
+</ul>
+</li>
+</ul>
+<p>Opciones:</p>
+<ul>
+<li>:r (reemplaza permisos).</li>
+</ul>
+<p>Permisos:</p>
+<ul>
+<li>N - sin acceso</li>
+<li>F - acceso total</li>
+<li>M - acceso de modificación</li>
+<li>RX - acceso de lectura y ejecución</li>
+<li>R - acceso de solo lectura</li>
+<li>W - acceso de solo escritura</li>
+<li>D - acceso de eliminación</li>
+</ul>
 
 
 
