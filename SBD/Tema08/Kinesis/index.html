@@ -9,18 +9,22 @@
       
       
       
+        <link rel="prev" href="../../Tema07/AWS_Glue/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+        <link rel="next" href="../../Tema01/PracticasAWS/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
-        <title>Tema 18: Publicación de Informes y Vías para Compartirlos - Mis Clases</title>
+        <title>T8 - AWS Kinesis - Mis Clases</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
       
 
@@ -39,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tema-18-publicacion-de-informes-y-vias-para-compartirlos" class="md-skip">
+        <a href="#amazon-kinesis-data-streams" class="md-skip">
           Skip to content
         </a>
       
@@ -77,7 +81,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+    <a href="../../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -97,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tema 18: Publicación de Informes y Vías para Compartirlos
+              T8 - AWS Kinesis
             
           </span>
         </div>
@@ -169,7 +173,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+    <a href="../../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -186,7 +190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -239,7 +243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SOM/Tema01/SistemesInformatics/" class="md-nav__link">
+      <a href="../../../SOM/Tema01/SistemesInformatics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -259,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SOM/Tema02/SistemesOperatius/" class="md-nav__link">
+      <a href="../../../SOM/Tema02/SistemesOperatius/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -279,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SOM/Tema03/GestioRecursos/" class="md-nav__link">
+      <a href="../../../SOM/Tema03/GestioRecursos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -299,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SOM/Tema04/Virtualitzacio/" class="md-nav__link">
+      <a href="../../../SOM/Tema04/Virtualitzacio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -319,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SOM/Tema05/InstalacionSO/" class="md-nav__link">
+      <a href="../../../SOM/Tema05/InstalacionSO/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -339,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SOM/Tema06/ConfiguracionBasicaWindows/" class="md-nav__link">
+      <a href="../../../SOM/Tema06/ConfiguracionBasicaWindows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -359,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SOM/Tema07/FicherosDirectoriosWindows/" class="md-nav__link">
+      <a href="../../../SOM/Tema07/FicherosDirectoriosWindows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -379,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SOM/Tema08/UsuariosGruposWindows/" class="md-nav__link">
+      <a href="../../../SOM/Tema08/UsuariosGruposWindows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SOM/Tema09/AdministracionWindows/" class="md-nav__link">
+      <a href="../../../SOM/Tema09/AdministracionWindows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,17 +428,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
@@ -447,7 +453,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Sistemas Big Data
@@ -460,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SBD/Tema01/BigDataConAWS/" class="md-nav__link">
+      <a href="../../Tema01/BigDataConAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SBD/Tema02/InfraestructuraAWS/" class="md-nav__link">
+      <a href="../../Tema02/InfraestructuraAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SBD/Tema03/SeguridadAWS/" class="md-nav__link">
+      <a href="../../Tema03/SeguridadAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -520,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SBD/Tema04/Informatica/" class="md-nav__link">
+      <a href="../../Tema04/Informatica/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -540,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SBD/Tema05/AlmacenamientoAWS/" class="md-nav__link">
+      <a href="../../Tema05/AlmacenamientoAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -560,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SBD/Tema06/BasesDatos/" class="md-nav__link">
+      <a href="../../Tema06/BasesDatos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,7 +586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SBD/Tema07/AWS_Glue/" class="md-nav__link">
+      <a href="../../Tema07/AWS_Glue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -598,9 +604,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../SBD/Tema08/Kinesis/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    T8 - AWS Kinesis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -609,6 +635,75 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-streams-flujos" class="md-nav__link">
+    1. Streams (Flujos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-productores-y-consumidores" class="md-nav__link">
+    2. Productores y Consumidores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-shards-fragmentos" class="md-nav__link">
+    3. Shards (Fragmentos)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-particion-de-datos" class="md-nav__link">
+    4. Partición de Datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-retencion-de-datos" class="md-nav__link">
+    5. Retención de Datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-procesamiento-de-streams" class="md-nav__link">
+    6. Procesamiento de Streams
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-escalabilidad-y-durabilidad" class="md-nav__link">
+    7. Escalabilidad y Durabilidad
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -620,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SBD/Tema01/PracticasAWS/" class="md-nav__link">
+      <a href="../../Tema01/PracticasAWS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDA/Tema01/IntroduccionBigData/" class="md-nav__link">
+      <a href="../../../BDA/Tema01/IntroduccionBigData/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -701,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDA/Tema02/RepasoSQL/" class="md-nav__link">
+      <a href="../../../BDA/Tema02/RepasoSQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +816,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDA/Tema03/NoSQL/" class="md-nav__link">
+      <a href="../../../BDA/Tema03/NoSQL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -741,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDA/Tema04/MongoDB/" class="md-nav__link">
+      <a href="../../../BDA/Tema04/MongoDB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -761,7 +856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDA/Tema05/Almacenamiento/" class="md-nav__link">
+      <a href="../../../BDA/Tema05/Almacenamiento/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -781,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDA/Tema06/ETL/" class="md-nav__link">
+      <a href="../../../BDA/Tema06/ETL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -801,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../BDA/Tema07/BI/" class="md-nav__link">
+      <a href="../../../BDA/Tema07/BI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -862,7 +957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema01/" class="md-nav__link">
+      <a href="../../../PowerBI/Tema01/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -882,7 +977,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema02/" class="md-nav__link">
+      <a href="../../../PowerBI/Tema02/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -902,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema03/" class="md-nav__link">
+      <a href="../../../PowerBI/Tema03/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -922,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema04/" class="md-nav__link">
+      <a href="../../../PowerBI/Tema04/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -942,7 +1037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema05/" class="md-nav__link">
+      <a href="../../../PowerBI/Tema05/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -962,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema06/" class="md-nav__link">
+      <a href="../../../PowerBI/Tema06/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema07/" class="md-nav__link">
+      <a href="../../../PowerBI/Tema07/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema08/" class="md-nav__link">
+      <a href="../../../PowerBI/Tema08/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Tema09/" class="md-nav__link">
+      <a href="../../../PowerBI/Tema09/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,190 +1165,51 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#indice" class="md-nav__link">
-    Índice
+  <a href="#1-streams-flujos" class="md-nav__link">
+    1. Streams (Flujos)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-formas-de-publicar-informes" class="md-nav__link">
-    1. Formas de publicar Informes
+  <a href="#2-productores-y-consumidores" class="md-nav__link">
+    2. Productores y Consumidores
   </a>
-  
-    <nav class="md-nav" aria-label="1. Formas de publicar Informes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pasos-para-la-publicacion" class="md-nav__link">
-    Pasos para la publicación
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#formas-de-compartir" class="md-nav__link">
-    Formas de compartir
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-creacion-de-paneles" class="md-nav__link">
-    2. Creación de Paneles
+  <a href="#3-shards-fragmentos" class="md-nav__link">
+    3. Shards (Fragmentos)
   </a>
-  
-    <nav class="md-nav" aria-label="2. Creación de Paneles">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#diferencias-entre-informes-y-paneles" class="md-nav__link">
-    Diferencias entre Informes y Paneles
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creacion-de-paneles" class="md-nav__link">
-    Creación de Paneles
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-gestion-y-limitaciones-al-publicar-en-areas-de-trabajo" class="md-nav__link">
-    3. Gestión y Limitaciones al Publicar en Áreas de Trabajo
+  <a href="#4-particion-de-datos" class="md-nav__link">
+    4. Partición de Datos
   </a>
-  
-    <nav class="md-nav" aria-label="3. Gestión y Limitaciones al Publicar en Áreas de Trabajo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#limitaciones" class="md-nav__link">
-    Limitaciones
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-gestion-de-permisos-de-acceso-a-datos" class="md-nav__link">
-    4. Gestión de Permisos de Acceso a Datos
+  <a href="#5-retencion-de-datos" class="md-nav__link">
+    5. Retención de Datos
   </a>
-  
-    <nav class="md-nav" aria-label="4. Gestión de Permisos de Acceso a Datos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pasos-para-configurar-permisos" class="md-nav__link">
-    Pasos para Configurar Permisos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-configuracion-de-actualizaciones" class="md-nav__link">
-    5. Configuración de Actualizaciones
+  <a href="#6-procesamiento-de-streams" class="md-nav__link">
+    6. Procesamiento de Streams
   </a>
-  
-    <nav class="md-nav" aria-label="5. Configuración de Actualizaciones">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pasos-previos" class="md-nav__link">
-    Pasos Previos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-actualizacion-manual" class="md-nav__link">
-    6. Actualización Manual
+  <a href="#7-escalabilidad-y-durabilidad" class="md-nav__link">
+    7. Escalabilidad y Durabilidad
   </a>
-  
-    <nav class="md-nav" aria-label="6. Actualización Manual">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#actualizacion-manual-en-power-bi-desktop" class="md-nav__link">
-    Actualización Manual en Power BI Desktop
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#actualizacion-manual-en-power-bi-service" class="md-nav__link">
-    Actualización Manual en Power BI Service
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-actualizacion-automatizada-y-programada" class="md-nav__link">
-    7. Actualización Automatizada y Programada
-  </a>
-  
-    <nav class="md-nav" aria-label="7. Actualización Automatizada y Programada">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuracion-de-actualizacion-automatizada" class="md-nav__link">
-    Configuración de Actualización Automatizada
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-actualizacion-manual" class="md-nav__link">
-    8. Actualización Manual
-  </a>
-  
-    <nav class="md-nav" aria-label="8. Actualización Manual">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#configuracion-de-actualizacion-programada" class="md-nav__link">
-    Configuración de Actualización Programada
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1272,172 +1228,25 @@
                   
 
 
-<h1 id="tema-18-publicacion-de-informes-y-vias-para-compartirlos">Tema 18: Publicación de Informes y Vías para Compartirlos</h1>
-<h2 id="indice">Índice</h2>
+<h1 id="amazon-kinesis-data-streams">Amazon Kinesis Data Streams</h1>
+<p>Amazon Kinesis Data Streams es un servicio de streaming en tiempo real proporcionado por Amazon Web Services (AWS) que permite a los usuarios recopilar, procesar y analizar grandes volúmenes de datos de manera continua. Antes de sumergirte en el uso práctico de Kinesis Data Streams, es importante comprender algunos términos y conceptos clave asociados con este servicio.</p>
+<h2 id="1-streams-flujos">1. Streams (Flujos)</h2>
+<p>Un stream en Amazon Kinesis Data Streams es una secuencia ordenada y duradera de registros de datos. Los registros son las unidades más pequeñas de datos dentro de un flujo y pueden ser de cualquier tipo, como datos de registros de servidores, eventos de clics de usuarios o datos de sensores de IoT.</p>
+<h2 id="2-productores-y-consumidores">2. Productores y Consumidores</h2>
 <ul>
-<li>Capítulo 1 – Formas de publicar Informes</li>
-<li>Capítulo 2 – Creación de Paneles</li>
-<li>Capítulo 3 – Gestión y limitaciones al publicar en Áreas de Trabajo</li>
-<li>Capítulo 4 – Gestión de Permisos de Acceso a los Datos</li>
-<li>Capítulo 5 – Configuración de Actualizaciones</li>
-<li>Capítulo 6 – Actualización manual</li>
-<li>Capítulo 7 – Actualización Automatizada y Programada</li>
+<li><strong>Productores:</strong> Son los componentes que generan y envían registros de datos al stream de Kinesis. Pueden ser aplicaciones, dispositivos IoT, servidores, etc.</li>
+<li><strong>Consumidores:</strong> Son los componentes que leen y procesan los registros de datos del stream de Kinesis. Pueden ser aplicaciones de análisis, sistemas de almacenamiento, almacenes de datos, entre otros.</li>
 </ul>
-<h2 id="1-formas-de-publicar-informes">1. Formas de publicar Informes</h2>
-<p>En este punto, se verá cómo se publica un cuadro de mando en Power BI Service. Se detallarán diferentes formas de publicar y compartir informes una vez estén en Power BI Service.</p>
-<p>Una vez aplicadas las buenas prácticas de desarrollo, revisado el rendimiento y definidos los roles de segmentación de datos, se procederá a la publicación en Power BI Service.</p>
-<h3 id="pasos-para-la-publicacion">Pasos para la publicación</h3>
-<ol>
-<li><strong>Publicar:</strong></li>
-<li>Seleccionar el recurso de publicar en Power BI Desktop para iniciar el proceso de publicación.</li>
-</ol>
-<blockquote>
-<p>Nota: La primera vez que se ejecute esta función, se solicitarán las credenciales de acceso a Power BI Service.</p>
-</blockquote>
-<ol>
-<li><strong>Seleccionar Área de Trabajo:</strong></li>
-<li>Tras seleccionar la función de "Publicar" y estar logueados, se elige el área de trabajo donde se desea publicar el tablero objetivo.</li>
-</ol>
-<blockquote>
-<p>Nota: Se pueden crear nuevas áreas en Power BI Service si es necesario.</p>
-</blockquote>
-<ol>
-<li><strong>Finalizar el Proceso:</strong></li>
-<li>Esperar a que finalice el proceso de publicación.</li>
-<li>Una vez completado, se puede validar la subida en Power BI Service.</li>
-</ol>
-<h3 id="formas-de-compartir">Formas de compartir</h3>
-<p>Power BI permite compartir informes de diversas maneras, dependiendo de la licencia del usuario.</p>
-<ul>
-<li><strong>Usuarios sin licencia:</strong></li>
-<li>Crear un archivo .pbix</li>
-<li>
-<p>Exportar un informe en PDF</p>
-</li>
-<li>
-<p><strong>Usuarios con licencia:</strong></p>
-</li>
-<li>Compartir vínculo (Personas de la organización y Personas específicas)</li>
-<li>Compartir a través de un sitio web o portal</li>
-<li>Incrustar reportes en SharePoint Online</li>
-<li>Compartir a través de áreas de trabajo</li>
-<li>Compartir a través de aplicaciones</li>
-</ul>
-<h2 id="2-creacion-de-paneles">2. Creación de Paneles</h2>
-<p>Se diferencia entre informes y paneles. Un informe es el resultado de datos visualizados, mientras que un panel es una página única que cuenta una historia a través de visualizaciones.</p>
-<h3 id="diferencias-entre-informes-y-paneles">Diferencias entre Informes y Paneles</h3>
-<p><strong>Informes:</strong>
-- Páginas múltiples.
-- Se pueden crear en Desktop y Service.
-- Un conjunto de datos por informe.
-- Admite varias opciones de filtro.
-- Se pueden establecer como informes destacados.</p>
-<p><strong>Paneles:</strong>
-- Página única.
-- Se crea solo en Service.
-- Puede usar varios informes y conjuntos de datos.
-- Admite marcadores como filtro.
-- Se puede establecer como panel destacado.</p>
-<h3 id="creacion-de-paneles">Creación de Paneles</h3>
-<ol>
-<li><strong>Acceder al área de trabajo:</strong></li>
-<li>
-<p>Seleccionar el área de trabajo.</p>
-</li>
-<li>
-<p><strong>Seleccionar nuevo panel:</strong></p>
-</li>
-<li>
-<p>Pinchar en el botón "Nuevo &gt; Panel" bajo el título del área seleccionada.</p>
-</li>
-<li>
-<p><strong>Definir el nombre del panel:</strong></p>
-</li>
-<li>
-<p>Especificar el nombre del nuevo panel.</p>
-</li>
-<li>
-<p><strong>Anclar objetos en el panel:</strong></p>
-</li>
-<li>Desde los informes, anclar objetos visuales al nuevo panel.</li>
-</ol>
-<h2 id="3-gestion-y-limitaciones-al-publicar-en-areas-de-trabajo">3. Gestión y Limitaciones al Publicar en Áreas de Trabajo</h2>
-<p>Las áreas de trabajo tienen funciones limitadas. Se pueden agregar o quitar miembros y editar el nombre y anotaciones del área.</p>
-<h3 id="limitaciones">Limitaciones</h3>
-<ul>
-<li>Máximo 1000 conjuntos de datos o informes por conjunto de datos.</li>
-<li>Almacenamiento limitado (10 GB en áreas de trabajo compartidas).</li>
-</ul>
-<h2 id="4-gestion-de-permisos-de-acceso-a-datos">4. Gestión de Permisos de Acceso a Datos</h2>
-<p>Configurar permisos en áreas de trabajo para definir quién puede ver, modificar o crear informes y conjuntos de datos.</p>
-<h3 id="pasos-para-configurar-permisos">Pasos para Configurar Permisos</h3>
-<ol>
-<li><strong>Seleccionar el Área de Trabajo:</strong></li>
-<li>
-<p>Seleccionar el área a la que se le quieren asignar usuarios y nivel de permisos.</p>
-</li>
-<li>
-<p><strong>Seleccionar permisos:</strong></p>
-</li>
-<li>
-<p>Hacer clic en "Acceso" para definir usuarios y asignar niveles de acceso.</p>
-</li>
-<li>
-<p><strong>Introducir emails y roles:</strong></p>
-</li>
-<li>Completar los correos de los usuarios y asignar roles.</li>
-</ol>
-<h2 id="5-configuracion-de-actualizaciones">5. Configuración de Actualizaciones</h2>
-<p>Antes de configurar actualizaciones automáticas, realizar comprobaciones y ajustes en Power BI Service.</p>
-<h3 id="pasos-previos">Pasos Previos</h3>
-<ol>
-<li><strong>Configurar puerta de enlace:</strong></li>
-<li>
-<p>Configurar la puerta de enlace para permitir el consumo de datos desde Power BI Service.</p>
-</li>
-<li>
-<p><strong>Credenciales de origen de datos:</strong></p>
-</li>
-<li>Configurar las credenciales de las fuentes de datos.</li>
-</ol>
-<h2 id="6-actualizacion-manual">6. Actualización Manual</h2>
-<p>Actualizar datos de forma manual en Power BI Desktop y Service.</p>
-<h3 id="actualizacion-manual-en-power-bi-desktop">Actualización Manual en Power BI Desktop</h3>
-<ul>
-<li>Pinchar en "Actualizar" en la barra de herramientas.</li>
-</ul>
-<h3 id="actualizacion-manual-en-power-bi-service">Actualización Manual en Power BI Service</h3>
-<ul>
-<li>Pinchar en "Publicar" después de actualizar en Power BI Desktop.</li>
-</ul>
-<h2 id="7-actualizacion-automatizada-y-programada">7. Actualización Automatizada y Programada</h2>
-<p>Automatizar y programar actualizaciones configurando el Gateway y las credenciales en Power BI Service.</p>
-<h3 id="configuracion-de-actualizacion-automatizada">Configuración de Actualización Automatizada</h3>
-<ol>
-<li><strong>Configurar Gateway:</strong></li>
-<li>
-<p>Configurar la puerta de enlace en el conjunto de datos.</p>
-</li>
-<li>
-<p><strong>Credenciales de origen de datos:</strong></p>
-</li>
-<li>
-<p>Configurar las credenciales de las fuentes de datos.</p>
-</li>
-<li>
-<p><strong>Configuración de Actualización Programada:</strong></p>
-</li>
-<li>Seleccionar la frecuencia, zona horaria, hora y notificaciones de errores.</li>
-</ol>
-<h2 id="8-actualizacion-manual">8. Actualización Manual</h2>
-<p>Activar la actualización programada y configurar la planificación en Power BI Service.</p>
-<h3 id="configuracion-de-actualizacion-programada">Configuración de Actualización Programada</h3>
-<ul>
-<li>Frecuencia de Actualización: Diaria o semanal.</li>
-<li>Zona horaria: Definir la zona horaria.</li>
-<li>Hora: Definir las horas de actualización.</li>
-<li>Notificaciones de errores: Agregar listas de correo.</li>
-</ul>
+<h2 id="3-shards-fragmentos">3. Shards (Fragmentos)</h2>
+<p>Los shards son unidades de capacidad de procesamiento en un stream de Kinesis. Cada shard tiene una capacidad máxima de ingestión y de salida. La cantidad de shards en un stream determina la capacidad total de procesamiento del stream. La cantidad de shards también afecta la capacidad de almacenamiento y la latencia de los datos.</p>
+<h2 id="4-particion-de-datos">4. Partición de Datos</h2>
+<p>Los shards de un stream de Kinesis son la base para la partición de datos. Cada registro enviado a un stream de Kinesis está asociado con una clave de partición. El servicio utiliza la clave de partición para determinar en qué shard se almacenará el registro. Esto permite distribuir los datos de manera uniforme entre los shards y, por lo tanto, lograr una alta escalabilidad y rendimiento.</p>
+<h2 id="5-retencion-de-datos">5. Retención de Datos</h2>
+<p>La retención de datos en Amazon Kinesis Data Streams define durante cuánto tiempo se mantendrán los registros en un stream. Después de este período, los registros se eliminan automáticamente. La retención de datos se configura al crear el stream y puede variar desde unas pocas horas hasta varios días.</p>
+<h2 id="6-procesamiento-de-streams">6. Procesamiento de Streams</h2>
+<p>El procesamiento de streams en Kinesis Data Streams implica la ingesta de datos, el procesamiento en tiempo real y la salida de datos. Puedes utilizar servicios adicionales de AWS, como AWS Lambda, Amazon Kinesis Data Analytics o Amazon Kinesis Data Firehose, para realizar diversas tareas de procesamiento en los datos de tu stream.</p>
+<h2 id="7-escalabilidad-y-durabilidad">7. Escalabilidad y Durabilidad</h2>
+<p>Amazon Kinesis Data Streams está diseñado para ser altamente escalable y duradero. Puedes aumentar la capacidad de procesamiento de un stream agregando más shards, y los datos almacenados en los streams están replicados automáticamente en múltiples ubicaciones para garantizar la durabilidad y la disponibilidad.</p>
 
 
 
@@ -1475,10 +1284,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
     
   </body>
