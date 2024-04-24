@@ -12,7 +12,7 @@
         <link rel="prev" href="../../Tema10/IntroduccionLinux/">
       
       
-        <link rel="next" href="../../../SBD/Tema01/BigDataConAWS/">
+        <link rel="next" href="../../Tema12/Usuarios/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>T11 - Gestión de archivos en - Mis Clases</title>
+        <title>T11 - Gestión de archivos en Linux - Mis Clases</title>
       
     
     
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              T11 - Gestión de archivos en
+              T11 - Gestión de archivos en Linux
             
           </span>
         </div>
@@ -458,7 +458,7 @@
           
   
   <span class="md-ellipsis">
-    T11 - Gestión de archivos en
+    T11 - Gestión de archivos en Linux
   </span>
   
 
@@ -469,7 +469,7 @@
         
   
   <span class="md-ellipsis">
-    T11 - Gestión de archivos en
+    T11 - Gestión de archivos en Linux
   </span>
   
 
@@ -611,6 +611,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema12/Usuarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - Gestión de usurarios en Linux
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1630,9 +1650,9 @@ Si utlizamos una redirección doble &gt;&gt;</p>
 </ul>
 <p>Cada tipo de permiso tiene tres valores:</p>
 <ul>
-<li>Lectura: Permite leer el archivo.</li>
-<li>Escritura: Permite modificar el archivo.</li>
-<li>Ejecución: Permite ejecutar el archivo como un programa.</li>
+<li>Lectura(r): Permite leer el archivo.</li>
+<li>Escritura(w): Permite modificar el archivo.</li>
+<li>Ejecución(x): Permite ejecutar el archivo como un programa.</li>
 </ul>
 <p><img alt="Permisos" src="../PermisosLinux.png" style="width:80%;margin:auto;display:block" /></p>
 <p>rwx rwx rwx ­--&gt; Donde para dar permiso o no, consideraremos 0 ó 1.</p>
@@ -1654,6 +1674,19 @@ Si utlizamos una redirección doble &gt;&gt;</p>
 <div class="highlight"><pre><span></span><code>chmod ugo+rwx Ejercicios/Ejer1.txt, Conseguimos los mismo.
 </code></pre></div>
 <p>Aquí, podemos variar el significado de la orden según utilicemos + (añadimos los permisos que se indican a ese usuario), ­ (le quitamos los permisos indicados), = (le asignamos los permisos).</p>
+<p>Ejemplos:</p>
+<p>Otorga permisos de lectura, escritura y ejecución al propietario del archivo programa.sh y permisos de ejecución al grupo y a los demás usuarios:</p>
+<div class="highlight"><pre><span></span><code>chmod 755 programa.sh
+</code></pre></div>
+<p>Otorga permisos de lectura y escritura al propietario y al grupo del archivo archivo.txt:</p>
+<div class="highlight"><pre><span></span><code>chmod 640 archivo.txt
+</code></pre></div>
+<p>Añade permisos de lectura y escritura al propietario y al grupo del archivo archivo.txt:</p>
+<div class="highlight"><pre><span></span><code>chmod ug+rw archivo.txt
+</code></pre></div>
+<p>Añade permisos de ejecución y escritura al propietario del archivo archivo.txt:</p>
+<div class="highlight"><pre><span></span><code>chmod u+x archivo.txt
+</code></pre></div>
 <p><strong>chown</strong></p>
 <p>Se utiliza para cambiar el propietario del fichero o directorio. Como parámetro, le pasaremos el nombre del propietario y el nombre del archivo o directorio. Por ejemplo:</p>
 <div class="highlight"><pre><span></span><code>chown alumno Cosas
@@ -1662,13 +1695,6 @@ Si utlizamos una redirección doble &gt;&gt;</p>
 <p>Existe la opción <strong>-R</strong>, que hace que el propietario de la carpeta cambie de forma recursiva, es decir, que también afectará el cambio al contenido de ésta.</p>
 <p><strong>chgrp</strong></p>
 <p>Es análoga a la anterior, sólo que aquí, en lugar de cambiar el propietario, cambiamos el grupo.</p>
-<p>Ejemplos:</p>
-<p>Otorga permisos de lectura y escritura al propietario y al grupo del archivo archivo.txt:</p>
-<div class="highlight"><pre><span></span><code>chmod 640 archivo.txt
-</code></pre></div>
-<p>Otorga permisos de lectura, escritura y ejecución al propietario del archivo programa.sh y permisos de ejecución al grupo y a los demás usuarios:</p>
-<div class="highlight"><pre><span></span><code>chmod 755 programa.sh
-</code></pre></div>
 <h2 id="118-busqueda-de-archivos">11.8. Búsqueda de Archivos</h2>
 <p>El comando find permite buscar archivos en el sistema. </p>
 <p>Sintaxis:
