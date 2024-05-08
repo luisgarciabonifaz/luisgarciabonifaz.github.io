@@ -1436,7 +1436,7 @@ lp:*:17002:0:99999:7:::
 <p>Ejemplos:</p>
 <div class="highlight"><pre><span></span><code>sudo useradd -d /home/juanito juan
 
-sudo useradd -M pedro
+sudo useradd -m pedro
 </code></pre></div>
 <p><strong>userdel</strong> </p>
 <div class="highlight"><pre><span></span><code>userdel [opciones] nombre usuario
@@ -1572,7 +1572,7 @@ el sistema.</li>
 <li><strong>.bash_history</strong>: guarda las líneas de comandos que se han ido ejecutando en
 el sistema.</li>
 </ul>
-<p>Cuando se crea un nuevo usuario se le colocan en su directorio estos copiandolos del directorio <strong>/etc/skel</strong>. Estos ficheros son los que ajustan los perfiles para el shell.</p>
+<p>Cuando se crea un nuevo usuario se le colocan en su directorio todos los archivos del directorio <strong>/etc/skel</strong>. Estos ficheros son los que ajustan los perfiles para el shell.</p>
 <p>Aparte, existen en el home de cada usuario otros ficheros que cargan perfiles para los entornos gráficos como el gnome, perfiles para el open office, etc.</p>
 
 
