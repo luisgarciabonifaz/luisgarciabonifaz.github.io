@@ -1,0 +1,2006 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Tema12/Usuarios/">
+      
+      
+        <link rel="next" href="../../../SBD/Tema01/BigDataConAWS/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>T13 - Administración en Linux - Mis Clases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#administracion-gnulinux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mis Clases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              T13 - Administración en Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mis Clases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemes Operatius Monolloc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemes Operatius Monolloc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema01/SistemesInformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Sistemes Informàtics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema02/SistemesOperatius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema03/GestioRecursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Gestio de Recursos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema04/Virtualitzacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Virtualització
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema05/InstalacionSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Instalació Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema06/ConfiguracionBasicaWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Configuració bàsica Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema07/FicherosDirectoriosWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - Gestió de fitxers i directoris en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema08/UsuariosGruposWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T8 - Gestió de usuaris i grups en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema09/AdministracionWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T9 - Administració del Sistema en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema10/IntroduccionLinux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T10 - Introducción Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema11/ArchivosLinux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T11 - Gestión de archivos en Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema12/Usuarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - Gestión de usurarios en Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    T13 - Administración en Linux
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    T13 - Administración en Linux
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-procesos" class="md-nav__link">
+    Gestión de Procesos
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de Procesos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-para-inspeccionar-procesos" class="md-nav__link">
+    Comandos para inspeccionar procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-para-monitorizar-procesos" class="md-nav__link">
+    Comandos para monitorizar procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-para-eliminar-y-detener-procesos" class="md-nav__link">
+    Comandos para eliminar y detener procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas-en-primer-y-segundo-plano" class="md-nav__link">
+    Tareas en Primer y Segundo Plano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-tareas" class="md-nav__link">
+    Programación de Tareas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-dispositivos" class="md-nav__link">
+    Gestión de Dispositivos
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de Dispositivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#montaje" class="md-nav__link">
+    Montaje
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manejo-de-discos" class="md-nav__link">
+    Manejo de Discos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-software" class="md-nav__link">
+    Instalación de Software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    Repositorios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-paquetes-con-apt" class="md-nav__link">
+    Gestión de Paquetes con APT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    Scripts
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-para-los-scripts" class="md-nav__link">
+    Comandos para los scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirecciones-y-tuberias" class="md-nav__link">
+    Redirecciones y Tuberías
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemas Big Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemas Big Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema01/BigDataConAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Big Data con AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema02/InfraestructuraAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Infraestructura AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema03/SeguridadAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Seguridad en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema04/Informatica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Informatica en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema05/AlmacenamientoAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema06/BasesDatos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Bases de Datos AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema07/AWS_Glue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - AWS Glue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema08/Kinesis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T8 - AWS Kinesis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema01/PracticasAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big Data Aplicado
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Big Data Aplicado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema01/IntroduccionBigData/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema02/RepasoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Repaso SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema03/NoSQL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Bases de datos NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema04/MongoDB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema05/Almacenamiento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema06/ETL/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BDA/Tema07/BI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - Bussines Intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Power BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Power BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Instalación y configuración de Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Conectando datos a Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Transformación y limpieza de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Modelado de datos en Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Creación de visualizaciones básicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - Creación de informes interactivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T8 - Compartir y colaborar en Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T9 - Actualización de datos y programación de actualizaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-procesos" class="md-nav__link">
+    Gestión de Procesos
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de Procesos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-para-inspeccionar-procesos" class="md-nav__link">
+    Comandos para inspeccionar procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-para-monitorizar-procesos" class="md-nav__link">
+    Comandos para monitorizar procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-para-eliminar-y-detener-procesos" class="md-nav__link">
+    Comandos para eliminar y detener procesos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tareas-en-primer-y-segundo-plano" class="md-nav__link">
+    Tareas en Primer y Segundo Plano
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-tareas" class="md-nav__link">
+    Programación de Tareas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-dispositivos" class="md-nav__link">
+    Gestión de Dispositivos
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestión de Dispositivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#montaje" class="md-nav__link">
+    Montaje
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manejo-de-discos" class="md-nav__link">
+    Manejo de Discos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-software" class="md-nav__link">
+    Instalación de Software
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repositorios" class="md-nav__link">
+    Repositorios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-de-paquetes-con-apt" class="md-nav__link">
+    Gestión de Paquetes con APT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scripts" class="md-nav__link">
+    Scripts
+  </a>
+  
+    <nav class="md-nav" aria-label="Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comandos-para-los-scripts" class="md-nav__link">
+    Comandos para los scripts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redirecciones-y-tuberias" class="md-nav__link">
+    Redirecciones y Tuberías
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    Bibliografía
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="administracion-gnulinux">Administración GNU/Linux</h1>
+<h2 id="gestion-de-procesos">Gestión de Procesos</h2>
+<p>En Linux se ejecutan muchos procesos de forma concurrente aunque realmente sólo uno accede al procesador en un instante determinado. Cada proceso tiene un número único que lo identifica, su PID.</p>
+<p>A un proceso están asociadas otras informaciones como :</p>
+<ul>
+<li>El usuario que lo ejecuta</li>
+<li>La hora de inicio</li>
+<li>La línea de comandos asociada</li>
+<li>Su estado</li>
+<li>Una prioridad</li>
+<li>La terminal donde fue invocado</li>
+</ul>
+<h3 id="comandos-para-inspeccionar-procesos">Comandos para inspeccionar procesos</h3>
+<p>Existen diversos comandos para inspeccionar procesos y son especialmente útiles para localizar y ﬁnalizar procesos que no son necesarios o son sospechosos.</p>
+<ul>
+<li><code>ps</code>: Muestra los procesos actuales en el shell y sus características. </li>
+<li><strong>Opciones Destacables:</strong></li>
+<li>-a: muestra todos los procesos de todos los usuarios en formato estandar.</li>
+<li>-f: muestra las relaciones jerárquicas entre los procesos.</li>
+<li>-x: muestra todos los procesos del usuario actual sin distinción de terminal.</li>
+<li>-u usuario/uid: Para seleccionar los procesos de un usuario por ID de usuario efectivo (EUID) o nombre</li>
+<li>-U usuario/uid: Para mostrar los procesos de un usuario por ID de usuario real (RUID) o nombre</li>
+<li>-e: muestra el entorno de cada proceso.</li>
+<li>
+<p>-l: Utiliza un formato más largo (muestra más información).</p>
+</li>
+<li>
+<p><code>pstree [opcions]</code>: Lista todos los procesos en forma de árbol.</p>
+</li>
+<li>
+<p><code>pidof [opciones] programa</code>: Obtiene el PID de un programa en ejecución.</p>
+</li>
+</ul>
+<h3 id="comandos-para-monitorizar-procesos">Comandos para monitorizar procesos</h3>
+<p>Para monitorizar continuamente los procesos, mostrando información como utilización de memoria y CPU de cada uno de ellos, se usa el comando  top . La tecla  [H]  proporciona ayuda sobre la utilización del programa. </p>
+<p>Este comportamiento se puede modificar tecleando:</p>
+<ul>
+<li>M: ordenará según el empleo de la memoria.</li>
+<li>P: ordenará según el empleo de la CPU.</li>
+<li>N: ordenará por ID.</li>
+<li>A: ordenará por antigüedad.</li>
+</ul>
+<p>La orden top también se puede utilizar con parámetros.</p>
+<ul>
+<li>-d delay : Especifica el intervalo entre actualizaciones que por defecto es 5 segundos. Esto indica el tiempo que tarda el programa en actualizar los datos que se están presentando por pantalla.</li>
+<li>-p PID: Para monitorizar procesos específicos se puede usar esta opción.</li>
+<li>-n iter: Se puede especificar que muestre cierto número de actualizaciones, y después finalice el
+programa.</li>
+</ul>
+<p>Ejemplo: top -p 1066</p>
+<p>El programa top muestra además algunas estadísticas generales acerca del
+sistema, en las cuatro primeras líneas de la pantalla:</p>
+<ul>
+<li>La hora actual y en la que se inició el sistema.</li>
+<li>La cantidad de usuarios conectados.</li>
+<li>Los promedios de carga de la CPU en los últimos uno, cinco y quince minutos transcurridos.</li>
+<li>Un resumen estadístico de la cantidad de procesos en ejecución y su estado (sleeping, running, zombie y stopped).</li>
+<li>Un resumen del empleo de la memoria física y virtual (swap).</li>
+</ul>
+<p>Una variante del programa top es htop, que a diferencia de top muestra una lista completa de procesos en  ejecución en lugar de los procesos que están consumiendo recursos. Además usa colores y da un aspecto visual más amigable ofreciendo información sobre la CPU, la swap y el estado de la memoria.</p>
+<h3 id="comandos-para-eliminar-y-detener-procesos">Comandos para eliminar y detener procesos</h3>
+<p><code>kill</code> Permite enviarles señales a los procesos con significados muy diversos. Los programas o comandos deben estar preparados para atrapar y tratar estas señales, al menos las más importantes.</p>
+<p>Sintaxis:</p>
+<ul>
+<li>kill -l [señal]</li>
+<li>kill [-s señal] pid</li>
+<li>kill [-señal] pid</li>
+</ul>
+<h3 id="tareas-en-primer-y-segundo-plano">Tareas en Primer y Segundo Plano</h3>
+<p>Cuando se inicia un programa, éste normalmente toma el control de la terminal impidiendo realizar cualquier otra tarea. Para liberar la terminal basta con pulsar control + Z que pausa el programa.</p>
+<p>Si se pausan procesos se pueden recuperar con fg y si hay más de uno debe añadirse el número de tarea que se quieren recuperar. El número de tarea asociado con un terminal se obtiene con el comando jobs.</p>
+<p>Una variante de fg es bg que, a diferencia de fg que devuelve la tarea al  primer plano, devuelve una tarea a un segundo plano.</p>
+<p>La alternativa a no tener que pausar y volver a ejecutar los programas con bg es añadir un carácter ampersand [&amp;] al final de la línea del comando a ejecutar que permitirá iniciar un programa sin que tome el control de la terminal.</p>
+<ul>
+<li><code>fg</code>: Recupera procesos pausados.</li>
+<li><code>bg</code>: Devuelve una tarea a segundo plano.</li>
+<li><code>control + Z</code>: Pausa el programa que está ejecutando.</li>
+</ul>
+<h3 id="programacion-de-tareas">Programación de Tareas</h3>
+<p>Con la herramienta <code>crontab</code> cada usuario podrá definir sus propias tareas programadas.</p>
+<p>La sintaxis más básica es:</p>
+<div class="highlight"><pre><span></span><code>crontab [opciones] [usuario]
+</code></pre></div>
+<p>Las opciones más comunes son:</p>
+<ul>
+<li>-l: Mostrar las tareas programadas por el usuario.</li>
+<li>-e: Editar el fichero crontab. Con esto editaremos el fichero de configuración de crontab de cada usuario para poder modificar las tareas programadas.</li>
+<li>-r: Eliminar el fichero crontab corriente.</li>
+<li>-u usuario: Aplicar una de las opciones anteriores para un usuario determinado. Sólo root puede hacerlo.</li>
+</ul>
+<p>Todas las tareas programadas están contenidas en los ficheros crontab, lo cuales podemos editar para cada usuario con la opción anterior o para todo el sistema editando el fichero /etc/crontab.</p>
+<p>Este fichero tiene una estructura específica que deberemos seguir.</p>
+<ul>
+<li>Minuto (0-59)</li>
+<li>Hora (0-23)</li>
+<li>Día del mes (1-31)</li>
+<li>Mes del año (1-12)</li>
+<li>Día de la semana (0-7, 0 y 7 son domingo)</li>
+<li>Comando/Script/Tarea a ejecutar</li>
+</ul>
+<p>Los campos están separados por espacios o tabuladores</p>
+<p>A la hora de expresar los minutos, horas, días, meses y año, podemos utilizar:</p>
+<ul>
+<li>Valores enteros</li>
+<li>Listas: 3,23,43</li>
+<li>Rangos de tiempo: 1­5; pasos: 2­6/2 (= 2,4,6)</li>
+<li>
+<ul>
+<li>(cualquier valor o todos los días, meses, etc).</li>
+</ul>
+</li>
+</ul>
+<p>Una vez programada nuestras tareas debemos reiniciar cron para aplicar los cambios:</p>
+<div class="highlight"><pre><span></span><code>sudo /etc/init.d/cron restart
+sudo service cron restart
+</code></pre></div>
+<p>Ejemplos:</p>
+<div class="highlight"><pre><span></span><code>0 * * * * /usr/sbin/ntpdate hora.oxixares.com &gt; /dev/null
+</code></pre></div>
+<p>Cada hora en punto ejecutamos la sincronización horaria y mandamos la salida a /dev/null/</p>
+<div class="highlight"><pre><span></span><code>0 20 * * * echo &quot;Me ejecuto a las ocho en punto&quot; &gt; /dev/null
+</code></pre></div>
+<p>Simplemente escribimos la frase a las 20:00 todos los días</p>
+<p>Otro comando para la programación de tareas es <code>at</code></p>
+<p>Con este otro comando ejecutamos tareas a una hora concreta sólo una vez</p>
+<div class="highlight"><pre><span></span><code>at [opciones]hora [fecha]
+</code></pre></div>
+<p>Las opciones más comunes son:</p>
+<ul>
+<li>-l: Mostrar las tareas programadas por el usuario.</li>
+<li>-d tarea: Elimina la tarea. El número de la tarea lo podemos consultar con la opción anteriores</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>$ at 3:15pm ó $ at 15:15
+</code></pre></div>
+<p>Una vez ejecutemos esta orden nos aparece el prompt de at para que introduzcamos los comandos que deben ejecutarse a esa hora:</p>
+<div class="highlight"><pre><span></span><code>at&gt; gmessage “Terminó tu turno” (terminaremos con control+d)
+</code></pre></div>
+<h2 id="gestion-de-dispositivos">Gestión de Dispositivos</h2>
+<p>En Linux los dispositivos físicos de la máquina y los de almacenamiento de información, en particular, son manipulados a través de ficheros especiales ubicados en el directorio /dev</p>
+<p>Esta acción se conoce como "montar'', que en definitiva es asociar el dispositivo a un directorio determinado. Las particiones de los discos en Linux se montan en directorios como /, /home y /usr.</p>
+<p>El sistema tiene un fichero llamado /etc/fstab en el cual se especifican dónde y en qué forma se montan los diferentes dispositivos.</p>
+<p>En el fichero /etc/fstab se guarda la lista de dispositivos montados en el arranque del sistema.</p>
+<p>Cada línea en este fichero describe un dispositivo, indicando los siguientes aspectos para cada uno:</p>
+<ul>
+<li>Nombre del dispositivo o etiqueta. Ejemplos: /dev/hda1, /dev/sdc1, /dev/fd0, LABEL=/home, LABEL=/cursos. También puede aparecer codificada como UUID.</li>
+<li>Directorio donde se monta. Ejemplos: /, /mnt/floppy, /tmp, etc.</li>
+<li>Sistema de ficheros. Ejemplos: ext2, msdos, nfs, swap, iso9660, auto, etc.</li>
+<li>Opciones de montaje. Ejemplos: ro, rw, exec, auto, user, etc.</li>
+<li>Dos valores numéricos: el primero toma los valores 0/1 indicando si al dispositivo se le hará dump (especie de backup) o no. El segundo número expresa la prioridad que tiene el dispositivo cuando se chequea la integridad del File System durante el inicio del sistema.</li>
+</ul>
+<p>Las opciones de montaje son numerosas. Las más usadas son:</p>
+<ul>
+<li>auto: indica que el dispositivo se monta siempre que se inicie el sistema. La opuesta es noauto.</li>
+<li>rw: indica que el dispositivo se monta con permisos de lectura y escritura.
+ -ro: indica que el dispositivo se monta con permisos de lectura solamente.</li>
+<li>defaults: es una opción equivalente a la unión de rw, suid, dev, exec, auto, nouser y async.</li>
+</ul>
+<p>Actualmente para cada dispositivo con sistema de ficheros ext[1234] en lugar de especificar su nombre en el fichero /etc/fstab se puede indicar una etiqueta o identificador asociado.</p>
+<p>La forma utilizada es LABEL=<etiqueta> o UUID=<uuid>.</p>
+<ul>
+<li><code>/dev</code>: Directorio donde se ubican los dispositivos físicos.</li>
+<li><code>/etc/fstab</code>: Especifica dónde y cómo se montan los dispositivos.</li>
+<li><code>mount</code> y <code>umount</code>: Comandos para montar y desmontar dispositivos.</li>
+</ul>
+<h3 id="montaje">Montaje</h3>
+<p>Si queremos que un dispositivo se monte automáticamente cada vez que el sistema se inicie, basta con colocar una línea apropiada en el fichero /etc/fstab.</p>
+<p>Si lo que queremos es montar o desmontar dispositivos directamente desde línea de comandos, podemos emplear mount y umount respectivamente.</p>
+<p>Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>mount [opciones] [dispositivo] [dir]
+umount [opciones] &lt;&gt; dir| &lt;dispositivo&gt;
+</code></pre></div>
+<p>Algunas opciones:</p>
+<ul>
+<li>-a: en el caso de mount monta todos los dispositivos que tienen la opción auto en el fichero fstab, y para umount desmonta todo lo que está en el fichero /etc/mtab.</li>
+<li>-t <tipo>: indica el tipo de file system a montar.</li>
+<li>-o <opciones>: especifica las opciones de montaje (separadas por comas).</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>mount ­-t iso9660 -o ro /dev/cdrom /mnt
+</code></pre></div>
+<h3 id="manejo-de-discos">Manejo de Discos</h3>
+<p>Para conocer información acerca de las particiones y dispositivos montados actualmente en el sistema.
+Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>df [opciones] [directorio]
+</code></pre></div>
+<p>Algunas opciones:</p>
+<ul>
+<li>-h: (human readable view) por defecto los tamaños se muestran en bytes y con esta opción se hace de forma más legible (Ej. G para gigabytes y M para megabytes).</li>
+<li>-T: muestra además el tipo de file system de cada dispositivo.</li>
+</ul>
+<p>El comando du nos informa del espacio que ocupa los ficheros o directorios.</p>
+<p>Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>du [opciones] [directorio]
+</code></pre></div>
+<p>Algunas opciones:
+- -h: Formato humano
+- -s: Resumen de total</p>
+<p>Para particionar un disco nuevo en GNU/Linux tenemos los comandos fdisk y gdisk</p>
+<p>Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>fdisk [device]
+</code></pre></div>
+<p>Opciones:</p>
+<ul>
+<li>p: Muestra la tabla de particiones de la unidad</li>
+<li>l: Muestra los tipos de particiones posibles en Linux (columna Id)</li>
+<li>u: Cambia el tipo de unidad que se utilizará en el resto de opciones.</li>
+<li>d: Borrar una partición.</li>
+<li>n: Crea una nueva partición (p, e, l).</li>
+<li>a: Cambia la partición de inicio del sistema o partición activa.</li>
+<li>v: Verifica la tabla de particiones.</li>
+<li>w: Guarda todos los cambios.</li>
+<li>q: Salir del comando fdisk.MANEJO DE DISCOS</li>
+</ul>
+<p>Para particionar un disco nuevo en GNU/Linux tenemos los comandos fdisk y gdisk</p>
+<p>Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>gdisk [device]
+</code></pre></div>
+<p>Opciones:</p>
+<ul>
+<li>c: Asigna una etiqueta a alguna de las particiones del disco duro seleccionado.</li>
+<li>d: Borra una partición.</li>
+<li>i: Muestra información sobre la partición del disco duro seleccionada.</li>
+<li>l: Muestra información sobre los tipos de particiones reconocidos por el comando gdisk.</li>
+<li>o: Crea una nueva tabla de particiones GPT vacía.</li>
+<li>n: Crea una nueva partición (volumen).</li>
+<li>p: Muestra la tabla de particiones de la unidad.</li>
+<li>q: Sale de la ejecución del comando gdisk.</li>
+<li>t: Modifica el tipo de partición seleccionada.</li>
+<li>v: Verifica el estado de un disco, mostrando los posibles errores detectados.</li>
+<li>w: Guarda todos los cambios realizados.</li>
+<li>x: Accede a un nuevo menú.</li>
+</ul>
+<p>Para crear un sistema de ficheros en un dispositivo (formatear a alto nivel).</p>
+<p>Sintaxis:
+    mkfs [-t type] [device]
+Ejemplo:
+    mkfs -t ext4 /dev/sdd1</p>
+<p>Resumiendo Los pasos para añadir un disco nuevo en GNU/Linux</p>
+<ol>
+<li>Añadir disco a la máquina</li>
+<li>Crear la/s particiones en el disco (fdisk o gdisk)</li>
+<li>Formatear la partición (mkfs)</li>
+<li>Montar la partición (mount)</li>
+<li>SI queremos que el montaje sea permanente, añadir una entrada al /etc/fstab</li>
+</ol>
+<h2 id="hardware">Hardware</h2>
+<p>Comandos que facilitan información del hardware</p>
+<p>Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>lshw [opiones] [parametros]
+</code></pre></div>
+<p>Algunas opciones:</p>
+<ul>
+<li>-html: Genera un informe en formato html (página web)</li>
+</ul>
+<p>Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>dmidecode [opiones] [parametros]
+</code></pre></div>
+<p>Lista información de la BIOS</p>
+<h2 id="instalacion-de-software">Instalación de Software</h2>
+<p>Existen varias opciones para instalar Software en Linux:</p>
+<ul>
+<li>Paquetes.</li>
+<li>Contienen código máquina y no código fuente, por lo que cada arquitectura necesita el suyo
+(X86, ALPHA, SPARC), dependiendo de la distribución se usan:</li>
+<li>Paquetes rpm</li>
+<li>Paquetes deb</li>
+<li>Ficheros ejecutables:</li>
+<li>Tan sólo tenemos que ejecutarlo desde una terminal con el comando “./fichero.bin”</li>
+<li>Código fuente.</li>
+<li>
+<p>Contienen el código fuente del programa y es necesario compilarlos e instalar el programa manualmente. Suelen incluir un fichero de texto README o INSTALL con instrucciones para la instalación.</p>
+</li>
+<li>
+<p><strong>Paquetes:</strong> <code>rpm</code> y <code>deb</code>.</p>
+</li>
+<li><strong>Ficheros ejecutables:</strong> se ejecutan directamente.</li>
+<li><strong>Código fuente:</strong> requiere compilación.</li>
+</ul>
+<h2 id="repositorios">Repositorios</h2>
+<p>Un repositorio es un servidor que almacena paquetes y programas para que nosotros los podamos descargar e instalar en nuestra distribución GNU-Linux.</p>
+<p>Cada una de las distribuciones GNU-Linux dispone de sus propios repositorios en los que se hallan los programas que nosotros podemos instalar en nuestro equipo.</p>
+<p>También podemos añadir y usar repositorios de terceros que contendrán versiones más actuales del software que tenemos instalado o programas que no han incluido los creadores de la distro que usamos.</p>
+<ul>
+<li>Al ejecutar el gestor de paquetes nos conectaremos al repositorio de internet que contiene los paquetes que queremos descargar.</li>
+<li>Una vez realizada la comprobación se descargarán los paquetes y dependencias necesarias para instalar el programa.</li>
+<li>Una vez descargados los paquetes se procederá a la instalación de los mismos.</li>
+</ul>
+<p>Los repositorios de Ubuntu se dividen en cinco categorías:</p>
+<ul>
+<li>main</li>
+<li>universe</li>
+<li>multiverse</li>
+<li>restricted</li>
+<li>partner.</li>
+</ul>
+<p>También puedes añadir repositorios de terceros para acceder a más software o a versiones más nuevas de un software.</p>
+<p>También puedes instalar una aplicación adicional utilizando los famosos PPA (Personal Package Archive).</p>
+<p>Ejemplos para añadir repositorios con apt-add-repository:</p>
+<ul>
+<li>apt-add-repository 'deb http://myserver/path/to/repo stable myrepo'</li>
+<li>apt-add-repository 'http://myserver/path/to/repo myrepo'</li>
+<li>apt-add-repository 'https://packages.medibuntu.org free non-free'</li>
+<li>apt-add-repository http://extras.ubuntu.com/ubuntu</li>
+<li>apt-add-repository ppa:user/repository</li>
+<li>apt-add-repository ppa:user/distro/repository</li>
+<li>apt-add-repository multiverse</li>
+</ul>
+<h2 id="gestion-de-paquetes-con-apt">Gestión de Paquetes con APT</h2>
+<p>El comando apt posee las siguientes características:</p>
+<ul>
+<li>Facilita la actualización del sistema de una forma sencilla.</li>
+<li>Realiza la gestión inteligente de las dependencias de la paquetería (instalación de un paquete y sus dependencias, eliminación, etc...)</li>
+<li>Puede realizar consultas a diferentes repositorios, siendo muy sencillo buscar una aplicación o servicio.</li>
+<li>Ofrece servicios de eliminación de paquetes obsoletos o no usados.</li>
+</ul>
+<p>Los ficheros de configuración se encuentran principalmente en el directorio /etc/apt .</p>
+<ul>
+<li>/etc/apt/apt.conf.d/: Fichero de configuración global</li>
+<li>/etc/apt/sources.list: Fichero de repositorios</li>
+<li>/var/cache/apt/: Directorio de caché</li>
+</ul>
+<p>Actualización:</p>
+<ul>
+<li>apt update: Refresca los repositorios de software.</li>
+<li>apt upgrade: Actualiza el sistema completamente.</li>
+<li>apt dist-upgrade: Actualiza la distribución completa (Deben ejecutarse previamente los dos comandos anteriores.</li>
+<li>apt list –upgradable: Lista los paquetes que pueden actualizarse en el sistema.</li>
+</ul>
+<p>Instalación:</p>
+<ul>
+<li>apt install xxxx: Sirve para instalar un paquete un paquete.</li>
+<li>apt -f install xxxx: Automáticamente instala paquetes y dependencias cuando hay un error en la instalación.</li>
+<li>apt –fix-broken: Trata de arreglar paquetes rotos.</li>
+<li>apt hold xxxx: Es para mantener un paquete en la versión actual y no actualizarlo.</li>
+</ul>
+<p>Borrado:</p>
+<ul>
+<li>apt remove xxxx: Sirve para eliminar un paquete.</li>
+<li>apt purge xxxx: Borra un paquete y los “restos” que de él depende.</li>
+<li>apt autoremove: Elimina los paquetes que se instalaron automáticamente para satisfacer las dependencias de otros paquetes y que ya no se necesitan.</li>
+<li>apt –purge autoremove: Aparte de eliminar los paquetes innecesarios, limpia las dependencias que tampoco son necesarias.</li>
+<li>apt clean xxxx: Borra los paquetes DEB en la caché del sistema.</li>
+</ul>
+<p>Búsqueda:</p>
+<ul>
+<li>apt search xxxx: Busca los paquetes.</li>
+<li>apt show xxxx: Muestra información sobre el paquete dado, incluyendo sus dependencias, instalación y tamaño de la descarga, las fuentes de las que está disponible el paquete, la descripción del contenido del paquete y mucho más.</li>
+<li>apt list: Lista todos los paquetes sin filtro</li>
+<li>apt list --installed: Listar sólo los paquetes instalados.</li>
+</ul>
+<h2 id="scripts">Scripts</h2>
+<p>Para ejecutar múltiples comandos en un solo paso desde el shell, puede escribirlos en una línea y separarlos con punto y coma.</p>
+<div class="highlight"><pre><span></span><code>pwd ; whoami   ¡¡En realidad, esto es un script de Bash!!
+</code></pre></div>
+<p>El comando pwd se ejecuta primero, mostrando el directorio de trabajo actual, luego se ejecuta el comando whoami para mostrar el usuario conectado </p>
+<p>¿Qué sucede si pones los comandos en un archivo, y cuando necesitamos ejecutar estos comandos, solo ejecutamos ese archivo?</p>
+<p>Esto es conocido como un script de Bash.</p>
+<p>Al comienzo de cualquier script de Bash, debemos definir qué shell usaremos porque hay muchos shells en Linux, Bash shell es uno de ellos.</p>
+<p>La primera línea que escribes al escribir un script bash es el (#!) Seguido del shell que utilizaras.</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+</code></pre></div>
+<p>Si utilizas el signo de numeral (#) delante de cualquier línea en su script de Bash, esta línea se comentará, lo que significa que no se procesará, pero la línea anterior es un caso especial. Esta línea define qué shell utilizaremos, que es el Bash de shell en nuestro caso.</p>
+<p>Los comandos de shell se ingresan uno por línea como este:</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+# This is a comment
+pwd 
+whoami
+</code></pre></div>
+<p>Puedes escribir múltiples comandos en la misma línea, pero debes separarlos con punto y coma, aunque es preferible escribir comandos en líneas separadas, esto hará que sea más fácil de leer luego.</p>
+<p>Después de escribir tu script de Bash, guarda el archivo.</p>
+<p>Ahora, configura ese archivo para que sea ejecutable, de lo contrario, mostrara permisos denegados. Puedes revisar cómo configurar permisos utilizando el comando chmod.</p>
+<div class="highlight"><pre><span></span><code>chmod +x ./myscript
+</code></pre></div>
+<p>Luego intenta ejecutarlo simplemente escribiéndolo en el shell:</p>
+<div class="highlight"><pre><span></span><code>./myscript
+</code></pre></div>
+<p>Y sí, se ejecuta.</p>
+<p>Ejemplo de Script</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+# our comment is here
+echo &quot;The current directory is:&quot;
+pwd
+echo &quot;The user logged in is:&quot;
+whoami
+</code></pre></div>
+<h3 id="comandos-para-los-scripts">Comandos para los scripts</h3>
+<div class="highlight"><pre><span></span><code>echo
+</code></pre></div>
+<p>Muestra por pantalla el texto entrecomillado</p>
+<div class="highlight"><pre><span></span><code>#!/bin/bash
+# our comment is here
+echo &quot;Esto aparece por pantalla”
+</code></pre></div>
+<p>find</p>
+<p>Para buscar ficheros</p>
+<p>Sintaxis: </p>
+<div class="highlight"><pre><span></span><code>find [directorio_de_inicio] [opciones] [terminos_de_busqueda]
+</code></pre></div>
+<p>Opciones más comunes:</p>
+<ul>
+<li>-maxdepth X: Busca en el directorio actual, y en los subdirectorios en los niveles X.</li>
+<li>-name X: Busca el nombre del fichero.</li>
+<li>-iname X: Busca sin distinguir mayúsculas y minúsculas.</li>
+<li>-not: Devuelve solo los resultados que no coinciden con la búsqueda</li>
+<li>-type f: Busca solo archivos de tipo f.</li>
+<li>-type d: Busca solo directorios</li>
+</ul>
+<p>Ejemplos:</p>
+<ul>
+<li>find / -name reporte (Busca el fichero cuyo nombre es reporte)</li>
+<li>find / -iname Reporte (Lo mismo, pero sin tomar en cuenta mayúsculas y minúsculas)</li>
+<li>find . -name “*.txt” (Cuando se utilizan comodines en los ficheros a buscar)</li>
+<li>find . -type f -name “*.txt” (Busca solo ficheros)</li>
+<li>find . -type d -name “<em>conf</em>” (Busca solo directorios)</li>
+<li>
+<p>find . -maxdepth 3 -name “*.txt” (Busca solo tres subdirectorios más abajo)</p>
+<p>grep</p>
+</li>
+</ul>
+<p>Sirve para encontrar texto dentro del archivo que le indiquemos.</p>
+<p>Sintaxis: </p>
+<div class="highlight"><pre><span></span><code>grep [opciones] [terminos_de_busqueda] [fichero_de_busqueda]
+</code></pre></div>
+<p>Opciones más comunes:</p>
+<ul>
+<li>-i: no diferenciará entre mayúsculas y minúsculas.</li>
+<li>-w: fuerza que sólo encuentre palabras concretas.</li>
+<li>-v: selecciona las líneas que no coinciden.</li>
+<li>-n: muestra el número de la línea con las palabras de solicitadas.</li>
+<li>-r: busca directorios recursivamente.</li>
+<li>
+<ul>
+<li>l: muestra sólo nombres de archivos con las líneas seleccionadas.</li>
+</ul>
+</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>grep Imágenes /home/pablinux/Documentos/830.desktop
+</code></pre></div>
+<h2 id="redirecciones-y-tuberias">Redirecciones y Tuberías</h2>
+<p>Es una opción de los comandos de Linux que permite enlazar la salida de un comando como entrada para el siguiente.</p>
+<p>Se representa con el símbolo |</p>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>cat /etc/passwd | grep luis
+</code></pre></div>
+<p>Busca en la salida del fichero /etc/passwd la palabra luis</p>
+<p>Redirecciones</p>
+<p>Permiten enviar la salida de un comando a un fichero:</p>
+<ul>
+<li>
+<blockquote>
+<p>fich1.txt</p>
+</blockquote>
+</li>
+<li>Envía la salida al fichero fich1.txt, si este fichero existe lo sobreescribe</li>
+<li>
+<blockquote>
+<blockquote>
+<p>fich1.txt</p>
+</blockquote>
+</blockquote>
+</li>
+<li>Envía la salida al fichero fich1.txt, si este fichero existe añade al final</li>
+<li>2&gt; fich1.txt</li>
+<li>Envía la salida con los errores al fichero fich1.txt, si este fichero existe lo sobreescribe</li>
+<li>2&gt;&gt; fich1.txt</li>
+<li>Envía la salida con los errores al fichero fich1.txt, si este fichero existe añade al final</li>
+</ul>
+<h2 id="bibliografia">Bibliografía</h2>
+<ul>
+<li><a href="https://bioinf.comav.upv.es/courses/unix/scripts_bash.html">Bioinf UPV</a></li>
+<li><a href="https://www.linuxtotal.com.mx/index.php?cont=info_admon_001">Linux Total</a></li>
+<li><a href="https://geekland.eu/que-son-los-repositorios-en-linux/">Geekland EU</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
