@@ -1631,11 +1631,27 @@ sudo service cron restart
 <p>En el fichero <strong>/etc/fstab</strong> se guarda la lista de dispositivos montados en el arranque del sistema.</p>
 <p>Cada línea en este fichero describe un dispositivo, indicando los siguientes aspectos para cada uno:</p>
 <ul>
-<li>Nombre del dispositivo o etiqueta. Ejemplos: /dev/hda1, /dev/sdc1, /dev/fd0, LABEL=/home, LABEL=/cursos. También puede aparecer codificada como UUID.</li>
-<li>Directorio donde se monta. Ejemplos: /, /mnt/floppy, /tmp, etc.</li>
-<li>Sistema de ficheros. Ejemplos: ext2, msdos, nfs, swap, iso9660, auto, etc.</li>
-<li>Opciones de montaje. Ejemplos: ro, rw, exec, auto, user, etc.</li>
-<li>Dos valores numéricos: el primero toma los valores 0/1 indicando si al dispositivo se le hará dump (especie de backup) o no. El segundo número expresa la prioridad que tiene el dispositivo cuando se chequea la integridad del File System durante el inicio del sistema.</li>
+<li>Nombre del dispositivo o etiqueta. <ul>
+<li>Ejemplos: /dev/hda1, /dev/sdc1, /dev/fd0, LABEL=/home, LABEL=/cursos. También puede aparecer codificada como UUID.</li>
+</ul>
+</li>
+<li>Directorio donde se monta. <ul>
+<li>Ejemplos: /, /mnt/floppy, /tmp, etc.</li>
+</ul>
+</li>
+<li>Sistema de ficheros. <ul>
+<li>Ejemplos: ext2, msdos, nfs, swap, iso9660, auto, etc.</li>
+</ul>
+</li>
+<li>Opciones de montaje. <ul>
+<li>Ejemplos: ro, rw, exec, auto, user, etc.</li>
+</ul>
+</li>
+<li>Dos valores numéricos: <ul>
+<li>El primero toma los valores 0/1 indicando si al dispositivo se le hará dump (especie de backup) o no. </li>
+<li>El segundo número expresa la prioridad que tiene el dispositivo cuando se chequea la integridad del File System durante el inicio del sistema.</li>
+</ul>
+</li>
 </ul>
 <p>Las opciones de montaje son numerosas. Las más usadas son:</p>
 <ul>
@@ -1646,6 +1662,12 @@ sudo service cron restart
 </ul>
 <p>Actualmente para cada dispositivo con sistema de ficheros ext[1234] en lugar de especificar su nombre en el fichero /etc/fstab se puede indicar una etiqueta o identificador asociado.</p>
 <p>La forma utilizada es LABEL=[etiqueta] o UUID=[uuid].</p>
+<p>Ejemplo /etc/fstab</p>
+<div class="highlight"><pre><span></span><code># &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;         &lt;options&gt;          &lt;dump&gt;  &lt;pass&gt;
+/dev/sda1       /               ext4           errors=remount-ro  0       1
+/dev/sda2       none            swap           sw                 0       0
+/dev/sr0        /media/cdrom0   udf,iso9660    user,noauto        0       0
+</code></pre></div>
 <h3 id="1321-montaje">13.2.1. Montaje</h3>
 <p>Si queremos que un dispositivo se monte automáticamente cada vez que el sistema se inicie, basta con colocar una línea apropiada en el fichero /etc/fstab.</p>
 <p>Si lo que queremos es montar o desmontar dispositivos directamente desde línea de comandos, podemos emplear mount y umount respectivamente.</p>
