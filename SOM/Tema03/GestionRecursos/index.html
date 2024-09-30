@@ -1659,9 +1659,11 @@
 <p>Así se evita que un proceso se apropie del procesador de manera indefinida.</p>
 <p>Cada vez que se crea un nuevo proceso, este es situado en estado de Preparado.</p>
 <p>Cuando el proceso que se está ejecutando es interrumpido, el Distribuidor elige un nuevo proceso entre los que se encuentran en estado Preparado. El estado del proceso elegido pasa a ser En Ejecución mientras que el proceso que abandona la ejecución pasará a estado Preparado (si ha consumido su tiempo) o Bloqueado (si ha realizado una petición al sistema).</p>
-<p><img alt="Cambios de estado de un proceso" src="../CambiosEstado.png" style="width:70%;margin:auto;display:block" /></p>
+<!-- ![Cambios de estado de un proceso](CambiosEstado.png){: style="width:70%;margin:auto;display:block"} -->
+
 <p>Los procesos que se encuentran en estado Preparado esperan su turno en una cola.</p>
-<p><img alt="Cola de procesos" src="../ColaProcesos.png" style="width:70%;margin:auto;display:block" /></p>
+<!--![Cola de procesos](ColaProcesos.png){: style="width:70%;margin:auto;display:block"} -->
+
 <h3 id="315-cambio-de-contexto">3.1.5 Cambio de contexto</h3>
 <p>Cuando se ejecuta el módulo del kernel que se encarga de parar la ejecución de un proceso y hacer los cambios necesarios para que se ejecute un proceso diferente, se produce un cambio de contexto, con estas acciones:</p>
 <ul>
@@ -1689,23 +1691,23 @@ proceso.</li>
 </div>
 <h3 id="317-algoritmos-de-planificacion">3.1.7. Algoritmos de planificación</h3>
 <p><strong>FCFS (First Come First Served)</strong></p>
-<p>Es empleado en procesos por lotes (sin intervención del usuario) y es no apropiativo. Los procesos se van poniendo en cola según llegan y se les asigna el estado Preparado. Cuando es asignado al procesador, no lo abandona hasta que acaba.
+<p>Es empleado en procesos por lotes (sin intervención del usuario) y es no expulsivo. Los procesos se van poniendo en cola según llegan y se les asigna el estado Preparado. Cuando es asignado al procesador, no lo abandona hasta que acaba.
 Una de sus ventajas principales consiste en que es un algoritmo muy sencillo de implementar y también es fácilmente predecible.
 Entre sus principales inconvenientes podemos mencionar que los procesos largos pueden hacer esperar mucho a los procesos cortos FCFS (First Come First Served)
 Ejemplo práctico en el que disponemos de cinco procesos que se incorporan al sistema en momentos sucesivos y que tienen diferentes tiempos de duración</p>
 <p><img alt="FCFS" src="../FCFS.png" style="width:100%;margin:auto;display:block" /></p>
 <p><strong>SJF (Shortest Job First)</strong></p>
-<p>Es empleado en procesos por lotes (sin intervención del usuario) y es no apropiativo.
+<p>Es empleado en procesos por lotes (sin intervención del usuario) y es no expulsivo.
 Los procesos se van poniendo en cola según llegan y se les asigna el estado Preparado, pero el Planificador elige el que tiene un menor tiempo previsto de ejecución.</p>
 <p><img alt="SJF" src="../SJF.png" style="width:100%;margin:auto;display:block" /></p>
 <p><strong>SRTF (Shortest Remaining Time First)</strong></p>
-<p>SRTF (Shortest Remaining Time First) es un algoritmo empleado en procesos por lotes (sin intervención del usuario) y no apropiativo. Los procesos se ponen en cola según llegan y se les asigna el estado Preparado. Sin embargo, el Planificador elige el proceso con el tiempo previsto más corto de ejecución.</p>
+<p>SRTF (Shortest Remaining Time First) es un algoritmo empleado en procesos por lotes (sin intervención del usuario) y expulsivo. Los procesos se ponen en cola según llegan y se les asigna el estado Preparado. Sin embargo, el Planificador elige el proceso con el tiempo previsto más corto de ejecución.</p>
 <p><img alt="SRTF" src="../SRTF.png" style="width:100%;margin:auto;display:block" /></p>
 <p><strong>RR (Round Robin)</strong></p>
-<p>RR (Round Robin) se utiliza en procesos interactivos (donde interviene el usuario) y es apropiativo. Los procesos se ponen en cola según llegan y se les asigna el estado Preparado. El procesador se asigna a cada proceso en orden durante un período de tiempo llamado "Quantum", que es igual para todos los procesos.</p>
+<p>RR (Round Robin) se utiliza en procesos interactivos (donde interviene el usuario) y es expulsivo. Los procesos se ponen en cola según llegan y se les asigna el estado Preparado. El procesador se asigna a cada proceso en orden durante un período de tiempo llamado "Quantum", que es igual para todos los procesos.</p>
 <p><img alt="RR" src="../RR.png" style="width:100%;margin:auto;display:block" /></p>
 <p><strong>Planificación por prioridad</strong></p>
-<p>La planificación por prioridad se emplea en procesos interactivos y es apropiativa. Cada proceso recibe un número entero que representa su prioridad, donde un número menor indica una prioridad más alta. Si se considera no apropiativa, funciona como el algoritmo "Primero el más corto" (SJF), pero considera la prioridad en lugar de la duración.</p>
+<p>La planificación por prioridad se emplea en procesos interactivos y es expulsiva. Cada proceso recibe un número entero que representa su prioridad, donde un número menor indica una prioridad más alta. Si se considera no apropiativa, funciona como el algoritmo "Primero el más corto" (SJF), pero considera la prioridad en lugar de la duración.</p>
 <p><img alt="Prioridad" src="../Prioridad.png" style="width:100%;margin:auto;display:block" /></p>
 <h3 id="318-comunicacion-entre-procesos">3.1.8. Comunicación entre procesos</h3>
 <p>Los sistemas operativos a menudo ejecutan varios procesos que deben comunicarse para colaborar en un objetivo común. </p>
