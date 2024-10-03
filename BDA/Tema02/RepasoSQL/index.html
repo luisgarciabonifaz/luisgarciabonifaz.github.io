@@ -833,6 +833,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#20-claves" class="md-nav__link">
+    2.0. Claves
+  </a>
+  
+    <nav class="md-nav" aria-label="2.0. Claves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201-clave-primaria" class="md-nav__link">
+    2.0.1. Clave primaria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#202-clave-ajena" class="md-nav__link">
+    2.0.2 Clave ajena
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#21-comandos" class="md-nav__link">
     2.1. Comandos
   </a>
@@ -1375,6 +1402,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#20-claves" class="md-nav__link">
+    2.0. Claves
+  </a>
+  
+    <nav class="md-nav" aria-label="2.0. Claves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#201-clave-primaria" class="md-nav__link">
+    2.0.1. Clave primaria
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#202-clave-ajena" class="md-nav__link">
+    2.0.2 Clave ajena
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#21-comandos" class="md-nav__link">
     2.1. Comandos
   </a>
@@ -1569,6 +1623,37 @@
 
 
 <h1 id="2-sql">2. SQL</h1>
+<h2 id="20-claves">2.0. Claves</h2>
+<p>En las BD Relacionales existe el concepto de clave que hac referencia al modo de identificar una fila o registro de forma única. Existen dos tipos de claves, primaria y ajena</p>
+<h3 id="201-clave-primaria">2.0.1. Clave primaria</h3>
+<p>Una clave primaria es un campo (o conjunto de campos) que identifica de manera única cada fila en una tabla. Es fundamental para garantizar la integridad de los datos y que no existan filas duplicadas.</p>
+<p>Características:</p>
+<ul>
+<li>Única: No puede haber dos filas en una tabla con el mismo valor en la clave primaria.</li>
+<li>No Nulo: Los valores de una clave primaria no pueden ser nulos.</li>
+<li>Estable: El valor de la clave primaria no debe cambiar frecuentemente, ya que está relacionado con otras tablas.</li>
+</ul>
+<p>Ejemplo en SQL:
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Clientes</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id_cliente</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">  </span><span class="c1">-- Clave primaria</span>
+<span class="w">    </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<span class="w">    </span><span class="n">email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></p>
+<h3 id="202-clave-ajena">2.0.2 Clave ajena</h3>
+<p>Una clave ajena es un campo o conjunto de campos en una tabla que se utiliza para establecer y reforzar un vínculo entre dos tablas. La clave ajena en una tabla hace referencia a la clave primaria de otra tabla.</p>
+<p>Características:
+- Integridad Referencial: Las claves ajenas aseguran que los valores en una tabla coincidan con los valores en otra tabla.
+- Relación entre tablas: Una clave ajena crea una relación entre dos tablas, lo que permite mantener la coherencia de los datos.
+- Dependencia de clave primaria: Siempre hace referencia a una clave primaria o candidata en otra tabla.</p>
+<p>Ejemplo en SQL:</p>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Pedidos</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="n">id_pedido</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w">  </span><span class="c1">-- Clave primaria de la tabla Pedidos</span>
+<span class="w">    </span><span class="n">fecha_pedido</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">id_cliente</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w">  </span><span class="c1">-- Clave ajena que referencia la tabla Clientes</span>
+<span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id_cliente</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">Clientes</span><span class="p">(</span><span class="n">id_cliente</span><span class="p">)</span><span class="w">  </span><span class="c1">-- Definimos la clave ajena</span>
+<span class="p">);</span>
+</code></pre></div>
 <h2 id="21-comandos">2.1. Comandos</h2>
 <p>Existen tres tipos de comandos SQL:</p>
 <ul>
