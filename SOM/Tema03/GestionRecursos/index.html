@@ -1773,7 +1773,7 @@ Además, este planteamiento nos permitiría ejecutar procesos que fueran más gr
 <p>Mientras dura toda esta operación, el proceso que originó el fallo de página permanece en estado Bloqueado.</p>
 <p>Para saber qué páginas se encuentran en memoria principal y cuáles están en el disco, la tabla de páginas puede incluir un bit de presencia.</p>
 <p>Este tipo de esquemas consiguen que la memoria se aproveche mucho mejor. Además, al poder cargar más procesos en la misma cantidad de memoria, el procesador estará mejor aprovechado.</p>
-<p>Sin embargo, si se produce una situación que provoque una cantidad elevada de fallos de página, los accesos a disco se multiplicarán y el</p>
+<p>Sin embargo, si se produce una situación que provoque una cantidad elevada de fallos de página, los accesos a disco se multiplicarán y el rendimiento puede caer de forma considerable. Este fenómeno recibe el nombre de hiperpaginación.</p>
 <h3 id="325-paginacion">3.2.5. Paginación</h3>
 <p>La paginación divide la memoria en bloques de tamaño fijo llamados "páginas". Cada proceso recibe páginas en la memoria principal según sus necesidades. Esto tiene ventajas, como un uso eficiente de la memoria y una administración más sencilla. Sin embargo, puede haber fragmentación interna y se requiere una tabla de páginas para llevar un registro de las ubicaciones.</p>
 <p><img alt="Paginació" src="../Paginacion1.png" style="width:50%;margin:auto;display:block" />
