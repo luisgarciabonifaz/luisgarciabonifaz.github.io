@@ -1367,6 +1367,39 @@ sudo rpm -Uvh mysql80-community-release-*</code></p>
 - Mongo
 - Nifi
 - Kafka</p>
+<p>Fichero con la configuración de MySQL + Mongo</p>
+<div class="highlight"><pre><span></span><code>services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - &quot;28000:27017&quot;
+    volumes:
+      # Sustituir /opt/data/mongo por una carpeta donde guardar las BD de mongo
+      - /opt/data/mongo:/data/db
+    networks:
+      default:
+        aliases:
+          - mongo
+
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: tu_contraseña_mysql
+    ports:
+      - &quot;3307:3306&quot;
+    volumes:
+      # Sustituir /opt/data/mysql por una carpeta donde guardar las BD de mysql
+      - /opt/data/mysql:/var/lib/mysql
+    networks:
+      default:
+        aliases:
+          - mysql
+
+networks:
+  default:
+</code></pre></div>
 
 
 
