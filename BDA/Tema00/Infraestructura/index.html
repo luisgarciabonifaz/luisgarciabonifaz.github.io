@@ -846,6 +846,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#03-docker" class="md-nav__link">
+    0.3. Docker
+  </a>
+  
+    <nav class="md-nav" aria-label="0.3. Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#032-componentes-de-docker" class="md-nav__link">
+    0.3.2. Componentes de Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#033-comandos-basicos-de-docker" class="md-nav__link">
+    0.3.3. Comandos básicos de Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#034-comandos-adicionales" class="md-nav__link">
+    0.3.4. Comandos adicionales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#035-docker-compose" class="md-nav__link">
+    0.3.5. Docker Compose
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1283,6 +1324,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#03-docker" class="md-nav__link">
+    0.3. Docker
+  </a>
+  
+    <nav class="md-nav" aria-label="0.3. Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#032-componentes-de-docker" class="md-nav__link">
+    0.3.2. Componentes de Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#033-comandos-basicos-de-docker" class="md-nav__link">
+    0.3.3. Comandos básicos de Docker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#034-comandos-adicionales" class="md-nav__link">
+    0.3.4. Comandos adicionales
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#035-docker-compose" class="md-nav__link">
+    0.3.5. Docker Compose
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1399,6 +1481,86 @@ sudo rpm -Uvh mysql80-community-release-*</code></p>
 
 networks:
   default:
+</code></pre></div>
+<h2 id="03-docker">0.3. Docker</h2>
+<p>Docker es una plataforma de contenedorización que permite a los desarrolladores empaquetar aplicaciones junto con todas sus dependencias en un contenedor. Esto asegura que la aplicación funcione de la misma manera en cualquier entorno, ya sea en desarrollo, pruebas o producción.</p>
+<p>Ventajas de Docker:</p>
+<ul>
+<li>Portabilidad: Los contenedores pueden ejecutarse en cualquier sistema que tenga Docker instalado.</li>
+<li>Eficiencia: Los contenedores son ligeros y utilizan menos recursos que las máquinas virtuales.</li>
+<li>Escalabilidad: Facilita el despliegue y escalado de aplicaciones en diferentes entornos.</li>
+<li>Consistencia: Asegura que las aplicaciones se ejecuten de manera idéntica en desarrollo y producción.</li>
+</ul>
+<p>### 0.3.1. Conceptos clave </p>
+<p><strong>Contenedores</strong>: Son las unidades donde se ejecuta la aplicación, aisladas del sistema operativo host.
+A diferencia de las máquinas virtuales, los contenedores no necesitan un sistema operativo completo, lo que los hace más ligeros.
+<strong>Imágenes</strong>: Son plantillas de solo lectura que contienen todo lo necesario para ejecutar un contenedor: el sistema operativo, las dependencias, el código de la aplicación, entre otros.
+Las imágenes son versionadas y pueden descargarse desde Docker Hub (un repositorio de imágenes públicas).
+<strong>Docker Hub</strong>: Es un repositorio público donde se almacenan y distribuyen imágenes de Docker.
+Puedes buscar imágenes oficiales de herramientas o lenguajes como Ubuntu, Nginx, Node.js, Python, entre otros.
+<strong>Dockerfile</strong>: Es un archivo de texto que contiene una serie de instrucciones para construir una imagen de Docker.
+Permite definir cómo se debe construir una imagen paso a paso (instalación de dependencias, configuración del entorno, etc.).</p>
+<h3 id="032-componentes-de-docker">0.3.2. Componentes de Docker</h3>
+<p><strong>Docker Engine</strong>: Es el motor de Docker que se encarga de crear y gestionar contenedores.
+<strong>Docker CLI (Command Line Interface)</strong>: Es la interfaz de línea de comandos que se utiliza para interactuar con Docker.
+<strong>Docker Daemon</strong>: Es el proceso que se ejecuta en segundo plano y administra los contenedores.</p>
+<h3 id="033-comandos-basicos-de-docker">0.3.3. Comandos básicos de Docker</h3>
+<p>Confimar Instalación:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>--version
+</code></pre></div>
+<p>Buscar una imagen en Docker Hub:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>search<span class="w"> </span>nombre_imagen
+</code></pre></div>
+<p>Descargar una imagen:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>pull<span class="w"> </span>nombre_imagen
+</code></pre></div>
+<p>Listar las imágenes locales:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>docker<span class="w"> </span>images
+</code></pre></div>
+<p>Crear y ejecutar un contenedor:
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>run<span class="w"> </span>nombre_imagen
+</code></pre></div></p>
+<p>Parámetro útil: -d (modo detach) para ejecutar en segundo plano.</p>
+<p>Listar contenedores en ejecución:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>ps
+</code></pre></div>
+<p>Parámetro útil: -a para listar todos los contenedores, incluso los detenidos.</p>
+<p>Detener un contenedor:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>stop<span class="w"> </span>id_contenedor
+</code></pre></div>
+<p>Eliminar un contenedor:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>rm<span class="w"> </span>id_contenedor
+</code></pre></div>
+<p>Eliminar una imagen:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>rmi<span class="w"> </span>nombre_imagen
+</code></pre></div>
+<h3 id="034-comandos-adicionales">0.3.4. Comandos adicionales</h3>
+<p>Construir una imagen desde un Dockerfile:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>nombre_imagen<span class="w"> </span>.
+</code></pre></div>
+<p>Inspeccionar un contenedor:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>inspect<span class="w"> </span>id_contenedor
+</code></pre></div>
+<h3 id="035-docker-compose">0.3.5. Docker Compose</h3>
+<p>Docker Compose es una herramienta que permite definir y ejecutar aplicaciones que constan de múltiples contenedores mediante un archivo docker-compose.yml.</p>
+<p>Ejemplo de docker-compose.yml:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">web</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;80:80&quot;</span>
+<span class="w">  </span><span class="nt">db</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">postgres</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">POSTGRES_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ejemplo_password</span>
+</code></pre></div>
+<p>Comandos Docker Compose:</p>
+<p>Levantar la aplicación:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker-compose<span class="w"> </span>up
+</code></pre></div>
+<p>Detener la aplicación:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker-compose<span class="w"> </span>down
 </code></pre></div>
 
 
