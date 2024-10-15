@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#actualizado-el-07102024" class="md-skip">
+        <a href="#actualizado-el-15102024" class="md-skip">
           Skip to content
         </a>
       
@@ -327,8 +327,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#actualizado-el-07102024" class="md-nav__link">
-    (Actualizado el 07/10/2024)
+  <a href="#actualizado-el-15102024" class="md-nav__link">
+    (Actualizado el 15/10/2024)
   </a>
   
 </li>
@@ -1408,8 +1408,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#actualizado-el-07102024" class="md-nav__link">
-    (Actualizado el 07/10/2024)
+  <a href="#actualizado-el-15102024" class="md-nav__link">
+    (Actualizado el 15/10/2024)
   </a>
   
 </li>
@@ -1620,7 +1620,7 @@
                   
 
 
-<h6 id="actualizado-el-07102024">(Actualizado el 07/10/2024)</h6>
+<h6 id="actualizado-el-15102024">(Actualizado el 15/10/2024)</h6>
 <h1 id="3-gestion-de-recursos">3. Gestión de Recursos</h1>
 <p>En este tema veremos en detalle la gestión de recursos que realiza el sistema operativo:</p>
 <ul>
@@ -1787,13 +1787,10 @@ Los procesos se van poniendo en cola según llegan y se les asigna el estado Pre
 </ul>
 </div>
 <h3 id="324-memoria-virtual">3.2.4. Memoria Virtual</h3>
-<p>Todos los métodos estudiados hasta el momento suponen que un proceso debe estar completamente cargado en memoria para poder ejecutarse. Sin embargo, el modelo de <strong>Memoria Virtual</strong> aplica los mecanismos de intercambio que ya hemos mencionado para que las partes de un proceso que no estén siendo utilizadas en un momento concreto, puedan residir en memoria secundaria. De esta manera, se libera una mayor cantidad de memoria principal para albergar un número de procesos superior.
-Además, este planteamiento nos permitiría ejecutar procesos que fueran más grandes que la memoria física.</p>
-<p>Cuando el proceso hace referencia a una dirección de memoria que no reside en memoria principal, se produce un <strong>fallo de página</strong>. En ese momento, el sistema localiza un marco de página libre y carga en él la página necesaria. Si no hubiera marcos libres, habría que aplicar un algoritmo de sustitución para elegir la página de este u otro proceso que debe abandonar la memoria principal para dejar espacio a la que debe cargarse.</p>
-<p>Mientras dura toda esta operación, el proceso que originó el fallo de página permanece en estado Bloqueado.</p>
-<p>Para saber qué páginas se encuentran en memoria principal y cuáles están en el disco, la tabla de páginas puede incluir un bit de presencia.</p>
-<p>Este tipo de esquemas consiguen que la memoria se aproveche mucho mejor. Además, al poder cargar más procesos en la misma cantidad de memoria, el procesador estará mejor aprovechado.</p>
-<p>Sin embargo, si se produce una situación que provoque una cantidad elevada de fallos de página, los accesos a disco se multiplicarán y el rendimiento puede caer de forma considerable. Este fenómeno recibe el nombre de <strong>hiperpaginación</strong>.</p>
+<p>Hasta ahora, hemos visto que un proceso necesita estar completamente en la memoria para ejecutarse. Sin embargo, con la <strong>Memoria Virtual</strong>, se permite que solo las partes del proceso que se están utilizando en ese momento estén en la memoria principal, mientras que el resto permanece en la memoria secundaria. Esto libera espacio en la memoria principal para que se puedan ejecutar más procesos a la vez. Además, este método nos permite ejecutar programas que son más grandes que la memoria física del sistema.</p>
+<p>Cuando un proceso necesita acceder a una parte de la memoria que no está en la memoria principal, ocurre un <strong>fallo de página</strong>. En ese momento, el sistema busca un espacio libre en la memoria principal y carga allí la información necesaria. Si no hay espacio libre, el sistema debe reemplazar una parte de la memoria ocupada por otra información menos importante, usando un algoritmo especial para decidir qué reemplazar.</p>
+<p>Mientras se realiza este proceso, el programa que generó el fallo de página se detiene momentáneamente.</p>
+<p>Este método permite usar la memoria de manera más eficiente, ya que podemos cargar más procesos en la misma cantidad de memoria y así aprovechar mejor el procesador. Sin embargo, si hay demasiados fallos de página, el acceso al disco se vuelve muy frecuente y el rendimiento del sistema puede disminuir drásticamente. Este problema se llama <strong>hiperpaginación</strong>.</p>
 <h3 id="325-paginacion">3.2.5. Paginación</h3>
 <p>La paginación divide la memoria en bloques de tamaño fijo llamados "páginas". Cada proceso recibe páginas en la memoria principal según sus necesidades. Esto tiene ventajas, como un uso eficiente de la memoria y una administración más sencilla. Sin embargo, puede haber fragmentación interna y se requiere una tabla de páginas para llevar un registro de las ubicaciones.</p>
 <p><img alt="Paginació" src="../Paginacion1.png" style="width:50%;margin:auto;display:block" />
