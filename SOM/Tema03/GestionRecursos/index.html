@@ -1803,12 +1803,16 @@ Además, este planteamiento nos permitiría ejecutar procesos que fueran más gr
 <p>Con marcos de página pequeños, hay poca fragmentación interna y tablas de páginas grandes.
 Con marcos de página grandes, hay más fragmentación interna y tablas de páginas pequeñas.</p>
 <p><img alt="Marcs de pàgina" src="../MarcosPagina.png" style="width:80%;margin:auto;display:block" /></p>
+<p><strong>Ejemplo asignacion memoria en la paginación</strong></p>
+<p><img alt="Ejemplo Paginacion" src="../Ejemplo_Paginacion.png" style="width:100%;margin:auto;display:block" /></p>
 <h3 id="326-segmentacion">3.2.6. Segmentación</h3>
 <p>La segmentación divide la memoria en segmentos lógicos de tamaño variable para reflejar la estructura lógica de un programa. Ofrece flexibilidad, pero puede causar fragmentación externa. Se necesita una tabla de segmentos para rastrear los segmentos en la memoria.</p>
 <p>Un programa se considera un conjunto de elementos lógicos de diferentes tamaños.</p>
 <p><img alt="Segmentació" src="../Segmentacion.png" style="width:40%;margin:auto;display:block" /></p>
 <p>La segmentación plantea que, al compilar un programa, este se convierta en un conjunto de segmentos a los que se les asignará un identificador, un punto de inicio y un tamaño.</p>
 <p><img alt="Segmentació" src="../TablaSegmentos.png" style="width:100%;margin:auto;display:block" /></p>
+<p><strong>Ejemplo asignacion memoria en la segmentación</strong></p>
+<p><img alt="Ejemplo Segmentacion" src="../Ejemplo_Segmentacion.png" style="width:100%;margin:auto;display:block" /></p>
 <h3 id="327-paginacion-segmentacion">3.2.7. Paginación + Segmentación</h3>
 <p>Cuando los segmentos son grandes, es común utilizar una combinación de paginación y segmentación. La idea es dividir cada segmento en páginas de longitud fija para su ubicación en la memoria.</p>
 <h3 id="328-control-del-uso-de-memoria">3.2.8. Control del uso de memoria</h3>
