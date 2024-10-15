@@ -1526,6 +1526,9 @@ Permite definir cómo se debe construir una imagen paso a paso (instalación de 
 </code></pre></div>
 <p>Parámetro útil: -a para listar todos los contenedores, incluso los detenidos.</p>
 <p>Detener un contenedor:</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>stop<span class="w"> </span>id_contenedor
+</code></pre></div>
+Iniciar un contenedor:</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>stop<span class="w"> </span>id_contenedor
 </code></pre></div>
 <p>Eliminar un contenedor:</p>
@@ -1535,11 +1538,11 @@ Permite definir cómo se debe construir una imagen paso a paso (instalación de 
 <div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>rmi<span class="w"> </span>nombre_imagen
 </code></pre></div>
 <h3 id="034-comandos-adicionales">0.3.4. Comandos adicionales</h3>
-<p>Construir una imagen desde un Dockerfile:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>nombre_imagen<span class="w"> </span>.
+<p>Acceder al contenedor</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>nombre_contenedor<span class="w"> </span>bash
 </code></pre></div>
-<p>Inspeccionar un contenedor:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span>inspect<span class="w"> </span>id_contenedor
+<p>Ejecutar un comando del contenedor</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>nombre_contenedor<span class="w"> </span>comando
 </code></pre></div>
 <h3 id="035-docker-compose">0.3.5. Docker Compose</h3>
 <p>Docker Compose es una herramienta que permite definir y ejecutar aplicaciones que constan de múltiples contenedores mediante un archivo docker-compose.yml.</p>
