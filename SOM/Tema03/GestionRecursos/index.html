@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#actualizado-el-15102024" class="md-skip">
+        <a href="#actualizado-el-16102024" class="md-skip">
           Skip to content
         </a>
       
@@ -327,8 +327,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#actualizado-el-15102024" class="md-nav__link">
-    (Actualizado el 15/10/2024)
+  <a href="#actualizado-el-16102024" class="md-nav__link">
+    (Actualizado el 16/10/2024)
   </a>
   
 </li>
@@ -467,15 +467,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#331-tecnicas-de-gestion-de-es" class="md-nav__link">
-    3.3.1. Técnicas de gestión de E/S
+  <a href="#331-gestion-de-la-es-por-parte-del-so" class="md-nav__link">
+    3.3.1. Gestion de la E/S por parte del SO
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#332-almacenamiento-intermedio" class="md-nav__link">
-    3.3.2. Almacenamiento intermedio
+  <a href="#332-tecnicas-de-gestion-de-es" class="md-nav__link">
+    3.3.2. Técnicas de gestión de E/S
   </a>
   
 </li>
@@ -1408,8 +1408,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#actualizado-el-15102024" class="md-nav__link">
-    (Actualizado el 15/10/2024)
+  <a href="#actualizado-el-16102024" class="md-nav__link">
+    (Actualizado el 16/10/2024)
   </a>
   
 </li>
@@ -1548,15 +1548,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#331-tecnicas-de-gestion-de-es" class="md-nav__link">
-    3.3.1. Técnicas de gestión de E/S
+  <a href="#331-gestion-de-la-es-por-parte-del-so" class="md-nav__link">
+    3.3.1. Gestion de la E/S por parte del SO
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#332-almacenamiento-intermedio" class="md-nav__link">
-    3.3.2. Almacenamiento intermedio
+  <a href="#332-tecnicas-de-gestion-de-es" class="md-nav__link">
+    3.3.2. Técnicas de gestión de E/S
   </a>
   
 </li>
@@ -1620,7 +1620,7 @@
                   
 
 
-<h6 id="actualizado-el-15102024">(Actualizado el 15/10/2024)</h6>
+<h6 id="actualizado-el-16102024">(Actualizado el 16/10/2024)</h6>
 <h1 id="3-gestion-de-recursos">3. Gestión de Recursos</h1>
 <p>En este tema veremos en detalle la gestión de recursos que realiza el sistema operativo:</p>
 <ul>
@@ -1824,32 +1824,75 @@ Los mapas de bits dividen la memoria en unidades de asignación, que pueden ser 
 <p>Las listas enlazadas mantienen registros de bloques de memoria asignados y libres, donde cada bloque representa un proceso o un espacio vacío entre procesos.</p>
 <p><img alt="Listes Enllaçades" src="../ListaEnlazada.png" style="width:100%;margin:auto;display:block" /></p>
 <h2 id="33-gestion-de-es">3.3. Gestión de E/S</h2>
-<p>El sistema operativo debe controlar los dispositivos, detectar interrupciones y manejar errores. También debe proporcionar una interfaz entre los periféricos y el resto del sistema, intentando que su uso sea lo más estándar posible.</p>
-<p>En un sistema informático moderno podemos encontrar muchos dispositivos de entrada/salida diferentes. Sin embargo, uno de los objetivos del diseño de un sistema operativo es que el usuario o el programador los perciban de una forma semejante, sin importar los detalles técnicos que los distinguen ni las diferencias en la complejidad del dispositivo.</p>
-<h3 id="331-tecnicas-de-gestion-de-es">3.3.1. Técnicas de gestión de E/S</h3>
-<p>Un ordenador puede utilizar diferentes técnicas para interactuar con los controladores de entrada/salida. Como ya mencionamos en el apartado anterior, mencionaremos las más representativas de menor a mayor sofisticación:</p>
-<p><strong>Entrada/salida programada</strong>: El procesador ejecuta una instrucción de un proceso que solicita una operación de entrada/salida. Se realiza el requerimiento al módulo de entrada/salida correspondiente, y queda en espera de recibir la respuesta.</p>
+<h3 id="331-gestion-de-la-es-por-parte-del-so">3.3.1. Gestion de la E/S por parte del SO</h3>
+<p>La gestión de E/S por parte del sistema operativo implica coordinar la comunicación entre los dispositivos de hardware y los programas de software para asegurar que las operaciones se realicen de manera eficiente y sin conflictos. A continuación, se presentan los componentes clave de la gestión de E/S en un sistema operativo:</p>
+<p><strong>Controladores de Dispositivo</strong></p>
+<p>Los controladores de dispositivo son programas que actúan como traductores entre el sistema operativo y los dispositivos de hardware. Cada dispositivo de E/S tiene un controlador específico que convierte las solicitudes de E/S de alto nivel en comandos que el dispositivo puede entender.</p>
+<p><strong>Buffering y Spooling</strong></p>
+<p>Para optimizar la transferencia de datos y evitar bloqueos, el sistema operativo utiliza técnicas de buffering y spooling.</p>
+<ul>
+<li><strong>Buffering</strong>: Almacena temporalmente los datos en un área de memoria intermedia (buffer) mientras se transfieren entre el dispositivo y la aplicación. </li>
+<li><strong>Spooling</strong>: Almacena las solicitudes de E/S en una cola para ser procesadas posteriormente. Es común en la impresión, donde los documentos a imprimir se colocan en una cola de impresión y se imprimen en el orden en que fueron solicitados.</li>
+</ul>
+<p><strong>Planificación de E/S</strong></p>
+<p>El sistema operativo también planifica las solicitudes de E/S para optimizar el uso de los dispositivos. Por ejemplo, en un disco duro, las solicitudes de lectura/escritura se pueden reorganizar para minimizar el tiempo de desplazamiento del cabezal, mejorando el rendimiento.</p>
+<p><strong>Interrupciones y Gestión de Prioridades</strong></p>
+<p>El sistema operativo gestiona las interrupciones generadas por los dispositivos de E/S, asignándoles diferentes niveles de prioridad. Cuando se recibe una interrupción, el sistema operativo puede determinar si debe atenderla inmediatamente o si puede esperar. Esto es crucial en sistemas donde algunos dispositivos requieren atención rápida (como una tarjeta de red) y otros no son tan urgentes (como un teclado).</p>
+<h3 id="332-tecnicas-de-gestion-de-es">3.3.2. Técnicas de gestión de E/S</h3>
+<p>Un ordenador puede utilizar diferentes técnicas para interactuar con los controladores de entrada/salida:</p>
+<p><strong>E/S Programada</strong></p>
+<p>En la E/S programada, el procesador se encarga directamente de controlar las operaciones de entrada y salida. El sistema operativo emite una solicitud al dispositivo y luego realiza una comprobación constante (sondeo o "polling") para verificar si el dispositivo está listo para enviar o recibir datos. Durante este tiempo, el procesador no puede realizar otras tareas, lo cual puede ser ineficiente.</p>
+<p>Ventajas:</p>
+<p>Es simple de implementar, ya que no requiere hardware adicional.
+Funciona bien en sistemas donde la velocidad del dispositivo de E/S es comparable a la del procesador.</p>
+<p>Desventajas:</p>
+<p>El procesador queda inactivo mientras espera la respuesta del dispositivo, lo que desperdicia recursos.
+No es adecuado para sistemas donde los dispositivos de E/S son mucho más lentos que el procesador, ya que provoca un "cuello de botella".</p>
+<p>Ejemplo:</p>
+<p>Cuando un programa lee datos de un puerto serie utilizando la E/S programada, el procesador comprueba repetidamente si hay nuevos datos disponibles. Si no hay datos, el procesador sigue esperando.</p>
 <p><img alt="Entrada/eixida programada" src="../ESProgramada.png" style="width:100%;margin:auto;display:block" /></p>
-<p><strong>Entrada/salida controlada por interrupciones</strong>: El procesador ejecuta una instrucción de un proceso que solicita una operación de entrada/salida. Entonces, el proceso espera en estado Bloqueado y el procesador continúa con la ejecución de otras instrucciones. Cuando se completa la operación, el módulo de entrada/salida genera una interrupción para el procesador y este ejecuta el módulo del sistema operativo que pone al proceso en estado Listo.
-<img alt="Entrada/eixida controlada per interrupcions" src="../ESInterrupciones.png" style="width:100%;margin:auto;display:block" /></p>
-<p><strong>Acceso directo a memoria (DMA, de las siglas en inglés Direct Memory Access)</strong>: El equipo dispone de un módulo DMA autorizado para acceder directamente a la memoria RAM. De esta manera, en lugar de encargarse el procesador de controlar cada operación individual de entrada o salida, se confía en el módulo DMA para que ejecute varias operaciones consecutivas, colocando (o obteniendo) la información directamente en la memoria RAM. El módulo DMA interrumpe al procesador solo cuando han terminado todas las operaciones que tenía encargadas.
-<img alt="Entrada/eixida directa a memòria" src="../ES_DMA.png" style="width:80%;margin:auto;display:block" /></p>
-<p><strong>Procesadores de entrada/salida (IOP)</strong>: El equipo dispone de un procesador complementario con la capacidad de ejecutar las operaciones de entrada/salida, obteniéndolas directamente de la memoria principal. También puede utilizar técnicas de DMA para leer o escribir los datos en la memoria. De esta forma, el procesador principal queda liberado de este tipo de operaciones.
-<img alt="Processadors d'entrada/eixida (o IOP)" src="../ESProcesadores.png" style="width:70%;margin:auto;display:block" /></p>
-<h3 id="332-almacenamiento-intermedio">3.3.2. Almacenamiento intermedio</h3>
-<p>Cuando es necesario leer un gran volumen de datos del almacenamiento secundario, el proceso irá emitiendo solicitudes de bloques de manera consecutiva, que irá procesando uno a uno. Como el almacenamiento secundario es mucho más lento, entre una lectura y otra el proceso, probablemente, permanecerá en estado Bloqueado. Una vez completada la lectura, tendrá que esperar en la cola de procesos en estado Listo hasta que el Planificador lo seleccione para su ejecución.</p>
-<p>Para evitar esta situación, se utiliza una técnica denominada buffering, que consiste en que el sistema operativo realice las lecturas antes de que se produzca la solicitud, almacenándolas en un área de la memoria principal llamada Buffer.</p>
-<p>Algo similar puede hacerse cuando disponemos de dispositivos muy lentos que, sin embargo, pueden recibir grandes volúmenes de datos. En estos casos, puede utilizarse una memoria intermedia situada en un almacenamiento externo (típicamente, un disco) y enviar los datos poco a poco al dispositivo externo.</p>
-<p>Esta técnica, aunque es similar al buffering, recibe el nombre de spooling, y la memoria intermedia se denomina spool (del inglés Simultaneous Peripheral Operations On-Line). Es una técnica que se utiliza habitualmente con impresoras.</p>
+<p><strong>E/S por Interrupciones</strong></p>
+<p>En la E/S por interrupciones, el dispositivo de E/S notifica al procesador cuando está listo para enviar o recibir datos, mediante una señal de interrupción. Esto libera al procesador de tener que verificar continuamente el estado del dispositivo, permitiéndole realizar otras tareas mientras espera.</p>
+<p>Funcionamiento:</p>
+<p>El dispositivo de E/S genera una interrupción para indicar que necesita atención.
+El procesador pausa su ejecución actual y guarda su estado.
+El sistema operativo ejecuta una rutina de atención de la interrupción (ISR, Interrupt Service Routine) para manejar la solicitud del dispositivo.</p>
+<p>Una vez completada la tarea, el procesador retoma la ejecución del programa en el punto en el que se interrumpió.</p>
+<p>Ventajas:</p>
+<p>Es mucho más eficiente que la E/S programada, ya que el procesador puede realizar otras tareas mientras espera.
+Mejora la capacidad de respuesta del sistema, ya que las interrupciones permiten que los dispositivos reaccionen rápidamente a los eventos.</p>
+<p>Desventajas:</p>
+<p>Requiere un sistema de gestión de interrupciones, que puede ser complejo de implementar.
+Si hay muchas interrupciones, puede causar una sobrecarga en el sistema, ya que el procesador pasará mucho tiempo gestionando interrupciones.</p>
+<p>Ejemplo:</p>
+<p>Un teclado puede generar una interrupción cada vez que se presiona una tecla, lo que alerta al sistema operativo para que lea el carácter y lo procese.</p>
+<p><img alt="Entrada/eixida controlada per interrupcions" src="../ESInterrupciones.png" style="width:100%;margin:auto;display:block" /></p>
+<p><strong>E/S mediante DMA (Acceso Directo a Memoria)</strong></p>
+<p>El DMA permite que un dispositivo de E/S transfiera datos directamente entre su memoria interna y la memoria principal del sistema, sin la intervención continua del procesador. El controlador de DMA gestiona la transferencia de datos, lo que libera al procesador para que realice otras tareas.</p>
+<p>Funcionamiento:</p>
+<p>El procesador configura el controlador de DMA, especificando la dirección de la memoria de origen, la dirección de destino y el tamaño de los datos a transferir.
+El controlador de DMA realiza la transferencia directamente entre el dispositivo y la memoria principal.
+Una vez que la transferencia se completa, el controlador de DMA genera una interrupción para notificar al procesador.</p>
+<p>Ventajas:</p>
+<p>Reduce la carga del procesador, ya que no tiene que gestionar cada byte de la transferencia.
+Es ideal para transferencias de datos grandes, como la lectura/escritura de archivos en disco.</p>
+<p>Desventajas:</p>
+<p>Requiere hardware especializado (controlador de DMA).
+Puede ser complicado de configurar, especialmente en sistemas con múltiples dispositivos que requieren acceso simultáneo al bus de memoria.</p>
+<p>Ejemplo:</p>
+<p>La transferencia de bloques de datos entre un disco duro y la memoria principal se realiza típicamente mediante DMA para maximizar la eficiencia.</p>
+<p><img alt="Entrada/eixida directa a memòria" src="../ES_DMA.png" style="width:80%;margin:auto;display:block" /></p>
 <h2 id="34-gestion-de-archivos">3.4. Gestión de Archivos</h2>
 <p>El sistema operativo es responsable de las siguientes actividades relacionadas con la gestión de discos:</p>
-<p>Creación y administración de la estructura lógica (Sistema de archivos).
-Administración del espacio libre.
-Asignación de almacenamiento.
-Planificación del disco: Decidir a qué proceso se le da servicio de disco.
-El Sistema de archivos (en inglés, filesystem) es el componente del sistema operativo encargado de organizar la manera en que se guardan los datos dentro de los dispositivos de almacenamiento secundario. Para llevar a cabo su tarea, desde un punto de vista lógico utiliza dos conceptos diferentes:</p>
-<p><strong>Archivo (o fichero)</strong>: es una serie de bytes almacenados en un dispositivo de almacenamiento externo que, en conjunto, forman una unidad lógica. Cada archivo suele estar identificado en el sistema mediante un nombre y una extensión. Normalmente, el nombre sirve para identificar el contenido del archivo y la extensión para identificar el tipo al que pertenece.
-<strong>Carpeta (o directorio)</strong>: es una forma de agrupar archivos, según el criterio del usuario, para facilitar su organización. Al igual que los archivos, las carpetas tienen un nombre que las identifica. Para un sistema de archivos, una carpeta no es más que un archivo que contiene información sobre la forma en que se organizan los datos. Como en el caso de los archivos, para evitar ambigüedades, no puede haber dos carpetas con el mismo nombre en la misma ubicación.
+<ul>
+<li>Creación y administración de la estructura lógica (Sistema de archivos).</li>
+<li>Administración del espacio libre.</li>
+<li>Asignación de almacenamiento.
+ -Planificación del disco: Decidir a qué proceso se le da servicio de disco.</li>
+</ul>
+<p>El Sistema de archivos (en inglés, filesystem) es el componente del sistema operativo encargado de organizar la manera en que se guardan los datos dentro de los dispositivos de almacenamiento secundario. Para llevar a cabo su tarea, desde un punto de vista lógico utiliza dos conceptos diferentes:</p>
+<p><strong>Archivo (o fichero)</strong>: es una serie de bytes almacenados en un dispositivo de almacenamiento externo que, en conjunto, forman una unidad lógica. Cada archivo suele estar identificado en el sistema mediante un nombre y una extensión. Normalmente, el nombre sirve para identificar el contenido del archivo y la extensión para identificar el tipo al que pertenece.</p>
+<p><strong>Carpeta (o directorio)</strong>: es una forma de agrupar archivos, según el criterio del usuario, para facilitar su organización. Al igual que los archivos, las carpetas tienen un nombre que las identifica. Para un sistema de archivos, una carpeta no es más que un archivo que contiene información sobre la forma en que se organizan los datos. Como en el caso de los archivos, para evitar ambigüedades, no puede haber dos carpetas con el mismo nombre en la misma ubicación.
 Como podemos suponer, la unidad de información con la que trabaja un sistema de archivos es, precisamente, el archivo.</p>
 <p>Es frecuente que cada familia de sistemas operativos tenga su propio sistema de archivos, aunque hoy en día la mayoría de ellos son compatibles con los sistemas de archivos más utilizados.</p>
 <p><img alt="Sistemes d'arxius)" src="../TiposFicheros.png" style="width:80%;margin:auto;display:block" /></p>
