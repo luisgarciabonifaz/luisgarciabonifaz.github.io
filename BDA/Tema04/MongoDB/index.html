@@ -2132,7 +2132,7 @@ tres títulos, y el cursor empezará a devolver a partir del cuarto.
 <p>La agregación nos permite transformar y combinar documentos en una colección. Básicamente, se construye un pipeline (secuencia de comandos) que procesan un conjunto de documentos a través de varios “bloques”: filtrado, proyecciones, agrupaciones, ordenación, limitación y skipping.</p>
 <p>Por ejemplo, si de la colección de  <a href="../libros.json" target="_blank">libros</a>  de ejemplo quisiéramos saber los tres autores con más libros escritos, crearíamos un pipeline con los siguientes pasos:</p>
 <ul>
-<li>Proyectaríamos el autor de cada libro.0</li>
+<li>Proyectaríamos el autor de cada libro.</li>
 <li>Agruparíamos los autores por nombre, contando el número de ocurrencias.</li>
 <li>Ordenaríamos los autores por dicho número de ocurrencias, descendentemente.</li>
 <li>Limitaríamos el resultado a los primeros tres.</li>
@@ -2233,7 +2233,7 @@ Si lo que queremos es que el valor del identificador contenga un objeto, lo pode
 <p><strong>Expresiones de fechas</strong>. </p>
 <p>Muchas agregaciones son basadas en el tiempo. ¿Qué ocurrió la semana pasada? ¿Y el mes pasado?. Es por esto que el entorno de agregación tiene un conjunto de expresiones  que pueden utilizarse para extraer información sobre fechas de una forma muy usable, son: “$year”, “$month”,“$week”, “$dayOfMonth”, “$dayOfWeek”, “$dayOfYear”, “$hour”, “$minute” y “$second”. </p>
 <p>Con siguiente sentencia de agregación vamos a recuperar tanto la fecha, como el año de dicha fecha, gracias a la expresión “$year”.</p>
-<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="kc">fe</span><span class="err">cha</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">year</span><span class="p">:{</span><span class="err">$year</span><span class="p">:</span><span class="err">&quot;$fecha* }}})</span>
+<div class="highlight"><pre><span></span><code><span class="err">db.libros.aggrega</span><span class="kc">te</span><span class="err">(</span><span class="p">{</span><span class="err">$projec</span><span class="kc">t</span><span class="p">:{</span><span class="kc">fe</span><span class="err">cha</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="err">year</span><span class="p">:{</span><span class="err">$year</span><span class="p">:</span><span class="s2">&quot;$fecha&quot;</span><span class="w"> </span><span class="p">}}}</span><span class="err">)</span>
 </code></pre></div>
 <p><strong>Expresiones de Strings</strong>.</p>
 <p>Hay una pocas operaciones básicas sobre cadenas de caracteres que también podemos utilizar. Son estas: </p>
