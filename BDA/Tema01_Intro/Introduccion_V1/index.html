@@ -1,0 +1,1442 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>1. Introducción Big Data - Mis Clases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-introduccion-big-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mis Clases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Introducción Big Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mis Clases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemes Operatius Monolloc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemes Operatius Monolloc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema01/SistemesInformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Sistemes Informàtics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema02/SistemesOperatius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema03/GestionRecursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Gestión de Recursos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema04/Virtualitzacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Virtualització
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema05/InstalacionSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Instalació Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema06/ConfiguracionBasicaWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Configuració bàsica Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema07/FicherosDirectoriosWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - Gestió de fitxers i directoris en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema08/UsuariosGruposWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T8 - Gestió de usuaris i grups en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema09/AdministracionWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T9 - Administració del Sistema en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema10/IntroduccionLinux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T10 - Introducción Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema11/ArchivosLinux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T11 - Gestión de archivos en Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema12/Usuarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - Gestión de usurarios en Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema13/Administracion_Linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T13 - Administración en Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemas Big Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemas Big Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema01/BigDataConAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Big Data con AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema02/InfraestructuraAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Infraestructura AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema03/SeguridadAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Seguridad en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema04/Informatica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Informatica en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema05/AlmacenamientoAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema06/BasesDatos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Bases de Datos AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema07/AWS_Glue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - AWS Glue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema08/Kinesis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T8 - AWS Kinesis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema01/PracticasAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big Data Aplicado
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Big Data Aplicado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema00/Infraestructura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T0 - Infraestrucura Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema01/IntroduccionBigData.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema02/RepasoSQL.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Repaso SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema03/NoSQL.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Bases de datos NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema04/MongoDB.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema05/Almacenamiento.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema06/ETL.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema07/BI.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - Bussines Intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Power BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Power BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Instalación y configuración de Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Conectando datos a Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Transformación y limpieza de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Modelado de datos en Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Creación de visualizaciones básicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - Creación de informes interactivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T8 - Compartir y colaborar en Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T9 - Actualización de datos y programación de actualizaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-big-data" class="md-nav__link">
+    1.1. Big Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-historia" class="md-nav__link">
+    1.2. Historia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-tecnologias" class="md-nav__link">
+    1.3. Tecnologías
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-aplicaciones" class="md-nav__link">
+    1.4. Aplicaciones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-big-data-y-aprendizaje-automatico" class="md-nav__link">
+    1.5. Big Data y Aprendizaje Automático
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-fuentes-u-origen-de-los-datos" class="md-nav__link">
+    1.6. Fuentes u origen de los datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-infraestructura" class="md-nav__link">
+    1.7. Infraestructura
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-almacenamiento" class="md-nav__link">
+    1.8. Almacenamiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-procesamiento" class="md-nav__link">
+    1.9. Procesamiento
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-analisis-con-big-data" class="md-nav__link">
+    1.10. Análisis con Big Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-visualizacion-de-datos" class="md-nav__link">
+    1.11. Visualización de datos
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="1-introduccion-big-data">1. Introducción Big Data</h1>
+<h2 id="11-big-data">1.1. Big Data</h2>
+<p><strong>Big Data</strong> es una colección de conjuntos de datos que son lo suficientemente grandes y complejos como para hacer obsoleta la arquitectura tradicional de almacenamiento y procesamiento de datos.</p>
+<p><strong>¿ Cuando considerar la utilización la arquitectura Big Data?</strong></p>
+<details class="info">
+<summary>Escenarios</summary>
+<ul>
+<li>Los datos son demasiado grandes para que las tiendas de datos tradicionales los procesen.</li>
+<li>Transformación y análisis de datos no estructurados.</li>
+<li>Necesidad de analizar datos en tiempo real con baja latencia.</li>
+</ul>
+</details>
+<p><strong>Tipos de cargas de trabajo</strong></p>
+<p>Los tipos de cargas de trabajo que se pueden considerar incluyen:</p>
+<ul>
+<li>Procesamiento por lotes de datos.</li>
+<li>Procesamiento en tiempo real de datos en movimiento.</li>
+</ul>
+<p>Las 3 Vs del Big Data son Volumen, Velocidad y Variedad.</p>
+<ul>
+<li>El Volumen se refiere a la cantidad de datos</li>
+<li>La Velocidad se refiere a la velocidad a la que se generan y procesan los datos</li>
+<li>La Variedad se refiere a los diferentes tipos de datos disponibles.</li>
+</ul>
+<p>Big Data es importante en el mundo actual porque puede utilizarse para abordar problemas empresariales que antes eran insolubles, generar información valiosa, perfeccionar campañas y técnicas de marketing, entrenar máquinas, modelado predictivo y otras aplicaciones avanzadas de análisis, reducir costos, ahorrar tiempo, comprender mejor las condiciones del mercado, vencer a grandes competidores y retener a clientes leales.</p>
+<h2 id="12-historia">1.2. Historia</h2>
+<p>El término ‘Big Data’ ha estado en uso desde principios de los años 90. Aunque no se sabe exactamente quién fue el primero en usar el término, la mayoría de las personas atribuyen a John R. Mashey (que en ese momento trabajaba en Silicon Graphics) por hacer popular el término.</p>
+<p><img alt="Infografía de la evolución del big data" src="https://ideasparatuempresa.vodafone.es/wp-content/uploads/2017/12/Infografia_Big_Data.jpg" /></p>
+<h2 id="13-tecnologias">1.3. Tecnologías</h2>
+<p>Hay muchas tecnologías populares de Big Data cómo Hadoop, Spark y bases de datos NoSQL.
+Estas tecnologías pueden compararse en función de sus casos de uso y capacidades.</p>
+<p>Las tecnologías de Big Data se pueden dividir en cuatro categorías principales:</p>
+<ul>
+<li><strong>Almacenamiento de datos:</strong> Las tecnologías de Big Data que se ocupan del almacenamiento de datos tienen la capacidad de recuperar, almacenar y gestionar grandes conjuntos de datos. Está compuesto por infraestructura que permite a los usuarios almacenar los datos para que sean fácilmente accesibles. La mayoría de las plataformas de almacenamiento de datos son compatibles con otros programas. Dos herramientas comúnmente utilizadas son Apache Hadoop y MongoDB.</li>
+<li><strong>Minería de datos:</strong> La minería de datos extrae patrones y tendencias útiles a partir del conjunto de datos sin procesar. Tecnologías cómo Rapidminer y Presto pueden convertir datos estructurados y no estructurados en información utilizable.</li>
+<li><strong>Análisis de datos:</strong> El análisis de datos utiliza técnicas avanzadas cómo el aprendizaje automático y el análisis estadístico para obtener información a partir del conjunto de datos.</li>
+<li><strong>Visualización de datos:</strong> La visualización de datos es importante para comprender el Big Data porque permite a los tomadores de decisiones ver analíticas presentadas visualmente para que puedan comprender conceptos difíciles o identificar nuevos patrones.</li>
+</ul>
+<p>Cada una de estas categorías está asociada con ciertas herramientas, y deberás elegir la herramienta adecuada para tus necesidades empresariales dependiendo del tipo de tecnología de Big Data que se requiera.</p>
+<h2 id="14-aplicaciones">1.4. Aplicaciones</h2>
+<p>Big Data se utiliza en diversas industrias cómo: la salud, las finanzas, el comercio minorista, etc.
+Los beneficios del uso del Big Data incluyen:</p>
+<ul>
+<li>Una mejor toma de decisiones</li>
+<li>Un aumento de la eficiencia</li>
+<li>Capacidad para descubrir nuevos conocimientos</li>
+</ul>
+<p>Sin embargo, también hay desafíos asociados con el uso del Big Data cómo gestionar grandes volúmenes de datos y garantizar la privacidad de los datos.</p>
+<h2 id="15-big-data-y-aprendizaje-automatico">1.5. Big Data y Aprendizaje Automático</h2>
+<p>Big data y aprendizaje automático son dos campos estrechamente relacionados y complementarios.
+* Big data se refiere a conjuntos de datos extremadamente grandes y complejos que son difíciles de procesar utilizando métodos tradicionales.
+* El aprendizaje automático, por otro lado, es una rama de la inteligencia artificial que se enfoca en desarrollar algoritmos que permitan a las máquinas aprender de los datos y mejorar su rendimiento con el tiempo.</p>
+<p>El aprendizaje automático aprovecha el big data para entrenar modelos más precisos y confiables. Cuanto más datos haya disponibles, más precisos y confiables serán los modelos del aprendizaje automático. El aprendizaje automático tiene aplicaciones amplias en el procesamiento y análisis del big data, cómo la clasificación y categorización automática de datos, la detección de anomalías y la predicción de resultados futuros.</p>
+<p>La combinación de big data y aprendizaje automático ofrece beneficios significativos. Permite descubrir información valiosa oculta en grandes volúmenes de datos, mejorar la toma de decisiones basada en datos, automatizar tareas y optimizar procesos empresariales.</p>
+<h2 id="16-fuentes-u-origen-de-los-datos">1.6. Fuentes u origen de los datos</h2>
+<p>Los datos en Big Data pueden ser clasificadas en tres tipos según su origen:</p>
+<ul>
+<li><strong>Generados por máquinas</strong>: procedentes de sensores (GPS, contadores…), Web Log Data (redes, aplicaciones…), procedentes de puntos de venta (códigos de barras de un producto) y financieros (operaciones bancarias).</li>
+<li><strong>Generados por personas</strong>: formularios, registros de contabilidad…</li>
+<li><strong>Datos externos</strong>: redes sociales, patentes, datos web, datos móviles, etiquetas RFID (rastreo electrónico) y códigos de barras, datos de ubicación, sensores de datos, entre otros.</li>
+</ul>
+<p>Según su estructura se pueden clasificar en tres tipos:</p>
+<ul>
+<li><strong>Datos estructurados</strong>: son aquellos que se encuentran ordenados y organizados en una estructura predefinida, cómo una tabla o una base de datos relacional. Estos datos son fáciles de gestionar y analizar, ya que su estructura permite una mayor predictibilidad. Ejemplos de datos estructurados incluyen registros en tablas, ficheros XML asociados a un esquema, y facturas autogeneradas al realizar una compra.</li>
+<li><strong>Datos semiestructurados</strong>: son aquellos que tienen cierta estructura, pero no están organizados en una estructura rígida cómo los datos estructurados. Ejemplos de datos semiestructurados incluyen documentos JSON y XML sin esquema asociado.</li>
+<li><strong>Datos no estructurados</strong>: son aquellos que no tienen una estructura predefinida y pueden ser difíciles de gestionar y analizar. Ejemplos de datos no estructurados incluyen publicaciones en redes sociales, vídeos, imágenes, y texto libre.</li>
+</ul>
+<p><img alt="Tipos de datos" src="../tiposdatos.jpg" style="width:70%;margin:auto;display:block" /></p>
+<h2 id="17-infraestructura">1.7. Infraestructura</h2>
+<p>Una infraestructura para Big Data debe facilitar la recopilación, el almacenamiento y el análisis de grandes volúmenes de datos, que pueden estar en diferentes formatos y generándose en tiempo real. Para ello, se utilizan tecnologías y servicios especiales que han sido creados específicamente para dar solución al procesamiento de estos enormes conjuntos de datos.</p>
+<p>Algunos de los principales elementos de hardware y software que integran una solución arquitectónica de Big Data son:</p>
+<ul>
+<li>Hardware: servidores, dispositivos de almacenamiento, redes de alta velocidad.</li>
+<li>Software: sistemas operativos, bases de datos, herramientas de análisis y visualización de datos.</li>
+</ul>
+<p>Estos son algunos ejemplos de infraestructuras para procesar el Big Data:</p>
+<ul>
+<li>Apache Hadoop: una de las soluciones más conocidas para analizar Big Data, que utiliza un marco de trabajo de código abierto para almacenar y procesar grandes conjuntos de datos.</li>
+<li>Apache Spark: esta herramienta permite almacenar gran parte de los datos de procesamiento en la memoria y en el disco, lo que se traduce en una mayor rapidez.</li>
+<li>Bases de datos NoSQL: como Cassandra, son utilizadas para almacenar y gestionar grandes volúmenes de datos no estructurados.</li>
+</ul>
+<p>La infraestructura para procesar el Big Data debe ser capaz de manejar grandes volúmenes de datos y proporcionar herramientas para su análisis y visualización.</p>
+<h2 id="18-almacenamiento">1.8. Almacenamiento</h2>
+<p>Hay muchas opciones disponibles para almacenar grandes volúmenes de datos.
+* Los sistemas de archivos distribuidos, como Hadoop Distributed File System (HDFS) y Google File System (GFS), son una opción popular para almacenar grandes conjuntos de datos en múltiples servidores.
+* Los servicios de almacenamiento en la nube, como Amazon S3 y Microsoft Azure Blob Storage, también son opciones populares para almacenar datos en la nube.</p>
+<p>La gestión efectiva de los datos es esencial para garantizar su integridad y disponibilidad. Esto incluye:
+* La implementación de medidas de seguridad adecuadas para proteger los datos contra el acceso no autorizado
+* La realización de copias de seguridad regulares para garantizar la recuperación en caso de pérdida de datos
+* La implementación de políticas y procedimientos para garantizar que los datos se manejen de manera responsable y ética.</p>
+<h2 id="19-procesamiento">1.9. Procesamiento</h2>
+<p>Dos opciones de procesamiento:</p>
+<ul>
+<li>
+<p><strong>En tiempo real</strong></p>
+<ul>
+<li>El procesamiento en tiempo real del Big Data implica analizar datos a medida que se generan para tomar decisiones o desencadenar acciones en tiempo real.</li>
+<li>Por ejemplo, el procesamiento en tiempo real puede utilizarse para monitorear feeds sociales en busca de menciones de una marca o producto en particular.</li>
+</ul>
+</li>
+<li>
+<p><strong>Por lotes o en Batch</strong></p>
+<ul>
+<li>El procesamiento por lotes implica analizar grandes volúmenes de datos a la vez en lugar de en tiempo real.</li>
+<li>Este enfoque puede ser útil cuando se trata con datos históricos o cuando se realizan análisis complejos que requieren más tiempo.</li>
+</ul>
+</li>
+</ul>
+<h2 id="110-analisis-con-big-data">1.10. Análisis con Big Data</h2>
+<p>Tipos de análisis de big data:</p>
+<ul>
+<li><strong>Predictivo</strong><ul>
+<li>El análisis predictivo implica utilizar técnicas estadísticas para hacer predicciones sobre eventos futuros basándose en datos históricos. Este enfoque puede aplicarse para generar conocimientos sobre tendencias o comportamientos futuros.</li>
+</ul>
+</li>
+<li><strong>De diagnóstico</strong><ul>
+<li>El análisis de diagnóstico utiliza algoritmos para descubrir patrones y relaciones dentro de grandes conjuntos de datos. Este enfoque puede aplicarse para extraer información útil de grandes volúmenes de datos no estructurados o semiestructurados.</li>
+</ul>
+</li>
+<li><strong>Descriptivo</strong><ul>
+<li>El análisis descriptivo es un método de análisis de datos que se utiliza para resumir y describir sus características principales. Se utiliza comúnmente para proporcionar una visión general de los datos y para identificar patrones y tendencias. </li>
+<li>En el contexto de Big Data, el análisis descriptivo puede utilizarse para obtener información a partir de conjuntos de datos grandes y complejos. Por ejemplo, una empresa podría utilizar el análisis descriptivo para entender la demografía de su base de clientes o para identificar patrones en el comportamiento de los clientes.</li>
+</ul>
+</li>
+<li><strong>Prescriptivo con Big Data</strong><ul>
+<li>El análisis prescriptivo es un tipo de análisis de datos que utiliza técnicas avanzadas de análisis, como el aprendizaje automático y los algoritmos de optimización, para sugerir acciones que se pueden tomar para lograr un resultado deseado.</li>
+<li>En el contexto de Big Data, el análisis prescriptivo puede utilizarse para tomar decisiones basadas en datos a partir de la información obtenida a partir de conjuntos de datos grandes y complejos. Por ejemplo, una empresa podría utilizar el análisis prescriptivo para optimizar su cadena de suministro o para determinar la mejor estrategia de precios para sus productos.</li>
+</ul>
+</li>
+</ul>
+<h2 id="111-visualizacion-de-datos">1.11. Visualización de datos</h2>
+<p>La visualización de datos es la presentación de datos en formato ilustrado o gráfico. Permite a los tomadores de decisiones ver la analítica presentada de forma visual, de modo que puedan captar conceptos difíciles o identificar nuevos patrones. Con la visualización interactiva, se puede llevar el concepto un paso adelante utilizando tecnología para profundizar en diagramas y gráficas para observar mayor detalle, cambiando de forma interactiva qué datos se ven y cómo se procesan.</p>
+<p>Hay muchas herramientas disponibles para la visualización de Big Data. Algunas de las herramientas más populares son Tableau, Infogram, ChartBlocks, Datawrapper y Ploty. Estas herramientas permiten crear tablas, gráficos, mapas y otros tipos de visualizaciones para ayudar a comprender y comunicar los datos.</p>
+<p>La visualización de datos es importante porque permite transmitir conceptos de manera universal y rápida. También puede ayudar a identificar áreas que necesitan atención o mejoras y esclarecer qué factores influencian el comportamiento de los clientes.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1716 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>6. ETL - Mis Clases</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6-etl" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Mis Clases" class="md-header__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Mis Clases
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. ETL
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Mis Clases" class="md-nav__button md-logo" aria-label="Mis Clases" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Mis Clases
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemes Operatius Monolloc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemes Operatius Monolloc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema01/SistemesInformatics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Sistemes Informàtics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema02/SistemesOperatius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema03/GestionRecursos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Gestión de Recursos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema04/Virtualitzacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Virtualització
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema05/InstalacionSO/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Instalació Sistemes Operatius
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema06/ConfiguracionBasicaWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Configuració bàsica Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema07/FicherosDirectoriosWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - Gestió de fitxers i directoris en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema08/UsuariosGruposWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T8 - Gestió de usuaris i grups en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema09/AdministracionWindows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T9 - Administració del Sistema en Windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema10/IntroduccionLinux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T10 - Introducción Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema11/ArchivosLinux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T11 - Gestión de archivos en Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema12/Usuarios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - Gestión de usurarios en Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SOM/Tema13/Administracion_Linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T13 - Administración en Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sistemas Big Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Sistemas Big Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema01/BigDataConAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Big Data con AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema02/InfraestructuraAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Infraestructura AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema03/SeguridadAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Seguridad en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema04/Informatica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Informatica en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema05/AlmacenamientoAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento en AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema06/BasesDatos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Bases de Datos AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema07/AWS_Glue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - AWS Glue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema08/Kinesis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T8 - AWS Kinesis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SBD/Tema01/PracticasAWS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T12 - AWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Big Data Aplicado
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Big Data Aplicado
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema00/Infraestructura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T0 - Infraestrucura Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema01/IntroduccionBigData.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Big Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema02/RepasoSQL.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Repaso SQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema03/NoSQL.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Bases de datos NoSQL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema04/MongoDB.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - MongoDB
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema05/Almacenamiento.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Almacenamiento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema06/ETL.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - ETL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tema07/BI.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - Bussines Intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Power BI
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Power BI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T1 - Introducción Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T2 - Instalación y configuración de Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T3 - Conectando datos a Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T4 - Transformación y limpieza de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T5 - Modelado de datos en Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T6 - Creación de visualizaciones básicas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema07/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T7 - Creación de informes interactivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema08/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T8 - Compartir y colaborar en Power BI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PowerBI/Tema09/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    T9 - Actualización de datos y programación de actualizaciones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-introduccion" class="md-nav__link">
+    6.1. Introducción
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611-ventajas" class="md-nav__link">
+    6.1.1. Ventajas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612-conceptos" class="md-nav__link">
+    6.1.2. Conceptos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613-componentes" class="md-nav__link">
+    6.1.3. Componentes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#614-diseno" class="md-nav__link">
+    6.1.4. Diseño
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#615-arquitectura" class="md-nav__link">
+    6.1.5. Arquitectura
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-casos-de-uso" class="md-nav__link">
+    6.2. Casos de uso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-profiling" class="md-nav__link">
+    6.3. Profiling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-extraccion" class="md-nav__link">
+    6.4. Extracción
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-transformacion" class="md-nav__link">
+    6.5. Transformación
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5. Transformación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#651-mapeo-de-datos" class="md-nav__link">
+    6.5.1. Mapeo de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#652-limpieza-de-datos" class="md-nav__link">
+    6.5.2. Limpieza de datos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#653-otras-transformaciones" class="md-nav__link">
+    6.5.3. Otras transformaciones
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-carga" class="md-nav__link">
+    6.6. Carga
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-verificacion-y-gestion-de-errores" class="md-nav__link">
+    6.7. Verificación y gestión de errores
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-caracteristicas-de-las-etl" class="md-nav__link">
+    6.8. Características de las ETL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69-herramientas" class="md-nav__link">
+    6.9. Herramientas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610-pentaho-data-integration" class="md-nav__link">
+    6.10. Pentaho Data Integration
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="6-etl">6. ETL</h1>
+<h2 id="61-introduccion">6.1. Introducción</h2>
+<p>El concepto ETL nace en la década de 1970 cuando las organizaciones comenzaron a utilizar múltiples repositorios de datos, o bases de datos, para almacenar diferentes tipos de información de negocios.</p>
+<p>A fines de la década de 1980 y principios de la década de 1990, los data warehouses aparecieron en escena. Siendo un tipo de base de datos diferente, los data warehouses proveían acceso integrado a datos de múltiples sistemas.</p>
+<p>Con el tiempo, el número de formatos, fuentes y sistemas de datos ha aumentado enormemente. Las ETL son ahora solo uno de varios métodos que utilizan las organizaciones para recopilar, importar y procesar datos.</p>
+<p>Las herramientas ETL (<strong>Extract, Transform and Load</strong>) son un componente esencial para data warehousing y analítica, se encargan de asegurar la integración de datos entre bases de datos y aplicaciones. Permiten recopilar, transformar y consolidar datos de forma automatizada.</p>
+<h3 id="611-ventajas">6.1.1. Ventajas</h3>
+<ul>
+<li><strong>Ahorran tiempo y esfuerzo en el manejo manual de datos.</strong><ul>
+<li>La mayor ventaja del proceso ETL es que ayuda a recopilar, transformar y consolidar datos de forma automatizada. Esto significa un ahorro de tiempo y esfuerzo de importar filas y filas de datos manualmente.</li>
+</ul>
+</li>
+<li><strong>Facilita el trabajo con datos complejos.</strong><ul>
+<li>Gestión de un gran volumen de datos complejos y diversos. Por ejemplo, ventas, clientes, productos, empresas de transporte…</li>
+<li>Normalización, transformación y agregaciones de datos. Un buen diseño de una ETL puede simplificar estos procesos.</li>
+</ul>
+</li>
+<li><strong>Reduce los riesgos asociados con el error humano</strong><ul>
+<li>Nadie está realmente a salvo de cometer errores. Podemos reducir la probabilidad de algunos de ellos como, datos que pueden duplicarse accidentalmente en el sistema de destino o las entradas manuales pueden insertarse incorrectamente.</li>
+</ul>
+</li>
+<li><strong>Ayuda a mejorar la toma de decisiones</strong><ul>
+<li>Al automatizar las prácticas de datos críticos y reducir la posibilidad de errores, la ETL ayuda a garantizar que los datos que recibe para analizar sean de la mejor calidad posible. Y los datos de alta calidad son fundamentales para tomar mejores decisiones corporativas.</li>
+</ul>
+</li>
+<li><strong>Aumenta el retorno de la inversión (ROI)</strong><ul>
+<li>A medida que ahorramos tiempo, esfuerzo y recursos, el proceso ETL en última instancia ayuda a aumentar el ROI. Además, al mejorar la inteligencia empresarial, ayuda a aumentar las ganancias. Una vista de datos consolidados para tomar mejores decisiones comerciales.</li>
+</ul>
+</li>
+</ul>
+<h3 id="612-conceptos">6.1.2. Conceptos</h3>
+<p><strong>Extracción</strong>: Ingesta de datos de diferentes fuentes no necesariamente pueden tener la misma tecnología o estructura.</p>
+<p><strong>Transformación</strong>: Modificación, combinación, enriquecimiento o limpieza de los datos de origen.</p>
+<p><strong>(L)Carga</strong>: Carga/Escritura de los datos ya tratados en un destino para ser explotados.</p>
+<h3 id="613-componentes">6.1.3. Componentes</h3>
+<p><img alt="ETL Components" src="../ETL.png" style="width:90%;margin:auto;display:block" /></p>
+<p><strong>Las fuentes pueden ser</strong>: Ficheros, BBDD, MongoDB, API REST, Logs, CRMs, ERPs, ...</p>
+<p><strong>Transformaciones:</strong></p>
+<ul>
+<li>Reformateo de datos</li>
+<li>Conversión de unidades</li>
+<li>Agregación de columnas</li>
+<li>Traducción</li>
+<li>Valores calculados</li>
+<li>...</li>
+</ul>
+<p><strong>Data Warehouse:</strong></p>
+<ul>
+<li>Cloud:<ul>
+<li>Amazon Redshift</li>
+<li>Azure Synapse Analytics</li>
+<li>BigQuery</li>
+<li>HDFS</li>
+</ul>
+</li>
+<li>On premises:<ul>
+<li>RDBMS</li>
+</ul>
+</li>
+</ul>
+<h3 id="614-diseno">6.1.4. Diseño</h3>
+<p>En el diseño de una ETL debemos hacer el análisis de requisitos funcionales y no funcionales de forma similar a como lo hacemos con cualquier aplicación.</p>
+<ul>
+<li><strong>Funcional</strong>: Define una función del software.</li>
+<li><strong>No funcional</strong>: Requisitos del cliente o arquitectura externos a la funcionalidad del software, por ejemplo, cantidad de usuarios de la aplicación o lenguaje/tecnologías a utilizar, seguridad, auditorías...</li>
+</ul>
+<p>Para el desarrollo de la ETL vamos a tener que ser conscientes de los datos a tratar y tomar decisiones en:</p>
+<ul>
+<li>Software a utilizar para desarrollar la aplicación.</li>
+<li>Definición y tecnologías de las fuentes de datos. Diccionario de datos o data profiling.</li>
+<li>Conocimiento de los datos y desarrollar transformaciones para explotarlos.</li>
+<li>Donde vamos a guardar toda la información del proceso, qué tecnologías.</li>
+<li>Como vamos a representar la información que el cliente nos pide.</li>
+</ul>
+<p>Implementar una ETL con los requisitos funcionales y no funcionales ya descritos implica pasar por diferentes fases.</p>
+<p><img alt="ETL Design" src="../DisenoETL.png" style="width:110%;margin:auto;display:block" /></p>
+<h3 id="615-arquitectura">6.1.5. Arquitectura</h3>
+<p>ETL representa los tres pasos básicos de la integración de datos: extraer, transformar y cargar. Sin embargo, esta abreviatura simplista pasa por alto algunas de las partes más importantes del proceso ETL.</p>
+<p>Estos tres pasos básicos se pueden ampliar a 6 pasos cruciales que juntos componen la arquitectura ETL.</p>
+<ul>
+<li>Profiling</li>
+<li>Extraction</li>
+<li>Cleansing</li>
+<li>Transformation</li>
+<li>Loading</li>
+<li>Monitoring</li>
+</ul>
+<h2 id="62-casos-de-uso">6.2. Casos de uso</h2>
+<p>Dependiendo de cómo recibamos los datos el proceso de ETL puede ser más o menos laborioso, tenemos tres situaciones típicas:</p>
+<ul>
+<li><strong>Solamente con una ingesta</strong>: datos limpios, ya estructurados y listos para explotar.</li>
+<li><strong>Ingesta + Carga</strong>: datos limpios, ya estructurados y listos para explotar pero queremos separarlos en otra parte del DataWarehouse para mantener una o varias copias de seguridad.</li>
+<li><strong>Ingesta + Transformación + Carga</strong>: datos en bruto, estructurados o no estructurados, con baja calidad… Necesitaremos realizar una o más transformaciones para poder explotarlos posteriormente realizando una carga una vez ya estén listos.</li>
+</ul>
+<p>Otras acciones que podemos realizar con las herramientas ETL son:</p>
+<ul>
+<li>Ingestar, transformar, cargar y explotar la información.</li>
+<li>Migrar datos entre aplicaciones o aplicaciones en la nube, sin alterar la integridad de los mismos.</li>
+<li>Replicación de datos para conseguir copias de seguridad y para diversos análisis de redundancia.</li>
+<li>Permite que la información sea depositada en una base de datos para guardarlos, clasificarlos y para transformarlos en Inteligencia de Negocios o información de alto valor.</li>
+<li>Sincronización de sistemas clave.</li>
+</ul>
+<p>Resumiendo, una ETL es el proceso que permite a las organizaciones:</p>
+<ul>
+<li>Mover datos desde múltiples fuentes.</li>
+<li>Reformatearlos, limpiarlos o añadir información adicional.</li>
+<li>Cargarlos en:<ul>
+<li>Otra base de datos</li>
+<li>Datamart</li>
+<li>Datawarehouse</li>
+<li>Datalake</li>
+</ul>
+</li>
+</ul>
+<h2 id="63-profiling">6.3. Profiling</h2>
+<p>Data Profiling es un paso crucial, aunque a menudo ignorado, en el proceso de ETL. Consiste en examinar sus datos sin procesar y garantizar que sean apropiados para ETL.</p>
+<p>Los tres componentes del data profiling son:</p>
+<ul>
+<li><strong>Descubrimiento de estructuras</strong>: ¿Cuáles son los valores o rangos de valores aceptables para cada campo en el registro de datos?</li>
+<li>
+<p><strong>Descubrimiento de contenido</strong>: </p>
+<ul>
+<li>¿Qué información contiene cada registro de datos y cuál es la calidad de este registro?</li>
+<li>¿Cómo se representan los datos que faltan (por ejemplo, con valores como NULL, 0 o -1)?</li>
+</ul>
+</li>
+<li>
+<p><strong>Descubrimiento de relaciones</strong>:</p>
+<ul>
+<li>¿Cuáles son las relaciones que existen entre las fuentes de datos dadas y entre registros individuales dentro de una fuente de datos? </li>
+<li>¿Cómo puede aprovechar estas conexiones durante ETL mientras reduce las ineficiencias (por ejemplo, eliminando datos duplicados del conjunto de datos)?</li>
+</ul>
+</li>
+</ul>
+<p>Código en Python para Data Profiling (Probablemente haya que instalar la librería pandas_profiling con:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>sweetviz
+</code></pre></div>
+<p>Y luego crear un fichero de Python con est código:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">sweetviz</span> <span class="k">as</span> <span class="nn">sv</span>
+
+<span class="c1"># Solicitar al usuario el nombre del archivo</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Introduce el nombre del archivo con extensión (.csv o .xls): &quot;</span><span class="p">)</span>
+
+<span class="c1"># Leer datos desde el archivo proporcionado por el usuario</span>
+<span class="k">if</span> <span class="n">file_path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;unicode_escape&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">file_path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.xls&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">file_path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.xlsx&#39;</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Formato de archivo no compatible. Utiliza archivos .csv, .xls o .xlsx.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Crear el perfil de análisis exploratorio de datos (EDA)</span>
+<span class="n">report</span> <span class="o">=</span> <span class="n">sv</span><span class="o">.</span><span class="n">analyze</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1"># Generar el informe y guardarlo como archivo HTML</span>
+<span class="n">report</span><span class="o">.</span><span class="n">show_html</span><span class="p">(</span><span class="s1">&#39;informe_eda.html&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="64-extraccion">6.4. Extracción</h2>
+<p>La fase de extracción consiste en la recuperación de información de varios origenes de datos.</p>
+<p>Las fuentes de datos pueden ser muy variadas, como bases de datos relacionales o no relacionales, ficheros, aplicaciones SaaS, CRMs, ERPs, APIs, páginas web o sistemas de logs.</p>
+<p><strong>Problema:</strong> Los datos pueden venir de diferentes proveedores, con diferentes estructuras y con diferentes formatos de origen.</p>
+<p>Para poder realizar una correcta extracción de los datos es necesario saber:</p>
+<ul>
+<li>Si los datos son estructurados<ul>
+<li>Qué tablas, columnas y tipos de dato por columna vamos a necesitar para ingestar de forma ordenada la información.</li>
+</ul>
+</li>
+<li>Si los datos no son estructurados.</li>
+</ul>
+<p>Esto lo podemos solucionar con herramientas de Profiling y Data dictionary.</p>
+<p>Debemos:</p>
+<ul>
+<li>Identificar: tablas, columnas, tipos de datos, tipos de objeto dentro de un modelo dimensional...</li>
+<li>Definir: destino en el que escribir la información, tablas, columnas, tablas de dimensiones y hechos, tipos de datos.</li>
+<li>Detectar la calidad de los datos.</li>
+<li>A veces vamos a necesitar el juicio de gente experta.</li>
+</ul>
+<p>Una vez ya conocemos los orígenes, las tecnologías con las que están implementados y los datos a extraer. El siguiente paso es:</p>
+<ul>
+<li>Convertir los datos a un formato preparado para iniciar el proceso de transformación.</li>
+<li>Almacenarlos en nuestro espacio de trabajo.</li>
+</ul>
+<p>Este proceso debe ser:</p>
+<ul>
+<li>Un proceso rápido, ligero, causar el menor impacto posible, ser transparente para los operacionales, independiente de las infraestructuras.</li>
+<li>No debe interferir con el funcionamiento de los operacionales, cargar las BBDD, perder datos por el camino, modificar información.</li>
+</ul>
+<h2 id="65-transformacion">6.5. Transformación</h2>
+<p>La fase de transformación de ETL es donde se produce la operación más crítica. El resultado de la transformación pasa por aplicar una serie de funciones o reglas de negocio sobre los datos extraídos para convertirlos en datos que, a continuación, serán cargados en la nueva fuente.</p>
+<p>Modificar los datos en bruto para que presenten los formatos de uso correctos, convertir los datos no estructurados en un formato estructurado y realizar cálculos como agregaciones de datos.</p>
+<p>La transformación se efectúa mediante una serie de normas. Estos son algunos de los estándares que garantizan la calidad de datos y su accesibilidad durante esta fase:</p>
+<ul>
+<li><strong>Normalización:</strong> definir qué datos entrarán en juego, cómo se formatearán y almacenarán, y otras consideraciones básicas que definirán las etapas sucesivas.</li>
+<li><strong>Eliminación de duplicados:</strong> excluir y/o eliminar los datos redundantes.</li>
+<li><strong>Verificación:</strong> ejecutar comprobaciones automatizadas para cotejar información similar, como tiempos de transacción o registros de acceso.</li>
+<li><strong>Clasificación:</strong> maximizar la eficiencia de los almacenes de datos agrupando y clasificando los datos en bruto en categorías.</li>
+</ul>
+<p><strong>Un proceso de transformación...</strong></p>
+<ul>
+<li><strong>Debe</strong> transformar los datos para mejorarlos, incrementar su calidad, integrarlos con otros sistemas, normalizarlos, eliminar duplicidades o ambigüedades.</li>
+<li><strong>No debe</strong> crear información, duplicar, eliminar información relevante, ser erróneo o impredecible.</li>
+</ul>
+<p>Podemos agrupar las transformaciones en:</p>
+<ul>
+<li>Mapeo de datos</li>
+<li>Limpieza de datos</li>
+<li>Otras transformaciones</li>
+</ul>
+<h3 id="651-mapeo-de-datos">6.5.1. Mapeo de datos</h3>
+<p>El mapeo de datos es el proceso por el que se establecen correspondencias entre campos de una base de datos a otra. Es el primer paso para facilitar la migración, integración y otras tareas de gestión de datos.</p>
+<p><strong>¿Cuándo se puede realizar un mapeo?</strong></p>
+<ul>
+<li>Si disponemos de datos limpios y estructurados generamos la ingesta y trabajamos sobre ellos.</li>
+<li>Después de una o varias transformaciones.</li>
+</ul>
+<p>Las tareas de mapeo de origen a destino varían en complejidad. El nivel de complejidad depende de la jerarquía de datos y la disparidad entre la estructura de datos de origen y destino.</p>
+<p>Usos de un mapeo de datos:</p>
+<ul>
+<li><strong>Migración de datos:</strong> es el proceso en que trasladamos los datos de un sistema a otro de forma puntual.</li>
+<li><strong>Integración de datos:</strong> proceso continuo por el que se trasladan datos periódicamente de un sistema a otro.</li>
+<li><strong>Durante una transformación de datos:</strong> por ejemplo, podemos realizar una operación de transformación de “Illinois” a “IL” y mapearlo a otro campo destino.</li>
+</ul>
+<h3 id="652-limpieza-de-datos">6.5.2. Limpieza de datos</h3>
+<p>Los datos que recibimos de los diferentes orígenes pueden contener errores, como información faltante, registros duplicados o datos incorrectos. La limpieza de datos ayuda a identificar errores en un conjunto de datos y los corrige para garantizar que solo se transfieran datos precisos a los sistemas de destino.</p>
+<p>Para realizar esta tarea, vamos a tener que:</p>
+<ul>
+<li>Realizar un análisis de los datos.</li>
+<li>Aplicar reglas de unificación de datos.</li>
+<li>Validaciones de completitud.</li>
+<li>Estandarización de datos.</li>
+</ul>
+<p>La limpieza de datos es importante para:</p>
+<ul>
+<li>Asegurar la calidad de los datos que vamos a procesar.</li>
+<li>Evitar la información no veraz o errónea.</li>
+<li>Ahorrar costes de espacio en disco al eliminarse la información duplicada.</li>
+<li>Agilizar las consultas por la ausencia de datos repetidos o inservibles.</li>
+<li>Ayudar a tomar decisiones estratégicas correctas.</li>
+</ul>
+<p>Una mala limpieza de datos puede producir:</p>
+<ul>
+<li>Procesos que requieren mucho tiempo.</li>
+<li>Costes adicionales.</li>
+<li>Trabajo adicional requerido para corregir los errores.</li>
+<li>Menor eficiencia.</li>
+<li>Mala toma de decisiones.</li>
+<li>Mala productividad.</li>
+</ul>
+<p><strong>Ejemplo:</strong>
+Tenemos la columna “Estado” en dos sistemas fuente, uno escribe el nombre del estado tal cual, Illinois como «Illinois», pero el otro sistema tiene la información escrita con la abreviatura «IL».</p>
+<p>Una vez hagamos una ingesta de las dos fuentes, ¿qué podemos hacer para poder explotar la información?</p>
+<h3 id="653-otras-transformaciones">6.5.3. Otras transformaciones</h3>
+<p>Todas las tareas de transformaciones se configuran para que se ejecuten automáticamente en la secuencia que se defina. Además de las que acabamos de ver, podemos añadir:</p>
+<ul>
+<li>Cambios de codificación.</li>
+<li>Cruzar diferentes fuentes de datos para obtener una fuente diferente.</li>
+<li>Agregar información en función de alguna variable.</li>
+<li>Tomar parte de los datos para cargarlos.</li>
+<li>Transformar información para generar códigos, claves, identificadores.</li>
+<li>Estructurar mejor la información.</li>
+<li>Generar indicadores que faciliten el procesamiento y entendimiento.</li>
+<li>...</li>
+</ul>
+<p>Estas son algunas de las acciones más comunes que podemos hacer para conseguir las tareas que hemos descrito:</p>
+<ul>
+<li>Reformateo de datos.</li>
+<li>Conversión de unidades.</li>
+<li>Selección de columnas para su carga posterior.</li>
+<li>Agregación de columnas.</li>
+<li>Eliminación de campos innecesarios de los registros.</li>
+<li>Dividir una columna en varias.</li>
+<li>Obtener nuevos valores calculados.</li>
+<li>Unir datos de varias fuentes.</li>
+<li>Lookups.</li>
+<li>Pivoting.</li>
+</ul>
+<h2 id="66-carga">6.6. Carga</h2>
+<p>La última fase de un proceso de ETL es la carga de esos datos extraídos y transformados a su nuevo destino. Existen tres vías habituales de cargar los datos a un almacén de datos: la carga completa, la carga incremental y la actualización completa.
+- <strong>Carga completa:</strong> Todos los datos se mueven al almacén al mismo tiempo.
+- <strong>Carga incremental:</strong> El movimiento de datos se produce en lotes.
+- <strong>Actualización completa:</strong> Se eliminan por completo los datos de una tabla o una BD y luego se vuelven a cargar.
+Básicamente movemos los datos de una zona de staging a otra BD o a un Data Warehouse o a un Datamart, a un fichero...</p>
+<h2 id="67-verificacion-y-gestion-de-errores">6.7. Verificación y gestión de errores</h2>
+<p>Durante todos los procesos de la ETL se recomienda ir realizando comprobaciones sobre el paso anterior, por ejemplo:</p>
+<ul>
+<li>Sobre los datos en bruto verificar después de la limpieza de datos que no existen duplicados.</li>
+<li>Sobre una transformación o un mapeo verificar que el número de registros sigue siendo el mismo antes y después de la transformación.</li>
+<li>Sobre una generación de id o información agrupada verificar que no estamos perdiendo información o tenemos campos a null.</li>
+</ul>
+<p>Si una ejecución de la ETL o un proceso falla…</p>
+<ul>
+<li>Logar o insertar en BD los pasos que realizamos a modo de auditoría. Añadir temporalidad.</li>
+<li>Si los datos se guardan en particiones, borrar la partición insertada y volver a ejecutar la ETL.</li>
+<li>Si es una actualización completa o una carga completa no tendremos mayor problema que volver a ejecutarlo.</li>
+<li>...</li>
+</ul>
+<p>El desarrollo de una ETL puede que no se acabe una vez implementada según los requisitos iniciales, siempre estará expuesta a posibles nuevos desarrollos que el cliente quiera que se implementen para poder explotar otra información o explotarla de otra forma.
+Las ETL requieren de una vigilancia en cada ejecución para verificar que durante todos los procesos no han ocurrido fallos, como por ejemplo: fallos de conexiones, caída de hosts, errores en transformaciones, bugs…</p>
+<p><img alt="Verificación y gestión de errores" src="clase/iabd/bda/verificacion.png?400" /></p>
+<h2 id="68-caracteristicas-de-las-etl">6.8. Características de las ETL</h2>
+<ul>
+<li>Tipos de carga o ejecución. Pueden ser diarias, semanales, mensuales, anuales… y se diferencian en:</li>
+<li>Incremental: añade información adicional sin modificar la existente.</li>
+<li>Total: borra y añade la información en su totalidad.</li>
+<li>Actualización completa: borrar y reinsertar.</li>
+<li>Permiten conectividad con diferentes sistemas y tipos de datos. Integración.</li>
+<li>Excel, BBDD Transaccionales, XML, Access, Teradata, HDFS, Hive, CRM</li>
+<li>APIs de Aplicaciones de terceros, Logs…</li>
+<li>Capacidad para transformar los datos</li>
+<li>Transformaciones Simples: tipos de datos, cadenas, codificaciones, cálculos simples</li>
+<li>Transformaciones Intermedias: agregaciones, lookups,</li>
+<li>Transformaciones Complejas: algoritmos de IA, Segmentación, Integración de código de terceros, Integración con otros lenguajes</li>
+<li>Metadatos y gestión de errores</li>
+<li>Permiten tener información del funcionamiento de todo el proceso</li>
+<li>Permiten el control de errores y establecer políticas al respecto</li>
+<li>Permiten la planificación y ejecución de lógica</li>
+<li>Capacidades de entrega de datos. Proporcionar datos a otras aplicaciones, procesos o bases de datos en varias formas:<ul>
+<li>Planificación por Batch</li>
+<li>Planificación por eventos</li>
+<li>Planificación en tiempo real</li>
+</ul>
+</li>
+<li>Otras características:</li>
+<li>Un aumento en la velocidad de desarrollo del proceso.</li>
+<li>La descentralización del control de la ejecución y de todos los procesos.</li>
+<li>Una mayor agilidad en el negocio.</li>
+</ul>
+<h2 id="69-herramientas">6.9. Herramientas</h2>
+<p><img alt="Herramientas 1" src="clase/iabd/bda/herramientas_1.png?600" />
+<img alt="Herramientas 2" src="clase/iabd/bda/herramientas_2.png?600" />
+<img alt="Herramientas 3" src="clase/iabd/bda/herramientas_3.png?600" />
+<img alt="Herramientas 4" src="clase/iabd/bda/herramientas_4.png?600" /></p>
+<h2 id="610-pentaho-data-integration">6.10. Pentaho Data Integration</h2>
+<p>La herramienta Pentaho Data Integration (PDI o también llamada Spoon) permite crear dos tipos de archivos básicos: transformaciones y trabajos.</p>
+<ul>
+<li>Las transformaciones describen los flujos de datos para ETL, como la lectura de un origen, la transformación de datos y la carga en una ubicación de destino.</li>
+<li>Los trabajos coordinan las actividades de ETL, como definir el flujo y las dependencias para las transformaciones de órdenes que deben ejecutarse.</li>
+</ul>
+<p>Descarga: <a href="https://www.hitachivantara.com/en-us/products/lumada-dataops/data-integration-analytics/pentaho-community-edition.html" target="_blank">Pentaho Data Integration</a></p>
+<p><img alt="Ejemplo Pentaho" src="../EjemploPentaho.png" style="width:80%;margin:auto;display:block" /></p>
+<p><strong>Comandos en línea de Pentaho Data Integration</strong></p>
+<ul>
+<li><strong>Pan:</strong> Herramienta en línea de comandos para ejecutar Transformaciones.</li>
+<li><strong>Kitchen:</strong> Herramienta en línea de comandos para ejecutar Jobs.</li>
+</ul>
+<p>Documentación: <a href="https://help.hitachivantara.com/Documentation/Pentaho/9.0/Products/Use_Command_Line_Tools_to_Run_Transformations_and_Jobs" target="_blank">Use Command Line Tools to Run Transformations and Jobs</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
