@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+    <!-- Fondo -->
+    <rect width="900" height="600" fill="#f8f9fa"/>
+    
+    <!-- Título -->
+    <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold">Arquitectura Data Lake</text>
+
+    <!-- Fuentes de Datos -->
+    <g transform="translate(50,80)">
+        <rect width="160" height="400" rx="10" fill="#ff9999"/>
+        <text x="80" y="30" text-anchor="middle" fill="black" font-weight="bold">Fuentes de Datos</text>
+        
+        <!-- Datos Estructurados -->
+        <rect x="20" y="50" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="80" text-anchor="middle" font-size="12">Datos Estructurados</text>
+        <text x="80" y="100" text-anchor="middle" font-size="10">- Bases de datos</text>
+        <text x="80" y="115" text-anchor="middle" font-size="10">- ERPs, CRMs</text>
+        
+        <!-- Datos Semi-estructurados -->
+        <rect x="20" y="150" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="180" text-anchor="middle" font-size="12">Semi-estructurados</text>
+        <text x="80" y="200" text-anchor="middle" font-size="10">- JSON, XML</text>
+        <text x="80" y="215" text-anchor="middle" font-size="10">- Logs, APIs</text>
+        
+        <!-- Datos No Estructurados -->
+        <rect x="20" y="250" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="280" text-anchor="middle" font-size="12">No Estructurados</text>
+        <text x="80" y="300" text-anchor="middle" font-size="10">- Imágenes</text>
+        <text x="80" y="315" text-anchor="middle" font-size="10">- Videos, Audio</text>
+    </g>
+
+    <!-- Flechas hacia Ingesta -->
+    <path d="M210,280 L300,280" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Capa de Ingesta -->
+    <g transform="translate(300,80)">
+        <rect width="140" height="400" rx="10" fill="#99ccff"/>
+        <text x="70" y="30" text-anchor="middle" fill="black" font-weight="bold">Ingesta</text>
+        
+        <rect x="20" y="60" width="100" height="140" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="90" text-anchor="middle" font-size="12">Batch</text>
+        <text x="70" y="110" text-anchor="middle" font-size="10">- Apache Sqoop</text>
+        <text x="70" y="130" text-anchor="middle" font-size="10">- Scripts ETL</text>
+        
+        <rect x="20" y="220" width="100" height="140" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="250" text-anchor="middle" font-size="12">Streaming</text>
+        <text x="70" y="270" text-anchor="middle" font-size="10">- Kafka</text>
+        <text x="70" y="290" text-anchor="middle" font-size="10">- Flume</text>
+    </g>
+
+    <!-- Flechas hacia Zonas -->
+    <path d="M440,280 L530,280" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Zonas del Data Lake -->
+    <g transform="translate(530,80)">
+        <rect width="160" height="400" rx="10" fill="#99ff99"/>
+        <text x="80" y="30" text-anchor="middle" fill="black" font-weight="bold">Zonas Data Lake</text>
+        
+        <!-- Raw Zone -->
+        <rect x="20" y="50" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="80" text-anchor="middle" font-size="12">Raw Zone</text>
+        <text x="80" y="100" text-anchor="middle" font-size="10">Datos crudos</text>
+        <text x="80" y="115" text-anchor="middle" font-size="10">Sin procesar</text>
+        
+        <!-- Trusted Zone -->
+        <rect x="20" y="150" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="180" text-anchor="middle" font-size="12">Trusted Zone</text>
+        <text x="80" y="200" text-anchor="middle" font-size="10">Datos limpios</text>
+        <text x="80" y="215" text-anchor="middle" font-size="10">Validados</text>
+        
+        <!-- Refined Zone -->
+        <rect x="20" y="250" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="280" text-anchor="middle" font-size="12">Refined Zone</text>
+        <text x="80" y="300" text-anchor="middle" font-size="10">Datos procesados</text>
+        <text x="80" y="315" text-anchor="middle" font-size="10">Enriquecidos</text>
+    </g>
+
+    <!-- Flechas hacia Consumo -->
+    <path d="M690,280 L780,280" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Capa de Consumo -->
+    <g transform="translate(780,80)">
+        <rect width="140" height="400" rx="10" fill="#cc99ff"/>
+        <text x="70" y="30" text-anchor="middle" fill="black" font-weight="bold">Consumo</text>
+        
+        <!-- Analytics -->
+        <rect x="20" y="50" width="100" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="80" text-anchor="middle" font-size="12">Analytics</text>
+        <text x="70" y="100" text-anchor="middle" font-size="10">Machine Learning</text>
+        
+        <!-- BI -->
+        <rect x="20" y="150" width="100" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="180" text-anchor="middle" font-size="12">BI</text>
+        <text x="70" y="200" text-anchor="middle" font-size="10">Dashboards</text>
+        
+        <!-- Data Science -->
+        <rect x="20" y="250" width="100" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="280" text-anchor="middle" font-size="12">Data Science</text>
+        <text x="70" y="300" text-anchor="middle" font-size="10">Notebooks</text>
+    </g>
+
+    <!-- Capa de Gobierno y Seguridad -->
+    <g transform="translate(50,500)">
+        <rect width="870" height="60" rx="10" fill="#ffcc99"/>
+        <text x="435" y="35" text-anchor="middle" fill="black" font-weight="bold">Gobierno de Datos y Seguridad</text>
+    </g>
+
+    <!-- Definición de la flecha -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+</svg>

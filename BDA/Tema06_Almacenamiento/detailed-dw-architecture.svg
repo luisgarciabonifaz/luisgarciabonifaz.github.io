@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+    <!-- Fondo -->
+    <rect width="900" height="600" fill="#f8f9fa"/>
+    
+    <!-- Título -->
+    <text x="450" y="40" text-anchor="middle" font-size="24" font-weight="bold">Arquitectura Data Warehouse</text>
+
+    <!-- Fuentes de Datos -->
+    <g transform="translate(50,80)">
+        <rect width="160" height="400" rx="10" fill="#ff9999"/>
+        <text x="80" y="30" text-anchor="middle" fill="black" font-weight="bold">Fuentes de Datos</text>
+        
+        <!-- OLTP -->
+        <rect x="20" y="50" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="80" text-anchor="middle" font-size="12">OLTP</text>
+        <text x="80" y="100" text-anchor="middle" font-size="10">- Base de datos</text>
+        <text x="80" y="115" text-anchor="middle" font-size="10">- ERP, CRM</text>
+        
+        <!-- Archivos -->
+        <rect x="20" y="150" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="180" text-anchor="middle" font-size="12">Archivos</text>
+        <text x="80" y="200" text-anchor="middle" font-size="10">- Excel, CSV</text>
+        <text x="80" y="215" text-anchor="middle" font-size="10">- XML, JSON</text>
+        
+        <!-- Externos -->
+        <rect x="20" y="250" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="280" text-anchor="middle" font-size="12">Externos</text>
+        <text x="80" y="300" text-anchor="middle" font-size="10">- APIs</text>
+        <text x="80" y="315" text-anchor="middle" font-size="10">- Web Services</text>
+    </g>
+
+    <!-- Flechas hacia ETL -->
+    <path d="M210,280 L300,280" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Capa ETL -->
+    <g transform="translate(300,80)">
+        <rect width="140" height="400" rx="10" fill="#99ccff"/>
+        <text x="70" y="30" text-anchor="middle" fill="black" font-weight="bold">ETL</text>
+        
+        <rect x="20" y="60" width="100" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="85" text-anchor="middle" font-size="12">Extracción</text>
+        <text x="70" y="105" text-anchor="middle" font-size="10">- Conectores</text>
+        <text x="70" y="120" text-anchor="middle" font-size="10">- Data Profiling</text>
+        
+        <rect x="20" y="160" width="100" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="185" text-anchor="middle" font-size="12">Transformación</text>
+        <text x="70" y="205" text-anchor="middle" font-size="10">- Limpieza</text>
+        <text x="70" y="220" text-anchor="middle" font-size="10">- Normalización</text>
+        
+        <rect x="20" y="260" width="100" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="285" text-anchor="middle" font-size="12">Carga</text>
+        <text x="70" y="305" text-anchor="middle" font-size="10">- Incremental</text>
+        <text x="70" y="320" text-anchor="middle" font-size="10">- Full Refresh</text>
+    </g>
+
+    <!-- Flechas hacia DW -->
+    <path d="M440,280 L530,280" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Data Warehouse -->
+    <g transform="translate(530,80)">
+        <rect width="160" height="400" rx="10" fill="#99ff99"/>
+        <text x="80" y="30" text-anchor="middle" fill="black" font-weight="bold">Data Warehouse</text>
+        
+        <!-- Staging -->
+        <rect x="20" y="50" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="80" text-anchor="middle" font-size="12">Staging Area</text>
+        <text x="80" y="100" text-anchor="middle" font-size="10">Datos temporales</text>
+        <text x="80" y="115" text-anchor="middle" font-size="10">Pre-procesados</text>
+        
+        <!-- Core DW -->
+        <rect x="20" y="150" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="180" text-anchor="middle" font-size="12">Core DW</text>
+        <text x="80" y="200" text-anchor="middle" font-size="10">Tablas de Hechos</text>
+        <text x="80" y="215" text-anchor="middle" font-size="10">Dimensiones</text>
+        
+        <!-- Data Marts -->
+        <rect x="20" y="250" width="120" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="80" y="280" text-anchor="middle" font-size="12">Data Marts</text>
+        <text x="80" y="300" text-anchor="middle" font-size="10">Ventas</text>
+        <text x="80" y="315" text-anchor="middle" font-size="10">Marketing, RRHH</text>
+    </g>
+
+    <!-- Flechas hacia Consumo -->
+    <path d="M690,280 L780,280" fill="none" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Capa de Consumo -->
+    <g transform="translate(780,80)">
+        <rect width="140" height="400" rx="10" fill="#cc99ff"/>
+        <text x="70" y="30" text-anchor="middle" fill="black" font-weight="bold">Consumo</text>
+        
+        <!-- Reportes -->
+        <rect x="20" y="50" width="100" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="80" text-anchor="middle" font-size="12">Reportes</text>
+        <text x="70" y="100" text-anchor="middle" font-size="10">- Operativos</text>
+        <text x="70" y="115" text-anchor="middle" font-size="10">- Estratégicos</text>
+        
+        <!-- BI -->
+        <rect x="20" y="150" width="100" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="180" text-anchor="middle" font-size="12">BI</text>
+        <text x="70" y="200" text-anchor="middle" font-size="10">- Dashboards</text>
+        <text x="70" y="215" text-anchor="middle" font-size="10">- KPIs</text>
+        
+        <!-- Analytics -->
+        <rect x="20" y="250" width="100" height="80" rx="5" fill="white" stroke="#666"/>
+        <text x="70" y="280" text-anchor="middle" font-size="12">Analytics</text>
+        <text x="70" y="300" text-anchor="middle" font-size="10">- OLAP</text>
+        <text x="70" y="315" text-anchor="middle" font-size="10">- Data Mining</text>
+    </g>
+
+    <!-- Capa de Metadata y Gobierno -->
+    <g transform="translate(50,500)">
+        <rect width="870" height="60" rx="10" fill="#ffcc99"/>
+        <text x="435" y="35" text-anchor="middle" fill="black" font-weight="bold">Metadata y Gobierno de Datos</text>
+    </g>
+
+    <!-- Definición de la flecha -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+        </marker>
+    </defs>
+</svg>
