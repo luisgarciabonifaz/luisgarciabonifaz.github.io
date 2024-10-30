@@ -1611,9 +1611,11 @@ AWS Glue: Servicio de ETL totalmente gestionado en la nube de Amazon Web Service
 <p>Un flujo de datos en NiFi es una representación visual de cómo los datos se mueven de una fuente a un destino. Cada flujo puede incluir pasos de procesamiento, filtrado, transformación y distribución de datos.</p>
 <p><strong>Processor</strong>:</p>
 <p>Es el componente básico de NiFi que realiza una operación sobre los datos. Un Processor puede ser de muchos tipos, por ejemplo:</p>
-<p>Leer archivos de un servidor FTP.
-Escribir datos en una base de datos.
-Transformar formatos de archivo (JSON, XML, CSV).</p>
+<ul>
+<li>Leer archivos de un servidor FTP.</li>
+<li>Escribir datos en una base de datos.</li>
+<li>Transformar formatos de archivo (JSON, XML, CSV).</li>
+</ul>
 <p><strong>FlowFile</strong>:</p>
 <p>Un FlowFile representa un mensaje o dato individual que se mueve a través del sistema NiFi. Cada FlowFile tiene un contenido (los datos) y atributos (metadatos como nombre de archivo, origen, etc.).</p>
 <p><strong>Controladores de servicios (Controller Services)</strong>:</p>
@@ -1641,19 +1643,19 @@ Transformar formatos de archivo (JSON, XML, CSV).</p>
 </li>
 </ul>
 <h3 id="773-caracteristicas-clave">7.7.3. Características clave</h3>
-<p><strong>a) Arrastrar y soltar (Drag and Drop):</strong>
+<p><strong>Arrastrar y soltar (Drag and Drop):</strong>
 La interfaz gráfica permite que los usuarios diseñen flujos sin necesidad de escribir código, solo arrastrando componentes.</p>
-<p><strong>b) Flujo en tiempo real y en batch:</strong>
+<p><strong>Flujo en tiempo real y en batch:</strong>
 NiFi es capaz de procesar datos en tiempo real, pero también soporta procesos batch. Se adapta tanto a la ingesta continua de datos como a tareas programadas.</p>
-<p><strong>c) Enrutamiento y transformación de datos:</strong>
+<p><strong>Enrutamiento y transformación de datos:</strong>
 Con los Processors, NiFi permite enrutamiento condicional, transformación y filtrado de datos según su contenido o atributos.</p>
-<p><strong>d) Alta disponibilidad y tolerancia a fallos:</strong>
+<p><strong>Alta disponibilidad y tolerancia a fallos:</strong>
 Mediante la agrupación en clústeres, NiFi distribuye el procesamiento entre nodos, garantizando que si un nodo falla, los otros continúan procesando los datos.</p>
-<p><strong>e) Seguridad:</strong>
+<p><strong>Seguridad:</strong>
 Autenticación y autorización basada en roles.
 Encriptación de datos en tránsito y en reposo.
 Control detallado de acceso para proteger los flujos de datos.</p>
-<p><strong>f) Monitorización y trazabilidad:</strong>
+<p><strong>Monitorización y trazabilidad:</strong>
 NiFi permite a los administradores monitorear flujos en tiempo real y rastrear el recorrido de cada dato dentro del sistema.</p>
 <h3 id="774-aplicaciones-comunes-de-apache-nifi">7.7.4. Aplicaciones comunes de Apache NiFi</h3>
 <ul>
