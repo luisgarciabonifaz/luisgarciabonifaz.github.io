@@ -896,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tema06/ETL.md" class="md-nav__link">
+      <a href="../ETL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tema07/BI.md" class="md-nav__link">
+      <a href="../../Tema08/BI.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1220,7 +1220,6 @@
 FROM Items
 INNER JOIN Respuestas ON Respuestas.id_item=Items.id_item
 WHERE Items.descripcion LIKE 'FAMILIA%';</p>
-<p>---- Los Items estan duplicados hay que borrar y volver a cargar</p>
 <p>SELECT Respuestas.id_encuesta,Respuestas.valor as departamento
 FROM Respuestas 
 INNER JOIN Items ON Respuestas.id_item=Items.id_item
@@ -1229,7 +1228,6 @@ WHERE Items.descripcion LIKE 'DEPARTAMENT%';</p>
 FROM Respuestas 
 INNER JOIN Items ON Respuestas.id_item=Items.id_item
 WHERE Items.descripcion LIKE '%Estudias Grado%';</p>
-<p>Idem Con Cursos y Departamentos</p>
 
 
 

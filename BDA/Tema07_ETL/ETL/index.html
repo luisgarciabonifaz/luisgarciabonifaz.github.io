@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../../Tema06_Almacenamiento/Almacenamiento/">
+      
+      
+        <link rel="next" href="../../../PowerBI/Tema01/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>7. ETL - Mis Clases</title>
+        <title>T7 - ETL - Mis Clases</title>
       
     
     
@@ -97,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. ETL
+              T7 - ETL
             
           </span>
         </div>
@@ -725,17 +729,19 @@
       
   
   
+    
+  
   
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
@@ -748,7 +754,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Big Data Aplicado
@@ -899,9 +905,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Tema06/ETL.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    T7 - ETL
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -910,6 +936,232 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-introduccion-al-proceso-etl" class="md-nav__link">
+    7.1. Introducción al proceso ETL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-fases-del-proceso-etl-extract-transform-load" class="md-nav__link">
+    7.2. Fases del proceso ETL (Extract, Transform, Load)
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2. Fases del proceso ETL (Extract, Transform, Load)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-data-profiling" class="md-nav__link">
+    7.2.1. Data Profiling
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-extraccion-extract" class="md-nav__link">
+    7.2.2. Extracción (Extract)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723-transformacion-transform" class="md-nav__link">
+    7.2.3. Transformación (Transform)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#724-carga-load" class="md-nav__link">
+    7.2.4. Carga (Load)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#725-verificacion-y-gestion-de-errores" class="md-nav__link">
+    7.2.5. Verificación y gestión de errores
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-herramientas-etl-populares" class="md-nav__link">
+    7.3. Herramientas ETL populares
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3. Herramientas ETL populares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-talend" class="md-nav__link">
+    7.3.1. Talend
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-pentaho-data-integration-pdi" class="md-nav__link">
+    7.3.2. Pentaho Data Integration (PDI)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#733-informatica-powercenter" class="md-nav__link">
+    7.3.3. Informatica PowerCenter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#734-microsoft-sql-server-integration-services-ssis" class="md-nav__link">
+    7.3.4. Microsoft SQL Server Integration Services (SSIS)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#735-apache-nifi" class="md-nav__link">
+    7.3.5. Apache NiFi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#736-otros-ejemplos" class="md-nav__link">
+    7.3.6. Otros ejemplos:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-retos-del-proceso-etl" class="md-nav__link">
+    7.4. Retos del proceso ETL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-etl-vs-elt" class="md-nav__link">
+    7.5. ETL vs ELT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-etl-en-tiempo-real-vs-etl-por-lotes" class="md-nav__link">
+    7.6. ETL en tiempo real vs ETL por lotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#77-nifi" class="md-nav__link">
+    7.7. NIFI
+  </a>
+  
+    <nav class="md-nav" aria-label="7.7. NIFI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#771-conceptos-clave" class="md-nav__link">
+    7.7.1. Conceptos clave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#772-arquitectura-de-apache-nifi" class="md-nav__link">
+    7.7.2. Arquitectura de Apache NiFi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#773-caracteristicas-clave" class="md-nav__link">
+    7.7.3. Características clave
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#774-aplicaciones-comunes-de-apache-nifi" class="md-nav__link">
+    7.7.4. Aplicaciones comunes de Apache NiFi
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#775-procesadores-comunes" class="md-nav__link">
+    7.7.5. Procesadores Comunes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#776-ejemplo-practico" class="md-nav__link">
+    7.7.6. Ejemplo práctico
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#78-actividades" class="md-nav__link">
+    7.8. Actividades
+  </a>
+  
+    <nav class="md-nav" aria-label="7.8. Actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#781-actividad-1-encuentas" class="md-nav__link">
+    7.8.1. Actividad 1 . Encuentas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -921,7 +1173,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tema07/BI.md" class="md-nav__link">
+      <a href="../../Tema08/BI.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
