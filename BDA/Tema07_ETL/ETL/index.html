@@ -1127,9 +1127,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#776-ejemplo-practico" class="md-nav__link">
-    7.7.6. Ejemplo práctico
+  <a href="#776-casos-de-uso" class="md-nav__link">
+    7.7.6. Casos de uso
   </a>
+  
+    <nav class="md-nav" aria-label="7.7.6. Casos de uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7761-diferencias-entre-fetchfile-y-getfile" class="md-nav__link">
+    7.7.6.1. Diferencias entre FetchFile y GetFIle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7762-procesamiento-paralelo" class="md-nav__link">
+    7.7.6.2. Procesamiento Paralelo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1616,9 +1636,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#776-ejemplo-practico" class="md-nav__link">
-    7.7.6. Ejemplo práctico
+  <a href="#776-casos-de-uso" class="md-nav__link">
+    7.7.6. Casos de uso
   </a>
+  
+    <nav class="md-nav" aria-label="7.7.6. Casos de uso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7761-diferencias-entre-fetchfile-y-getfile" class="md-nav__link">
+    7.7.6.1. Diferencias entre FetchFile y GetFIle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7762-procesamiento-paralelo" class="md-nav__link">
+    7.7.6.2. Procesamiento Paralelo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1938,14 +1978,69 @@ NiFi permite a los administradores monitorear flujos en tiempo real y rastrear e
 </ul>
 </li>
 </ul>
-<h3 id="776-ejemplo-practico">7.7.6. Ejemplo práctico</h3>
-<p>Imaginemos que queremos automatizar un flujo de datos donde se recibe un archivo CSV en un servidor FTP y se inserta en una base de datos MySQL:</p>
+<h3 id="776-casos-de-uso">7.7.6. Casos de uso</h3>
+<h4 id="7761-diferencias-entre-fetchfile-y-getfile">7.7.6.1. Diferencias entre FetchFile y GetFIle</h4>
+<p><strong>GetFile:</strong></p>
 <ul>
-<li><strong>FetchFTP</strong>: Un Processor que descarga el archivo CSV desde el servidor FTP.</li>
-<li><strong>ConvertRecord</strong>: Convierte el CSV a un formato más estructurado (JSON, por ejemplo).</li>
-<li><strong>PutDatabaseRecord</strong>: Inserta los datos estructurados en una base de datos MySQL.</li>
+<li>Lee archivos de un directorio local del sistema</li>
+<li>Monitorea continuamente el directorio en busca de nuevos archivos</li>
+<li>Puede eliminar o mover el archivo original después de leerlo</li>
+<li>Ideal para vigilar carpetas donde se depositan archivos nuevos</li>
 </ul>
-<p>Este flujo básico ilustra cómo NiFi puede automatizar la ingesta y procesamiento de datos desde diferentes fuentes hasta un sistema de destino.</p>
+<p><strong>FetchFile:</strong></p>
+<ul>
+<li>Lee archivos basándose en una ruta específica proporcionada en los atributos del flowfile</li>
+<li>No monitorea directorios - necesita que otro procesador le indique qué archivo leer</li>
+<li>Normalmente se usa en conjunto con ListFile o GetFile</li>
+<li>Mejor para lecturas selectivas o bajo demanda</li>
+</ul>
+<pre class="mermaid"><code>flowchart TD
+    subgraph "Ejemplo GetFile"
+    A[GetFile] --&gt; B[ProcessFile]
+    B --&gt; C[PutFile]
+    end
+
+    subgraph "Ejemplo FetchFile"
+    D[ListFile] --&gt; E[RouteOnAttribute]
+    E --&gt; F[FetchFile]
+    F --&gt; G[ProcessFile]
+    G --&gt; H[PutFile]
+
+    note1["ListFile encuentra los archivos
+    y crea flowfiles con la ruta"]
+
+    note2["FetchFile lee el contenido
+    basado en la ruta del flowfile"]
+
+    D --- note1
+    F --- note2
+    end</code></pre>
+<h4 id="7762-procesamiento-paralelo">7.7.6.2. Procesamiento Paralelo</h4>
+<pre class="mermaid"><code>flowchart LR
+    A[GetFile] --&gt; B{RouteOnAttribute}
+    B --&gt;|original| C[PutFile]
+    B --&gt;|clone| D[UpdateAttribute]
+    D --&gt; E[Processor 1]
+    E --&gt; F[Processor 2]
+
+    subgraph "Rama de Archivo"
+    C
+    end
+
+    subgraph "Rama de Procesamiento"
+    D --&gt; E --&gt; F
+    end</code></pre>
+<p><strong>Configuración de RouteOnAttribute</strong></p>
+<ul>
+<li>Routing Strategy: Route to Property name</li>
+<li>Property Name: route</li>
+<li>Clone FlowFile: true</li>
+</ul>
+<p><strong>Propiedades de enrutamiento</strong></p>
+<ul>
+<li>original: ${filename:equals('true')}</li>
+<li>clone: ${filename:equals('true')}</li>
+</ul>
 <h2 id="78-actividades">7.8. Actividades</h2>
 <h3 id="781-actividad-1-encuentas">7.8.1. Actividad 1 . Encuentas</h3>
 <p>La jefatura de estudios de un instituto quiere crear un cuadro de mando con datos de la satisfacción de los alumnos y los profesores con distintos aspectos del funcionamiento y las instalaciones del centro. </p>
