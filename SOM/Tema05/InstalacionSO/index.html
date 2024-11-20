@@ -1426,7 +1426,7 @@
 </ul>
 </li>
 </ul>
-<p>Una <strong>tabla de particiones</strong> es una estructura de datos en un disco duro que contiene información sobre la organización de las particiones en ese disco. En términos más simples, la tabla de particiones actúa como un mapa que le dice al sistema operativo dónde comienza y termina cada partición en el disco.</p>
+<p>Una <strong>tabla de particiones</strong> es una estructura de datos en un disco duro que contiene información sobre la organización de las particiones en ese disco. La tabla de particiones actúa como un mapa que le dice al sistema operativo dónde comienza y termina cada partición en el disco.</p>
 <p>Hay diferentes estándares para las tablas de particiones, siendo los más comunes el MBR (Master Boot Record) y el GPT (GUID Partition Table)</p>
 <ul>
 <li><strong>MBR</strong> (Master Boot Record) es un tipo de tabla de particiones y un sector de arranque que se encuentra en el primer sector (el sector cero) de un disco duro. Contiene información crítica para el inicio del sistema operativo y la organización de las particiones en el disco.</li>
@@ -1469,15 +1469,16 @@
 </tbody>
 </table>
 <h2 id="52-requisitos-de-hardware">5.2. Requisitos de Hardware</h2>
-<p>Antes de instalar un sistema operativo, es importante verificar que el hardware del ordenador cumpla con los requisitos mínimos del SO. Cada sistema operativo tiene requisitos específicos para funcionar adecuadamente. Estos son los componentes clave y su importancia:</p>
+<p>Antes de instalar un sistema operativo, es importante verificar que el hardware del ordenador cumpla con los requisitos mínimos del SO. Cada sistema operativo tiene unos requisitos específicos para funcionar adecuadamente. </p>
+<p>Estos son los componentes clave y su importancia:</p>
 <ul>
 <li>CPU (procesador)<ul>
 <li>La capacidad del procesador, medida en núcleos y velocidad (GHz), influye en el rendimiento general del sistema. Por ejemplo, un procesador de doble núcleo puede realizar varias tareas a la vez, pero un procesador de cuatro núcleos suele ser más eficiente para sistemas operativos modernos y multitarea.</li>
 </ul>
 </li>
 <li>Memoria RAM<ul>
-<li>La RAM es esencial para la velocidad de operación. En sistemas de 32 bits, el límite de RAM suele ser de 4 GB, mientras que en sistemas de 64 bits puede llegar a ser de 8 GB o más.</li>
-<li>Ejemplo de requisitos: Windows 10 necesita al menos 2 GB de RAM para la versión de 64 bits, pero se recomienda tener 4 GB o más para un rendimiento fluido.</li>
+<li>La RAM es esencial para la velocidad de operación. En sistemas de 32 bits, el límite de RAM es de 4 GB, mientras que en sistemas de 64 bits puede superar esos 4 GB.</li>
+<li>Como ejemplo Windows 10 necesita al menos 2 GB de RAM para la versión de 64 bits, pero se recomienda tener 4 GB o más para un rendimiento fluido.</li>
 </ul>
 </li>
 <li>Almacenamiento<ul>
@@ -1511,7 +1512,6 @@
 <ul>
 <li><strong>GRUB (GRand Unified Bootloader)</strong>: Usado en Linux y compatible con Windows. GRUB detecta todos los sistemas operativos instalados y muestra un menú para elegir cuál iniciar.</li>
 <li><strong>Windows Boot Manager</strong>: El gestor de arranque predeterminado de Windows. Si solo tienes un SO de Windows, se inicia automáticamente, pero si hay otros sistemas detectados, se mostrará un menú.</li>
-<li><strong>LILO (Linux Loader)</strong>: Gestor de arranque más antiguo, utilizado en distribuciones Linux anteriores a GRUB, aunque menos común en la actualidad.</li>
 </ul>
 <p>El gestor de arranque se carga justo después del BIOS o UEFI, y permite seleccionar el sistema operativo a iniciar.</p>
 <h2 id="55-fases-de-instalacion">5.5. Fases de Instalación</h2>
