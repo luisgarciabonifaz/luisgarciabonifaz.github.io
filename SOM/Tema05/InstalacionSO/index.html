@@ -1405,27 +1405,6 @@
 </ul>
 <h3 id="512-particiones">5.1.2. Particiones:</h3>
 <p>Las particiones en un disco duro son divisiones lógicas o secciones separadas que se crean en el espacio de almacenamiento de un disco. Estas particiones permiten organizar y gestionar mejor la información almacenada en el disco.</p>
-<p>Tipos de particiones:</p>
-<ul>
-<li><strong>Partición Primaria:</strong><ul>
-<li>Es la partición principal en un disco duro.</li>
-<li>Puedes tener hasta cuatro particiones primarias en un disco.</li>
-<li>Una de estas particiones primarias puede ser designada como "activa" y contener el cargador de arranque del sistema operativo.</li>
-</ul>
-</li>
-<li><strong>Partición Extendida</strong>:<ul>
-<li>Se utiliza para crear particiones lógicas adicionales dentro de ella.</li>
-<li>Puedes tener solo una partición extendida en un disco.</li>
-<li>No se utiliza directamente para almacenar datos, pero sirve como contenedor para particiones lógicas.</li>
-</ul>
-</li>
-<li><strong>Partición Lógica</strong>:<ul>
-<li>Se crea dentro de una partición extendida.</li>
-<li>No puedes arrancar un sistema operativo directamente desde una partición lógica; necesitas una partición primaria o una partición activa para eso.</li>
-<li>Puedes tener varias particiones lógicas dentro de una partición extendida.</li>
-</ul>
-</li>
-</ul>
 <p>Una <strong>tabla de particiones</strong> es una estructura de datos en un disco duro que contiene información sobre la organización de las particiones en ese disco. La tabla de particiones actúa como un mapa que le dice al sistema operativo dónde comienza y termina cada partición en el disco.</p>
 <p>Hay diferentes estándares para las tablas de particiones, siendo los más comunes el MBR (Master Boot Record) y el GPT (GUID Partition Table)</p>
 <ul>
@@ -1468,6 +1447,27 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Tipos de particiones en MBR</strong>:</p>
+<ul>
+<li><strong>Partición Primaria:</strong><ul>
+<li>Es la partición principal en un disco duro.</li>
+<li>Puedes tener hasta cuatro particiones primarias en un disco.</li>
+<li>Una de estas particiones primarias puede ser designada como "activa" y contener el cargador de arranque del sistema operativo.</li>
+</ul>
+</li>
+<li><strong>Partición Extendida</strong>:<ul>
+<li>Se utiliza para crear particiones lógicas adicionales dentro de ella.</li>
+<li>Puedes tener solo una partición extendida en un disco.</li>
+<li>No se utiliza directamente para almacenar datos, pero sirve como contenedor para particiones lógicas.</li>
+</ul>
+</li>
+<li><strong>Partición Lógica</strong>:<ul>
+<li>Se crea dentro de una partición extendida.</li>
+<li>No puedes arrancar un sistema operativo directamente desde una partición lógica; necesitas una partición primaria o una partición activa para eso.</li>
+<li>Puedes tener varias particiones lógicas dentro de una partición extendida.</li>
+</ul>
+</li>
+</ul>
 <h2 id="52-requisitos-de-hardware">5.2. Requisitos de Hardware</h2>
 <p>Antes de instalar un sistema operativo, es importante verificar que el hardware del ordenador cumpla con los requisitos mínimos del SO. Cada sistema operativo tiene unos requisitos específicos para funcionar adecuadamente. </p>
 <p>Estos son los componentes clave y su importancia:</p>
