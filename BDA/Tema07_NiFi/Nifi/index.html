@@ -1680,7 +1680,8 @@ NiFi permite a los administradores monitorear flujos en tiempo real y rastrear e
 </li>
 <li>....</li>
 </ul>
-<p>Posible lista de tablas:</p>
+<details class="ayuda">
+<summary>Posible lista de tablas:</summary>
 <table>
 <thead>
 <tr>
@@ -1817,6 +1818,19 @@ NiFi permite a los administradores monitorear flujos en tiempo real y rastrear e
 </tr>
 </tbody>
 </table>
+</details>
+<details class="ayuda">
+<summary>Ejemplo de JOIN para recuperar identificador de Familia</summary>
+<div class="highlight"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">Respuestas</span><span class="p">.</span><span class="n">id_encuesta</span><span class="p">,</span><span class="n">Respuestas</span><span class="p">.</span><span class="n">valor</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">familia</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">Items</span>
+<span class="k">INNER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Respuestas</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Respuestas</span><span class="p">.</span><span class="n">id_item</span><span class="o">=</span><span class="n">Items</span><span class="p">.</span><span class="n">id_item</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">Items</span><span class="p">.</span><span class="n">descripcion</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;FAMILIA%&#39;</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<details class="ayuda">
+<summary>Plantilla parcial de NiFi</summary>
+<p><a href="../Clase_V2.xml" target="_blank">Plantilla</a></p>
+</details>
 
 
 
