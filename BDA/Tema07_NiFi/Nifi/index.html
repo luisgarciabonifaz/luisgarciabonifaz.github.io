@@ -1060,16 +1060,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#77-actividades" class="md-nav__link">
-    7.7. Actividades
+  <a href="#77-api-rest-de-nifi" class="md-nav__link">
+    7.7. API REST de NiFi
   </a>
   
-    <nav class="md-nav" aria-label="7.7. Actividades">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#78-actividades" class="md-nav__link">
+    7.8. Actividades
+  </a>
+  
+    <nav class="md-nav" aria-label="7.8. Actividades">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#771-actividad-1-encuentas" class="md-nav__link">
-    7.7.1. Actividad 1 . Encuentas
+  <a href="#781-actividad-1-encuentas" class="md-nav__link">
+    7.8.1. Actividad 1 . Encuentas
   </a>
   
 </li>
@@ -1457,16 +1464,23 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#77-actividades" class="md-nav__link">
-    7.7. Actividades
+  <a href="#77-api-rest-de-nifi" class="md-nav__link">
+    7.7. API REST de NiFi
   </a>
   
-    <nav class="md-nav" aria-label="7.7. Actividades">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#78-actividades" class="md-nav__link">
+    7.8. Actividades
+  </a>
+  
+    <nav class="md-nav" aria-label="7.8. Actividades">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#771-actividad-1-encuentas" class="md-nav__link">
-    7.7.1. Actividad 1 . Encuentas
+  <a href="#781-actividad-1-encuentas" class="md-nav__link">
+    7.8.1. Actividad 1 . Encuentas
   </a>
   
 </li>
@@ -1673,8 +1687,56 @@ NiFi permite a los administradores monitorear flujos en tiempo real y rastrear e
 - Password: [Tu contraseña o token]
 - Use TLS: true</p>
 <p>Para conseguir la contraseña accede a https://myaccount.google.com/apppasswords en tu cuenta de correo de gmail y creala una contraseña para alicaciones, quitale los espacios en blanco pegala en el campo Password</p>
-<h2 id="77-actividades">7.7. Actividades</h2>
-<h3 id="771-actividad-1-encuentas">7.7.1. Actividad 1 . Encuentas</h3>
+<h2 id="77-api-rest-de-nifi">7.7. API REST de NiFi</h2>
+<p>Apache NiFi ofrece una API REST que permite interactuar de forma similar al interfaz gráfico. Esta API es útil para administrar flujos de datos, configurar procesadores, obtener métricas y realizar tareas administrativas.</p>
+<p>La API REST de NiFi suele estar disponible en la siguiente ruta:</p>
+<div class="highlight"><pre><span></span><code>http://&lt;host&gt;:&lt;puerto&gt;/nifi-api
+</code></pre></div>
+<p>Las peticiones siguen al nomenclatura /nifi-api/<servicio>, de manera que con nuestra máquina virtual podríamos acceder a información sobre la instalación mediante</p>
+<div class="highlight"><pre><span></span><code> https://localhost:8443/nifi-api/flow/about.
+</code></pre></div>
+<p>Se puede consultar todas los servicios disponibles en la <a href="https://nifi.apache.org/docs/nifi-docs/rest-api/index.html">documentación oficial</a></p>
+<p>Algunos de los servicios más destacados son:
+- <strong>/access</strong>: para autenticarnos y obtener el token de acceso a Nifi
+- <strong>/controller</strong>: permite obtener la configuración de los controladores, gestionar el cluster y crear tareas para informes.
+- <strong>/controller-services</strong>: permite gestionar los servicios de controlador y modificar sus referencias.
+- <strong>/flow</strong>: para obtener metadatos de los flujos de datos, estado de los componentes y el histórico de consultas.
+- <strong>/process-groups</strong>: Para cargar e iniciar plantillas y crear componentes.
+- <strong>/processors</strong>: Permite crear y planificar un procesador y definir sus propiedades.
+- <strong>/connections</strong>: Para crear conexiones, definir las prioridades de las colas y modificar el destino de las conexiones.
+- <strong>/flowfile-queues</strong>: Permite ver el contenido de loas colas, descargar sus flowfiles y vaciar las colas.</p>
+<p>Para iniciar un grupo de procesasores con esta API REST deberiamos hacer los siguiente:</p>
+<ol>
+<li>Obtener el tocken para la API</li>
+</ol>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="se">\</span>
+-d<span class="w"> </span><span class="s2">&quot;username=nifi&amp;password=nifinifinifi&quot;</span><span class="w"> </span><span class="se">\</span>
+https://localhost:8443/nifi-api/access/token
+</code></pre></div>
+<ol>
+<li>Obtener el ID del grupo de procesadores</li>
+</ol>
+<p><img alt="ID del grupo de procesadores" src="../ID_Grupo_Procesadores.jpg?400" style="width:60%;margin:auto;display:block" /></p>
+<ol>
+<li>
+<p>Lanzar el grupo de procesadores
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer &lt;token&gt;&quot;</span><span class="w">   </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;id&quot;: &quot;&lt;ProceesGroupID&gt;&quot;,</span>
+<span class="s1">    &quot;state&quot;: &quot;RUNNING&quot;</span>
+<span class="s1">  }&#39;</span><span class="w">   </span>https://localhost:8443/nifi-api/flow/process-groups/&lt;ProceesGroupID&gt;
+</code></pre></div></p>
+</li>
+<li>
+<p>Parar el grupo de procesadores
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-k<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w">   </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer &lt;token&gt;&quot;</span><span class="w">   </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;id&quot;: &quot;&lt;ProceesGroupID&gt;&quot;,</span>
+<span class="s1">    &quot;state&quot;: &quot;STOPPED&quot;</span>
+<span class="s1">  }&#39;</span><span class="w">   </span>https://localhost:8443/nifi-api/flow/process-groups/&lt;ProceesGroupID&gt;
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="78-actividades">7.8. Actividades</h2>
+<h3 id="781-actividad-1-encuentas">7.8.1. Actividad 1 . Encuentas</h3>
 <p>La jefatura de estudios de un instituto quiere crear un cuadro de mando con datos de la satisfacción de los alumnos y los profesores con distintos aspectos del funcionamiento y las instalaciones del centro. </p>
 <p>El cuadro de mando debe tener algunos filtros como:</p>
 <ul>
