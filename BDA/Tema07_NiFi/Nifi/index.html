@@ -1054,6 +1054,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#765-notify-y-wait" class="md-nav__link">
+    7.6.5. Notify y Wait
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1458,6 +1465,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#765-notify-y-wait" class="md-nav__link">
+    7.6.5. Notify y Wait
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1687,6 +1701,63 @@ NiFi permite a los administradores monitorear flujos en tiempo real y rastrear e
 - Password: [Tu contraseña o token]
 - Use TLS: true</p>
 <p>Para conseguir la contraseña accede a https://myaccount.google.com/apppasswords en tu cuenta de correo de gmail y creala una contraseña para alicaciones, quitale los espacios en blanco pegala en el campo Password</p>
+<h3 id="765-notify-y-wait">7.6.5. Notify y Wait</h3>
+<p>Para sincronizar varias ramas de un flujo de datos puedes utiizar los procesadores Wait y Notify. Estos serian los pasos:</p>
+<ol>
+<li>
+<p>Añadir un procesasor Notity al final de cada rama que queramos sincronicar</p>
+</li>
+<li>
+<p>Asigna el mismo nombre a todos los Release Signal Identifier de los Notify</p>
+</li>
+<li>
+<p>Añadir un procesadsor Wait al inicio de la unificaicón de las ramas</p>
+</li>
+<li>
+<p>Asigna el mismo nombre que usaste en los procesasores Notify al Release Signal Identifier del Wait</p>
+</li>
+<li>
+<p>Asinga al Target Signal Count del Wait el numero de Notify que tengas para permitir la sincronización cuando todos acaben</p>
+</li>
+<li>
+<p>Configurar un Distributed Map Cache Service</p>
+</li>
+<li>
+<p>En la pestaña Controller Services, haz clic en + para añadir un nuevo servicio.</p>
+</li>
+<li>Busca y selecciona DistributedMapCacheServer. Este será el servicio que actuará como caché.</li>
+<li>
+<p>Configura el servicio:</p>
+<ul>
+<li>Asigna un puerto en el parámetro Port (por ejemplo, 4557 o cualquier puerto libre en tu sistema).</li>
+</ul>
+</li>
+<li>
+<p>Configurar un Distributed Map Cache Client Service</p>
+</li>
+<li>
+<p>En la misma sección de Controller Services, añade otro servicio, esta vez selecciona DistributedMapCacheClientService.</p>
+</li>
+<li>
+<p>Configura el cliente para que apunte al servidor configurado en el paso anterior:</p>
+<ul>
+<li>En el parámetro Distributed Map Cache Server Hostname, ingresa localhost (o el nombre del host del servidor NiFi si es remoto).</li>
+<li>En el parámetro Port, ingresa el mismo puerto que configuraste en el DistributedMapCacheServer (por ejemplo, 4557).</li>
+</ul>
+</li>
+<li>
+<p>Asociar el mismo Distributed Map Cache Client al Notify</p>
+</li>
+<li>
+<p>Vuelve al procesador Notify.</p>
+</li>
+<li>En el campo Distributed Cache Service, selecciona el DistributedMapCacheClientService que configuraste en el paso anterior.</li>
+</ol>
+<p>6:  Asociar el mismo Distributed Map Cache Client al Wait</p>
+<ul>
+<li>Vuelve al procesador Wait.</li>
+<li>En el campo Distributed Cache Service, selecciona el mismo DistributedMapCacheClientService.</li>
+</ul>
 <h2 id="77-api-rest-de-nifi">7.7. API REST de NiFi</h2>
 <p>Apache NiFi ofrece una API REST que permite interactuar de forma similar al interfaz gráfico. Esta API es útil para administrar flujos de datos, configurar procesadores, obtener métricas y realizar tareas administrativas.</p>
 <p>La API REST de NiFi suele estar disponible en la siguiente ruta:</p>
@@ -1696,15 +1767,17 @@ NiFi permite a los administradores monitorear flujos en tiempo real y rastrear e
 <div class="highlight"><pre><span></span><code> https://localhost:8443/nifi-api/flow/about.
 </code></pre></div>
 <p>Se puede consultar todas los servicios disponibles en la <a href="https://nifi.apache.org/docs/nifi-docs/rest-api/index.html">documentación oficial</a></p>
-<p>Algunos de los servicios más destacados son:
-- <strong>/access</strong>: para autenticarnos y obtener el token de acceso a Nifi
-- <strong>/controller</strong>: permite obtener la configuración de los controladores, gestionar el cluster y crear tareas para informes.
-- <strong>/controller-services</strong>: permite gestionar los servicios de controlador y modificar sus referencias.
-- <strong>/flow</strong>: para obtener metadatos de los flujos de datos, estado de los componentes y el histórico de consultas.
-- <strong>/process-groups</strong>: Para cargar e iniciar plantillas y crear componentes.
-- <strong>/processors</strong>: Permite crear y planificar un procesador y definir sus propiedades.
-- <strong>/connections</strong>: Para crear conexiones, definir las prioridades de las colas y modificar el destino de las conexiones.
-- <strong>/flowfile-queues</strong>: Permite ver el contenido de loas colas, descargar sus flowfiles y vaciar las colas.</p>
+<p>Algunos de los servicios más destacados son:</p>
+<ul>
+<li><strong>/access</strong>: para autenticarnos y obtener el token de acceso a Nifi</li>
+<li><strong>/controller</strong>: permite obtener la configuración de los controladores, gestionar el cluster y crear tareas para informes.</li>
+<li><strong>/controller-services</strong>: permite gestionar los servicios de controlador y modificar sus referencias.</li>
+<li><strong>/flow</strong>: para obtener metadatos de los flujos de datos, estado de los componentes y el histórico de consultas.</li>
+<li><strong>/process-groups</strong>: Para cargar e iniciar plantillas y crear componentes.</li>
+<li><strong>/processors</strong>: Permite crear y planificar un procesador y definir sus propiedades.</li>
+<li><strong>/connections</strong>: Para crear conexiones, definir las prioridades de las colas y modificar el destino de las conexiones.</li>
+<li><strong>/flowfile-queues</strong>: Permite ver el contenido de loas colas, descargar sus flowfiles y vaciar las colas.</li>
+</ul>
 <p>Para iniciar un grupo de procesasores con esta API REST deberiamos hacer los siguiente:</p>
 <ol>
 <li>Obtener el tocken para la API</li>
