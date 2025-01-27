@@ -1691,16 +1691,18 @@ NiFi permite a los administradores monitorear flujos en tiempo real y rastrear e
 <p>ALTER TABLE tu_tabla CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</p>
 </details>
 <h3 id="764-enviar-correo">7.6.4. Enviar correo</h3>
-<p>Para enviar datos por correo electronico hay que usar el procesador <strong>PutEmail</strong> </p>
-<p><strong>PutEmail</strong> 
-- SMTP Hostname: smtp.gmail.com
-- SMTP Port: 587
-- From: tuemail@gmail.com
-- To: destinatario@gmail.com
-- Username: tuemail@gmail.com
-- Password: [Tu contraseña o token]
-- Use TLS: true</p>
-<p>Para conseguir la contraseña accede a https://myaccount.google.com/apppasswords en tu cuenta de correo de gmail y creala una contraseña para alicaciones, quitale los espacios en blanco pegala en el campo Password</p>
+<p>Para enviar datos por correo electronico hay que usar el procesador PutEmail</p>
+<p>Ejemplo de PutEmail von Gmail </p>
+<ul>
+<li><strong>SMTP Hostname</strong>: smtp.gmail.com</li>
+<li><strong>SMTP Port</strong>: 587</li>
+<li><strong>From</strong>: tuemail@gmail.com</li>
+<li><strong>To</strong>: destinatario@gmail.com</li>
+<li><strong>Username</strong>: tuemail@gmail.com</li>
+<li><strong>Password</strong>: [Tu contraseña o token]</li>
+<li><strong>Use TLS</strong>: true</li>
+</ul>
+<p>Para conseguir la contraseña accede a <a href="https://myaccount.google.com/apppasswords">https://myaccount.google.com/apppasswords</a> en tu cuenta de correo de gmail y creala una contraseña para alicaciones, quitale los espacios en blanco pegala en el campo Password</p>
 <h3 id="765-notify-y-wait">7.6.5. Notify y Wait</h3>
 <p>Para sincronizar varias ramas de un flujo de datos puedes utiizar los procesadores Wait y Notify. Estos serian los pasos:</p>
 <ol>
