@@ -652,18 +652,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1321-montaje" class="md-nav__link">
+  <a href="#1321-instalacion-de-discos" class="md-nav__link">
     <span class="md-ellipsis">
-      13.2.1. Montaje
+      13.2.1. Instalación de discos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#1322-manejo-de-discos" class="md-nav__link">
+  <a href="#1322-informacion-de-los-discos-y-particiones" class="md-nav__link">
     <span class="md-ellipsis">
-      13.2.2. Manejo de Discos
+      13.2.2. Información de los discos y particiones
     </span>
   </a>
   
@@ -1667,18 +1667,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1321-montaje" class="md-nav__link">
+  <a href="#1321-instalacion-de-discos" class="md-nav__link">
     <span class="md-ellipsis">
-      13.2.1. Montaje
+      13.2.1. Instalación de discos
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#1322-manejo-de-discos" class="md-nav__link">
+  <a href="#1322-informacion-de-los-discos-y-particiones" class="md-nav__link">
     <span class="md-ellipsis">
-      13.2.2. Manejo de Discos
+      13.2.2. Información de los discos y particiones
     </span>
   </a>
   
@@ -1925,9 +1925,10 @@ Ejemplos:</p>
 </code></pre></div>
 <h2 id="132-gestion-de-dispositivos">13.2. Gestión de Dispositivos</h2>
 <p>En Linux los dispositivos físicos de la máquina y los de almacenamiento de información, en particular, son manipulados a través de ficheros especiales ubicados en el directorio /dev</p>
-<p>Esta acción se conoce como <strong>"montar"</strong>, que en definitiva es asociar el dispositivo a un directorio determinado. Las particiones de los discos en Linux se montan en directorios como /, /home y /usr.</p>
+<p>Cada dispositivo físico de almacenamiento que quiera utilizar debo colocarlo en una rama del arbol de directorios único de Linux. 
+Esta acción se conoce como <strong>"montar"</strong>, que en definitiva es asociar el dispositivo a un directorio determinado. Las particiones y los discos en Linux se montan en directorios como /, /home y /usr.</p>
 <p>El sistema tiene un fichero llamado <strong>/etc/fstab</strong> en el cual se especifican dónde y en qué forma se montan los diferentes dispositivos.</p>
-<p>En el fichero <strong>/etc/fstab</strong> se guarda la lista de dispositivos montados en el arranque del sistema.</p>
+<p>En este fichero <strong>/etc/fstab</strong> se guarda la lista de dispositivos montados en el arranque del sistema.</p>
 <p>Cada línea en este fichero describe un dispositivo, indicando los siguientes aspectos para cada uno:</p>
 <ul>
 <li>Nombre del dispositivo o etiqueta. <ul>
@@ -1952,14 +1953,14 @@ Ejemplos:</p>
 </ul>
 </li>
 </ul>
-<p>Las opciones de montaje son numerosas. Las más usadas son:</p>
+<p>Las opciones de montaje son muchas, las más usadas son:</p>
 <ul>
 <li><strong>auto</strong>: indica que el dispositivo se monta siempre que se inicie el sistema. La opuesta es noauto.</li>
 <li><strong>rw</strong>: indica que el dispositivo se monta con permisos de lectura y escritura.</li>
 <li><strong>ro</strong>: indica que el dispositivo se monta con permisos de lectura solamente.</li>
 <li><strong>defaults</strong>: es una opción equivalente a la unión de rw, suid, dev, exec, auto, nouser y async.</li>
 </ul>
-<p>Actualmente para cada dispositivo con sistema de ficheros ext[1234] en lugar de especificar su nombre en el fichero /etc/fstab se puede indicar una etiqueta o identificador asociado.</p>
+<p>Actualmente para cada dispositivo con sistema de ficheros ext[1234] en lugar de especificar su nombre en el fichero <strong>/etc/fstab</strong> se puede indicar una etiqueta o identificador asociado.</p>
 <p>La forma utilizada es LABEL=[etiqueta] o UUID=[uuid].</p>
 <p>Ejemplo /etc/fstab</p>
 <div class="highlight"><pre><span></span><code># &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;         &lt;options&gt;          &lt;dump&gt;  &lt;pass&gt;
@@ -1967,43 +1968,19 @@ Ejemplos:</p>
 /dev/sda2       none            swap           sw                 0       0
 /dev/sr0        /media/cdrom0   udf,iso9660    user,noauto        0       0
 </code></pre></div>
-<h3 id="1321-montaje">13.2.1. Montaje</h3>
-<p>Si queremos que un dispositivo se monte automáticamente cada vez que el sistema se inicie, basta con colocar una línea apropiada en el fichero /etc/fstab.</p>
-<p>Si lo que queremos es montar o desmontar dispositivos directamente desde línea de comandos, podemos emplear mount y umount respectivamente.</p>
-<p>Sintaxis:</p>
-<div class="highlight"><pre><span></span><code>mount [opciones] [dispositivo] [dir]
-umount [opciones] &lt;&gt; dir| &lt;dispositivo&gt;
-</code></pre></div>
-<p>Algunas opciones:</p>
-<ul>
-<li>-a: en el caso de mount monta todos los dispositivos que tienen la opción auto en el fichero fstab, y para umount desmonta todo lo que está en el fichero /etc/mtab.</li>
-<li>-t [tipo]: indica el tipo de file system a montar.</li>
-<li>-o [opciones]: especifica las opciones de montaje (separadas por comas).</li>
-</ul>
-<p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code>mount ­-t iso9660 -o ro /dev/cdrom /mnt
-</code></pre></div>
-<h3 id="1322-manejo-de-discos">13.2.2. Manejo de Discos</h3>
-<p><strong>df</strong></p>
-<p>Para conocer información acerca de las particiones y dispositivos montados actualmente en el sistema.</p>
-<p>Sintaxis:</p>
-<div class="highlight"><pre><span></span><code>df [opciones] [directorio]
-</code></pre></div>
-<p>Algunas opciones:</p>
-<ul>
-<li>-h: (human readable view) por defecto los tamaños se muestran en bytes y con esta opción se hace de forma más legible (Ej. G para gigabytes y M para megabytes).</li>
-<li>-T: muestra además el tipo de file system de cada dispositivo.</li>
-</ul>
-<p><strong>du</strong></p>
-<p>El comando du nos informa del espacio que ocupa los ficheros o directorios.</p>
-<p>Sintaxis:</p>
-<div class="highlight"><pre><span></span><code>du [opciones] [directorio]
-</code></pre></div>
-<p>Algunas opciones:</p>
-<ul>
-<li>-h: Formato humano</li>
-<li>-s: Resumen de total</li>
-</ul>
+<h3 id="1321-instalacion-de-discos">13.2.1. Instalación de discos</h3>
+<p>Los pasos para añadir un disco nuevo en GNU/Linux</p>
+<ol>
+<li>Añadir disco a la máquina</li>
+<li>Crear la/s particiones en el disco (fdisk o gdisk)</li>
+<li>Formatear la partición (mkfs)</li>
+<li>Montar la partición (mount)</li>
+<li>Si queremos que el montaje sea permanente, añadir una entrada al /etc/fstab</li>
+</ol>
+<p>Veamoslos con un poco de detalle</p>
+<p><strong>Añadir disco a la máquina</strong>. </p>
+<p>Es el primer paso necesario antes de empezar</p>
+<p><strong>Crear las particiones</strong></p>
 <p>Para particionar un disco nuevo en GNU/Linux tenemos los comandos fdisk y gdisk</p>
 <p>Sintaxis:</p>
 <div class="highlight"><pre><span></span><code>fdisk [device]
@@ -2039,6 +2016,7 @@ umount [opciones] &lt;&gt; dir| &lt;dispositivo&gt;
 <li>w: Guarda todos los cambios realizados.</li>
 <li>x: Accede a un nuevo menú.</li>
 </ul>
+<p><strong>Formatear la partición</strong></p>
 <p>Para crear un sistema de ficheros en un dispositivo (formatear a alto nivel).</p>
 <p>Sintaxis:</p>
 <div class="highlight"><pre><span></span><code>mkfs [-t type] [device]
@@ -2046,14 +2024,44 @@ umount [opciones] &lt;&gt; dir| &lt;dispositivo&gt;
 <p>Ejemplo:</p>
 <div class="highlight"><pre><span></span><code>mkfs -t ext4 /dev/sdd1
 </code></pre></div>
-<p>Resumiendo Los pasos para añadir un disco nuevo en GNU/Linux</p>
-<ol>
-<li>Añadir disco a la máquina</li>
-<li>Crear la/s particiones en el disco (fdisk o gdisk)</li>
-<li>Formatear la partición (mkfs)</li>
-<li>Montar la partición (mount)</li>
-<li>SI queremos que el montaje sea permanente, añadir una entrada al /etc/fstab</li>
-</ol>
+<p><strong>Montar la partición</strong></p>
+<p>Para montar o desmontar dispositivos directamente desde línea de comandos, podemos emplear mount y umount respectivamente.</p>
+<p>Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>mount [opciones] [dispositivo] [dir]
+umount [opciones] &lt;&gt; dir| &lt;dispositivo&gt;
+</code></pre></div>
+<p>Algunas opciones:</p>
+<ul>
+<li>-a: en el caso de mount monta todos los dispositivos que tienen la opción auto en el fichero fstab, y para umount desmonta todo lo que está en el fichero /etc/mtab.</li>
+<li>-t [tipo]: indica el tipo de file system a montar.</li>
+<li>-o [opciones]: especifica las opciones de montaje (separadas por comas).</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>mount ­-t ext4 -o rw /dev/sdc /mnt/datos
+</code></pre></div>
+<p><strong>Hacer permanente el montaje</strong></p>
+<p>Si queremos que un dispositivo se monte automáticamente cada vez que el sistema se inicie, basta con colocar una línea apropiada en el fichero /etc/fstab.</p>
+<h3 id="1322-informacion-de-los-discos-y-particiones">13.2.2. Información de los discos y particiones</h3>
+<p><strong>df</strong></p>
+<p>Para conocer información acerca de las particiones y dispositivos montados actualmente en el sistema.</p>
+<p>Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>df [opciones] [directorio]
+</code></pre></div>
+<p>Algunas opciones:</p>
+<ul>
+<li>-h: (human readable view) por defecto los tamaños se muestran en bytes y con esta opción se hace de forma más legible (Ej. G para gigabytes y M para megabytes).</li>
+<li>-T: muestra además el tipo de file system de cada dispositivo.</li>
+</ul>
+<p><strong>du</strong></p>
+<p>El comando du nos informa del espacio que ocupa los ficheros o directorios.</p>
+<p>Sintaxis:</p>
+<div class="highlight"><pre><span></span><code>du [opciones] [directorio]
+</code></pre></div>
+<p>Algunas opciones:</p>
+<ul>
+<li>-h: Formato humano</li>
+<li>-s: Resumen de total</li>
+</ul>
 <h2 id="133-hardware">13.3. Hardware</h2>
 <p>Comandos que facilitan información del hardware</p>
 <p><strong>lshw</strong></p>
